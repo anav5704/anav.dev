@@ -1,0 +1,27 @@
+* {
+  color: #111111;
+}
+
+body {
+  width: 75%;
+  margin: auto;
+  padding: 100px 0px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: auto;
+}
