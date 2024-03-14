@@ -6,7 +6,8 @@ body {
   width: 50%;
   margin: auto;
   padding: 100px 0px;
-   font-size: 1.125rem;
+  font-size: 1.125rem;
+  font-family:serif;
 }
 
 header {
@@ -20,7 +21,7 @@ h1 {
 }
 
 h2 {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 img {
