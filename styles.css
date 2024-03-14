@@ -38,10 +38,10 @@ img {
   margin: auto;
 }
 
-footer {
-  margin-top: 100px;
+nav {
   display: flex;
   gap: 10px;
+  margin-bottom: 25px;
   flex-direction: column;
   align-items: center;
 }
