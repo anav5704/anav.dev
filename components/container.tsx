@@ -9,7 +9,7 @@ export const Container = ({ children, className }: ContainerProps) => {
     return (
         <section className={classNames(
             className,
-            "mx-auto w-1/2"
+            "mx-auto w-3/5 mt-20"
         )}>
             {children}
         </section>

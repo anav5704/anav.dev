@@ -2,9 +2,9 @@ import Link from "next/link"
 import { ArrowUpRight } from '@geist-ui/icons'
 import React from "react"
 
-export const Nav = () => {
+export const NavBar = () => {
     return (
-        <nav className="w-1/2 mx-auto sticky top-10 bg-zinc-950/50 backdrop-blur border border-zinc-900 rounded-xl flex items-center justify-around">
+        <nav className="w-3/5 mx-auto sticky top-10 bg-zinc-950/50 backdrop-blur-sm border border-zinc-900 rounded-full flex items-center justify-around">
             <Link href="/blog" className="link">
                 Skills
             </Link>

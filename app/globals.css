@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --primary-dim: #10b981;
+        --primary-accent: #34d399;
+        --primary-bright: #2dd4bf;
+    }
+
     html,
     body {
         @apply bg-white dark:bg-zinc-950 text-black dark:text-white;
@@ -11,16 +17,20 @@
 
 @layer components {
     .link {
-        @apply text-zinc-500 transition  hover:text-rose-400 p-3;
+        @apply text-zinc-500 transition hover:text-primary-accent p-3;
     }
 
-    .text-gradient-rose {
-        @apply bg-gradient-to-br from-rose-500 to-pink-400 bg-clip-text text-transparent;
+    .text-primary-gradient {
+        @apply bg-gradient-to-br from-primary-dim to-primary-bright bg-clip-text text-transparent;
     }
 }
 
 @layer utilities {
-    .glow {
-        @apply absolute blur-3xl -inset-1 bg-gradient-to-br from-rose-500 to-pink-400;
+    .glow-gradient {
+        background: radial-gradient(
+            ellipse 80% 50% at 50% -20%,
+            rgba(0, 255, 153, 0.15),
+            transparent
+        );
     }
 }

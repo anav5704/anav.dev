@@ -1,9 +1,9 @@
-import { Container, Nav } from "@/components"
+import { Container, NavBar, SubHeading } from "@/components"
 import Image from "next/image"
 
 export default function Home() {
     return (
-        <main className="relative pt-32 h-[300vh]">
+        <main className="glow-gradient relative pt-32 h-[300vh]">
             <Image
                 src="/anav.jpg"
                 alt="Picture of Anav"
@@ -12,12 +12,21 @@ export default function Home() {
                 height={175}
                 width={175}
             />
-            <h1 className="font-black text-4xl text-center tracking-tight my-10">
-                Software Engineer,
+            <h1 className="font-black text-6xl text-center leading-none tracking-tighter my-10">
+                <span className="text-primary-gradient">Fullstack Web Dev</span>
                 <br />
-                Homemade <span className="text-gradient-rose">Fullstack Web Dev</span>.
+                & Software Engineer
             </h1>
-            <Nav />
+            <NavBar />
+            <Container>
+                <SubHeading content="Anav Learn" />
+            </Container>
+            <Container>
+                <SubHeading content="Anav Build" />
+            </Container>
+            <Container>
+                <SubHeading content="Anav Wirte" />
+            </Container>
         </main >
     )
 }
