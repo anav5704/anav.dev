@@ -11,7 +11,11 @@
 
 @layer components {
     .link {
-        @apply opacity-25 hover:opacity-100 transition  hover:text-rose-400;
+        @apply text-zinc-500 transition  hover:text-rose-400 p-3;
+    }
+
+    .text-gradient-rose {
+        @apply bg-gradient-to-br from-rose-500 to-pink-400 bg-clip-text text-transparent;
     }
 }
 

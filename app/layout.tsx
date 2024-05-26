@@ -7,8 +7,8 @@ import "./globals.css"
 const inter = DM_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-    title: "Anav - Fullstack  Web Developer from Fiji.",
-    description: "Hey, I'm Anav. Im a Software Engineering Student at the University of the South Pacific.",
+    title: "Anav Chand - Software Engineer and Fullstack Web Developer from Fiji.",
+    description: "Hey, I'm Anav Chand. I'm a Software Engineering Student at the University of the South Pacific.",
 }
 
 export default function RootLayout({
