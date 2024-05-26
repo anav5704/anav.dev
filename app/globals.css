@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        @apply bg-white dark:bg-zinc-950 text-black dark:text-white;
+    }
+}
+
+@layer components {
+    .link {
+        @apply opacity-25 hover:opacity-100 transition  hover:text-rose-400;
+    }
+}
+
+@layer utilities {
+    .glow {
+        @apply absolute blur-3xl -inset-1 bg-gradient-to-br from-rose-500 to-pink-400;
+    }
+}

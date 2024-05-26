@@ -1,0 +1,25 @@
+import { Analytics } from "@vercel/analytics/react"
+import type { Metadata } from "next"
+import { DM_Sans } from "next/font/google"
+
+import "./globals.css"
+
+const inter = DM_Sans({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+    title: "Anav - Fullstack  Web Developer from Fiji.",
+    description: "Hey, I'm Anav. Im a Software Engineering Student at the University of the South Pacific.",
+}
+
+export default function RootLayout({
+    children,
+}: Readonly<{ children: React.ReactNode }>) {
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <Analytics />
+                {children}
+            </body>
+        </html>
+    )
+}
