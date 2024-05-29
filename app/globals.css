@@ -23,6 +23,18 @@
     .text-primary-gradient {
         @apply bg-gradient-to-br from-primary-dim to-primary-bright bg-clip-text text-transparent;
     }
+
+    .bg-gradient-primary {
+        @apply bg-gradient-to-br from-primary-dim to-primary-bright;
+    }
+
+    .bg-gradient-accent {
+        @apply bg-gradient-to-t from-emerald-900/20 to-[rgba(225,225,225,0)];
+    }
+
+    .glow {
+        box-shadow: 0 0 100px 10px var(--primary-bright);
+    }
 }
 
 @layer utilities {

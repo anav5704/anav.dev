@@ -4,7 +4,7 @@ import React from "react"
 
 export const NavBar = () => {
     return (
-        <nav className="w-3/5 mx-auto sticky top-10 bg-zinc-950/50 backdrop-blur-sm border border-zinc-900 rounded-full flex items-center justify-around">
+        <nav className="w-3/4 mx-auto sticky top-10 bg-zinc-950/50 backdrop-blur-sm border border-zinc-900 rounded-full flex items-center justify-around">
             <Link href="/blog" className="link">
                 Skills
             </Link>

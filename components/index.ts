@@ -1,3 +1,5 @@
 export * from "./nav-bar"
 export * from "./container"
 export * from "./sub-heading"
+export * from "./skill-card"
+export * from "./badge"
