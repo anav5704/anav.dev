@@ -10,7 +10,14 @@ interface SkillCardProps {
     className: string
 }
 
-export const SkillCard = ({ children, title, description, isFeatured, isNew, className }: SkillCardProps) => {
+export const SkillCard = ({
+    children,
+    title,
+    description,
+    isFeatured,
+    isNew,
+    className,
+}: SkillCardProps) => {
     return (
         <section
             className={classNames(

@@ -35,9 +35,9 @@ function getAllContent(directory: string): Project[] {
     const slugs = getContentSlugs(directory)
     const content = slugs
         .map((slug) => getContentBySlug(directory, slug))
-        .sort((item1, item2) => (
+        .sort((item1, item2) =>
             item1.date > item2.date ? -1 : 1
-        ))
+        )
     return content
 }
 

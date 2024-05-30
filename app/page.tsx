@@ -1,28 +1,43 @@
-import { SkillCard, Container, NavBar, SubHeading, ProjectCard, Grid } from "@/components"
-import { getAllProjects, getAllResearchPapers } from "@/lib/api"
+import {
+    Container,
+    Grid,
+    NavBar,
+    ProjectCard,
+    SkillCard,
+    SubHeading,
+    WritingCard,
+} from "@/components"
+import {
+    getAllBlogs,
+    getAllProjects,
+    getAllResearchPapers,
+} from "@/lib/api"
+import Image from "next/image"
+
 const researchPapers = getAllResearchPapers()
 const projects = getAllProjects()
-import Image from "next/image"
+const blogs = getAllBlogs()
 
 export default function Home() {
     return (
-        <main className="glow-gradient relative pt-32 h-[300vh]">
+        <main className="glow-gradient relative pt-32 mb-40">
             <Image
                 src="/anav.jpg"
                 alt="Picture of Anav"
                 className="rounded-full mx-auto"
-                quality={100}
-                height={175}
-                width={175}
+                quality={75}
+                height={200}
+                width={200}
             />
             <h1 className="font-black text-6xl text-center leading-none tracking-tighter my-10">
-                <span className="text-primary-gradient">Fullstack Web Dev</span>
-                <br />
-                & Software Engineer
+                <span className="text-primary-gradient">
+                    Fullstack Web Dev
+                </span>
+                <br />& Software Engineer
             </h1>
             <NavBar />
             <Container>
-                <SubHeading content="Anav Learn" />
+                <SubHeading content="My Skills" />
                 <Grid>
                     <SkillCard
                         title="Languages"
@@ -77,13 +92,23 @@ export default function Home() {
             </Container>
             <Container>
                 <SubHeading content="Blogs & Research" />
-                {researchPapers.map((paper, index) => (
-                    <div
-                        key={index}>
-                        {paper.content}
-                    </div>
-                ))}
+                <div className="grid grid-cols-2 gap-5">
+                    {researchPapers.map((paper, index) => (
+                        <WritingCard
+                            key={index}
+                            type="Research"
+                            writing={paper}
+                        />
+                    ))}
+                    {blogs.map((blog, index) => (
+                        <WritingCard
+                            key={index}
+                            type="Blog"
+                            writing={blog}
+                        />
+                    ))}
+                </div>
             </Container>
-        </main >
+        </main>
     )
 }

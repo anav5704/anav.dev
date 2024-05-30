@@ -7,7 +7,8 @@ export const SubHeading = ({
 }: SubHeadingProps) => {
     return (
         <h3 className="text-4xl font-bold mb-10">
-            {content}
+            <span className="text-primary-gradient">#</span>
+            {" "}{content}
         </h3>
     )
 }
