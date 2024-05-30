@@ -35,6 +35,14 @@
     .glow {
         box-shadow: 0 0 100px 10px var(--primary-bright);
     }
+
+    .card {
+        @apply bg-zinc-900 p-5 h-72 rounded-3xl overflow-hidden flex flex-col justify-between;
+    }
+
+    .featured {
+        @apply bg-gradient-primary text-zinc-950;
+    }
 }
 
 @layer utilities {
