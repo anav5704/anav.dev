@@ -14,8 +14,8 @@ export const SkillCard = ({ children, title, description, isFeatured, isNew, cla
     return (
         <section className={classNames(
             className,
-            isFeatured && "bg-gradient-primary text-zinc-950",
-            "bg-zinc-900 p-5 h-72 rounded-3xl overflow-hidden flex flex-col justify-between"
+            "card",
+            isFeatured && "featured",
         )}>
             <div className="flex items-center justify-between mb-2">
                 <h3 className="text-2xl font-medium">{title}</h3>
