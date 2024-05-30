@@ -1,16 +1,18 @@
+import classNames from "classnames"
+
 interface ContainerProps {
-    children: React.ReactNode,
+    children: React.ReactNode
     className?: string
 }
 
-import classNames from "classnames"
-
 export const Container = ({ children, className }: ContainerProps) => {
     return (
-        <section className={classNames(
-            className,
-            "mx-auto w-3/4 mt-20"
-        )}>
+        <section
+            className={classNames(
+                className,
+                "mx-auto w-3/4 mt-20"
+            )}
+        >
             {children}
         </section>
     )

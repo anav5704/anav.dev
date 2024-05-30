@@ -1,8 +1,13 @@
-import { BLOGS_DIR, PROJECTS_DIR, RESEARCH_DIR } from "./constants"
-import { Project, Blog, Research } from "@/types/content"
+import { Blog, Project, Research } from "@/types/content"
+import fs from "fs"
 import matter from "gray-matter"
 import { join } from "path"
-import fs from "fs"
+
+import {
+    BLOGS_DIR,
+    PROJECTS_DIR,
+    RESEARCH_DIR,
+} from "./constants"
 
 const projectsDirectory = join(process.cwd(), PROJECTS_DIR)
 const blogsDirectory = join(process.cwd(), BLOGS_DIR)
@@ -10,12 +15,14 @@ const researchDirectory = join(process.cwd(), RESEARCH_DIR)
 
 type Content = Project | Blog | Research
 
-
 function getContentSlugs(directory: string) {
     return fs.readdirSync(directory)
 }
 
-function getContentBySlug(directory: string, slug: string): Content {
+function getContentBySlug(
+    directory: string,
+    slug: string
+): Content {
     const realSlug = slug.replace(/\.md$/, "")
     const fullPath = join(directory, `${realSlug}.md`)
     const fileContents = fs.readFileSync(fullPath, "utf8")
@@ -28,7 +35,9 @@ function getAllContent(directory: string): Project[] {
     const slugs = getContentSlugs(directory)
     const content = slugs
         .map((slug) => getContentBySlug(directory, slug))
-        .sort((item1, item2) => (item1.date > item2.date ? -1 : 1))
+        .sort((item1, item2) => (
+            item1.date > item2.date ? -1 : 1
+        ))
     return content
 }
 
@@ -43,4 +52,3 @@ export function getAllBlogs(): Project[] {
 export function getAllResearchPapers(): Project[] {
     return getAllContent(researchDirectory)
 }
-

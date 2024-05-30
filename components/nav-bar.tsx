@@ -1,5 +1,6 @@
+import { ArrowUpRight } from "@geist-ui/icons"
 import Link from "next/link"
-import { ArrowUpRight } from '@geist-ui/icons'
+
 import React from "react"
 
 export const NavBar = () => {

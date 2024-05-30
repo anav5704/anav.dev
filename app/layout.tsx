@@ -9,7 +9,8 @@ const inter = DM_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
     title: "Anav Chand - Software Engineer &  Fullstack Web Developer from Fiji.",
-    description: "Hey, I'm Anav Chand. I'm a Software Engineering Student at the University of the South Pacific.",
+    description:
+        "Hey, I'm Anav Chand. I'm a Software Engineering Student at the University of the South Pacific.",
 }
 
 export default function RootLayout({
