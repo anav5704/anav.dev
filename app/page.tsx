@@ -1,4 +1,7 @@
-import { SkillCard, Container, NavBar, SubHeading } from "@/components"
+import { SkillCard, Container, NavBar, SubHeading, ProjectCard, Grid } from "@/components"
+import { getAllProjects, getAllResearchPapers } from "@/lib/api"
+const researchPapers = getAllResearchPapers()
+const projects = getAllProjects()
 import Image from "next/image"
 
 export default function Home() {
@@ -19,9 +22,8 @@ export default function Home() {
             </h1>
             <NavBar />
             <Container>
-                <SubHeading content="Anav Learn"
-                />
-                <section className="grid grid-cols-3 gap-5">
+                <SubHeading content="Anav Learn" />
+                <Grid>
                     <SkillCard
                         title="Languages"
                         description="Proficient in a variety of programming languages & capable of building high quality software."
@@ -60,13 +62,27 @@ export default function Home() {
                     >
                         <></>
                     </SkillCard>
-                </section>
+                </Grid>
             </Container>
             <Container>
-                <SubHeading content="Anav Build" />
+                <SubHeading content="Top Projects" />
+                <Grid>
+                    {projects.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            project={project}
+                        />
+                    ))}
+                </Grid>
             </Container>
             <Container>
-                <SubHeading content="Anav Wirte" />
+                <SubHeading content="Blogs & Research" />
+                {researchPapers.map((paper, index) => (
+                    <div
+                        key={index}>
+                        {paper.content}
+                    </div>
+                ))}
             </Container>
         </main >
     )
