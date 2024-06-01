@@ -79,16 +79,16 @@ Unix-based environment are fond of macOS. Developers that
 want an open-source environment and need greater system
 control frequently use Linux.
 
-### Summary
+<!-- ### Summary -->
 
-| Component        | Minimum                        | Recommended                     |
+<!-- | Component        | Minimum                        | Recommended                     |
 | ---------------- | ------------------------------ | ------------------------------- |
 | CPU              | Intel Core i3 or equivalent    | Intel Core i7 or equivalent     |
 | GPU              | Integrated Graphics            | Integrated Graphics             |
 | RAM              | 4GB or more                    | 8GB or more                     |
 | Storage          | SSD with 128GB storage         | SSD with 128GB storage or more  |
 | Display          | 14-inch, 1280 x 720 resolution | 14-inch, 1920 x 1080 resolution |
-| Operating System | Windows, macOS, Linux          | Windows 10, macOS, Linux        |
+| Operating System | Windows, macOS, Linux          | Windows 10, macOS, Linux        | -->
 
 ### That's It!
 
@@ -106,6 +106,6 @@ the most difficult programming challenges with time and
 practice. And now that you know what the basic computer
 specs are, the next step would be to learn about some
 programming basics like
-[comments ](https://code-hl.com/benefits-of-commenting-in-programming)and
+[comments](https://code-hl.com/benefits-of-commenting-in-programming) and
 [debugging](https://code-hl.com/debugging-common-coding-errors-and-mistakes).
 Until next time, happy coding!

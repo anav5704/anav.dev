@@ -5,16 +5,18 @@ date: "2020-03-15T05:35:07.322Z"
 isFeatured: false
 ---
 
-1
-1.0 Emerging Technologies and Software Engineering Roles
-1.1 Introduction to Extended Reality
+### 1.0 Emerging Technologies and Software Engineering Roles
+
+### 1.1 Introduction to Extended Reality
+
 Extended Reality (XR) is a generalized term used to describe technologies that aim to combine the
 physical and virtual world into one, seamless experience. Some of the popular technologies that fall
 under this umbrella include Augmented Reality (AR), Virtual Reality (VR) and Mixed Reality (MR). XR
 is without a doubt an emerging technology as the current market size of $105.58 billion USD is
 expected to grow to $472.3 billion USD by 2028 (Mordor Intelligence, 2023). In addition to this, the
 Apple Vision Pro, a spatial computer that merges AR and VR, was announced early June this year.
-1.2 The Impact of XR on Software Engineering Role
+
+### 1.2 The Impact of XR on Software Engineering Role
 The rapid growth of advanced technology such as extended reality is bound to have various impacts
 on software engineering roles. One of the major impacts is enhanced remote collaboration and
 better communication among programmers (A. Elliott, Peiris, & Parnin, 2015). Working remotely is
@@ -22,12 +24,14 @@ standardized in the software engineering field, and XR takes it a step further b
 based in different geographical locations join each other in a virtual live coding environment. This
 also promotes parallel development as there could be various teams (development, code review,
 design) working simultaneously.
+
 That was a scenario where software engineers use XR to develop applications, but what if software
 engineers need to develop applications for XR? An impact of this would be that developers and
 designers would need to learn new skills and tools like 3d modelling, advanced animations, and
 spatial sound design to efficiently deliver functional software. Alongside this comes a vast number of
 challenges such as creating immersive experiences and ensuring user safety.
-1.3 The Evolution of Frontend Web Developer Responsibilities
+
+### 1.3 The Evolution of Frontend Web Developer Responsibilities
 The responsibility of Frontend Web Developer, at its simplest, is to make user friendly web pages
 using HTML, CSS and JavaScript that are fast and responsive. In recent years, this role has seen
 various changes with the increased popularity of JavaScript frameworks (like React JS) and
@@ -37,13 +41,15 @@ incorporate XR, frontend web developers need to learn and master new XR framewor
 these frameworks include WebXR, A-Frame and ReactVR (B. Alexey, 2021), which provides
 developers with the necessary tools, libraries, and APIs to create XR content that can be accessed via
 web browsers.
+
 Secondly, frontend web developers need to learn how to create and implement immersive UI/UX
 design. It involves considering components such as spatial mapping and 3D visualization which are
 used to anchor virtual objects or information to the user's physical space (Uxcel, 2023). Even more
 basic interactions like text fields need to be redefined as now instead of a keyboard and muse, the
 input methods are gestures, voice commands, and hand controllers.
-2
-1.4 Ethical Considerations and Challenges in XR
+
+
+### 1.4 Ethical Considerations and Challenges in XR
 Despite groups such as IEEE promoting increased focus on ethics (for XR and technologies in general),
 there remains various ethical considerations (IEEE, 2023). The most obvious one being separation
 from the real world. Putting on an XR headset means blocking yourself from the physical world,
@@ -55,8 +61,10 @@ study of 41,151 respondents, the majority of the software engineers work 8-9 hou
 2-5 hours is spent on coding (M. Elmar, 2023). Spending long hours in an XR headset can lead to
 nausea and dizziness. This is caused when the brain receives mixed signals i.e., the eyes register
 digital signals, while your inner the knows that the body is in the real world.
-2.0 Extended Reality in Software Development Life Cycle
-2.1. Requirements Gathering / Planning
+
+### 2.0 Extended Reality in Software Development Life Cycle
+
+### 2.1. Requirements Gathering / Planning
 In this phase, meetings are held with stakeholders and information on the problem domain is
 gathered. With the emergence of XR technologies like immersive augmented reality (IAR),
 requirements engineers can use this to better understand and respond to stakeholders (L. Merino,
@@ -64,50 +72,56 @@ requirements engineers can use this to better understand and respond to stakehol
 this is happening, the IAR headset will provide an interactive view of “nodes” or “entities” in real
 time. This will in turn help the requirements engineers to `visualize the relationship between
 concepts.
-2.2. Requirements Analysis
+
+### 2.2. Requirements Analysis
 The main purpose of the requirements analysis phase is to understand the information collected in
 the previous phase and to plan the general approach that will be used in the development.
 Complementary to writing notes and analyzing data by drawing on whiteboards, requirements
 engineers can utilize IAR headsets to digitize the notes and diagrams (L. Merino, 2020). This allows
 data to be organized in a spatial way and improves efficiency. In addition to this, large chunks of data
 can be decomposed and related data can be bundled freely.
-2.3. Design
+
+### 2.3. Design
 In the design phase, the overall look, feel and functionality of the product is decided. The use of IAR
 in this phase can allow designers to project UML diagrams (like use case diagrams) to a wall (L.
 Merino, 2020). This lets designers add use cases by drawing boxes and linking them using lines with
 makers, which function as a stylus. The software then takes these doodles and properly converts
 them to use cases. Built in microphones can be used to give names to these use cases because of
 voice recognition.
-2.4. Coding / Implementation
+
+### 2.4. Coding / Implementation
 The design from the previous phase is converted into code and executable programs in this phase.
 Mixed reality can be used in many ways here, Firstly, developers can use IAR headsets and place
 recently viewed files to the left of their desktop and documentations for needed technologies to the
 on the right. This will drastically help boost productivity. Secondly, Remote pair programming (also
 known as distributed or virtual pair programming) can be done (J. Dominic, 2020). The navigator and
 driver can both use XR devices to work at a virtual desk from anywhere which promotes flexibility.
-3
-2.5. Testing
+
+### 2.5. Testing
 In this phase, software is assessed at various levels (component testing, integration testing) to ensure
 it meets the project standards. Similar to the design phase, testers can use IAR to virtually write and
 test code on a whiteboard with syntax highlighting. “City visualization” health checks can also be
 done using IAR (L. Merino, 2020). This is where buildings represent test classes and districts
 represent test suites. The lack of buildings in a district means that it lacks test coverage. The results Is
 an immersive and interactive way to test projects.
-2.6. Deployment
+
+### 2.6. Deployment
 In the deployment phase, the finished software is released and installed on user machines. Despite
 XR being more prominent in the other phases, it can still be used in deployment in niche ways like
 end user training. VR headsets could be used to replicate a virtual office and help prepare users for
 various expected, and unforeseen scenarios (S. Bennett, 2023). Such VR training simulators can
 include troubleshooting tasks whereby if the user fails to complete a task, a step-by-step guide will
 be displayed in the spatial environment.
-2.7. Maintenance
+
+### 2.7. Maintenance
 Software is kept fully functional and newly discovered issues are fixed in this phase. Once again, the
 IAR headsets and whiteboard can be used here. In the case of fixing newly found issues, developers
 can have build configurations for the software displayed spatially and work on debugging issues.
 Collaborative software will then use cameras to capture and update the new build configuration (L.
 Merino, 2020). Even in a software update scenario, developers can brainstorm ideas and solutions
 faster. The whiteboard approach fosters a creative and collaborative experience.
-2.8. Benefits and Potential Drawbacks of XR
+
+### 2.8. Benefits and Potential Drawbacks of XR
 As mentioned earlier, enhanced remote collaboration is one of the more significant benefits of using
 XR in SLDC. Platforms like skype offer connectedness but lack speed and instant messaging offers
 speed but lacks connectedness (A. Elliott, 2015). XR technologies fit between and above these as
@@ -120,6 +134,7 @@ visualization” mentioned in the testing phase, “Solar System visualization�
 used. This is where packages are made into suns which have planets orbiting them. In this system,
 planets are classes, orbits are inheritance levels, and the sizes of planets vary on the lines of code
 (LOC) for that class.
+
 Unfortunately, just like with every other technology, there are bound to be some drawbacks that
 need to be considered. The most obvious one being cost. The apple vison pro (which will be the most
 advanced VR headset when it releases next year) will cost $3,499.00 USD. If XR technologies like this
@@ -130,40 +145,47 @@ the immersive nature of XR, sensory disabilities, especially vision issues will 
 on the usage of the technology. AR and VR heavily rely on the user’s depth perception as it is
 responsible for mentally mapping out the physical environment in 3d. If users lack depth perception,
 the technology will no longer be immersive and thus there will be no point in using it.
-4
-3. Bibliography
+
+### 3. References
+
 Mordor Intelligence Research & Advisory. (2023, July). “Extended Reality Market Size & Share
-Analysis - Growth Trends & Forecasts (2023 - 2028)”. Mordor Intelligence.
-https://www.mordorintelligence.com/industry-reports/extended-reality-xr-market
+Analysis - Growth Trends & Forecasts (2023 - 2028)”. Mordor Intelligence.https://www.mordorintelligence.com/industry-reports/extended-reality-xr-market
+
 Elliott, B. Peiris and C. Parnin (2015) "Virtual Reality in Software Engineering: Affordances,
 Applications, and Challenges," 2015 IEEE/ACM 37th IEEE International Conference on Software
 Engineering, Florence, Italy, 2015, pp. 547-550, doi: 10.1109/ICSE.2015.191.
+
 https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7203009&isnumber=7202933
 L. Merino, M. Lungu and C. Seidl (2020) "Unleashing the Potentials of Immersive Augmented Reality
 for Software Engineering," 2020 IEEE 27th International Conference on Software Analysis, Evolution
 and Reengineering (SANER), London, ON, Canada, 2020, pp. 517-521, doi:
 10.1109/SANER48275.2020.9054812.
+
 https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9054812&isnumber=9054788
 J. Dominic, B. Tubre, C. Ritter, J. Houser, C. Smith and P. Rodeghero (2020) "Remote Pair Programming in Virtual
 Reality," 2020 IEEE International Conference on Software Maintenance and Evolution (ICSME), Adelaide, SA,
-Australia, 2020, pp. 406-417, doi: 10.1109/ICSME46990.2020.00046.
-https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9240715&isnumber=9240598
+Australia, 2020, pp. 406-417, doi: 10.1109/ICSME46990.2020.00046. https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9240715&isnumber=9240598
+
 B. Alexey (2021, June 29) “Virtual Reality in Frontend Development: Tips and Trends you Need to
 Know”. Gorilla Logic. https://gorillalogic.com/blog/virtual-reality-in-frontend-development-tips-and-
-trends-you-need-to-know/
+trends-you-need-to-know.
+
 Uxcel (2023) “Extended Reality Design (XR)”
 https://app.uxcel.com/glossary/extended-reality-design?utm_source=share-tag
 IEEE (2022) “Ethics in Virtual Reality” IEEE Digital Reality.
 https://digitalreality.ieee.org/publications/ethics-in-vr
+
 M. Elmar (2023, June 3) “How Many Hours a Week Do Software Engineers Work?”. CS Careerline.
 https://cscareerline.com/how-many-hours-a-week-do-software-engineers-
 work/#:~:text=On%20average%2C%20a%20software%20engineer%20spends%20about%202-
 5,up%20to%202%20hours%20or%20more%20per%20bug.
+
 Bennett, S. (2023, July 12). How to Use VR Training Simulator Software. WebinarCare.
 https://webinarcare.com/best-vr-training-simulator-software/use-vr-training-simulator-software/
 Elliott, A. (2015, January 16). Using Virtual Reality to Create Software: A Likely Future. Medium.
 https://medium.com/@anthonyE_vr/using-virtual-reality-to-create-software-a-likely-future-
 336fec17e7c2
+
 A. Schreiber, L. Nafeie, A. Baranowski, P. Seipel and M. Misiak (2019) "Visualization of Software
 Architectures in Virtual Reality and Augmented Reality," 2019 IEEE Aerospace Conference, Big Sky,
 MT, USA, 2019, pp. 1-12, doi: 10.1109/AERO.2019.8742198.
