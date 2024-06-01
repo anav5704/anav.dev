@@ -9,22 +9,19 @@ import {
     RESEARCH_DIR,
 } from "./constants"
 
-const projectsDirectory = join(process.cwd(), PROJECTS_DIR)
-const blogsDirectory = join(process.cwd(), BLOGS_DIR)
-const researchDirectory = join(process.cwd(), RESEARCH_DIR)
-
 type Content = Project | Blog | Research
 
 function getContentSlugs(directory: string) {
-    return fs.readdirSync(directory)
+    return fs.readdirSync(join(process.cwd(), directory))
 }
 
-function getContentBySlug(
+export function getContentBySlug(
     directory: string,
     slug: string
 ): Content {
     const realSlug = slug.replace(/\.md$/, "")
-    const fullPath = join(directory, `${realSlug}.md`)
+    const path = join(process.cwd(), directory)
+    const fullPath = join(path, `${realSlug}.md`)
     const fileContents = fs.readFileSync(fullPath, "utf8")
     const { data, content } = matter(fileContents)
 
@@ -42,13 +39,13 @@ function getAllContent(directory: string): Project[] {
 }
 
 export function getAllProjects(): Project[] {
-    return getAllContent(projectsDirectory)
+    return getAllContent(PROJECTS_DIR)
 }
 
 export function getAllBlogs(): Project[] {
-    return getAllContent(blogsDirectory)
+    return getAllContent(BLOGS_DIR)
 }
 
 export function getAllResearchPapers(): Project[] {
-    return getAllContent(researchDirectory)
+    return getAllContent(RESEARCH_DIR)
 }

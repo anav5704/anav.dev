@@ -43,6 +43,18 @@
     .featured {
         @apply bg-gradient-primary text-zinc-950;
     }
+
+    #content h3 {
+        @apply mt-10 mb-2 text-2xl font-bold tracking-tight;
+    }
+
+    #content p {
+        @apply text-lg text-zinc-300;
+    }
+
+    #content a {
+        @apply text-primary-accent underline;
+    }
 }
 
 @layer utilities {

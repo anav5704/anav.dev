@@ -1,6 +1,8 @@
 import {
     Container,
+    CurrentSong,
     Grid,
+    Heading,
     NavBar,
     ProjectCard,
     SkillCard,
@@ -20,21 +22,22 @@ const blogs = getAllBlogs()
 
 export default function Home() {
     return (
-        <main className="glow-gradient relative pt-32 mb-40">
+        <main className="relative pt-32 mb-40">
             <Image
-                src="/anav.jpg"
+                src="/anav.webp"
                 alt="Picture of Anav"
                 className="rounded-full mx-auto"
-                quality={75}
+                quality={100}
                 height={200}
                 width={200}
             />
-            <h1 className="font-black text-6xl text-center leading-none tracking-tighter my-10">
+            {/* <CurrentSong /> */}
+            <Heading>
                 <span className="text-primary-gradient">
                     Fullstack Web Dev
                 </span>
                 <br />& Software Engineer
-            </h1>
+            </Heading>
             <NavBar />
             <Container>
                 <SubHeading content="My Skills" />

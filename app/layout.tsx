@@ -2,8 +2,8 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next"
 import { DM_Sans } from "next/font/google"
-
 import "./globals.css"
+import classNames from "classnames"
 
 const inter = DM_Sans({ subsets: ["latin"] })
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={classNames(inter.className, "glow-gradient")}>
                 <SpeedInsights />
                 <Analytics />
                 {children}
