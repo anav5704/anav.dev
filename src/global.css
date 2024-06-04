@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Zodiak;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Zodiak-Variable.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: Jakatra;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/PlusJakartaSans-Variable.woff") format("woff");
+  }
+}

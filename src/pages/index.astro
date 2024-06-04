@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import "../../src/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="grid place-content-center h-screen">
+    <Image src="/anav.webp" alt="img" width={200} height={200} />
+    <h1 class="font-zodiak text-3xl">Anav Chand</h1>
+    <p class="font-jakatra">Fullstack web developer && Software Engineer</p>
+  </body>
+</html>
