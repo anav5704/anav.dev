@@ -1,19 +1,23 @@
 ---
 import { Image } from "astro:assets";
+import ImageGrid from "@components/ImageComponent.astro";
+import MainLayout from "@layouts/main.astro";
 import "../../src/global.css";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="grid place-content-center h-screen">
-    <Image src="/anav.webp" alt="img" width={200} height={200} />
-    <h1 class="font-zodiak text-3xl">Anav Chand</h1>
-    <p class="font-jakatra">Fullstack web developer && Software Engineer</p>
-  </body>
-</html>
+<MainLayout title="v3.0.0">
+  <h1 class="text-6xl font-black tracking-tighter leading-none">
+    anav <span class="opacity-5">aan-avv</span>
+  </h1>
+  <article class="my-10 text-lg space-y-2">
+    <p>
+      Hey! I'm a homemade frontend web developer from Fiji. Recently got into
+      backed and devOps stuff - it's really fun.
+    </p>
+    <p>
+      I am currently pursuing a Bachelors of Software Engineering at the
+      University of the South Pacific. This is also fun.
+    </p>
+  </article>
+  <ImageGrid />
+</MainLayout>

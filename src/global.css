@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: Zodiak;
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    src: url("/fonts/Zodiak-Variable.woff") format("woff");
+  :root {
+    --primary-dim: #10b981;
+    --primary-accent: #34d399;
+    --primary-bright: #2dd4bf;
+  }
+
+  html,
+  body {
+    @apply font-jakatra bg-white dark:bg-zinc-950 text-black dark:text-white;
   }
 
   @font-face {
@@ -16,6 +19,50 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/PlusJakartaSans-Variable.woff") format("woff");
+    src: url("/fonts/PlusJakartaSans-Variable.ttf");
+  }
+}
+
+@layer components {
+  .hero-image {
+    @apply rounded-xl col-span-1 object-cover w-full h-full object-top;
+  }
+
+  .link {
+    @apply text-zinc-500 transition hover:text-primary-accent p-3;
+  }
+
+  .text-primary-gradient {
+    @apply bg-gradient-to-br from-primary-dim to-primary-bright bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-primary {
+    @apply bg-gradient-to-br from-primary-dim to-primary-bright;
+  }
+
+  .bg-gradient-accent {
+    @apply bg-gradient-to-t from-emerald-900/20 to-[rgba(225,225,225,0)];
+  }
+
+  .glow {
+    box-shadow: 0 0 100px 10px var(--primary-bright);
+  }
+
+  .card {
+    @apply bg-zinc-900 p-5 h-72 rounded-3xl overflow-hidden flex flex-col justify-between;
+  }
+
+  .featured {
+    @apply bg-gradient-primary text-zinc-950;
+  }
+}
+
+@layer utilities {
+  .glow-gradient {
+    background: radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgba(0, 255, 153, 0.15),
+      transparent
+    );
   }
 }
