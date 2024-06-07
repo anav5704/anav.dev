@@ -11,7 +11,15 @@
 
   html,
   body {
-    @apply font-jakatra bg-white dark:bg-zinc-950 text-black dark:text-white;
+    @apply font-serif leading-snug;
+  }
+
+  /* @font-face {
+    font-family: DM Sans;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/DMSans-Variable.ttf") format("ttf");
   }
 
   @font-face {
@@ -20,12 +28,28 @@
     font-style: normal;
     font-display: swap;
     src: url("/fonts/PlusJakartaSans-Variable.ttf");
-  }
+  } */
 }
 
 @layer components {
+  p {
+    @apply text-lg;
+  }
+
+  a {
+    @apply underline;
+  }
+
+  code {
+    @apply bg-zinc-200 text-sm px-2 py-0.5 rounded-lg inline-block;
+  }
+
+  .faded {
+    @apply text-zinc-400;
+  }
+
   .hero-image {
-    @apply rounded-xl col-span-1 object-cover w-full h-full object-top;
+    @apply rounded-2xl col-span-1 object-cover w-full h-full object-top;
   }
 
   .link {
@@ -54,15 +78,5 @@
 
   .featured {
     @apply bg-gradient-primary text-zinc-950;
-  }
-}
-
-@layer utilities {
-  .glow-gradient {
-    background: radial-gradient(
-      ellipse 80% 50% at 50% -20%,
-      rgba(0, 255, 153, 0.15),
-      transparent
-    );
   }
 }
