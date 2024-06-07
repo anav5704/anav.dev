@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "@layouts/main.astro";
+import Header from "@components/Header.astro";
+
+export async function getStaticPaths() {
+  const allProjects = await getCollection("projects");
+
+  return allProjects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<MainLayout title={project.data.title}>
+  <Header mainContent={project.data.title} />
+  <Content />
+</MainLayout>

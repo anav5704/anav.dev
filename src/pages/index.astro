@@ -4,7 +4,6 @@ import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
 import MainLayout from "@layouts/main.astro";
 import { formatDate } from "@lib/format-date";
-import "../../src/global.css";
 
 const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
@@ -31,7 +30,7 @@ const research = unfilderedResearch.filter(
       <a href="https://www.usp.ac.fj/" target="_blank">
         University of the South Pacific
       </a>
-      who might be a little <em>too</em> passionate about fullstack web development.
+      who might be a little <em>too</em> passionate about web development.
     </p>
   </article>
   <ImageGrid />
@@ -78,7 +77,7 @@ const research = unfilderedResearch.filter(
   <article class="space-y-3">
     {
       blogs.map((blog) => (
-        <div class="text-lg">
+        <div class="text-xl">
           <a href={"blogs/" + blog.slug} class="font-bold">
             {blog.data.title}
           </a>
@@ -90,7 +89,7 @@ const research = unfilderedResearch.filter(
     }
     {
       research.map((research) => (
-        <div class="text-lg">
+        <div class="text-xl">
           <a href={"research/" + research.slug} class="font-bold">
             {research.data.title}
           </a>

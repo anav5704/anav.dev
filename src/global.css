@@ -3,37 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --primary-dim: #10b981;
-    --primary-accent: #34d399;
-    --primary-bright: #2dd4bf;
-  }
-
   html,
   body {
     @apply font-serif leading-snug;
   }
-
-  /* @font-face {
-    font-family: DM Sans;
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    src: url("/fonts/DMSans-Variable.ttf") format("ttf");
-  }
-
-  @font-face {
-    font-family: Jakatra;
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    src: url("/fonts/PlusJakartaSans-Variable.ttf");
-  } */
 }
 
 @layer components {
   p {
-    @apply text-lg;
+    @apply text-xl;
   }
 
   a {
@@ -41,7 +19,7 @@
   }
 
   code {
-    @apply bg-zinc-200 text-sm px-2 py-0.5 rounded-lg inline-block;
+    @apply bg-zinc-200 text-base px-2  rounded-lg inline-block;
   }
 
   .faded {

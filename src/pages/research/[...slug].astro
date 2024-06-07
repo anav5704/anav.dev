@@ -1,0 +1,22 @@
+---
+import { getCollection, reference } from "astro:content";
+import MainLayout from "@layouts/main.astro";
+import Header from "@components/Header.astro";
+
+export async function getStaticPaths() {
+  const allResearch = await getCollection("research");
+
+  return allResearch.map((research) => ({
+    params: { slug: research.slug },
+    props: { research },
+  }));
+}
+
+const { research } = Astro.props;
+const { Content } = await research.render();
+---
+
+<MainLayout title={research.data.title}>
+  <Header mainContent={research.data.title} />
+  <Content />
+</MainLayout>
