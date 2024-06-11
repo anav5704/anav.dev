@@ -5,7 +5,7 @@
 @layer base {
   html,
   body {
-    @apply font-serif leading-snug;
+    @apply font-serif leading-snug scroll-smooth;
   }
 
   h2 {
@@ -19,7 +19,7 @@
   }
 
   a {
-    @apply underline;
+    @apply hover:underline;
   }
 
   code {

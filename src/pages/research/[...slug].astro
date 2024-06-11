@@ -18,7 +18,10 @@ const { research } = Astro.props;
 const { Content } = await research.render();
 ---
 
-<MainLayout title={research.data.title}>
+<MainLayout
+  title={research.data.title}
+  description={research.body.slice(0, 120) + "..."}
+>
   <Header mainContent={research.data.title} />
   <p class="text-zinc-500 mb-5">
     Anav Chand • {formatDate(research.data.date)}

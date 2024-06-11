@@ -1,15 +1,16 @@
 import vercel from '@astrojs/vercel/serverless';
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
+    site: 'https://anav.dev',
     output: 'server',
     adapter: vercel({
         webAnalytics: {
-            enabled: true,
-        },
+            enabled: true
+        }
     }),
     devToolbar: {
         enabled: false
@@ -18,5 +19,5 @@ export default defineConfig({
         syntaxHighlight: 'shiki',
         theme: 'dracula'
     },
-    integrations: [tailwind(), react()]
+    integrations: [tailwind(), react(), sitemap()]
 });

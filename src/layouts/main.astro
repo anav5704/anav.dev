@@ -1,6 +1,13 @@
 ---
+interface Props {
+  title: string;
+  description: string;
+}
+
 import SpeedInsights from "@vercel/speed-insights/astro";
-const { title, description } = Astro.props;
+const { title, description }: Props = Astro.props;
+import NavBar from "@components/NavBar.astro";
+
 import "../../src/global.css";
 ---
 
@@ -9,11 +16,14 @@ import "../../src/global.css";
     <SpeedInsights />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="description" content={description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
   </head>
-  <body class="py-20">
-    <main class="w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
+  <body>
+    <NavBar />
+    <main class="pt-28 pb-20 w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
       <slot />
     </main>
   </body>
