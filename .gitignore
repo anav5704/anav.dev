@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# vecel
+.vercel/
+
 # dependencies
 node_modules/
 
