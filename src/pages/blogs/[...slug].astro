@@ -1,7 +1,9 @@
 ---
+export const prerender = true;
 import { getCollection } from "astro:content";
 import MainLayout from "@layouts/main.astro";
 import Header from "@components/Header.astro";
+import { formatDate } from "@lib/format-date";
 
 export async function getStaticPaths() {
   const allBlogs = await getCollection("blogs");
@@ -18,5 +20,8 @@ const { Content } = await blog.render();
 
 <MainLayout title={blog.data.title}>
   <Header mainContent={blog.data.title} />
+  <p class="text-zinc-500 mb-5">
+    Anav Chand • {formatDate(blog.data.date)}
+  </p>
   <Content />
 </MainLayout>

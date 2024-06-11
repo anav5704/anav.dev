@@ -2,13 +2,14 @@
 import { Image } from "astro:assets";
 ---
 
-<section class="mt-10 grid grid-cols-2 md:grid-cols-3 grid-rows-3 gap-4">
+<section class="mt-10 grid grid-cols-2 md:grid-cols-3 grid-rows-3 gap-5">
   <Image
     src="/short1.jpg"
     alt="img"
     width={200}
     height={200}
-    class="hero-image md:h-40"
+    class="hero-image hidden md:block md:h-40"
+    loading="lazy"
   />
   <Image
     src="/anav.webp"
@@ -23,6 +24,7 @@ import { Image } from "astro:assets";
     width={200}
     height={200}
     class="hero-image md:h-40"
+    loading="lazy"
   />
   <Image
     src="/tall1.jpg"
@@ -36,7 +38,7 @@ import { Image } from "astro:assets";
     alt="img"
     width={200}
     height={200}
-    class="hero-image md:row-span-2"
+    class="hero-image hidden md:block md:row-span-2"
   />
   <Image
     src="/short3.jpg"
@@ -44,5 +46,6 @@ import { Image } from "astro:assets";
     width={200}
     height={200}
     class="hero-image md:h-40"
+    loading="lazy"
   />
 </section>

@@ -7,6 +7,10 @@
   body {
     @apply font-serif leading-snug;
   }
+
+  h2 {
+    @apply text-3xl font-bold mt-7 mb-3;
+  }
 }
 
 @layer components {
