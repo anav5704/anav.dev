@@ -3,21 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: "Satoshi";
+    font-weight: inherit;
+    font-style: inherit;
+    font-display: swap;
+    src: url("/fonts/Satoshi-Variable.ttf");
+  }
+
   html,
   body {
-    @apply font-serif leading-snug scroll-smooth;
+    @apply text-lg leading-snug font-satoshi scroll-smooth;
+  }
+
+  main {
+    @apply space-y-3;
   }
 
   h2 {
-    @apply text-3xl font-bold mt-7 mb-3;
+    @apply pt-8 text-3xl font-bold;
   }
 }
 
 @layer components {
-  p {
-    @apply text-xl;
-  }
-
   a {
     @apply hover:underline;
   }
@@ -27,7 +35,7 @@
   }
 
   .faded {
-    @apply text-zinc-400;
+    @apply text-zinc-500;
   }
 
   .hero-image {

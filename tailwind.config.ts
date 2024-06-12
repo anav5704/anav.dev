@@ -10,10 +10,9 @@ export default {
                 "primary-accent": "var(--primary-accent)",
                 "primary-bright": "var(--primary-bright)",
             },
-            // fontFamily: {
-            //     dmSans: ["DM Sans", defaultTheme.fontFamily.sans],
-            //     jakatra: ["Jakatra", defaultTheme.fontFamily.serif]
-            // }
+            fontFamily: {
+                "satoshi": ["Satoshi", defaultTheme.fontFamily.sans],
+            }
         },
     },
     plugins: [],

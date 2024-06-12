@@ -25,15 +25,13 @@ const research = unfilderedResearch.filter(
   description="Hey. I'm a 1st year Software Engineering student at the University of the South Pacific."
 >
   <!-- HERO SECTION -->
-
-  <Header mainContent="Anav" fadedContent="aan-avv" />
-  <article>
+  <article class="pb-5 space-y-3">
+    <Header content=" Anav" subContent="/ aan-aav /" />
     <p>
       Hey! I'm a 1st year Software Engineering student at the
       <a href="https://www.usp.ac.fj/" target="_blank">
         University of the South Pacific
-      </a>
-      who might be a little <em>too</em> passionate about web development.
+      </a> who might be a little <em>too</em> passionate about web development.
     </p>
   </article>
   <ImageGrid />
@@ -41,69 +39,59 @@ const research = unfilderedResearch.filter(
 
   <!-- SKILLS SECTION -->
 
-  <Header mainContent="My Skills" fadedContent="" />
-  <article class="space-y-3">
-    {
-      skills.map((skill) => (
-        <p>
-          <span class="font-bold">{skill.data.title}</span>
-          {" - "}
-          {skill.data.description}
-          {skill.data.examples.map((example) => (
-            <code class="mr-2">{example}</code>
-          ))}
-        </p>
-      ))
-    }
-  </article>
+  <h2>Skills</h2>
+  {
+    skills.map((skill) => (
+      <p>
+        <span class="font-semibold">{skill.data.title}</span>
+        {" - "}
+        {skill.data.description}
+        {skill.data.examples.map((example) => (
+          <code class="mr-2 text-sm ">{example}</code>
+        ))}
+      </p>
+    ))
+  }
   <div id="projects"></div>
   <!-- PROJECTS SECTION -->
 
-  <Header mainContent="Top Projects" fadedContent="" />
+  <h2>Cool Projects</h2>
 
-  <article class="space-y-3">
-    {
-      projects.map((project) => (
-        <p>
-          <a href={"projects/" + project.slug} class="font-bold">
-            {project.data.title}
-          </a>
-          {" - "}
-          {project.data.description}
-        </p>
-      ))
-    }
-  </article>
+  {
+    projects.map((project) => (
+      <p>
+        <a href={"projects/" + project.slug} class="font-semibold">
+          {project.data.title}
+        </a>
+        {" - "}
+        {project.data.description}
+      </p>
+    ))
+  }
   <div id="blogs"></div>
 
   <!-- WRITINGS SECTION -->
 
-  <Header mainContent="Blogs & Research" fadedContent="" />
+  <h2>Blogs & Research</h2>
 
-  <article class="space-y-3">
-    {
-      research.map((research) => (
-        <div class="text-xl">
-          <a href={"research/" + research.slug} class="font-bold">
-            {research.data.title}
-          </a>
-          <div class="text-zinc-500 mt-1">
-            Research • {formatDate(research.data.date)}
-          </div>
-        </div>
-      ))
-    }
-    {
-      blogs.map((blog) => (
-        <div class="text-xl">
-          <a href={"blogs/" + blog.slug} class="font-bold">
-            {blog.data.title}
-          </a>
-          <div class="text-zinc-500 mt-1">
-            Blog • {formatDate(blog.data.date)}
-          </div>
-        </div>
-      ))
-    }
-  </article>
+  {
+    research.map((research) => (
+      <div>
+        <a href={"research/" + research.slug} class="font-semibold">
+          {research.data.title}
+        </a>
+        <p class="faded">Research • {formatDate(research.data.date)}</p>
+      </div>
+    ))
+  }
+  {
+    blogs.map((blog) => (
+      <div>
+        <a href={"blogs/" + blog.slug} class="font-semibold">
+          {blog.data.title}
+        </a>
+        <p class="faded">Blog • {formatDate(blog.data.date)}</p>
+      </div>
+    ))
+  }
 </MainLayout>

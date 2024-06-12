@@ -1,10 +1,13 @@
 ---
-const { mainContent, fadedContent } = Astro.props;
+interface Props {
+  content: string;
+  subContent?: string;
+}
+
+const { content, subContent } = Astro.props;
 ---
 
-<h1
-  class="text-3xl md:text-4xl font-black tracking-normal leading-none first-of-type:mt-0 mt-20 mb-5"
->
-  {mainContent}
-  <span class="faded">{fadedContent}</span>
+<h1 class="text-3xl md:text-4xl font-bold tracking-normal leading-none">
+  {content}
+  <span class="faded">{subContent}</span>
 </h1>

@@ -22,7 +22,7 @@ const { Content } = await blog.render();
   title={blog.data.title}
   description={blog.body.slice(0, 120) + "..."}
 >
-  <Header mainContent={blog.data.title} />
+  <Header content={blog.data.title} />
   <p class="text-zinc-500 mb-5">
     Anav Chand • {formatDate(blog.data.date)}
   </p>

@@ -1,6 +1,10 @@
+---
+import { ArrowUpRight } from "@geist-ui/icons";
+---
+
 <nav class="fixed w-full mb-20 mt-10">
   <ul
-    class="bg-zinc-300/50 rounded-full backdrop-blur-sm flex items-center justify-around p-3 w-11/12 md:w-3/4 lg:w-1/2 mx-auto"
+    class="bg-zinc-300/50 rounded-full backdrop-blur-sm text-sm flex items-center justify-around p-3 w-11/12 md:w-3/4 lg:w-1/2 mx-auto"
   >
     <li>
       <a href="/">About</a>
@@ -14,8 +18,9 @@
     <li>
       <a href="#blogs">Blogs</a>
     </li>
-    <li>
+    <li class="flex items-end gap-1">
       <a target="_blank" href="https://github.com/anav5704">GitHub</a>
+      <ArrowUpRight size={20} />
     </li>
   </ul>
 </nav>
