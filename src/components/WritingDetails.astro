@@ -1,0 +1,19 @@
+---
+import Header from "@components/Header.astro";
+import { formatDate } from "@lib/format-date";
+import { formatDistanceToNow } from "date-fns";
+
+interface Props {
+  title: string;
+  date: Date;
+}
+
+const { title, date } = Astro.props;
+---
+
+<article class="my-12 space-y-2">
+  <Header content={title} />
+  <p>
+    {formatDate(date)} ({formatDistanceToNow(date).replace("about ", "")} ago)
+  </p>
+</article>

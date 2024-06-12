@@ -21,7 +21,7 @@
   }
 
   h2 {
-    @apply pt-8 text-3xl font-bold;
+    @apply pt-5 text-3xl font-bold;
   }
 }
 
