@@ -5,9 +5,8 @@ interface Props {
 }
 
 import SpeedInsights from "@vercel/speed-insights/astro";
-const { title, description } = Astro.props;
 import NavBar from "@components/NavBar.astro";
-
+const { title, description } = Astro.props;
 import "../../src/global.css";
 ---
 
@@ -19,9 +18,14 @@ import "../../src/global.css";
     <meta name="description" content={description} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
     <SpeedInsights />
   </head>
-  <body>
+  <body id="about">
     <NavBar />
     <main class="py-16 w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
       <slot />

@@ -25,6 +25,7 @@ const research = unfilderedResearch.filter(
   description="Hey. I'm a 1st year Software Engineering student at the University of the South Pacific."
 >
   <!-- HERO SECTION -->
+
   <article class="my-12 space-y-2">
     <Header content="Hi, I'm Anav" />
     <p>
@@ -47,16 +48,16 @@ const research = unfilderedResearch.filter(
         {" - "}
         {skill.data.description}
         {skill.data.examples.map((example) => (
-          <code class="mr-2 text-sm ">{example}</code>
+          <code class="mr-1 text-sm">{example}</code>
         ))}
       </p>
     ))
   }
   <div id="projects"></div>
+
   <!-- PROJECTS SECTION -->
 
   <h2>Cool Projects</h2>
-
   {
     projects.map((project) => (
       <p>

@@ -1,5 +1,6 @@
 ---
 import Header from "@components/Header.astro";
+import { Calendar } from "@geist-ui/icons";
 import { formatDate } from "@lib/format-date";
 import { formatDistanceToNow } from "date-fns";
 
@@ -13,7 +14,8 @@ const { title, date } = Astro.props;
 
 <article class="my-12 space-y-2">
   <Header content={title} />
-  <p>
+  <p class="flex items-center gap-1">
+    <Calendar size={20} />
     {formatDate(date)} ({formatDistanceToNow(date).replace("about ", "")} ago)
   </p>
 </article>

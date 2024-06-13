@@ -2,8 +2,6 @@
 export const prerender = true;
 import { getCollection } from "astro:content";
 import MainLayout from "@layouts/main.astro";
-import Header from "@components/Header.astro";
-import { formatDate } from "@lib/format-date";
 import WritingDetails from "@components/WritingDetails.astro";
 
 export async function getStaticPaths() {

@@ -21,19 +21,35 @@
   }
 
   h2 {
-    @apply pt-5 text-3xl font-bold;
+    @apply pt-5 text-2xl font-bold;
   }
-}
 
-@layer components {
   a {
     @apply hover:underline;
   }
 
-  code {
-    @apply bg-zinc-200 text-base px-2  rounded-lg inline-block;
+  li {
+    @apply list-disc ml-5;
   }
 
+  blockquote {
+    @apply bg-zinc-200  rounded-2xl p-3 italic border-zinc-500;
+  }
+
+  code {
+    @apply bg-zinc-200 px-2  rounded-lg inline-block text-sm;
+  }
+
+  pre {
+    @apply p-3 rounded-lg text-sm;
+
+    code {
+      @apply [all:unset];
+    }
+  }
+}
+
+@layer components {
   .faded {
     @apply text-zinc-500;
   }
