@@ -2,8 +2,9 @@
 id: 3
 title: Notes App
 description: This is a simple and user-friendly note-taking app I made while I was learning the MERN stack. This was also the first time I wrote documentation for a project and it still holds till this  day.
+metaDescription: Fullstack notes web app built using MongoDB, Express JS, React JS, Node JS with the frontend hosted on Vercel and backend hosted on Render.
 repo: https://github.com/anav5704/Note-App-MERN
-site: https://digidiary.netlify.app
+site: https://notes.anav.dev
 ---
 
 This is a simple and user-friendly note-taking app I made while I was learning the MERN stack (MongoDB, Express JS, React JS, Node JS). Development time was almost 1 month: started on the 28th of August, 2023, and ended on the 23rd of September, 2023. This was also my first time using a component library and I chose Mantine as it fit my style. I still prefer using plain TailwindCSS with HeroIcons.
