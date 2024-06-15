@@ -57,7 +57,7 @@ const research = unfilderedResearch.filter(
 
   <!-- PROJECTS SECTION -->
 
-  <h2>Cool Projects</h2>
+  <h2>Top Projects</h2>
   {
     projects.map((project) => (
       <p>
@@ -69,32 +69,40 @@ const research = unfilderedResearch.filter(
       </p>
     ))
   }
-  <div id="blogs"></div>
+  <div id="research"></div>
 
-  <!-- WRITINGS SECTION -->
+  <!-- RESEARCH SECTION -->
 
-  <h2>Blogs & Research</h2>
-
+  <h2>Research</h2>
   {
     research.map((research) => (
       <div class="space-y-1">
         <a href={"research/" + research.slug} class="font-semibold">
           {research.data.title}
         </a>
-        <p class="faded text-base">
-          Research • {formatDate(research.data.date)}
-        </p>
+        <p class="faded">{formatDate(research.data.date)}</p>
       </div>
     ))
   }
+  <div>
+    <a href="/research">All Research</a>
+  </div>
+  <div id="blogs"></div>
+
+  <!-- BLOGS SECTION -->
+
+  <h2>Blogs</h2>
   {
     blogs.map((blog) => (
       <div class="space-y-1">
         <a href={"blogs/" + blog.slug} class="font-semibold">
           {blog.data.title}
         </a>
-        <p class="faded text-base">Blog • {formatDate(blog.data.date)}</p>
+        <p class="faded">{formatDate(blog.data.date)}</p>
       </div>
     ))
   }
+  <div>
+    <a href="/blogs">All Blogs</a>
+  </div>
 </MainLayout>

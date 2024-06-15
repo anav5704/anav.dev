@@ -16,6 +16,7 @@ const projectsCollection = defineCollection({
     schema: z.object({
         id: z.number(),
         title: z.string(),
+        metaTitle: z.string(),
         description: z.string(),
         metaDescription: z.string(),
         repo: z.string(),
@@ -37,7 +38,7 @@ const researchCollections = defineCollection({
     type: 'content',
     schema: z.object({
         title: z.string(),
-        // description: z.string(),
+        description: z.string(),
         date: z.date(),
         featured: z.boolean(),
     })

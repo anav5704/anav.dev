@@ -1,6 +1,6 @@
 ---
 title: 5 Amazing Tips That Can Help You Learn Coding Faster!
-date: 2020-03-14T05:35:07.322Z
+date: 2021-03-14T05:35:07.322Z
 featured: true
 ---
 

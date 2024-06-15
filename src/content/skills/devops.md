@@ -7,9 +7,4 @@ examples:
   - GitHub
   - GitHub Actions
   - Turbo Repo
-  - Sentry
-  - Axiom
-  - PostHog
-  - Docker
-  - PM2
 ---

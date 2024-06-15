@@ -6,8 +6,5 @@ examples:
   - Node JS
   - Express JS
   - Prisma
-  - Drizzle
   - PostgreSQL
-  - SQLite
-  - MongoDB
 ---

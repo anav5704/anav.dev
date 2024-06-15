@@ -1,6 +1,7 @@
 ---
 id: 3
 title: Notes App
+metaTitle: Note App MERN Stack
 description: This is a simple and user-friendly note-taking app I made while I was learning the MERN stack. This was also the first time I wrote documentation for a project and it still holds till this  day.
 metaDescription: Fullstack notes web app built using MongoDB, Express JS, React JS, Node JS with the frontend hosted on Vercel and backend hosted on Render.
 repo: https://github.com/anav5704/Note-App-MERN
@@ -27,7 +28,7 @@ This is a simple and user-friendly note-taking app I made while I was learning t
 
 ## Architecture
 
-![Hero Page Image](./images/notes-app/architecture.png)
+![Architecture Diagram](./images/notes-app/architecture.png)
 
 As with most other MERN Stack apps, DigiDiary uses a MVC architecture, which is an acronym for Model-View-Controller. As the name suggests, the system is broken into 3 main components that are highly dependent on each other. From my understanding, I'm guessing this is very good as development would be faster because there could be 3 teams working simultaneously on a project.
 
@@ -64,10 +65,6 @@ const createNote = async (req, res) => {
 ```
 
 This app has a controller for each of the primary interactions between the user and the system. These interactions are also called "use cases" and I have made a use-case diagram for this app:
-
-![Class Diagram](https://github.com/anav5704/Note-App-MERN/blob/main/client/public/docs/useCaseDiagram.png)
-
-</details>
 
 ## Getting Started
 

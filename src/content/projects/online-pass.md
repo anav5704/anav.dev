@@ -1,6 +1,7 @@
 ---
 id: 1
 title: Online PASS
+metaTitle: Online PASS - University of the South Pacific
 description: Online PASS is a real-time, full-stack progressive web application designed to streamline and enhance the peer assisted study sessions at the University of the South Pacific.
 metaDescription: Fullstack internal University Software built using Next JS, TailwindCSS, Prisma, AWS RDS, AWS S3 and Supabase with the frontend and backend hosted on Render.
 repo: https://github.com/anav5702/online-pass

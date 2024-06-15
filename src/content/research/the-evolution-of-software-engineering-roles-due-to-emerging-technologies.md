@@ -1,6 +1,7 @@
 ---
 title: The Evolution of Software Engineering Roles Due to Emerging Technologies.
-date: 2020-03-15T05:35:07.322Z
+description: hello
+date: 2023-08-29T00:00:00.000Z
 featured: true
 ---
 

@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Header from "@components/Header.astro";
+import MainLayout from "@layouts/main.astro";
+import { formatDate } from "@lib/format-date";
+
+const unfilteredResearch = await getCollection("research");
+const reserearch = unfilteredResearch.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<MainLayout
+  title="Anav Chand - Research"
+  description="Hey. Check out some research I have done. Some are University assignments and some my own."
+>
+  <article class="my-12">
+    <Header content="Reseaerch" />
+  </article>
+  {
+    reserearch.map((research) => (
+      <div class="space-y-1">
+        <a href={"blogs/" + research.slug} class="font-semibold">
+          {research.data.title}
+        </a>
+        <p class="faded">{formatDate(research.data.date)}</p>
+      </div>
+    ))
+  }
+</MainLayout>

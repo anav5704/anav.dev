@@ -1,6 +1,7 @@
 ---
 id: 2
 title: Great Quotes
+metaTitle: Quote App Next JS
 description: This is a website that hosts a collection of great quotes said by my great friends throughout highschool and university. They talk too much and I needed to preserve their words.
 metaDescription: Fullstack quote sharing web app built using Next JS, TailwindCSS, Prisma & Drizzle and Postgres (Neon) with the frontend and backend hosted on Vercel.
 repo: https://github.com/anav5704/great-quotes
