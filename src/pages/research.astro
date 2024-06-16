@@ -15,12 +15,12 @@ const reserearch = unfilteredResearch.sort(
   description="Hey. Check out some research I have done. Some are University assignments and some my own."
 >
   <article class="my-12">
-    <Header content="Reseaerch" />
+    <Header content="Research" />
   </article>
   {
     reserearch.map((research) => (
       <div class="space-y-1">
-        <a href={"blogs/" + research.slug} class="font-semibold">
+        <a href={"research/" + research.slug} class="font-semibold">
           {research.data.title}
         </a>
         <p class="faded">{formatDate(research.data.date)}</p>
