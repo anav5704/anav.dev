@@ -8,12 +8,12 @@
     font-weight: inherit;
     font-style: inherit;
     font-display: swap;
-    src: url("/fonts/Satoshi-Variable.ttf");
+    src: url("/fonts/Satoshi-Variable.ttf") format("truetype");
   }
 
   html,
   body {
-    @apply text-lg leading-snug font-satoshi scroll-smooth;
+    @apply text-lg leading-snug  scroll-smooth;
   }
 
   main {
