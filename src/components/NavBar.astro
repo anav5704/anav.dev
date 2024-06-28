@@ -2,28 +2,28 @@
 import { ArrowUpRight } from "@geist-ui/icons";
 ---
 
-<nav class="fixed w-full mt-6">
-  <ul
-    class="bg-zinc-200/50 [&>li]:list-none rounded-full backdrop-blur-sm text-sm flex items-center justify-around p-3 w-11/12 md:w-3/4 lg:w-1/2 mx-auto"
+<nav class="fixed w-screen bg-[#fdf8ed]">
+  <div
+    class="[&>p>a]:no-underline flex items-center justify-between py-3 w-11/12 md:w-3/4 lg:w-1/2 mx-auto"
   >
-    <li>
-      <a href="/#about">About</a>
-    </li>
-    <li>
+    <p>
+      <a href="/#anav">Anav</a>
+    </p>
+    <p>
       <a href="/#skills">Skills</a>
-    </li>
-    <li>
+    </p>
+    <p>
       <a href="/#projects">Projects</a>
-    </li>
-    <li>
+    </p>
+    <p>
       <a href="/#research">Research</a>
-    </li>
-    <li>
+    </p>
+    <p>
       <a href="/#blogs">Blogs</a>
-    </li>
-    <li class="flex items-end gap-1">
+    </p>
+    <p class="flex items-center gap-1">
       <a target="_blank" href="https://github.com/anav5704">GitHub</a>
       <ArrowUpRight size={20} />
-    </li>
-  </ul>
+    </p>
+  </div>
 </nav>

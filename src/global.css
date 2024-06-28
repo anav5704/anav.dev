@@ -13,19 +13,37 @@
 
   html,
   body {
-    @apply text-lg leading-snug  scroll-smooth;
+    @apply text-lg leading-snug  scroll-smooth text-[#444444] bg-[#fdf8ed];
+    font-family: "Times New Roman", Times, serif;
   }
 
   main {
     @apply space-y-3;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-black font-bold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
   h2 {
-    @apply pt-5 text-2xl font-bold;
+    @apply text-3xl pt-5;
+  }
+
+  h3 {
+    @apply text-2xl pt-5;
   }
 
   a {
-    @apply hover:underline;
+    @apply underline hover:!underline;
   }
 
   li {
@@ -33,11 +51,11 @@
   }
 
   blockquote {
-    @apply bg-zinc-200  rounded-2xl p-3 italic border-zinc-500;
+    @apply bg-[#fff2da]  rounded-2xl p-3 italic border-zinc-500;
   }
 
   code {
-    @apply bg-zinc-200 px-2  rounded-lg inline-block text-sm;
+    @apply bg-[#444444]/25  px-2  rounded-md inline-block text-sm;
   }
 
   pre {

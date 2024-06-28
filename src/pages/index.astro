@@ -45,7 +45,7 @@ const research = unfilderedResearch.filter(
   {
     skills.map((skill) => (
       <p>
-        <span class="font-semibold">{skill.data.title}</span>
+        <b>{skill.data.title}</b>
         {" - "}
         {skill.data.description}
         {skill.data.examples.map((example) => (
@@ -62,8 +62,8 @@ const research = unfilderedResearch.filter(
   {
     projects.map((project) => (
       <p>
-        <a href={"projects/" + project.slug} class="font-semibold">
-          {project.data.title}
+        <a href={"projects/" + project.slug}>
+          <b>{project.data.title}</b>
         </a>
         {" - "}
         {project.data.description}
@@ -78,10 +78,10 @@ const research = unfilderedResearch.filter(
   {
     research.map((research) => (
       <div class="space-y-1">
-        <a href={"research/" + research.slug} class="font-semibold">
-          {research.data.title}
+        <a href={"research/" + research.slug}>
+          <b>{research.data.title}</b>
         </a>
-        <p class="faded">{formatDate(research.data.date)}</p>
+        <p>{formatDate(research.data.date)}</p>
       </div>
     ))
   }
@@ -99,7 +99,7 @@ const research = unfilderedResearch.filter(
         <a href={"blogs/" + blog.slug} class="font-semibold">
           {blog.data.title}
         </a>
-        <p class="faded">{formatDate(blog.data.date)}</p>
+        <p>{formatDate(blog.data.date)}</p>
       </div>
     ))
   }
