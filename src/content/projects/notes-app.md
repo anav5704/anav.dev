@@ -32,18 +32,18 @@ This is a simple and user-friendly note-taking app I made while I was learning t
 
 As with most other MERN Stack apps, DigiDiary uses a MVC architecture, which is an acronym for Model-View-Controller. As the name suggests, the system is broken into 3 main components that are highly dependent on each other. From my understanding, I'm guessing this is very good as development would be faster because there could be 3 teams working simultaneously on a project.
 
-## Models
+### Models
 
 The Model part of MVC deals with data logic and business logic. The data logic is the storing, retrieving, and manipulating of data from a database, MongoDB in this case. On the other hand, business logic refers to how this data is processed. The model acts as a link between the controller and the database as the controllers can't directly interact with the database itself. Mongoose is used to do all of this.
 
-## Views
+### Views
 
 The view part handles the UI logic and generates UI components for the user based on the data collected by the model. This data is obtained from the controller and not the model itself. Some of the main views for this app are the home page(where all the created notes are displayed) and the edit page, where(the note data is displayed).
 Feel free to check out the final version if you want to have a look.
 
 </details>
 
-## Controllers
+### Controllers
 
 Controllers are the functions that act as a link between the model and view. It takes the input from the user and forwards it to the model to use it. It then sends a response back to the user after the model is done doing its thing. Responses can be either a success or failure, whereby the error needs to be handled. Here is. Here is an example of a controller for creating notes:
 

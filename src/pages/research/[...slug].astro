@@ -3,24 +3,26 @@ export const prerender = true;
 import { getCollection } from "astro:content";
 import MainLayout from "@layouts/main.astro";
 import WritingDetails from "@components/WritingDetails.astro";
+import TableOfContents from "@components/TableOfContents.astro";
 
 export async function getStaticPaths() {
-  const allResearch = await getCollection("research");
+    const allResearch = await getCollection("research");
 
-  return allResearch.map((research) => ({
-    params: { slug: research.slug },
-    props: { research },
-  }));
+    return allResearch.map((research) => ({
+        params: { slug: research.slug },
+        props: { research }
+    }));
 }
 
 const { research } = Astro.props;
-const { Content } = await research.render();
+const { Content, headings } = await research.render();
 ---
 
 <MainLayout
-  title={research.data.title}
-  description={research.body.slice(0, 120) + "..."}
+    title={research.data.title}
+    description={research.body.slice(0, 120) + "..."}
 >
-  <WritingDetails title={research.data.title} date={research.data.date} />
-  <Content />
+    <WritingDetails title={research.data.title} date={research.data.date} />
+    <TableOfContents headings={headings} />
+    <Content />
 </MainLayout>

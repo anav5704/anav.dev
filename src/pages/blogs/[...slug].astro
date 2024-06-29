@@ -3,6 +3,7 @@ export const prerender = true;
 import { getCollection } from "astro:content";
 import MainLayout from "@layouts/main.astro";
 import WritingDetails from "@components/WritingDetails.astro";
+import TableOfContents from "@components/TableOfContents.astro";
 
 export async function getStaticPaths() {
     const allBlogs = await getCollection("blogs");
@@ -14,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { blog } = Astro.props;
-const { Content } = await blog.render();
+const { Content, headings } = await blog.render();
 ---
 
 <MainLayout
@@ -22,5 +23,6 @@ const { Content } = await blog.render();
     description={blog.body.slice(0, 120) + "..."}
 >
     <WritingDetails title={blog.data.title} date={blog.data.date} />
+    <TableOfContents headings={headings} />
     <Content />
 </MainLayout>
