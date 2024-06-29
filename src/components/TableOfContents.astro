@@ -1,0 +1,36 @@
+---
+import type { MarkdownHeading } from "astro";
+const { headings } = Astro.props;
+---
+
+<!-- ASCII Tree Table of Contents
+<details class="space-y-1">
+    <summary>Table of Contents</summary>
+    {
+        headings.map((heading: MarkdownHeading, index: number) => (
+            <div class="flex gap-5">
+                {heading.depth == 3 && "│"}
+                <p>
+                    {heading.depth == 3
+                        ? heading.depth == headings[index + 1]?.depth
+                            ? "├─ "
+                            : "└─ "
+                        : headings[index + 1]
+                          ? "├─ "
+                          : "└─ "}
+                    <a href={"#" + heading.slug}>{heading.text}</a>
+                </p>
+            </div>
+        ))
+    }
+</details> -->
+<details class="space-y-1">
+    <summary>Table of Contents</summary>
+    {
+        headings.map((heading: MarkdownHeading, index: number) => (
+            <p class={`${heading.depth == 3 && "ml-7"}`}>
+                <a href={"#" + heading.slug}>{heading.text}</a>
+            </p>
+        ))
+    }
+</details>
