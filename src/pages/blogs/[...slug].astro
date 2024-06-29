@@ -5,12 +5,12 @@ import MainLayout from "@layouts/main.astro";
 import WritingDetails from "@components/WritingDetails.astro";
 
 export async function getStaticPaths() {
-  const allBlogs = await getCollection("blogs");
+    const allBlogs = await getCollection("blogs");
 
-  return allBlogs.map((blog) => ({
-    params: { slug: blog.slug },
-    props: { blog },
-  }));
+    return allBlogs.map((blog) => ({
+        params: { slug: blog.slug },
+        props: { blog }
+    }));
 }
 
 const { blog } = Astro.props;
@@ -18,9 +18,9 @@ const { Content } = await blog.render();
 ---
 
 <MainLayout
-  title={blog.data.title}
-  description={blog.body.slice(0, 120) + "..."}
+    title={blog.data.title}
+    description={blog.body.slice(0, 120) + "..."}
 >
-  <WritingDetails title={blog.data.title} date={blog.data.date} />
-  <Content />
+    <WritingDetails title={blog.data.title} date={blog.data.date} />
+    <Content />
 </MainLayout>

@@ -12,14 +12,14 @@ This is a simple web app that hosts some great quotes my friends and I have said
 
 ## Technologies Used
 
-- Next JS 14
-- TailwindCSS
-- Next UI
-- Framer Motion
-- Next Auth
-- Prisma
-- Neon PostgreSQL
-- tRPC
+-   Next JS 14
+-   TailwindCSS
+-   Next UI
+-   Framer Motion
+-   Next Auth
+-   Prisma
+-   Neon PostgreSQL
+-   tRPC
 
 ## Getting Started
 
@@ -45,6 +45,6 @@ Once that is done, run `npm run dev` to view it on localhost.
 
 ## Learning Resources
 
-- [Neon PostgreSQL](https://neon.tech/)
-- [Next UI docs](https://www.youtube.com/watch?v=Kz0srrlecRQ&t=719s)
-- [T3 docs](https://t3.gg/)
+-   [Neon PostgreSQL](https://neon.tech/)
+-   [Next UI docs](https://www.youtube.com/watch?v=Kz0srrlecRQ&t=719s)
+-   [T3 docs](https://t3.gg/)

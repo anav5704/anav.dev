@@ -1,18 +1,17 @@
-import { z, defineCollection } from "astro:content"
+import { z, defineCollection } from "astro:content";
 
 const skillsCollection = defineCollection({
-    type: 'content',
+    type: "content",
     schema: z.object({
         id: z.number(),
         title: z.string(),
         description: z.string(),
-        examples: z.array(z.string()),
-
+        examples: z.array(z.string())
     })
-})
+});
 
 const projectsCollection = defineCollection({
-    type: 'content',
+    type: "content",
     schema: z.object({
         id: z.number(),
         title: z.string(),
@@ -20,35 +19,33 @@ const projectsCollection = defineCollection({
         description: z.string(),
         metaDescription: z.string(),
         repo: z.string(),
-        site: z.string(),
+        site: z.string()
     })
-})
+});
 
 const blogsCollection = defineCollection({
-    type: 'content',
+    type: "content",
     schema: z.object({
         title: z.string(),
         // description: z.string(),
         date: z.date(),
-        featured: z.boolean(),
+        featured: z.boolean()
     })
-})
+});
 
 const researchCollections = defineCollection({
-    type: 'content',
+    type: "content",
     schema: z.object({
         title: z.string(),
         description: z.string(),
         date: z.date(),
-        featured: z.boolean(),
+        featured: z.boolean()
     })
-})
-
-
+});
 
 export const collections = {
     skills: skillsCollection,
     projects: projectsCollection,
     blogs: blogsCollection,
     research: researchCollections
-}
+};

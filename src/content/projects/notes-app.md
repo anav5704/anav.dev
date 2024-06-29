@@ -12,13 +12,13 @@ This is a simple and user-friendly note-taking app I made while I was learning t
 
 ## Technologies Used
 
-- React JS
-- Express JS
-- Node JS
-- MongoDB
-- Mongoose
-- Mantine UI
-- Vite PWA
+-   React JS
+-   Express JS
+-   Node JS
+-   MongoDB
+-   Mongoose
+-   Mantine UI
+-   Vite PWA
 
 ## Hosting
 
@@ -28,7 +28,7 @@ This is a simple and user-friendly note-taking app I made while I was learning t
 
 ## Architecture
 
-![Architecture Diagram](./images/notes-app/architecture.png)
+![Architecture Diagram](./images/notes-app/architecture.webp)
 
 As with most other MERN Stack apps, DigiDiary uses a MVC architecture, which is an acronym for Model-View-Controller. As the name suggests, the system is broken into 3 main components that are highly dependent on each other. From my understanding, I'm guessing this is very good as development would be faster because there could be 3 teams working simultaneously on a project.
 
@@ -49,18 +49,21 @@ Controllers are the functions that act as a link between the model and view. It 
 
 ```js
 const createNote = async (req, res) => {
-  const { title, content } = req.body;
+    const { title, content } = req.body;
 
-  try {
-    checkMissingFields(req);
+    try {
+        checkMissingFields(req);
 
-    const id = req.user._id;
-    const note = await noteModel.create({ title, content, owner: id });
+        const note = await noteModel.create({
+            title,
+            content,
+            owner: req.user._id;
+        });
 
-    res.status(200).json(note);
-  } catch (err) {
-    res.status(400).json(err.message);
-  }
+        res.status(200).json(note);
+    } catch (err) {
+        res.status(400).json(err.message);
+    }
 };
 ```
 
@@ -90,6 +93,6 @@ Special thanks to Aaryan, Danvil, Ilisoni, Indeevar, Mesake, Rohan, Veer, and Ve
 
 ## Learning Resources
 
-- [MERN stack full tutorial and project](https://www.youtube.com/watch?v=CvCiNeLnZ00)
-- [MVC pattern explained in Node JS](https://www.youtube.com/watch?v=bQuBlR0T5cc)
-- [MongoDB in 100 seconds](https://www.youtube.com/watch?v=-bt_y4Loofg)
+-   [MERN stack full tutorial and project](https://www.youtube.com/watch?v=CvCiNeLnZ00)
+-   [MVC pattern explained in Node JS](https://www.youtube.com/watch?v=bQuBlR0T5cc)
+-   [MongoDB in 100 seconds](https://www.youtube.com/watch?v=-bt_y4Loofg)

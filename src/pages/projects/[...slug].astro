@@ -5,12 +5,12 @@ import { getCollection } from "astro:content";
 import MainLayout from "@layouts/main.astro";
 
 export async function getStaticPaths() {
-  const allProjects = await getCollection("projects");
+    const allProjects = await getCollection("projects");
 
-  return allProjects.map((project) => ({
-    params: { slug: project.slug },
-    props: { project },
-  }));
+    return allProjects.map((project) => ({
+        params: { slug: project.slug },
+        props: { project }
+    }));
 }
 
 const { project } = Astro.props;
@@ -18,13 +18,13 @@ const { Content } = await project.render();
 ---
 
 <MainLayout
-  title={project.data.metaTitle}
-  description={project.data.metaDescription}
+    title={project.data.metaTitle}
+    description={project.data.metaDescription}
 >
-  <ProjectDetails
-    title={project.data.title}
-    repo={project.data.repo}
-    site={project.data.site}
-  />
-  <Content />
+    <ProjectDetails
+        title={project.data.title}
+        repo={project.data.repo}
+        site={project.data.site}
+    />
+    <Content />
 </MainLayout>

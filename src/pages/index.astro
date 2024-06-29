@@ -12,98 +12,100 @@ const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
 
 const unfiltereedBlgos = await getCollection("blogs");
-const blogs = unfiltereedBlgos.filter((blog) => blog.data.featured == true);
+const blogs = unfiltereedBlgos.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
 
 const unfilderedResearch = await getCollection("research");
 const research = unfilderedResearch.filter(
-  (research) => research.data.featured == true
+    (research) => research.data.featured == true
 );
 ---
 
 <MainLayout
-  title="Anav Chand - Fullstack Web Dev From Fiji"
-  description="Hey. I'm a 1st year Software Engineering student at the University of the South Pacific."
+    title="Anav Chand - Fullstack Web Dev From Fiji"
+    description="Hey. I'm a 1st year Software Engineering student at the University of the South Pacific."
 >
-  <!-- HERO SECTION -->
+    <!-- HERO SECTION -->
 
-  <article class="my-12 space-y-2">
-    <Header content="Hi, I'm Anav" />
-    <p>
-      I am a 1st year Software Engineering student at the
-      <a href="https://www.usp.ac.fj/" target="_blank">
-        University of the South Pacific</a
-      >
-      who might be a little <em>too</em> passionate about web development.
-    </p>
-  </article>
-  <ImageGrid />
-  <div id="skills"></div>
+    <article class="my-12 space-y-2">
+        <Header content="Hi, I'm Anav" />
+        <p>
+            I am a 1st year Software Engineering student at the
+            <a href="https://www.usp.ac.fj/" target="_blank">
+                University of the South Pacific</a
+            >
+            who might be a little <em>too</em> passionate about web development.
+        </p>
+    </article>
+    <ImageGrid />
+    <div id="skills"></div>
 
-  <!-- SKILLS SECTION -->
+    <!-- SKILLS SECTION -->
 
-  <h2>My Skills</h2>
-  {
-    skills.map((skill) => (
-      <p>
-        <b>{skill.data.title}</b>
-        {" - "}
-        {skill.data.description}
-        {skill.data.examples.map((example) => (
-          <code class="mr-1 text-sm">{example}</code>
-        ))}
-      </p>
-    ))
-  }
-  <div id="projects"></div>
+    <h2>My Skills</h2>
+    {
+        skills.map((skill) => (
+            <p>
+                <b>{skill.data.title}</b>
+                {" - "}
+                {skill.data.description}
+                {skill.data.examples.map((example) => (
+                    <code class="mr-1 text-sm">{example}</code>
+                ))}
+            </p>
+        ))
+    }
+    <div id="projects"></div>
 
-  <!-- PROJECTS SECTION -->
+    <!-- PROJECTS SECTION -->
 
-  <h2>Top Projects</h2>
-  {
-    projects.map((project) => (
-      <p>
-        <a href={"projects/" + project.slug}>
-          <b>{project.data.title}</b>
-        </a>
-        {" - "}
-        {project.data.description}
-      </p>
-    ))
-  }
-  <div id="research"></div>
+    <h2>Top Projects</h2>
+    {
+        projects.map((project) => (
+            <p>
+                <a href={"projects/" + project.slug}>
+                    <b>{project.data.title}</b>
+                </a>
+                {" - "}
+                {project.data.description}
+            </p>
+        ))
+    }
+    <div id="research"></div>
 
-  <!-- RESEARCH SECTION -->
+    <!-- RESEARCH SECTION -->
 
-  <h2>Featured Research</h2>
-  {
-    research.map((research) => (
-      <div class="space-y-1">
-        <a href={"research/" + research.slug}>
-          <b>{research.data.title}</b>
-        </a>
-        <p>{formatDate(research.data.date)}</p>
-      </div>
-    ))
-  }
-  <div>
-    <a href="/research">All Research</a>
-  </div>
-  <div id="blogs"></div>
+    <h2>Featured Research</h2>
+    {
+        research.map((research) => (
+            <div class="space-y-1">
+                <a href={"research/" + research.slug}>
+                    <b>{research.data.title}</b>
+                </a>
+                <p>{formatDate(research.data.date)}</p>
+            </div>
+        ))
+    }
+    <div>
+        <a href="/research">All Research</a>
+    </div>
+    <div id="blogs"></div>
 
-  <!-- BLOGS SECTION -->
+    <!-- BLOGS SECTION -->
 
-  <h2>Latest Blogs</h2>
-  {
-    blogs.map((blog) => (
-      <div class="space-y-1">
-        <a href={"blogs/" + blog.slug} class="font-semibold">
-          {blog.data.title}
-        </a>
-        <p>{formatDate(blog.data.date)}</p>
-      </div>
-    ))
-  }
-  <div>
-    <a href="/blogs">All Blogs</a>
-  </div>
+    <h2>Latest Blogs</h2>
+    {
+        blogs.map((blog) => (
+            <div class="space-y-1">
+                <a href={"blogs/" + blog.slug} class="font-semibold">
+                    {blog.data.title}
+                </a>
+                <p>{formatDate(blog.data.date)}</p>
+            </div>
+        ))
+    }
+    <div>
+        <a href="/blogs">All Blogs</a>
+    </div>
 </MainLayout>

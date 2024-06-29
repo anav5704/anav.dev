@@ -1,95 +1,94 @@
-import vercel from '@astrojs/vercel/serverless';
-import { defineConfig } from 'astro/config';
+import vercel from "@astrojs/vercel/serverless";
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import { createHighlighter } from 'shiki';
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import mdx from "@astrojs/mdx";
 
 const theme = {
-    name: 'gruvbox-dark',
+    name: "gruvbox-dark",
     settings: [
         {
-            scope: ['comment'],
+            scope: ["comment"],
             settings: {
-                foreground: '#928374',
-            },
+                foreground: "#928374"
+            }
         },
         {
-            scope: ['string'],
+            scope: ["string"],
             settings: {
-                foreground: '#B8BB26',
-            },
+                foreground: "#B8BB26"
+            }
         },
         {
-            scope: ['keyword'],
+            scope: ["keyword"],
             settings: {
-                foreground: '#FB4934',
-            },
+                foreground: "#FB4934"
+            }
         },
         {
-            scope: ['number', 'constant', 'variable.language'],
+            scope: ["number", "constant", "variable.language"],
             settings: {
-                foreground: '#D79921',
-            },
+                foreground: "#D79921"
+            }
         },
         {
-            scope: ['function', 'entity.name.function'],
+            scope: ["function", "entity.name.function"],
             settings: {
-                foreground: '#FABD2F',
-            },
+                foreground: "#FABD2F"
+            }
         },
         {
-            scope: ['variable.parameter', 'variable'],
+            scope: ["variable.parameter", "variable"],
             settings: {
-                foreground: '#83A598',
-            },
+                foreground: "#83A598"
+            }
         },
         {
-            scope: ['class', 'type'],
+            scope: ["class", "type"],
             settings: {
-                foreground: '#D3869B',
-            },
+                foreground: "#D3869B"
+            }
         },
         {
-            scope: ['punctuation'],
+            scope: ["punctuation"],
             settings: {
-                foreground: '#EBDBB2',
-            },
+                foreground: "#EBDBB2"
+            }
         },
         {
-            scope: ['operator'],
+            scope: ["operator"],
             settings: {
-                foreground: '#FE8019',
-            },
+                foreground: "#FE8019"
+            }
         },
         {
-            scope: ['meta.embedded'],
+            scope: ["meta.embedded"],
             settings: {
-                foreground: '#8EC07C',
-            },
+                foreground: "#8EC07C"
+            }
         },
         {
-            scope: ['support'],
+            scope: ["support"],
             settings: {
-                foreground: '#689D6A',
-            },
-        },
+                foreground: "#689D6A"
+            }
+        }
     ],
     colors: {
-        'editor.background': '#282828',
-        'editor.foreground': '#EBDBB2',
-        'editorCursor.foreground': '#EBDBB2',
-        'editor.selectionBackground': '#D5C4A1',
-        'editor.lineHighlightBackground': '#3C3836',
-        'editorLineNumber.foreground': '#928374',
-    },
+        "editor.background": "#282828",
+        "editor.foreground": "#EBDBB2",
+        "editorCursor.foreground": "#EBDBB2",
+        "editor.selectionBackground": "#D5C4A1",
+        "editor.lineHighlightBackground": "#3C3836",
+        "editorLineNumber.foreground": "#928374"
+    }
 };
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://anav.dev',
-    output: 'server',
+    site: "https://anav.dev",
+    output: "server",
     adapter: vercel({
         webAnalytics: {
             enabled: true
@@ -99,10 +98,8 @@ export default defineConfig({
         enabled: false
     },
     markdown: {
-        syntaxHighlight: 'shiki',
-        shikiConfig: {
-            theme
-        },
+        syntaxHighlight: "shiki",
+        shikiConfig: { theme }
     },
     integrations: [tailwind(), react(), sitemap(), mdx()]
 });

@@ -1,66 +1,66 @@
 ---
 import { Image } from "astro:assets";
-import smallOne from "../images/short1.jpg";
-import tallOne from "../images/anav.webp";
-import smallTwo from "../images/short2.jpg";
-import tallTwo from "../images/tall1.jpg";
-import smallThree from "../images/short3.jpg";
-import tallThree from "../images/tall3.jpg";
+import shortOne from "../images/short1.webp";
+import tallOne from "../images/tall1.webp";
+import shortTwo from "../images/short2.webp";
+import tallTwo from "../images/tall2.webp";
+import shortThree from "../images/short3.webp";
+import tallThree from "../images/tall3.webp";
 ---
 
 <section class="grid grid-cols-2 md:grid-cols-3 grid-rows-3 gap-3">
-  <Image
-    src={smallOne}
-    alt="img"
-    width={500}
-    height={500}
-    format="webp"
-    loading="eager"
-    class="hero-image hidden md:block md:h-40"
-  />
-  <Image
-    src={tallOne}
-    alt="img"
-    width={500}
-    height={500}
-    format="webp"
-    loading="eager"
-    class="hero-image row-span-2"
-  />
-  <Image
-    src={smallTwo}
-    alt="img"
-    width={500}
-    height={500}
-    format="webp"
-    loading="eager"
-    class="hero-image md:h-40"
-  />
-  <Image
-    src={tallTwo}
-    alt="img"
-    width={500}
-    height={500}
-    format="webp"
-    loading="eager"
-    class="hero-image row-span-2"
-  />
-  <Image
-    src={tallThree}
-    alt="img"
-    width={500}
-    height={500}
-    format="webp"
-    loading="eager"
-    class="hero-image hidden md:block md:row-span-2"
-  />
-  <Image
-    src={smallThree}
-    alt="img"
-    width={500}
-    height={500}
-    format="webp"
-    loading="eager"
-    class="hero-image md:h-40"
-  />
+    <Image
+        src={shortOne}
+        alt="Anav and Vetaia"
+        width={500}
+        height={500}
+        format="webp"
+        loading="eager"
+        class="hero-image hidden md:block md:h-40"
+    />
+    <Image
+        src={tallOne}
+        alt="Anav staring of into the distance"
+        width={500}
+        height={500}
+        format="webp"
+        loading="eager"
+        class="hero-image row-span-2"
+    />
+    <Image
+        src={shortTwo}
+        alt="Anav and Nivideta"
+        width={500}
+        height={500}
+        format="webp"
+        loading="eager"
+        class="hero-image md:h-40"
+    />
+    <Image
+        src={tallTwo}
+        alt="View from Anavs room"
+        width={500}
+        height={500}
+        format="webp"
+        loading="eager"
+        class="hero-image row-span-2"
+    />
+    <Image
+        src={tallThree}
+        alt="Anav giving a thumbs up"
+        width={500}
+        height={500}
+        format="webp"
+        loading="eager"
+        class="hero-image hidden md:block md:row-span-2"
+    />
+    <Image
+        src={shortThree}
+        alt="Big American Shorthair"
+        width={500}
+        height={500}
+        format="webp"
+        loading="eager"
+        class="hero-image md:h-40"
+    />
 </section>

@@ -1,7 +1,7 @@
 ---
 interface Props {
-  title: string;
-  description: string;
+    title: string;
+    description: string;
 }
 
 import SpeedInsights from "@vercel/speed-insights/astro";
@@ -11,31 +11,31 @@ import "../../src/global.css";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="preload"
-      href="/fonts/Satoshi-Variable.ttf"
-      type="font/truetype"
-      as="font"
-      crossorigin
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="description" content={description} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>{title}</title>
-    <style>
-      @view-transition {
-        navigation: auto;
-      }
-    </style>
-    <SpeedInsights />
-  </head>
-  <body id="anav">
-    <NavBar />
-    <main class="py-10 w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
-      <slot />
-    </main>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <link
+            rel="preload"
+            href="/fonts/Satoshi-Variable.ttf"
+            type="font/truetype"
+            as="font"
+            crossorigin
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="description" content={description} />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <title>{title}</title>
+        <style>
+            @view-transition {
+                navigation: auto;
+            }
+        </style>
+        <SpeedInsights />
+    </head>
+    <body id="anav">
+        <NavBar />
+        <main class="py-10 w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
+            <slot />
+        </main>
+    </body>
 </html>

@@ -12,9 +12,9 @@ This is a simple discord bot made using Google's Palm 2. The setup was easy and 
 
 ## Technologies Used
 
-- Node JS
-- Discord JS
-- Palm 2 API
+-   Node JS
+-   Discord JS
+-   Palm 2 API
 
 ## Getting Started
 
@@ -30,6 +30,6 @@ Finally Start the app by running `node index.js` or `node .`
 
 ## Learning Resources
 
-- [Creating an AI Discord bot](https://www.youtube.com/watch?v=VxD7Lt1eV2U)
-- [How to build a Discord bot](https://www.youtube.com/watch?v=Oy5HGvrxM4o)
-- [Discord JS docs](https://discord.js.org/)
+-   [Creating an AI Discord bot](https://www.youtube.com/watch?v=VxD7Lt1eV2U)
+-   [How to build a Discord bot](https://www.youtube.com/watch?v=Oy5HGvrxM4o)
+-   [Discord JS docs](https://discord.js.org/)

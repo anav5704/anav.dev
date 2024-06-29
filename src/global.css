@@ -3,104 +3,68 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Satoshi";
-    font-weight: inherit;
-    font-style: inherit;
-    font-display: swap;
-    src: url("/fonts/Satoshi-Variable.ttf") format("truetype");
-  }
+    html,
+    body {
+        @apply text-lg leading-snug  scroll-smooth text-[#444444] bg-white;
+        font-family: "Times New Roman", Times, serif;
+    }
 
-  html,
-  body {
-    @apply text-lg leading-snug  scroll-smooth text-[#444444] bg-[#fdf8ed];
-    font-family: "Times New Roman", Times, serif;
-  }
+    main {
+        @apply space-y-3;
+    }
 
-  main {
-    @apply space-y-3;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-black font-bold;
+    }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-black font-bold;
-  }
+    h1 {
+        @apply text-4xl;
+    }
 
-  h1 {
-    @apply text-4xl;
-  }
+    h2 {
+        @apply text-3xl pt-5;
+    }
 
-  h2 {
-    @apply text-3xl pt-5;
-  }
+    h3 {
+        @apply text-2xl pt-5;
+    }
 
-  h3 {
-    @apply text-2xl pt-5;
-  }
+    a {
+        @apply underline hover:!underline;
+    }
 
-  a {
-    @apply underline hover:!underline;
-  }
+    li {
+        @apply list-disc ml-5;
+    }
 
-  li {
-    @apply list-disc ml-5;
-  }
+    hr {
+        @apply border-zinc-200;
+    }
 
-  blockquote {
-    @apply bg-[#fff2da]  rounded-2xl p-3 italic border-zinc-500;
-  }
-
-  code {
-    @apply bg-[#444444]/25  px-2  rounded-md inline-block text-sm;
-  }
-
-  pre {
-    @apply p-3 rounded-lg text-sm;
+    img {
+        @apply rounded-lg;
+    }
 
     code {
-      @apply [all:unset];
+        @apply bg-[#444444]/25  px-2 rounded-md inline-block text-sm;
     }
-  }
+
+    pre {
+        @apply p-3 rounded-lg text-sm;
+
+        code {
+            @apply [all:unset];
+        }
+    }
 }
 
 @layer components {
-  .faded {
-    @apply text-zinc-500;
-  }
-
-  .hero-image {
-    @apply rounded-2xl col-span-1 object-cover w-full h-full object-top;
-  }
-
-  .link {
-    @apply text-zinc-500 transition hover:text-primary-accent p-3;
-  }
-
-  .text-primary-gradient {
-    @apply bg-gradient-to-br from-primary-dim to-primary-bright bg-clip-text text-transparent;
-  }
-
-  .bg-gradient-primary {
-    @apply bg-gradient-to-br from-primary-dim to-primary-bright;
-  }
-
-  .bg-gradient-accent {
-    @apply bg-gradient-to-t from-emerald-900/20 to-[rgba(225,225,225,0)];
-  }
-
-  .glow {
-    box-shadow: 0 0 100px 10px var(--primary-bright);
-  }
-
-  .card {
-    @apply bg-zinc-900 p-5 h-72 rounded-3xl overflow-hidden flex flex-col justify-between;
-  }
-
-  .featured {
-    @apply bg-gradient-primary text-zinc-950;
-  }
+    .hero-image {
+        @apply rounded-2xl col-span-1 object-cover w-full h-full object-top;
+    }
 }
