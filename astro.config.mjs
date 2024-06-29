@@ -3,7 +3,6 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
-import mdx from "@astrojs/mdx";
 
 const theme = {
     name: "gruvbox-dark",
@@ -101,5 +100,5 @@ export default defineConfig({
         syntaxHighlight: "shiki",
         shikiConfig: { theme }
     },
-    integrations: [tailwind(), react(), sitemap(), mdx()]
+    integrations: [tailwind(), react(), sitemap()]
 });
