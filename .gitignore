@@ -26,10 +26,5 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# images
-*.png
-*.jpg
-*.jpeg
-
 # misc
 .DS_Store

@@ -18,10 +18,7 @@ const { research } = Astro.props;
 const { Content, headings } = await research.render();
 ---
 
-<MainLayout
-    title={research.data.title}
-    description={research.body.slice(0, 120) + "..."}
->
+<MainLayout title={research.data.title} description={research.data.description}>
     <WritingDetails title={research.data.title} date={research.data.date} />
     <TableOfContents headings={headings} />
     <Content />

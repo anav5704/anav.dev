@@ -6,25 +6,25 @@ import { formatDate } from "@lib/format-date";
 
 const unfiltereedBlgos = await getCollection("blogs");
 const blogs = unfiltereedBlgos.sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+    (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 ---
 
 <MainLayout
-  title="Anav Chand - Blogs"
-  description="Hey. Check out the blogs I have written. Some are technical and some personal."
+    title="Anav Chand - Blogs"
+    description="A collection of technical blogs on web technologes and personal blogs on univeresity life."
 >
-  <article class="my-12">
-    <Header content="Blogs" />
-  </article>
-  {
-    blogs.map((blog) => (
-      <div class="space-y-1">
-        <a href={"blogs/" + blog.slug} class="font-semibold">
-          {blog.data.title}
-        </a>
-        <p class="faded">{formatDate(blog.data.date)}</p>
-      </div>
-    ))
-  }
+    <article class="my-12">
+        <Header content={`Blogs (${blogs.length})`} />
+    </article>
+    {
+        blogs.map((blog) => (
+            <div class="space-y-1">
+                <a href={"blogs/" + blog.slug} class="font-semibold">
+                    {blog.data.title}
+                </a>
+                <p class="faded">{formatDate(blog.data.date)}</p>
+            </div>
+        ))
+    }
 </MainLayout>

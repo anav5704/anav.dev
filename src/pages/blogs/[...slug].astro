@@ -18,10 +18,7 @@ const { blog } = Astro.props;
 const { Content, headings } = await blog.render();
 ---
 
-<MainLayout
-    title={blog.data.title}
-    description={blog.body.slice(0, 120) + "..."}
->
+<MainLayout title={blog.data.title} description={blog.data.description}>
     <WritingDetails title={blog.data.title} date={blog.data.date} />
     <TableOfContents headings={headings} />
     <Content />

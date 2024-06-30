@@ -17,13 +17,13 @@ export const NavBar = () => {
                     <a href="/#skills">Skills</a>
                 </p>
                 <p>
-                    <a href="/#projects">Projects</a>
+                    <a href="/projects">Projects</a>
                 </p>
                 <p>
-                    <a href="/#research">Research</a>
+                    <a href="/blogs">Blogs</a>
                 </p>
                 <p>
-                    <a href="/#blogs">Blogs</a>
+                    <a href="/research">Research</a>
                 </p>
                 <p className="flex items-center gap-1">
                     <a target="_blank" href="https://github.com/anav5704">GitHub</a>

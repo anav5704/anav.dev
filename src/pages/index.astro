@@ -9,17 +9,19 @@ const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
 
 const unsortedProjects = await getCollection("projects");
-const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
+const projects = unsortedProjects
+    .sort((a, b) => a.data.id - b.data.id)
+    .slice(0, 3);
 
 const unfiltereedBlgos = await getCollection("blogs");
-const blogs = unfiltereedBlgos.sort(
-    (a, b) => b.data.date.getTime() - a.data.date.getTime()
-);
+const blogs = unfiltereedBlgos
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 3);
 
 const unfilderedResearch = await getCollection("research");
-const research = unfilderedResearch.filter(
-    (research) => research.data.featured == true
-);
+const research = unfilderedResearch
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 3);
 ---
 
 <MainLayout
@@ -39,11 +41,10 @@ const research = unfilderedResearch.filter(
         </p>
     </article>
     <ImageGrid />
-    <div id="skills"></div>
 
     <!-- SKILLS SECTION -->
 
-    <h2>My Skills</h2>
+    <h2 id="skills">My Skills</h2>
     {
         skills.map((skill) => (
             <p>
@@ -56,11 +57,10 @@ const research = unfilderedResearch.filter(
             </p>
         ))
     }
-    <div id="projects"></div>
 
     <!-- PROJECTS SECTION -->
 
-    <h2>Top Projects</h2>
+    <h2 id="projects">Top Projects</h2>
     {
         projects.map((project) => (
             <p>
@@ -72,29 +72,13 @@ const research = unfilderedResearch.filter(
             </p>
         ))
     }
-    <div id="research"></div>
-
-    <!-- RESEARCH SECTION -->
-
-    <h2>Featured Research</h2>
-    {
-        research.map((research) => (
-            <div class="space-y-1">
-                <a href={"research/" + research.slug}>
-                    <b>{research.data.title}</b>
-                </a>
-                <p>{formatDate(research.data.date)}</p>
-            </div>
-        ))
-    }
     <div>
-        <a href="/research">All Research</a>
+        <a href="/projects">View all projects</a>
     </div>
-    <div id="blogs"></div>
 
     <!-- BLOGS SECTION -->
 
-    <h2>Latest Blogs</h2>
+    <h2 id="blogs">Latest Blogs</h2>
     {
         blogs.map((blog) => (
             <div class="space-y-1">
@@ -106,6 +90,23 @@ const research = unfilderedResearch.filter(
         ))
     }
     <div>
-        <a href="/blogs">All Blogs</a>
+        <a href="/blogs">View all blogs</a>
+    </div>
+
+    <!-- RESEARCH SECTION -->
+
+    <h2 id="research">Featured Research</h2>
+    {
+        research.map((research) => (
+            <div class="space-y-1">
+                <a href={"research/" + research.slug}>
+                    <b>{research.data.title}</b>
+                </a>
+                <p>{formatDate(research.data.date)}</p>
+            </div>
+        ))
+    }
+    <div>
+        <a href="/research">View all research</a>
     </div>
 </MainLayout>
