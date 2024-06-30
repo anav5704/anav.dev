@@ -1,7 +1,7 @@
 ---
 title: Basic Computer Specs For Beginner Level Programming in 2024.
+description: Welcome to the exciting world of programming! One of the first thing
 date: 2020-03-14T05:35:07.322Z
-featured: true
 ---
 
 Welcome to the exciting world of programming! One of the

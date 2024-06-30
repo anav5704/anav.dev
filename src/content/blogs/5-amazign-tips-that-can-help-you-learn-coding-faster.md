@@ -1,7 +1,7 @@
 ---
 title: 5 Amazing Tips That Can Help You Learn Coding Faster!
+description: It can be an exciting and exhilarating experience to learn to code
 date: 2021-03-14T05:35:07.322Z
-featured: true
 ---
 
 It can be an exciting and exhilarating experience to learn
