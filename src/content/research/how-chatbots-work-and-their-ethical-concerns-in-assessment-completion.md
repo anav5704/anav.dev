@@ -1,9 +1,10 @@
 ---
 title: How Chatbots Work And Their Ethical Concerns In Assessment Completion.
-description: hello
+description: This paper explores how chatbots impact education, while ethically addressing concerns surrounding assessment completion.
 date: 2024-06-03T00:00:00.000Z
-featured: true
 ---
+
+## Introduction
 
 The emergence of large language models has drastically changed how humans interact with computers and has encouraged every industry to incorporate and push the boundaries of such technologies. While sectors such as E-commerce, Healthcare and Travel have benefited from chatbots, others, such as Education, are still having difficulty adapting to chatbots. This is due to the ethical concerns chatbot usage brings up such as cheating in assessments. Fortunately, there are solutions that mitigate these effects and prove that chatbot incorporation in education is ethical, especially for assessment completion. This essay will discuss the underlying technologies that bring chatbots to life, primarily artificial intelligence, and natural language processing. It will also go over the various ethical considerations surrounding assessment completion in higher education, and practical solutions.
 
@@ -29,6 +30,42 @@ In spite of this, there are practical solutions that universities can implement 
 
 If universities take such measures and students are able to use chatbots in a way that supports learning and does not replace their critical thinking, the usage of chatbots to help students’ complete assessments can be regarded as ethical. The purpose of an assessment is to measure a student’s learning and achievement while preparing them for participation in work and community activities (Spiller, 2021). The responsible usage of chatbots in assessment completion will not only preserve the main purpose of an assessment but also further prove that it is very ethical to utilize chatbots for such use cases.
 
-## Conclusion
+## Final Thoughts
 
 To conclude, the rise of chatbots has presented various ethical concerns in higher education, hindering the rate its which institutions can adapt to them. However, the existence of practical solutions to address those issues proves that universities can create win-win situations for them, their staff, and students. Providing resources on chatbot usage and implementing innovative assessments helps incorporate chatbots into assessments while preserving the purpose of an assessment. This in turn leads to the usage of chatbots in assessment completion to be seen as very ethical. Chatbots are a modern and advancing technology and the earlier Universities adapt to it, the better it will be for everyone as they is here to stay.
+
+## References
+
+Adamopoulou, E., Moussiades, L. (2020). Chatbots: History, technology, and applications. Machine Learning with Applications.
+
+Ayanwale, M., Molefi, R. (2024). Exploring intention of undergraduate students to embrace chatbots: from the vantagepoint of Lesotho.
+
+Cassidy, C. (2023). Australian universities to return to ‘pen and paper’ exams after students caught using AI to write essays. [Source](https://www.theguardian.com/australia-news/2023/jan/10/universities-to-return-to-pen-and-paper-exams-after-students-caught-using-ai-to-write-essays.)
+
+Commonwealth of Learning. (2024). USP enhanced its Semester Zero programme with GPT-powered AI support. [Source](https://www.col.org/news/usp-enhanced-its-semester-zero-programme-with-gpt-powered-ai-support.)
+
+Coursera. (2024). What Is Natural Language Generation? [Source](https://www.coursera.org/articles/natural-language-generation.)
+
+Dale, R. (2021). GPT-3: What’s it good for? Natural Language Engineering.
+
+Fuchs, K. (2023). Exploring the opportunities and challenges of NLP models in higher education: is Chat GPT a blessing or a curse.
+
+IBM. (2024). What are AI hallucinations? [Source](https://www.ibm.com/topics/ai-hallucinations.)
+
+IBM. (2024). What is a neural network? [Source](https://www.ibm.com/topics/neural-networks.)
+
+IBM. (2024). What is artificial intelligence (AI)? [Source](https://www.ibm.com/topics/artificial-intelligence.)
+
+IBM. (2024). What is natural language processing (NLP)? [Source](https://www.ibm.com/topics/natural-language-processing.)
+
+Kooli, C. (2023). Chatbots in Education and Research: A Critical Examination of Ethical Implications and Solutions.
+
+Microsoft. (2024). What is a vector database? [Source](https://learn.microsoft.com/en-us/semantic-kernel/memories/vector-db.)
+
+Okonkwo, C., Ade-Ibijola, A. (2021). Chatbots applications in education: A systematic review. Computers and Education: Artificial Intelligence.
+
+OpenAI. (2024). How ChatGPT and our language models are developed. [Source](https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed#h_2df02d4917.)
+
+Spiller, D. (2021). Assessment: Purpose and Principles. [Source](https://www.usp.ac.fj/learning-teaching/wp-content/uploads/sites/75/2021/07/Assessment_-_Purposes_and_Principles.pdf.)
+
+Weale ,S. (2023). Lecturers urged to review assessments in UK amid concerns over new AI tool. [Source](https://www.theguardian.com/technology/2023/jan/13/end-of-the-essay-uk-lecturers-assessments-chatgpt-concerns-ai.)
