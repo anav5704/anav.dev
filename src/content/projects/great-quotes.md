@@ -1,22 +1,25 @@
 ---
+id: 2
 title: Great Quotes
 metaTitle: Great Quotes - Next JS Quotes App
 description: Storagef for my friends quotes from highschool and university.
 metaDescription: Fullstack quote sharing web app built using Next JS, TailwindCSS, Prisma & Drizzle and Postgres (Neon) with the frontend and backend hosted on Vercel.
 date: 2023-12-25
-featured: true
-order: 2
 repo: https://github.com/anav5704/great-quotes
 site: https://quotes.anav.dev
 ---
 
 ## Project Overview
 
+---
+
 ![Great Quotes Demo](./images/great-quotes-demo.webp)
 
 This is a simple web app that hosts some great quotes my friends and I have said throughout highschool nad university. Users can create, update and delete their own quotes and like others quotes after logging in. This project uses the T3 stack and is hosted on [Render](https://render.com) - initial load may take some time as I am on a free tier.
 
 ## Technologies Used
+
+---
 
 -   Next JS 14
 -   TailwindCSS
@@ -28,6 +31,8 @@ This is a simple web app that hosts some great quotes my friends and I have said
 -   tRPC
 
 ## Getting Started
+
+---
 
 First fork and clone the repo. Then, run `npm install` to download all the dependencies. Now, set up your environmental variables. Make a `.env` file in the root of your project with the following variables:
 
@@ -50,6 +55,8 @@ NEXT_CRYPTR
 Once that is done, run `npm run dev` to view it on localhost.
 
 ## Learning Resources
+
+---
 
 -   [Neon PostgreSQL](https://neon.tech/)
 -   [Next UI docs](https://www.youtube.com/watch?v=Kz0srrlecRQ&t=719s)

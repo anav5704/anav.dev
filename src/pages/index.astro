@@ -9,10 +9,7 @@ const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
 
 const unsortedProjects = await getCollection("projects");
-const projects = unsortedProjects
-    .filter((project) => project.data.featured)
-    .sort((a, b) => a.data.order! - b.data.order!)
-    .slice(0, 3);
+const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
 
 const unfiltereedBlgos = await getCollection("blogs");
 const blogs = unfiltereedBlgos
@@ -76,9 +73,6 @@ const research = unfilderedResearch
             </div>
         ))
     }
-    <div>
-        <a href="/projects">View all projects</a>
-    </div>
 
     <!-- BLOGS SECTION -->
 

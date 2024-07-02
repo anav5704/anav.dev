@@ -8,6 +8,8 @@ date: 2023-08-29T00:00:00.000Z
 
 ### Introduction to Extended Reality
 
+---
+
 Extended Reality (XR) is a generalized term used to describe technologies that aim to combine the
 physical and virtual world into one, seamless experience. Some of the popular technologies that fall
 under this umbrella include Augmented Reality (AR), Virtual Reality (VR) and Mixed Reality (MR). XR
@@ -16,6 +18,8 @@ expected to grow to $472.3 billion USD by 2028 (Mordor Intelligence, 2023). In a
 Apple Vision Pro, a spatial computer that merges AR and VR, was announced early June this year.
 
 ### The Impact of XR on Software Engineering Role
+
+---
 
 The rapid growth of advanced technology such as extended reality is bound to have various impacts
 on software engineering roles. One of the major impacts is enhanced remote collaboration and
@@ -32,6 +36,8 @@ spatial sound design to efficiently deliver functional software. Alongside this 
 challenges such as creating immersive experiences and ensuring user safety.
 
 ### The Evolution of Frontend Web Developer Responsibilities
+
+---
 
 The responsibility of Frontend Web Developer, at its simplest, is to make user friendly web pages
 using HTML, CSS and JavaScript that are fast and responsive. In recent years, this role has seen
@@ -51,6 +57,8 @@ input methods are gestures, voice commands, and hand controllers.
 
 ### Ethical Considerations and Challenges in XR
 
+---
+
 Despite groups such as IEEE promoting increased focus on ethics (for XR and technologies in general),
 there remains various ethical considerations (IEEE, 2023). The most obvious one being separation
 from the real world. Putting on an XR headset means blocking yourself from the physical world,
@@ -67,6 +75,8 @@ digital signals, while your inner the knows that the body is in the real world.
 
 ### Requirements Gathering / Planning
 
+---
+
 In this phase, meetings are held with stakeholders and information on the problem domain is
 gathered. With the emergence of XR technologies like immersive augmented reality (IAR),
 requirements engineers can use this to better understand and respond to stakeholders (L. Merino,
@@ -77,6 +87,8 @@ concepts.
 
 ### Requirements Analysis
 
+---
+
 The main purpose of the requirements analysis phase is to understand the information collected in
 the previous phase and to plan the general approach that will be used in the development.
 Complementary to writing notes and analyzing data by drawing on whiteboards, requirements
@@ -85,6 +97,8 @@ data to be organized in a spatial way and improves efficiency. In addition to th
 can be decomposed and related data can be bundled freely.
 
 ### Design
+
+---
 
 In the design phase, the overall look, feel and functionality of the product is decided. The use of IAR
 in this phase can allow designers to project UML diagrams (like use case diagrams) to a wall (L.
@@ -95,6 +109,8 @@ voice recognition.
 
 ### Coding / Implementation
 
+---
+
 The design from the previous phase is converted into code and executable programs in this phase.
 Mixed reality can be used in many ways here, Firstly, developers can use IAR headsets and place
 recently viewed files to the left of their desktop and documentations for needed technologies to the
@@ -103,6 +119,8 @@ known as distributed or virtual pair programming) can be done (J. Dominic, 2020)
 driver can both use XR devices to work at a virtual desk from anywhere which promotes flexibility.
 
 ### Testing
+
+---
 
 In this phase, software is assessed at various levels (component testing, integration testing) to ensure
 it meets the project standards. Similar to the design phase, testers can use IAR to virtually write and
@@ -113,6 +131,8 @@ an immersive and interactive way to test projects.
 
 ### Deployment
 
+---
+
 In the deployment phase, the finished software is released and installed on user machines. Despite
 XR being more prominent in the other phases, it can still be used in deployment in niche ways like
 end user training. VR headsets could be used to replicate a virtual office and help prepare users for
@@ -122,6 +142,8 @@ be displayed in the spatial environment.
 
 ### Maintenance
 
+---
+
 Software is kept fully functional and newly discovered issues are fixed in this phase. Once again, the
 IAR headsets and whiteboard can be used here. In the case of fixing newly found issues, developers
 can have build configurations for the software displayed spatially and work on debugging issues.
@@ -130,6 +152,8 @@ Merino, 2020). Even in a software update scenario, developers can brainstorm ide
 faster. The whiteboard approach fosters a creative and collaborative experience.
 
 ### Benefits of XR
+
+---
 
 As mentioned earlier, enhanced remote collaboration is one of the more significant benefits of using
 XR in SLDC. Platforms like skype offer connectedness but lack speed and instant messaging offers
@@ -146,6 +170,8 @@ planets are classes, orbits are inheritance levels, and the sizes of planets var
 
 ### Potential Drawbacks of XR
 
+---
+
 Unfortunately, just like with every other technology, there are bound to be some drawbacks that
 need to be considered. The most obvious one being cost. The apple vison pro (which will be the most
 advanced VR headset when it releases next year) will cost $3,499.00 USD. If XR technologies like this
@@ -158,6 +184,8 @@ responsible for mentally mapping out the physical environment in 3d. If users la
 the technology will no longer be immersive and thus there will be no point in using it.
 
 ## References
+
+---
 
 Alexey, B. (2021, June 29) “Virtual Reality in Frontend Development: Tips and Trends you Need to
 Know”. Gorilla Logic. [Source](https://gorillalogic.com/blog/virtual-reality-in-frontend-development-tips-and-trends-you-need-to-know/)

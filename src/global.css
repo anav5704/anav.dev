@@ -52,7 +52,11 @@
     }
 
     code {
-        @apply bg-[#444444]/25  px-2 rounded-md inline-block text-sm;
+        @apply bg-zinc-200  px-2 rounded-md inline-block text-sm;
+    }
+
+    blockquote {
+        @apply rounded-lg bg-zinc-200 p-2 italic;
     }
 
     pre {
