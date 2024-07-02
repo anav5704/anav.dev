@@ -5,7 +5,9 @@ import MainLayout from "@layouts/main.astro";
 import { formatDate } from "@lib/format-date";
 
 const unsortedProjects = await getCollection("projects");
-const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
+const projects = unsortedProjects.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
 ---
 
 <MainLayout
@@ -17,13 +19,16 @@ const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
     </article>
     {
         projects.map((project) => (
-            <p>
-                <a href={"projects/" + project.slug}>
-                    <b>{project.data.title}</b>
-                </a>
-                {" - "}
-                {project.data.description}
-            </p>
+            <div class="space-y-1">
+                <p>
+                    <a href={"projects/" + project.slug}>
+                        <b>{project.data.title}</b>
+                    </a>
+                    {" - "}
+                    {project.data.description}
+                </p>
+                <p>{formatDate(project.data.date)}</p>
+            </div>
         ))
     }
 </MainLayout>

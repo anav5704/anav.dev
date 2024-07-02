@@ -10,7 +10,8 @@ const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
 
 const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects
-    .sort((a, b) => a.data.id - b.data.id)
+    .filter((project) => project.data.featured)
+    .sort((a, b) => a.data.order! - b.data.order!)
     .slice(0, 3);
 
 const unfiltereedBlgos = await getCollection("blogs");
@@ -26,7 +27,7 @@ const research = unfilderedResearch
 
 <MainLayout
     title="Anav Chand - Fullstack Web Dev From Fiji"
-    description="Hey. I'm a 1st year Software Engineering student at the University of the South Pacific."
+    description="Hi, I'm Anav Chand. I am a 1st year Software Engineering student at the University of the South Pacific."
 >
     <!-- HERO SECTION -->
 
@@ -63,13 +64,16 @@ const research = unfilderedResearch
     <h2 id="projects">Top Projects</h2>
     {
         projects.map((project) => (
-            <p>
-                <a href={"projects/" + project.slug}>
-                    <b>{project.data.title}</b>
-                </a>
-                {" - "}
-                {project.data.description}
-            </p>
+            <div class="space-y-1">
+                <p>
+                    <a href={"projects/" + project.slug}>
+                        <b>{project.data.title}</b>
+                    </a>
+                    {" - "}
+                    {project.data.description}
+                </p>
+                <p>{formatDate(project.data.date)}</p>
+            </div>
         ))
     }
     <div>

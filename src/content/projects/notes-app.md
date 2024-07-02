@@ -1,14 +1,16 @@
 ---
-id: 3
-title: Digi Diary
+title: Notes App
 metaTitle: Digi Diary - MERN Stack Notes App
-description: This is a simple and user-friendly note-taking app I made while I was learning the MERN stack. This was also the first time I wrote documentation for a project and it still holds till this  day.
+description: MERN stack PWA that allows for CRUD operations on notes.
 metaDescription: Fullstack notes web app built using MongoDB, Express JS, React JS, Node JS with the frontend hosted on Vercel and backend hosted on Render.
+date: 2023-08-28
 repo: https://github.com/anav5704/Note-App-MERN
 site: https://notes.anav.dev
 ---
 
 ## Project Overview
+
+![Notes App Demo](./images/notes-app-demo.webp)
 
 This is a simple and user-friendly note-taking app I made while I was learning the MERN stack (MongoDB, Express JS, React JS, Node JS). Development time was almost 1 month: started on the 28th of August, 2023, and ended on the 23rd of September, 2023. This was also my first time using a component library and I chose Mantine as it fit my style. I still prefer using plain TailwindCSS with HeroIcons.
 
@@ -30,7 +32,7 @@ This is a simple and user-friendly note-taking app I made while I was learning t
 
 ## Architecture
 
-![Architecture Diagram](./images/notes-app/architecture.webp)
+![Architecture Diagram](./images/notes-app-architecture.webp)
 
 As with most other MERN Stack apps, DigiDiary uses a MVC architecture, which is an acronym for Model-View-Controller. As the name suggests, the system is broken into 3 main components that are highly dependent on each other. From my understanding, I'm guessing this is very good as development would be faster because there could be 3 teams working simultaneously on a project.
 

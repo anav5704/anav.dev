@@ -6,7 +6,7 @@ const { headings } = Astro.props;
 <details class="space-y-1 cursor-pointer p-1">
     <summary>Table of Contents</summary>
     {
-        headings.map((heading: MarkdownHeading, index: number) => (
+        headings.map((heading: MarkdownHeading) => (
             <p class={`${heading.depth == 3 && "ml-7"}`}>
                 <a href={"#" + heading.slug}>{heading.text}</a>
             </p>

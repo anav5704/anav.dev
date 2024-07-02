@@ -13,11 +13,13 @@ const skillsCollection = defineCollection({
 const projectsCollection = defineCollection({
     type: "content",
     schema: z.object({
-        id: z.number(),
         title: z.string(),
         metaTitle: z.string(),
         description: z.string(),
         metaDescription: z.string(),
+        featured: z.boolean().optional(),
+        order: z.number().optional(),
+        date: z.date(),
         repo: z.string(),
         site: z.string()
     })
