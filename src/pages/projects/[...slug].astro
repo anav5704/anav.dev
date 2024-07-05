@@ -1,9 +1,9 @@
 ---
 export const prerender = true;
 import ProjectDetails from "@components/ProjectDetails.astro";
-import { getCollection } from "astro:content";
-import MainLayout from "@layouts/main.astro";
 import TableOfContents from "@components/TableOfContents.astro";
+import ContentLayout from "@layouts/content.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
     const allProjects = await getCollection("projects");
@@ -18,9 +18,12 @@ const { project } = Astro.props;
 const { Content, headings } = await project.render();
 ---
 
-<MainLayout
+<ContentLayout
     title={project.data.metaTitle}
     description={project.data.metaDescription}
+    contentType="Projects"
+    createdAt={project.data.createdAt}
+    updatedAt={project.data.updatedAt}
 >
     <ProjectDetails
         title={project.data.title}
@@ -29,4 +32,4 @@ const { Content, headings } = await project.render();
     />
     <TableOfContents headings={headings} />
     <Content />
-</MainLayout>
+</ContentLayout>
