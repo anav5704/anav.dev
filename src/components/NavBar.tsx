@@ -1,8 +1,8 @@
-import { ArrowUpRight, Menu } from "@geist-ui/icons"
-import { useState } from "react"
+import { ArrowUpRight, Menu } from "@geist-ui/icons";
+import { useState } from "react";
 
 export const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <nav className="fixed w-screen bg-white border-b border-zinc-200 md:border-none">
@@ -11,13 +11,17 @@ export const NavBar = () => {
             >
                 <div className="flex items-center justify-between">
                     <a href="/#anav">Anav</a>
-                    <Menu className="block md:hidden" size={20} onClick={() => setIsOpen((prev) => !prev)} />
+                    <Menu
+                        className="block md:hidden"
+                        size={20}
+                        onClick={() => setIsOpen((prev) => !prev)}
+                    />
                 </div>
                 <p>
                     <a href="/#skills">Skills</a>
                 </p>
                 <p>
-                    <a href="/#projects">Projects</a>
+                    <a href="/projects">Projects</a>
                 </p>
                 <p>
                     <a href="/blogs">Blogs</a>
@@ -26,10 +30,12 @@ export const NavBar = () => {
                     <a href="/research">Research</a>
                 </p>
                 <p className="flex items-center gap-1">
-                    <a target="_blank" href="https://github.com/anav5704">GitHub</a>
+                    <a target="_blank" href="https://github.com/anav5704">
+                        GitHub
+                    </a>
                     <ArrowUpRight size={20} />
                 </p>
             </div>
         </nav>
-    )
-}
+    );
+};

@@ -1,10 +1,12 @@
 ---
 id: 1
+featured: true
 title: Online PASS
 metaTitle: Online PASS - University of the South Pacific
 description: In-house software built for the University of the South Pacific.
 metaDescription: Fullstack in-house software for the University of the South Pacific built using Next JS, TailwindCSS, Prisma, AWS RDS, AWS S3 and Supabase with the frontend and backend hosted on Render.
-date: 2024-01-01
+createdAt: 2024-01-01T00:00:00+12:00
+updatedAt: 2024-01-01T00:00:00+12:00
 repo: https://github.com/anav5702/online-pass
 site: https://opass.anav.dev
 ---

@@ -2,23 +2,25 @@
 import ImageGrid from "@components/ImageGrid.astro";
 import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
-import MainLayout from "@layouts/main.astro";
 import { formatDate } from "@lib/format-date";
+import MainLayout from "@layouts/main.astro";
 
 const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
 
 const unsortedProjects = await getCollection("projects");
-const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
+const projects = unsortedProjects
+    .sort((a, b) => a.data.id - b.data.id)
+    .slice(0, 3);
 
 const unfiltereedBlgos = await getCollection("blogs");
 const blogs = unfiltereedBlgos
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
 
 const unfilderedResearch = await getCollection("research");
 const research = unfilderedResearch
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
 ---
 
@@ -69,10 +71,14 @@ const research = unfilderedResearch
                     {" - "}
                     {project.data.description}
                 </p>
-                <p>{formatDate(project.data.date)}</p>
+                <p>{formatDate(project.data.createdAt)}</p>
             </div>
         ))
     }
+
+    <div>
+        <a href="/projects">View all projects</a>
+    </div>
 
     <!-- BLOGS SECTION -->
 
@@ -83,7 +89,7 @@ const research = unfilderedResearch
                 <a href={"blogs/" + blog.slug} class="font-semibold">
                     {blog.data.title}
                 </a>
-                <p>{formatDate(blog.data.date)}</p>
+                <p>{formatDate(blog.data.createdAt)}</p>
             </div>
         ))
     }
@@ -100,7 +106,7 @@ const research = unfilderedResearch
                 <a href={"research/" + research.slug}>
                     <b>{research.data.title}</b>
                 </a>
-                <p>{formatDate(research.data.date)}</p>
+                <p>{formatDate(research.data.createdAt)}</p>
             </div>
         ))
     }

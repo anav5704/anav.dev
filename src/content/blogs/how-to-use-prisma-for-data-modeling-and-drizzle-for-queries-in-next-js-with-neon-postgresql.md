@@ -1,7 +1,8 @@
 ---
 title: How To Use Prisma For Data Modeling And Drizzle For Queries.
 description: Learn how to use Prisma and Drizzle in the same Project. We will connect a Next.js app to Neon serverless PostgreSQL.
-date: 2024-06-28T00:00:00.000Z
+createdAt: 2024-06-28T00:00:00+12:00
+updatedAt: 2024-06-28T00:00:00+12:00
 ---
 
 ## Prisma? Drizzle?

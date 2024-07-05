@@ -1,7 +1,8 @@
 ---
 title: How Chatbots Work And Their Ethical Concerns In Assessment Completion.
 description: This paper explores how chatbots impact education, while ethically addressing concerns surrounding assessment completion.
-date: 2024-06-03T00:00:00.000Z
+createdAt: 2024-06-03T00:00:00+12:00
+updatedAt: 2024-06-03T00:00:00+12:00
 ---
 
 ## Introduction

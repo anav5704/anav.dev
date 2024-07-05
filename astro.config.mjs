@@ -87,6 +87,8 @@ const theme = {
 // https://astro.build/config
 export default defineConfig({
     site: "https://anav.dev",
+
+    // TODO: move to fully static site and remove vercel speed insights
     output: "server",
     adapter: vercel({
         webAnalytics: {

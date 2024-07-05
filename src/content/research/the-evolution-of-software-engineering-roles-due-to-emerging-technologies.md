@@ -1,7 +1,8 @@
 ---
 title: The Evolution of Software Engineering Roles Due to Emerging Technologies.
 description: This paper discusses how XR technologies impacts web developers in relation to the software development life cycle.
-date: 2023-08-29T00:00:00.000Z
+createdAt: 2023-08-29T00:00:00.000Z
+updatedAt: 2023-08-29T00:00:00.000Z
 ---
 
 ## Emerging Technologies and Software Engineering Roles

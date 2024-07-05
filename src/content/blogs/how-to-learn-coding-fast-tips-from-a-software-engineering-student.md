@@ -1,7 +1,8 @@
 ---
 title: How To learn Coding Fast – Tips From A Software Engineering Student.
 description: It can be an exciting and exhilarating experience to learn to code
-date: 2024-07-02
+updatedAt: 2024-07-02T00:00:00+12:00
+createdAt: 2024-07-02T00:00:00+12:00
 ---
 
 ## Motivation

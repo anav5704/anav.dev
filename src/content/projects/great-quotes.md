@@ -1,10 +1,12 @@
 ---
 id: 2
+featured: true
 title: Great Quotes
 metaTitle: Great Quotes - Next JS Quotes App
-description: Storagef for my friends quotes from highschool and university.
+description: Storage for my friends quotes from highschool and university.
 metaDescription: Fullstack quote sharing web app built using Next JS, TailwindCSS, Prisma & Drizzle and Postgres (Neon) with the frontend and backend hosted on Vercel.
-date: 2023-12-25
+createdAt: 2023-12-25T00:00:00+12:00
+updatedAt: 2023-12-25T00:00:00+12:00
 repo: https://github.com/anav5704/great-quotes
 site: https://quotes.anav.dev
 ---
