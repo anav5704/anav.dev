@@ -93,6 +93,10 @@ export default defineConfig({
             enabled: true
         }
     }),
+    prefetch: {
+        prefetchAll: true,
+        defaultStrategy: "viewport"
+    },
     devToolbar: {
         enabled: false
     },
