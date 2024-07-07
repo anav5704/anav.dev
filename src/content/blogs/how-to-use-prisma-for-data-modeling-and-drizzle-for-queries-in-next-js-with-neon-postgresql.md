@@ -1,8 +1,8 @@
 ---
 title: How To Use Prisma For Data Modeling And Drizzle For Queries.
-description: Learn how to use Prisma and Drizzle in the same Project. We will connect a Next.js app to Neon serverless PostgreSQL.
+description: Learn how to use Prisma ORM and Drizzle ORM in the same Next.js app, connected to a Neon serverless PostgreSQL database.
 createdAt: 2024-06-28T00:00:00+12:00
-updatedAt: 2024-06-28T00:00:00+12:00
+updatedAt: 2024-07-07T00:00:00+12:00
 ---
 
 ## Prisma? Drizzle?
@@ -15,25 +15,29 @@ The modern web development era has given birth to some of the greatest technolog
 
 ---
 
-These ORMs are often used separately as they have their own strengths and weaknesses. Prisma is known for its phenomenal developer experience but may lack in performance. On the other hand, Drizzle shines when it comes to speed but has a steep learning curve.
+These ORMs are often used separately as they have their own strengths and weaknesses. Prisma is known for its phenomenal developer experience while Drizzle shines when it comes to speed. Using both these ORMs in the same project may not be the best idea, but it is possible. It will allow you to easily design schemas and migrate them while having a fast backend. If you already have an API built out with Prisma, here are some cases when you might want to go with this dual ORM strategy:
 
-Using both these ORMs in the same project is possible, probably not the best idea, but still possible. It will allow you to easily write schemas and migrate databases while having a fast backend. If you do not have any API built out and are looking to start with combining the two, skip head. If you already have an API built out with Prisma, here are some cases when you might want to go with this dual ORM strategy:
-
--   Small API that can quickly be rewritten in Drizzle
+-   Small API that can quickly be re-written in Drizzle
 -   Slow/heavy backend that needs improvements
--   Want to gain privileges to say “I use Drizzle btw”
+-   Want to gain privileges to say _“I use Drizzle btw”_
+
+## Demo Repository
+
+---
+
+If you find anything confusing while following this guide, feel free to use [this repository](https://github.com/anav5704/great-quotes) as a reference. I am planning to create a proper standalone starter temple for a Prisma and Drizzle dual ORM Next.js app very soon.
 
 ## Setup Neon PostgreSQL
 
 ---
 
-Before we set up a PostgreSQL instance on [Neon](https://neon.tech), just now both Prisma and Drizzle do not support all database engines. Drizzle supports every PostgreSQL, MySQL and SQLite database while Prisma supports those along with Mongo DB and Cockroach DB.
+Before we set up a PostgreSQL instance on [Neon](https://neon.tech), just know that both Prisma and Drizzle do not support all database engines. Drizzle supports every PostgreSQL, MySQL and SQLite database while Prisma supports those along with MongoDB and CockroachDB.
 
 ### Create Project
 
 ---
 
-Head over to Neon, create an account if you do not have one already and then create a project. You will be able to create multiple databases within a single project. The [free tier](https://neon.tech/pricing) will bless you with a single project with 5GB storage across all databases.
+Head over to Neon, create an account if you do not have one already, and then create a project. You will be able to create multiple databases within a single project. The [free tier](https://neon.tech/pricing) will bless you with a single project with 5GB storage across all databases.
 
 ![Create Project](./images/create-project.webp)
 
@@ -51,7 +55,7 @@ Navigate to your dashboard and create a database by clicking on the database dro
 
 Click on the dropdown under the database dropdown and choose the connection string. Make sure you have the correct database selected.
 
-![Connection String](./images/connection-string.webp)
+## ![Connection String](./images/connection-string.webp)
 
 Now copy the connection string and go back to your project. Create a `.env` file if you don't have one and paste your connection string. It should look something like this:
 
@@ -63,7 +67,7 @@ DATABASE_URL="postgresql://username:password@host/database"
 
 ---
 
-In our dual ORM strategy, Prisma will be used to make the database schema and will be responsible for pushing the schemas to the database. It will act as the creator and sender.
+In our dual ORM strategy, Prisma will be used to make the database schema and will be responsible for pushing the schema to the database. It will act as the creator and sender.
 
 ### Install Prisma
 
@@ -75,13 +79,13 @@ Assuming you already have a [Next.js](https://nextjs.org) app with typescript re
 npm install prisma --save-dev
 ```
 
-The following command will create a `Prisma` directory that contains a `prisma.schema` file. It will hold our database connection and data models.
+The following command will create a `prisma` directory that contains a `schema.prisma` file. It will hold our database connection and data models.
 
 ```bash
 npx prisma init
 ```
 
-Now we are going to connect prisma to our database. Add the following to the top of your file:
+Now we are going to connect Prisma to our database. Add the following to the top of your file:
 
 ```prisma
 datasource db {
@@ -159,7 +163,7 @@ npm install drizzle-kit --save-dev
 
 ---
 
-Make a `Drizzle` directory at the root of your project. Inside that, make an `index.ts` file and paste the following code into it:
+Make a `drizzle` directory at the root of your project. Inside that, make an `index.ts` file and paste the following code into it:
 
 ```ts
 import { neon } from "@neondatabase/serverless";
@@ -170,7 +174,7 @@ const sql = neon(process.env.DATABASE_URL!);
 export const db = drizzle(sql);
 ```
 
-We will also have to set up a `drizzle.config.ts` file within the Drizzle folder. This just tells Drizzle where the schema is and where to generate the migrations.
+We will also have to set up a `drizzle.config.ts` file within the `drizzle` directory. This just tells Drizzle where the schema is and where to generate the migrations.
 
 ```ts
 import { defineConfig } from "drizzle-kit";
@@ -189,7 +193,7 @@ export default defineConfig({
 
 ---
 
-Little checkpoint - your project structure should look something like this right now:
+Checkpoint - your project structure should look something like this right now:
 
 ```ts
 Quotes-App
@@ -224,7 +228,7 @@ Now that our schema is out of Prisma, we can use Drizzle kits [pull](https://orm
 npx drizzle-kit introspect
 ```
 
-After Drizzle is done pulling the schema, it will generate 2 new files in the Drizzle directory - a `schema.ts` file and a `relations.ts` file. Your new structure should look like this:
+After Drizzle is done pulling the schema, it will generate 2 new files in the `drizzle` directory: a `schema.ts` file and a `relations.ts` file. Your new structure should look like this:
 
 ```ts
 Quotes-App
@@ -243,7 +247,7 @@ Let's quickly edit our `drizzle/index.ts` to tell Drizzle where our new schemas 
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
 
-// import new data models
+// import new data models and relations
 import * as relations from "@/drizzle/relations";
 import * as models from "@/drizzle/schema";
 
@@ -259,6 +263,24 @@ You are now all set to import the database anywhere and start using it.
 import { db } from "@/drizzle";
 ```
 
+### NPM Script
+
+---
+
+Running the Prisma `pull` and Drizzle `introspect` command every time you update your schema will get annoying. To make our lives a bit easier, let's create a custom [NPM script](https://docs.npmjs.com/cli/v10/using-npm/scripts) to do both of these for us. Add this to your `package.json`:
+
+```json
+"scripts": {
+    "db:new": "npx prisma db push && npx drizzle-kit introspect"
+}
+```
+
+Now all you have to do is run the following command:
+
+```bash
+npm run db:new
+```
+
 ## Generating Schema Types
 
 ---
@@ -269,7 +291,7 @@ One of the things that makes Prisma shine is `prisma generate`. This command aut
 import { User, Quote } from "@prisma/client";
 ```
 
-Drizzle on the other hand has no such command. However, there is a simple alternative that requires a tab bit more work but it gets the job done. Make a types directory with an `index.ts` file in it. We will import our Drizzle models here and infer types from them.
+Drizzle on the other hand has no such command. Instead, we will have to infer the types from the data models ourselves. Make a `types` directory with an `index.ts` file in it. In our case, we will need to make types for our `User` and `Quote` model.
 
 ```ts
 import { User, Quote } from "@/drizzle/schema";
@@ -280,10 +302,10 @@ export type Quote = typeof Quote.$inferSelect;
 export type QuoteUser = Quote & { User: User };
 ```
 
-And with that, we have successfully set up a Prisma and Drizzle ORM in the same project.
+And with that, we have successfully set up a Prisma ORM and Drizzle ORM in the same project.
 
 ## Final Thoughts
 
 ---
 
-Using both Prisma and Drizzle in the same project may not be for everyone, but it can be done. Setting up this dual ORM strategy allows us to enjoy the convenient Prisma schema language while having a performant backend. I wanted to implement this in a project of mine but I already had ~35 API endpoints and ~15 server actions built out using Prisma. Converting these queries to Drizzle seemed like a nightmare so I stuck with a full Prisma setup. That being said, I hope this guide helps you out.
+Using both Prisma and Drizzle in the same project may not be for everyone, but it can be done. Setting up this dual ORM strategy allows us to enjoy the convenient Prisma schema language while having a performant backend. I wanted to implement this in a project of mine, but I already had ~35 API endpoints and ~15 server actions built out using Prisma. Converting these queries to Drizzle seemed like a nightmare, so I stuck with a full Prisma setup. That being said, I hope this guide helps you out.
