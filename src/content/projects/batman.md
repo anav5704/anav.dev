@@ -1,6 +1,6 @@
 ---
 id: 5
-featured: true
+featured: false
 title: Batman
 metaTitle: Batman - Node JS Discord Bot
 description: Discord bot that replies as Batman and comes with 2 slash commands.

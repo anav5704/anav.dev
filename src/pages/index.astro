@@ -10,6 +10,7 @@ const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
 
 const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects
+    .filter((a) => a.data.featured == true)
     .sort((a, b) => a.data.id - b.data.id)
     .slice(0, 3);
 
@@ -26,7 +27,7 @@ const research = unfilderedResearch
 
 <MainLayout
     title="Anav Chand - Fullstack Web Dev From Fiji"
-    description="Hi, I'm Anav Chand. I am a 1st year Software Engineering student at the University of the South Pacific."
+    description="Hi, I'm Anav Chand. I am a 1st year Software Engineering student at the University of the South Pacific. I am also a self-taught Full-Stack web developer."
 >
     <!-- HERO SECTION -->
 

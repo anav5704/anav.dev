@@ -1,6 +1,6 @@
 ---
 id: 4
-featured: true
+featured: false
 title: Codebase Stats
 metaTitle: Codebase Stats - Count Lines of Code in your codebase
 description: CLI tool that counts no. of directories, files and lines of code.
