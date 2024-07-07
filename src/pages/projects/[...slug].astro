@@ -19,9 +19,9 @@ const { Content, headings } = await project.render();
 ---
 
 <ContentLayout
+    contentType="Projects"
     title={project.data.metaTitle}
     description={project.data.metaDescription}
-    contentType="Projects"
     createdAt={project.data.createdAt}
     updatedAt={project.data.updatedAt}
 >

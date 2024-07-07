@@ -19,9 +19,9 @@ const { Content, headings } = await blog.render();
 ---
 
 <ContentLayout
+    contentType="Blogs"
     title={blog.data.title}
     description={blog.data.description}
-    contentType="Blogs"
     createdAt={blog.data.createdAt}
     updatedAt={blog.data.updatedAt}
 >
