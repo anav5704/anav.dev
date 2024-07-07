@@ -15,7 +15,7 @@ site: https://opass.anav.dev
 
 ---
 
-![Online PASS Demo](./images/online-pass-demo.webp)
+[![Online PASS Demo](./images/online-pass-demo.webp)](https://opass.anav.dev)
 
 Online PASS is a real-time, full-stack progressive web application designed to streamline and enhance PASS (University of the South Pacific's Peer Aided Study Sessions). It consolidates features from Viber and Zoom, offering functionalities such as chat rooms, audio/video calls, session schedules, worksheet submissions, and resource access. OPASS also boasts a plethora of badges to earn and a leader board to showcase the best students and leaders.
 

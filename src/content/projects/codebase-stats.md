@@ -15,9 +15,9 @@ site: https://www.npmjs.com/package/codebase-stats
 
 ---
 
-![Codebase Stats Demo](./images/codebase-stats-demo.webp)
+[![Codebase Stats Demo](./images/codebase-stats-demo.webp)](https://www.npmjs.com/package/codebase-stats)
 
-This is a simple cli tool that counts the number of directories, files and lines that code your codebase consists of using a recursive function. All `.files`, `.directories`, `images` and the `node_modules` are ignored.
+This is a simple CLI tool that counts the number of directories, files and lines that code your codebase consists of using a recursive function. All `.files`, `.directories`, `images` and the `node_modules` are ignored.
 
 ## Technologies Used
 

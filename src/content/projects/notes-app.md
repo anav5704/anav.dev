@@ -15,7 +15,7 @@ site: https://notes.anav.dev
 
 ---
 
-![Notes App Demo](./images/notes-app-demo.webp)
+[![Notes App Demo](./images/notes-app-demo.webp)](https://notes.anav.dev)
 
 This is a simple and user-friendly note-taking app I made while I was learning the MERN stack (MongoDB, Express JS, React JS, Node JS). Development time was almost 1 month: started on the 28th of August, 2023, and ended on the 23rd of September, 2023. This was also my first time using a component library and I chose Mantine as it fit my style. I still prefer using plain TailwindCSS with HeroIcons.
 

@@ -15,7 +15,7 @@ site: https://quotes.anav.dev
 
 ---
 
-![Great Quotes Demo](./images/great-quotes-demo.webp)
+[![Great Quotes Demo](./images/great-quotes-demo.webp)](https://quotes.anav.dev)
 
 This is a simple web app that hosts some great quotes my friends and I have said throughout highschool nad university. Users can create, update and delete their own quotes and like others quotes after logging in. This project uses the T3 stack and is hosted on [Render](https://render.com) - initial load may take some time as I am on a free tier.
 

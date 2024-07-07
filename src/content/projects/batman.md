@@ -15,7 +15,7 @@ site: https://discord.gg/K9rMzPudgS
 
 ---
 
-![Batman Demo](./images/batman-demo.webp)
+[![Batman Demo](./images/batman-demo.webp)](https://discord.gg/K9rMzPudgS)
 
 This is a simple discord bot made using Google's Palm 2. The setup was easy and straightforward. This bot reads messages and replies to them as if it is Batman. If you want to talk to him, feel free to join the [Gotham City](https://discord.gg/K9rMzPudgS) discord server.
 
