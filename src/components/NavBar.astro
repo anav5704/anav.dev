@@ -1,0 +1,51 @@
+---
+const links = [
+    {
+        label: "Anav",
+        href: "/#anav",
+        mobile: true
+    },
+    {
+        label: "Skills",
+        href: "/#skills",
+        mobile: false
+    },
+    {
+        label: "Projects",
+        href: "/projects",
+        mobile: false
+    },
+    {
+        label: "Blogs",
+        href: "/blogs",
+        mobile: false
+    },
+    {
+        label: "Research",
+        href: "/research",
+        mobile: false
+    },
+    {
+        label: "Links",
+        href: "/links",
+        mobile: true
+    }
+];
+---
+
+<nav class="fixed w-screen bg-white">
+    <div
+        class="flex items-star justify-between py-3 w-11/12 md:w-3/4 lg:w-1/2 mx-auto"
+    >
+        {
+            links.map((link) => (
+                <a
+                    class={`${!link.mobile && "hidden"} md:block no-underline hover:underline`}
+                    href={link.href}
+                >
+                    {link.label}
+                </a>
+            ))
+        }
+    </div>
+</nav>
