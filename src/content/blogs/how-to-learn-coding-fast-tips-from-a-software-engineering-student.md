@@ -61,6 +61,6 @@ Now let’s get into the good stuff. Here is a list of resources that I think wi
 
 ---
 
-Learning to code fast is what everyone wants. Learning to be a good developer is what is actually important. While it is important to learn this new skill efficiently, you should not rush through it. Take your time and learn the ins and outs of a language. Learn the tools that make it better and learn what the ecosystem has to offer. With that being said, I wish you best of luck!`
+Learning to code fast is what everyone wants. Learning to be a good developer is what is actually important. While it is important to learn this new skill efficiently, you should not rush through it. Take your time and learn the ins and outs of a language. Learn the tools that make it better and learn what the ecosystem has to offer. With that being said, I wish you best of luck!
 
 > “Rome wasn't built in a day, but they were laying bricks every hour”
