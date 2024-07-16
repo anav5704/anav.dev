@@ -43,10 +43,10 @@ In order to prevent Batman from responding to every message, you need to mention
 
 First, fork and clone the repo, and install all the required dependencies by running `npm install`. Then make a `.env` file in the root of your project and add the following variables:
 
-```
-PALM_AI_API_KEY
-DISCORD_TOKEN
-GIPHY_API_KEY
+```sh
+PALM_AI_API_KEY="palm-api-key"
+DISCORD_TOKEN="discord-token"
+GIPHY_API_KEY="giphy-api-key"
 ```
 
 Finally Start the app by running `node index.js` or `node .`

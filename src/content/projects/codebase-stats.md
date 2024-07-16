@@ -32,19 +32,19 @@ This is a simple CLI tool that counts the number of directories, files and lines
 
 Fist install the package:
 
-```
+```sh
 npm i -g codebase-stats@latest
 ```
 
 Then navigate to the project you want to get the stats for:
 
-```
+```sh
 cd path/to/project
 ```
 
 Finally, run the following command to get the stats:
 
-```
+```sh
 codebase-stats
 ```
 

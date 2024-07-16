@@ -59,7 +59,7 @@ Click on the dropdown under the database dropdown and choose the connection stri
 
 Now copy the connection string and go back to your project. Create a `.env` file if you don't have one and paste your connection string. It should look something like this:
 
-```bash
+```sh
 DATABASE_URL="postgresql://username:password@host/database"
 ```
 
@@ -75,13 +75,13 @@ In our dual ORM strategy, Prisma will be used to make the database schema and wi
 
 Assuming you already have a [Next.js](https://nextjs.org) app with typescript ready to go, we are going to install Prisma.
 
-```bash
+```sh
 npm install prisma --save-dev
 ```
 
 The following command will create a `prisma` directory that contains a `schema.prisma` file. It will hold our database connection and data models.
 
-```bash
+```sh
 npx prisma init
 ```
 
@@ -100,7 +100,7 @@ datasource db {
 
 To migrate our database schema, we will need to install the Prisma client.
 
-```bash
+```sh
 npm install @prisma/client
 ```
 
@@ -145,7 +145,7 @@ Drizzle will be used to pull the schema from the database and make the actual qu
 
 First, we are going to install the Drizzle ORM itself and the Neon serverless adapter for it.
 
-```bash
+```sh
 npm install drizzle-orm @neondatabase/serverless
 ```
 
@@ -155,7 +155,7 @@ npm install drizzle-orm @neondatabase/serverless
 
 Drizzle kit is a CLI that will help us generate the schema and relations from our database. It also lets us view our data locally using Drizzle Studio.
 
-```bash
+```sh
 npm install drizzle-kit --save-dev
 ```
 
@@ -210,7 +210,7 @@ Quotes-App
 
 To migrate our schema to the Neon database, we run the [push](https://www.prisma.io/docs/orm/prisma-migrate/workflows/prototyping-your-schema) command that comes with the Prisma client:
 
-```bash
+```sh
 npx prisma db push
 ```
 
@@ -224,7 +224,7 @@ Head over to your Neon dashboard and go to the tables view. You can see the sche
 
 Now that our schema is out of Prisma, we can use Drizzle kits [pull](https://orm.drizzle.team/kit-docs/commands#introspect--pull) command to automatically generate the data models and relations in Drizzle.
 
-```bash
+```sh
 npx drizzle-kit introspect
 ```
 
@@ -277,7 +277,7 @@ Running the Prisma `pull` and Drizzle `introspect` command every time you update
 
 Now all you have to do is run the following command:
 
-```bash
+```sh
 npm run db:new
 ```
 

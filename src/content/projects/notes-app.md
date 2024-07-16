@@ -96,10 +96,10 @@ This app has a controller for each of the primary interactions between the user 
 
 Firstly, fork this repository and then clone it onto your machine. Then, cd into the client folder and run `npm install `. Now cd out to the root folder and cd into the server folder and run `npm install` again. Create a `.env` file in the root of the server folder and add the environment variables:
 
-```
+```sh
 PORT=4000
-MONGO
-SECRET
+MONGO="mongodb-uri"
+SECRET="hash-secret"
 ```
 
 The backend routes for the Express app are hardcoded in the `client/src/hooks/controllers/useNoteController` file for all 6 controllers, change it to your own backend routes.

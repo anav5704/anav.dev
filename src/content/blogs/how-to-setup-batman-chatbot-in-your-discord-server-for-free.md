@@ -39,10 +39,10 @@ An API key is just a fancy synonym for a password. It is used to authenticate th
 
 We are now going to get API keys for the services we will be using. These API keys are extremely sensitive and should be kept private. I recommend creating a local `keys.txt` file and storing the API keys there. In that file, add the following:
 
-```bash
-PALM_AI_API_KEY
-DISCORD_TOKEN
-GIPHY_API_KEY
+```sh
+PALM_AI_API_KEY=""
+DISCORD_TOKEN=""
+GIPHY_API_KEY=""
 ```
 
 ### Discord Token
@@ -59,7 +59,7 @@ After creating the application, go to the `Bot` section and click on `Reset Toke
 
 After a new token is generated, copy it and paste it into the `keys.txt` file.
 
-```bash
+```sh
 DISCORD_TOKEN="your-discord-token"
 ```
 
@@ -77,7 +77,7 @@ I made the Batman Discord Bot using Google Palm AI. It is now know as Google Gem
 
 Each key belongs to a specific project. If you do not have a project, create one. Copy the key and paste it into the `keys.txt` file. Despite this being a `Gemini` API, we will still name the variable `Palm AI` as that is what the code expects.
 
-```bash
+```sh
 PALM_AI_API_KEY="your-gemini-api-key"
 ```
 
@@ -91,7 +91,7 @@ You can create a Giphy API key from your [Giphy Developer Dashboard](https://dev
 
 Copy the key and paste it into the `keys.txt` file. Just note that this time, instead of the API key itself, we are using a URI that has the API key in it.
 
-```bash
+```sh
 GIPHY_API_KEY="https://api.giphy.com/v1/gifs/search?api_key=<your-giphy-api-key>&q=Batman&limit=50"
 ```
 
