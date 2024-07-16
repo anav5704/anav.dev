@@ -6,74 +6,62 @@ import react from "@astrojs/react";
 
 const theme = {
     name: "gruvbox-dark",
-    settings: [
-        {
-            scope: ["comment"],
-            settings: {
-                foreground: "#928374"
-            }
-        },
-        {
-            scope: ["string"],
-            settings: {
-                foreground: "#B8BB26"
-            }
-        },
-        {
-            scope: ["keyword"],
-            settings: {
-                foreground: "#FB4934"
-            }
-        },
-        {
-            scope: ["number", "constant", "variable.language"],
-            settings: {
-                foreground: "#D79921"
-            }
-        },
-        {
-            scope: ["function", "entity.name.function"],
-            settings: {
-                foreground: "#FABD2F"
-            }
-        },
-        {
-            scope: ["variable.parameter", "variable"],
-            settings: {
-                foreground: "#83A598"
-            }
-        },
-        {
-            scope: ["class", "type"],
-            settings: {
-                foreground: "#D3869B"
-            }
-        },
-        {
-            scope: ["punctuation"],
-            settings: {
-                foreground: "#EBDBB2"
-            }
-        },
-        {
-            scope: ["operator"],
-            settings: {
-                foreground: "#FE8019"
-            }
-        },
-        {
-            scope: ["meta.embedded"],
-            settings: {
-                foreground: "#8EC07C"
-            }
-        },
-        {
-            scope: ["support"],
-            settings: {
-                foreground: "#689D6A"
-            }
+    settings: [{
+        scope: ["comment"],
+        settings: {
+            foreground: "#928374"
         }
-    ],
+    }, {
+        scope: ["string"],
+        settings: {
+            foreground: "#B8BB26"
+        }
+    }, {
+        scope: ["keyword"],
+        settings: {
+            foreground: "#FB4934"
+        }
+    }, {
+        scope: ["number", "constant", "variable.language"],
+        settings: {
+            foreground: "#D79921"
+        }
+    }, {
+        scope: ["function", "entity.name.function"],
+        settings: {
+            foreground: "#FABD2F"
+        }
+    }, {
+        scope: ["variable.parameter", "variable"],
+        settings: {
+            foreground: "#83A598"
+        }
+    }, {
+        scope: ["class", "type"],
+        settings: {
+            foreground: "#D3869B"
+        }
+    }, {
+        scope: ["punctuation"],
+        settings: {
+            foreground: "#EBDBB2"
+        }
+    }, {
+        scope: ["operator"],
+        settings: {
+            foreground: "#FE8019"
+        }
+    }, {
+        scope: ["meta.embedded"],
+        settings: {
+            foreground: "#8EC07C"
+        }
+    }, {
+        scope: ["support"],
+        settings: {
+            foreground: "#689D6A"
+        }
+    }],
     colors: {
         "editor.background": "#282828",
         "editor.foreground": "#EBDBB2",
@@ -84,11 +72,10 @@ const theme = {
     }
 };
 
+
 // https://astro.build/config
 export default defineConfig({
     site: "https://anav.dev",
-
-    // TODO: move to fully static site and remove vercel speed insights
     output: "server",
     adapter: vercel({
         webAnalytics: {
@@ -104,7 +91,10 @@ export default defineConfig({
     },
     markdown: {
         syntaxHighlight: "shiki",
-        shikiConfig: { theme }
+        shikiConfig: {
+            wrap: true,
+            theme
+        }
     },
     integrations: [tailwind(), react(), sitemap()]
 });
