@@ -60,10 +60,10 @@
     }
 
     pre {
-        @apply p-3 rounded-lg;
+        @apply p-2 rounded-lg;
 
         code {
-            @apply bg-transparent text-base;
+            @apply bg-transparent;
         }
     }
 }

@@ -1,8 +1,8 @@
 ---
 title: How To Setup Batman Chatbot In Your Discord Server For Free.
 description: This blog explains how you can learn coding quickly and effectively along with tips on how to grow as a developer.
-updatedAt: 2024-07-15T00:00:00+12:00
-createdAt: 2024-07-15T00:00:00+12:00
+updatedAt: 2024-07-17T00:00:00+12:00
+createdAt: 2024-07-17T00:00:00+12:00
 ---
 
 ## Guide Overview
@@ -85,11 +85,11 @@ PALM_AI_API_KEY="your-gemini-api-key"
 
 ---
 
-You can create a Giphy API key from your [Giphy Developer Dashboard](https://developers.giphy.com/dashboard/). A Giphy account is required for this.
+You can create a Giphy API key from your [Giphy Developer Dashboard](https://developers.giphy.com/dashboard/). A Giphy account is required for this. While creating the key, you will be given an option to chose either `SDK` or `API`. Choose `API` and proceed.
 
 ![Create Giphy API Key](./images/create-giphy-api-key.webp)
 
-Copy the key and paste it into the `keys.txt` file. Just note that this time, instead of the API key itself, we are using a URI that has the API key in it.
+Once you have created the API key, copy it and paste it into the `keys.txt` file. Just note that this time, instead of the API key itself, we are using a URI that has the API key in it.
 
 ```sh
 GIPHY_API_KEY="https://api.giphy.com/v1/gifs/search?api_key=<your-giphy-api-key>&q=Batman&limit=50"
