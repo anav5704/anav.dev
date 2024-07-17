@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    skill: CollectionEntry<"skills">;
+}
+
+const { skill } = Astro.props;
+---
+
+<div>
+    <b>{skill.data.title}</b>
+    {" - "}
+    {skill.data.description}
+    {skill.data.examples.map((example) => <code class="mr-1">{example}</code>)}
+</div>

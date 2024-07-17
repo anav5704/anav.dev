@@ -1,0 +1,17 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "@lib/format-date";
+
+interface Props {
+    research: CollectionEntry<"research">;
+}
+
+const { research } = Astro.props;
+---
+
+<div class="space-y-1">
+    <a href={"research/" + research.slug}>
+        <b>{research.data.title}</b>
+    </a>
+    <p>{formatDate(research.data.createdAt)}</p>
+</div>

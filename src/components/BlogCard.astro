@@ -1,0 +1,17 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "@lib/format-date";
+
+interface Props {
+    blog: CollectionEntry<"blogs">;
+}
+
+const { blog } = Astro.props;
+---
+
+<div class="space-y-1">
+    <a href={"blogs/" + blog.slug} class="font-semibold">
+        {blog.data.title}
+    </a>
+    <p>{formatDate(blog.data.createdAt)}</p>
+</div>

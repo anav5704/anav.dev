@@ -3,30 +3,23 @@ import Header from "@components/Header.astro";
 import { Github, Globe } from "@geist-ui/icons";
 
 interface Props {
-  title: string;
-  repo?: string;
-  site?: string;
+    title: string;
+    repo: string;
+    site: string;
 }
 
 const { title, repo, site } = Astro.props;
 ---
 
 <article class="my-12 space-y-2">
-  <Header content={title} />
-  <div class="flex items-center gap-5">
-    {
-      repo && (
+    <Header content={title} />
+    <div class="flex items-center gap-5">
         <a target="_blank" href={repo} class="flex items-center gap-1">
-          <Github size={20} /> Source Code
+            <Github size={20} /> Source Code
         </a>
-      )
-    }
-    {
-      site && (
+
         <a target="_blank" href={site} class="flex items-center gap-1">
-          <Globe size={20} /> Live Preview
+            <Globe size={20} /> Live Preview
         </a>
-      )
-    }
-  </div>
+    </div>
 </article>
