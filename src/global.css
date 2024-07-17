@@ -5,7 +5,7 @@
 @layer base {
     html,
     body {
-        @apply text-lg leading-snug  scroll-smooth text-[#444444] bg-white underline-offset-[3px];
+        @apply leading-snug  scroll-smooth text-[#444444] bg-white underline-offset-[3px];
         font-family: "Times New Roman", Times, serif;
         scroll-padding-top: 50px;
     }
@@ -33,6 +33,12 @@
 
     h3 {
         @apply text-2xl pt-5;
+    }
+
+    a,
+    p,
+    summary {
+        @apply text-lg;
     }
 
     a {
