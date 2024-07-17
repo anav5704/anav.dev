@@ -3,10 +3,10 @@ id: 1
 featured: true
 title: Online PASS
 metaTitle: Online PASS - University of the South Pacific
-description: In-house software built for the University of the South Pacific.
+description: Internal software built for the University of the South Pacific.
 metaDescription: Fullstack in-house software for the University of the South Pacific built using Next JS, TailwindCSS, Prisma, AWS RDS, AWS S3 and Supabase with the frontend and backend hosted on Render.
 createdAt: 2024-01-01T00:00:00+12:00
-updatedAt: 2024-01-01T00:00:00+12:00
+updatedAt: 2024-07-17T00:00:00+12:00
 repo: https://github.com/anav5702/online-pass
 site: https://opass.anav.dev
 ---
@@ -17,7 +17,19 @@ site: https://opass.anav.dev
 
 [![Online PASS Demo](./images/online-pass-demo.webp)](https://opass.anav.dev)
 
-Online PASS is a real-time, full-stack progressive web application designed to streamline and enhance PASS (University of the South Pacific's Peer Aided Study Sessions). It consolidates features from Viber and Zoom, offering functionalities such as chat rooms, audio/video calls, session schedules, worksheet submissions, and resource access. OPASS also boasts a plethora of badges to earn and a leader board to showcase the best students and leaders.
+[The University of the South Pacific](https://usp.ac.fj) (USP) provijdes a robust technological ecosystem for learning, including Student Online Services (SOLS), Information Technology Services (ITS), Moodle integration, and Sem 0 GPT. USP also offers programs like PASS (peer aided study sessions) where students collaborate under the guidance of high-achieving peers.
+
+## The Problem
+
+---
+
+There are challenges with managing various technologies for PASS leaders and ensuring student participation due to the need for Viber and Zoom installations, issues with Viber file storage, and time limitations on Zoom calls. These issues affect the efficiency of the system for both leaders and students.
+
+## The Solution
+
+---
+
+Online PASS! A real-time, full-stack progressive web application designed to streamline and enhance PASS. It will consolidate features from Viber and Zoom, offering functionalities such as chat rooms, audio/video calls, session schedules, worksheet submissions, and resource access. OPASS also boasts a plethora of badges to earn and a leader board to showcase the best students and leaders.
 
 ## Technologies Used
 
@@ -42,29 +54,29 @@ Online PASS is a real-time, full-stack progressive web application designed to s
 
 **Chat** - students can send messages, edit them, delete them and reply to other messages.
 
-**Polls** - students can add polls with multiple options and course members can cast their votes.
+**Polls** - students can add polls with multiple options and course members can cast votes.
 
-**Submissions** - students can share with their peers and submit worksheet answers for marking.
+**Submissions** - students can share with their peers and submit worksheets for marking.
 
-**Resources** - leaders can share resources in the form of uploading worksheets or linking sites.
+**Resources** - leaders can share resources by uploading worksheets or linking sites.
 
-**Schedule** - students can view the scheduled sessions for the week and leaders can manage them.
+**Schedule** - students can view the scheduled sessions and leaders can manage them.
 
-**Attendance** - leaders can take attendance for sessions from within the app, no more sheets!.
+**Attendance** - leaders can take directly attendance for sessions from within the app.
 
-**Announcements** - admins and leaders can send global / course scoped messages to members.
+**Announcements** - admins and leaders can send scoped messages to course members.
 
-**Notifications** - alerts will be sent out to students on certain events such as session cancellation.
+**Notifications** - alerts will be sent out to students on events such as session cancellation.
 
-**Achievements** - students can earn badges for completing certain tasks and reaching milestones.
+**Achievements** - students can earn badges by completing tasks and reaching milestones.
 
-**Leaderboards** - students and leaders with high engagement and contribution get added here.
+**Leaderboards** - list of students and leaders with high engagement and contribution.
 
-**Dashboard** - admins and leaders have access to a powerful dashboard with vital information.
+**Dashboard** - admins and leaders have access to a powerful dashboard with vital info.
 
-**Feedback Friday** - students can share their experiences, report bugs or request features on Fridays.
+**Feedback Friday** - students can share their experiences and report bugs on Fridays.
 
-**Turbo Keys** - all internal app and course navigation links have a custom shortcut bound to them.
+**Turbo Keys** - internal app and course navigation links have shortcuts bound to them.
 
 ## Architecture
 
