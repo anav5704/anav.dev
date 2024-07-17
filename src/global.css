@@ -5,13 +5,13 @@
 @layer base {
     html,
     body {
-        @apply leading-snug  scroll-smooth text-[#444444] bg-white underline-offset-[3px];
+        @apply scroll-smooth text-[#444444] bg-white underline-offset-[3px];
         font-family: "Times New Roman", Times, serif;
         scroll-padding-top: 50px;
     }
 
     main {
-        @apply space-y-3;
+        @apply space-y-3 text-lg;
     }
 
     h1,
@@ -35,14 +35,8 @@
         @apply text-2xl pt-5;
     }
 
-    a,
-    p,
-    summary {
-        @apply text-lg;
-    }
-
     a {
-        @apply underline hover:!underline;
+        @apply underline hover:underline;
     }
 
     li {
@@ -58,7 +52,7 @@
     }
 
     code {
-        @apply bg-zinc-200  px-2 rounded-md inline-block text-sm;
+        @apply bg-zinc-200 px-2 rounded-lg inline-block text-sm;
     }
 
     blockquote {
@@ -66,10 +60,10 @@
     }
 
     pre {
-        @apply p-3 rounded-lg text-sm;
+        @apply p-3 rounded-lg;
 
         code {
-            @apply [all:unset];
+            @apply bg-transparent text-base;
         }
     }
 }
