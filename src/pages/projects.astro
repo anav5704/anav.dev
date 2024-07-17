@@ -1,10 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
-import { formatDate } from "@lib/format-date";
 import ListLayout from "@layouts/list.astro";
+import ProjectCard from "@components/ProjectCard.astro";
 
 const unsortedProjects = await getCollection("projects");
+
 const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
 ---
 
@@ -16,18 +17,5 @@ const projects = unsortedProjects.sort((a, b) => a.data.id - b.data.id);
     <article class="my-12">
         <Header content={`Projects (${projects.length})`} />
     </article>
-    {
-        projects.map((project) => (
-            <div class="space-y-1">
-                <p>
-                    <a href={"projects/" + project.slug}>
-                        <b>{project.data.title}</b>
-                    </a>
-                    {" - "}
-                    {project.data.description}
-                </p>
-                <p>{formatDate(project.data.createdAt)}</p>
-            </div>
-        ))
-    }
+    {projects.map((project) => <ProjectCard project={project} />)}
 </ListLayout>

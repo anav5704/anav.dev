@@ -2,8 +2,11 @@
 import ImageGrid from "@components/ImageGrid.astro";
 import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
-import { formatDate } from "@lib/format-date";
 import MainLayout from "@layouts/main.astro";
+import SkillCard from "@components/SkillCard.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+import BlogCard from "@components/BlogCard.astro";
+import ResearchCard from "@components/ResearchCard.astro";
 
 const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
@@ -26,7 +29,7 @@ const research = unfilderedResearch
 ---
 
 <MainLayout
-    title="Anav Chand - Fullstack Web Dev From Fiji"
+    title="Anav Chand | Fullstack Web Dev From Fiji"
     description="Hi, I'm Anav Chand. I am a 1st year Software Engineering student at the University of the South Pacific. I am also a self-taught Full-Stack web developer."
 >
     <!-- HERO SECTION -->
@@ -46,36 +49,14 @@ const research = unfilderedResearch
     <!-- SKILLS SECTION -->
 
     <h2 id="skills">My Skills</h2>
-    {
-        skills.map((skill) => (
-            <p>
-                <b>{skill.data.title}</b>
-                {" - "}
-                {skill.data.description}
-                {skill.data.examples.map((example) => (
-                    <code class="mr-1 text-sm">{example}</code>
-                ))}
-            </p>
-        ))
-    }
+
+    {skills.map((skill) => <SkillCard skill={skill} />)}
 
     <!-- PROJECTS SECTION -->
 
     <h2 id="projects">Top Projects</h2>
-    {
-        projects.map((project) => (
-            <div class="space-y-1">
-                <p>
-                    <a href={"projects/" + project.slug}>
-                        <b>{project.data.title}</b>
-                    </a>
-                    {" - "}
-                    {project.data.description}
-                </p>
-                <p>{formatDate(project.data.createdAt)}</p>
-            </div>
-        ))
-    }
+
+    {projects.map((project) => <ProjectCard project={project} />)}
 
     <div>
         <a href="/projects">View all projects</a>
@@ -84,16 +65,9 @@ const research = unfilderedResearch
     <!-- BLOGS SECTION -->
 
     <h2 id="blogs">Latest Blogs</h2>
-    {
-        blogs.map((blog) => (
-            <div class="space-y-1">
-                <a href={"blogs/" + blog.slug} class="font-semibold">
-                    {blog.data.title}
-                </a>
-                <p>{formatDate(blog.data.createdAt)}</p>
-            </div>
-        ))
-    }
+
+    {blogs.map((blog) => <BlogCard blog={blog} />)}
+
     <div>
         <a href="/blogs">View all blogs</a>
     </div>
@@ -101,16 +75,9 @@ const research = unfilderedResearch
     <!-- RESEARCH SECTION -->
 
     <h2 id="research">Featured Research</h2>
-    {
-        research.map((research) => (
-            <div class="space-y-1">
-                <a href={"research/" + research.slug}>
-                    <b>{research.data.title}</b>
-                </a>
-                <p>{formatDate(research.data.createdAt)}</p>
-            </div>
-        ))
-    }
+
+    {research.map((research) => <ResearchCard research={research} />)}
+
     <div>
         <a href="/research">View all research</a>
     </div>

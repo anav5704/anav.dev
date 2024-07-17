@@ -1,11 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
-import { formatDate } from "@lib/format-date";
 import ListLayout from "@layouts/list.astro";
+import ResearchCard from "@components/ResearchCard.astro";
 
-const unfilteredResearch = await getCollection("research");
-const reserearch = unfilteredResearch.sort(
+const unsortedResearch = await getCollection("research");
+
+const reserearch = unsortedResearch.sort(
     (a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime()
 );
 ---
@@ -18,14 +19,5 @@ const reserearch = unfilteredResearch.sort(
     <article class="my-12">
         <Header content={`Research (${reserearch.length})`} />
     </article>
-    {
-        reserearch.map((research) => (
-            <div class="space-y-1">
-                <a href={"research/" + research.slug} class="font-semibold">
-                    {research.data.title}
-                </a>
-                <p class="faded">{formatDate(research.data.createdAt)}</p>
-            </div>
-        ))
-    }
+    {reserearch.map((research) => <ResearchCard research={research} />)}
 </ListLayout>
