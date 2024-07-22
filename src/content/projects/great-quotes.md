@@ -45,7 +45,7 @@ NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="secret"
 GOOGLE_CLIENT_ID="client-id"
 GOOGLE_CLIENT_SECRET="client-secret"
-DATABASE_URL="postgres://user:password@hos/database"
+DATABASE_URL="postgres://user:password@hostname:port/database"
 ```
 
 Once that is done, run `npm run dev` to view it on

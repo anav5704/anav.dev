@@ -2,7 +2,7 @@
 title: How To Use Prisma For Data Modeling And Drizzle For Queries.
 description: Learn how to use Prisma ORM and Drizzle ORM in the same Next.js app, connected to a Neon serverless PostgreSQL database.
 createdAt: 2024-06-28T00:00:00+12:00
-updatedAt: 2024-07-07T00:00:00+12:00
+updatedAt: 2024-07-22T00:00:00+12:00
 ---
 
 ## Prisma? Drizzle?
@@ -60,7 +60,7 @@ Click on the dropdown under the database dropdown and choose the connection stri
 Now copy the connection string and go back to your project. Create a `.env` file if you don't have one and paste your connection string. It should look something like this:
 
 ```sh
-DATABASE_URL="postgresql://username:password@host/database"
+DATABASE_URL="postgresql://username:password@hostname:port/database"
 ```
 
 ## Setup Prisma ORM

@@ -1,7 +1,7 @@
 ---
 title: How To Learn Coding Fast – Tips From A Software Engineering Student.
 description: This blog explains how you can learn coding quickly and effectively along with tips on how to grow as a developer.
-updatedAt: 2024-07-02T00:00:00+12:00
+updatedAt: 2024-07-22T00:00:00+12:00
 createdAt: 2024-07-07T00:00:00+12:00
 ---
 
@@ -9,9 +9,9 @@ createdAt: 2024-07-07T00:00:00+12:00
 
 ---
 
-I through of coding as a “cool” thing back when I started gaining an interest in computers (and still do). Being able to write code and see the computer run it and give an output is very rewarding. Learning to code in today's world is one of the best decisions you can make. There is an ever-growing market in programming jobs, and it is a very high-paying skill to have. Whatever your reason to start coding, I’ll share some tips that I have learnt over the past 3 years so that you can learn coding faster.
+I thought of coding as a _cool_ thing back when I started gaining an interest in computers (and still do). Being able to write code and see the computer run it and give an output is very rewarding. Learning to code in today's world is one of the best decisions you can make. There is an ever-growing market in programming jobs, and it is a very high-paying skill to have. Whatever your reason to start coding, I’ll share some tips that I have learnt over the past 3 years so that you can learn coding faster.
 
-## Chose A Domain
+## Choose A Domain
 
 ---
 
@@ -33,13 +33,13 @@ So was I. Kind of. When you start watching tutorial after tutorial and build pro
 
 ---
 
-At this point, you should have a solid understanding of the primary languages and tools used in your domain. Once you make it out of tutorial hell, you should move on to building more complex projects with that knowledge. Along with complex, they should be real world projects. Try to find a problem that you, your family or your friends are facing. Take time out to plan for a solution and then code it out. I was building personal projects for a long time, and I recently built a real-world project. The problem I saw was a technologically poor peer mentoring system at my university and built [Online PASS](https://www.anav.dev/projects/online-pass) so solve it.
+At this point, you should have a solid understanding of the primary languages and tools used in your domain. Once you make it out of tutorial hell, you should move on to building more complex projects with that knowledge. Along with complex, they should be real-world projects. Try to find a problem that you, your family or your friends are facing. Take time out to plan for a solution and then code it out. I was building personal projects for a long time, and I recently built a real-world project. The problem I saw was a technologically poor peer mentoring system at my university and built [Online PASS](https://www.anav.dev/projects/online-pass) to solve it.
 
 ## It’s Okay To Suck
 
 ---
 
-Just as with life, you will have ups and downs in your coding journey. Sometimes, you will feel like a genius after adding certain features or completing certain projects. Sometimes, you will feel horrible. Maybe it's because you can’t find the solution to something or feel like you’re not good enough. That’s also normal. If you are new to the coding space, then this can be because you’re still developing your skills haven't found a good mindset. If you’ve been coding for a while (like me), then it may just be burnout. Take a break. Touch some grass. Continue coding after you have mentally recovered.
+Just as with life, you will have ups and downs in your coding journey. Sometimes, you will feel like a genius after adding certain features or completing certain projects. Sometimes, you will feel horrible. Maybe it's because you can’t find the solution to something or feel like you’re not good enough. That’s also normal. If you are new to the coding space, then this can be because you’re still developing your skills or haven't found a good mindset. If you’ve been coding for a while (like me), then it may just be burnout. Take a break. Touch some grass. Continue coding after you have mentally recovered.
 
 ## Bonus Resources
 
@@ -47,15 +47,15 @@ Just as with life, you will have ups and downs in your coding journey. Sometimes
 
 Now let’s get into the good stuff. Here is a list of resources that I think will help you learn coding faster and make you a better developer.
 
-[Monkey Type](https://monkeytype.com/) – to code fast you need to type fast. Increase your wpm and learn to type without looking at your keyboard. Trust me, this will help you long term.
+[Monkey Type](https://monkeytype.com/) - to code fast you need to type fast. Increase your wpm and learn to type without looking at your keyboard. Trust me, this will help you long term.
 
-[Git & GitHub](https://cs000.anav.dev) – a developer without Git is like a chef without a knife. If you plan to take coding seriously, go learn Git and GitHub.
+[Git & GitHub](https://cs000.dev) - a developer without Git is like a chef without a knife. If you plan to take coding seriously, go learn Git and GitHub.
 
-[Awesome](https://github.com/sindresorhus/awesome) – these are lists about all kinds of interesting topics. They span across all primary domains and are a great way to discover new tools.
+[Awesome](https://github.com/sindresorhus/awesome) - these are lists about all kinds of interesting topics. They span across all primary domains and are a great way to discover new tools.
 
-[Roadmap.sh](https://roadmap.sh) – this is a collection of roadmaps based on various domains. It’s a massive help as it guides you in the right direction without holding your hand.
+[Roadmap.sh](https://roadmap.sh) - this is a collection of roadmaps based on various domains. It’s a massive help as it guides you in the right direction without holding your hand.
 
-[Documentation](https://guneetsinghtuli.medium.com/why-learning-from-documentation-is-better-than-watching-youtube-tutorial-4e1282132bda) – normalize reading docs. It is the fastest way to fix bugs and learn tools. Reading docs is a sign you’re growing as a developer.
+[Documentation](https://guneetsinghtuli.medium.com/why-learning-from-documentation-is-better-than-watching-youtube-tutorial-4e1282132bda) - normalize reading docs. It is the fastest way to fix bugs and learn tools. Reading docs is a sign you’re growing as a developer.
 
 ## Final Thoughts
 

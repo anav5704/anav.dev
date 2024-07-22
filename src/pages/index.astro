@@ -1,12 +1,12 @@
 ---
+import ResearchCard from "@components/ResearchCard.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+import SkillCard from "@components/SkillCard.astro";
 import ImageGrid from "@components/ImageGrid.astro";
+import BlogCard from "@components/BlogCard.astro";
 import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
 import MainLayout from "@layouts/main.astro";
-import SkillCard from "@components/SkillCard.astro";
-import ProjectCard from "@components/ProjectCard.astro";
-import BlogCard from "@components/BlogCard.astro";
-import ResearchCard from "@components/ResearchCard.astro";
 
 const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
@@ -42,6 +42,9 @@ const research = unfilderedResearch
                 University of the South Pacific</a
             >
             who might be a little <em>too</em> passionate about web development.
+            Currently buidling <a href="https://github.com/anav5704/CS000"
+                >CS000</a
+            >.
         </p>
     </article>
     <ImageGrid />

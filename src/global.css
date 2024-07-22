@@ -11,7 +11,7 @@
     }
 
     main {
-        @apply space-y-3 text-lg;
+        @apply space-y-3 text-base md:text-lg;
     }
 
     h1,
@@ -24,15 +24,15 @@
     }
 
     h1 {
-        @apply text-4xl;
+        @apply text-3xl md:text-4xl;
     }
 
     h2 {
-        @apply text-3xl pt-5;
+        @apply text-2xl md:text-3xl pt-5;
     }
 
     h3 {
-        @apply text-2xl pt-5;
+        @apply text-xl md:text-2xl pt-5;
     }
 
     a {
