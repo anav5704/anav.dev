@@ -53,6 +53,7 @@
 
     code {
         @apply bg-zinc-200 px-2 rounded-lg inline-block text-sm;
+        font-family: "JetBrains Mono", monospace;
     }
 
     blockquote {

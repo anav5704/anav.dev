@@ -26,6 +26,9 @@ const unfilderedResearch = await getCollection("research");
 const research = unfilderedResearch
     .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
+
+const currentProjectName = import.meta.env.PROJECT_NAME;
+const currentProjectUrl = import.meta.env.PROJECT_URL;
 ---
 
 <MainLayout
@@ -42,8 +45,8 @@ const research = unfilderedResearch
                 University of the South Pacific</a
             >
             who might be a little <em>too</em> passionate about web development.
-            Currently building <a href="https://www.cs000.dev" target="_blank"
-                >CS000</a
+            Currently building <a href={currentProjectUrl} target="_blank"
+                >{currentProjectName}</a
             >.
         </p>
     </article>
