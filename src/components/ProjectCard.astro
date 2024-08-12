@@ -11,9 +11,11 @@ const { project } = Astro.props;
 
 <div class="space-y-1">
     <div>
-        <a href={"projects/" + project.slug}><b>{project.data.title}</b></a>
+        <a href={"projects/" + project.slug}>
+            <b>{project.data.title}</b>
+        </a>
         {" - "}
         {project.data.description}
     </div>
-    <p>{formatDate(project.data.createdAt)}</p>
+    <p class="faded">{formatDate(project.data.createdAt)}</p>
 </div>

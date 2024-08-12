@@ -10,8 +10,8 @@ const { blog } = Astro.props;
 ---
 
 <div class="space-y-1">
-    <a href={"blogs/" + blog.slug} class="font-semibold">
-        {blog.data.title}
+    <a href={"blogs/" + blog.slug}>
+        <b>{blog.data.title}</b>
     </a>
-    <p>{formatDate(blog.data.createdAt)}</p>
+    <p class="faded">{formatDate(blog.data.createdAt)}</p>
 </div>

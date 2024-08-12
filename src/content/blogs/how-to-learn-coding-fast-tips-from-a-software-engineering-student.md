@@ -1,7 +1,7 @@
 ---
-title: How To Learn Coding Fast – Tips From A Software Engineering Student.
+title: How To Learn Coding Fast - Tips From A Software Engineering Student.
 description: This blog explains how you can learn coding quickly and effectively along with tips on how to grow as a developer.
-updatedAt: 2024-07-22T00:00:00+12:00
+updatedAt: 2024-08-12T00:00:00+12:00
 createdAt: 2024-07-07T00:00:00+12:00
 ---
 
@@ -47,7 +47,7 @@ Just as with life, you will have ups and downs in your coding journey. Sometimes
 
 Now let’s get into the good stuff. Here is a list of resources that I think will help you learn coding faster and make you a better developer.
 
-[Monkey Type](https://monkeytype.com/) - to code fast you need to type fast. Increase your wpm and learn to type without looking at your keyboard. Trust me, this will help you long term.
+[Monkey Type](https://monkeytype.com/) - to code fast you need to type fast. Increase your wpm and learn to type without looking at your keyboard. This will help you long term.
 
 [Git & GitHub](https://cs000.dev) - a developer without Git is like a chef without a knife. If you plan to take coding seriously, go learn Git and GitHub.
 

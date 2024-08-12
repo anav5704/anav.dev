@@ -26,9 +26,6 @@ const unfilderedResearch = await getCollection("research");
 const research = unfilderedResearch
     .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
-
-const currentProjectName = import.meta.env.PROJECT_NAME;
-const currentProjectUrl = import.meta.env.PROJECT_URL;
 ---
 
 <MainLayout
@@ -40,14 +37,11 @@ const currentProjectUrl = import.meta.env.PROJECT_URL;
     <article class="my-12 space-y-2">
         <Header content="Hi, I'm Anav" />
         <p>
-            I am a 1st year Software Engineering student at the
+            I am a first-year Software Engineering student at the
             <a href="https://www.usp.ac.fj/" target="_blank">
                 University of the South Pacific</a
             >
             who might be a little <em>too</em> passionate about web development.
-            Currently building <a href={currentProjectUrl} target="_blank"
-                >{currentProjectName}</a
-            >.
         </p>
     </article>
     <ImageGrid />

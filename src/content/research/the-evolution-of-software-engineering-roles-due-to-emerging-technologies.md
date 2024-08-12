@@ -2,7 +2,7 @@
 title: The Evolution of Software Engineering Roles Due to Emerging Technologies.
 description: This paper discusses how XR technologies impacts web developers in relation to the software development life cycle.
 createdAt: 2023-08-29T00:00:00.000Z
-updatedAt: 2023-08-29T00:00:00.000Z
+updatedAt: 2024-08-12T00:00:00.000Z
 ---
 
 ## Emerging Technologies and Software Engineering Roles
@@ -74,7 +74,7 @@ digital signals, while your inner the knows that the body is in the real world.
 
 ## Extended Reality in Software Development Life Cycle
 
-### Requirements Gathering / Planning
+### Requirements Gathering
 
 ---
 
@@ -108,7 +108,7 @@ makers, which function as a stylus. The software then takes these doodles and pr
 them to use cases. Built in microphones can be used to give names to these use cases because of
 voice recognition.
 
-### Coding / Implementation
+### Coding
 
 ---
 
@@ -169,7 +169,7 @@ used. This is where packages are made into suns which have planets orbiting them
 planets are classes, orbits are inheritance levels, and the sizes of planets vary on the lines of code
 (LOC) for that class.
 
-### Potential Drawbacks of XR
+### Drawbacks of XR
 
 ---
 

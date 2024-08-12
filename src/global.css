@@ -11,7 +11,7 @@
     }
 
     main {
-        @apply space-y-3 text-base md:text-lg;
+        @apply space-y-3 text-base md:text-xl;
     }
 
     h1,
@@ -53,7 +53,7 @@
 
     code {
         @apply bg-zinc-200 px-2 rounded-lg inline-block text-sm;
-        font-family: "JetBrains Mono", monospace;
+        font-family: "JetBrains Mono Variable", monospace;
     }
 
     blockquote {
@@ -72,5 +72,9 @@
 @layer components {
     .hero-image {
         @apply rounded-2xl col-span-1 object-cover w-full h-full object-top;
+    }
+
+    .faded {
+        @apply text-[#888888];
     }
 }

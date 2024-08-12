@@ -13,5 +13,5 @@ const { research } = Astro.props;
     <a href={"research/" + research.slug}>
         <b>{research.data.title}</b>
     </a>
-    <p>{formatDate(research.data.createdAt)}</p>
+    <p class="faded">{formatDate(research.data.createdAt)}</p>
 </div>

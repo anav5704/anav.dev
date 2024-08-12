@@ -3,10 +3,10 @@ id: 5
 featured: false
 title: Batman
 metaTitle: Batman - Node JS Discord Bot
-description: Discord bot that replies as Batman and comes with 2 slash commands.
+description: Discord bot that replies as Batman, comes with 2 slash commands.
 metaDescription: Discord chat bot that imitates Batman built using Node Js, Discord JS and Palm 2 API with the server hosted on Render.
 createdAt: 2023-12-01T00:00:00+12:00
-updatedAt: 2023-12-01T00:00:00+12:00
+updatedAt: 2024-12-12T00:00:00+12:00
 repo: https://github.com/anav5704/ai-discord-bot
 site: https://discord.gg/K9rMzPudgS
 ---
