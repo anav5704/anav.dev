@@ -23,7 +23,6 @@ export default defineConfig({
     markdown: {
         syntaxHighlight: "shiki",
         shikiConfig: {
-            wrap: true,
             theme: {
                 name: "gruvbox-dark",
                 settings: [{

@@ -1,6 +1,6 @@
 ---
 id: 3
-featured: true
+featured: false
 title: Notes App
 metaTitle: Digi Diary - MERN Stack Notes App
 description: MERN stack PWA that allows for CRUD operations on notes.
