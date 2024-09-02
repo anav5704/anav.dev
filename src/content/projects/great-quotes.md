@@ -34,6 +34,81 @@ This is a simple web app that hosts some great quotes my friends and I have said
 -   Drizzle
 -   Neon PostgreSQL
 
+## Architecture
+
+---
+
+This web application uses a MVC architecture, short for Model-View-Controller. As the name suggests, the system is broken into 3 main components that tightly coupled and frequently communicate with each together. The web server, application server and database server are all hosted on serverless platforms.
+
+### Models
+
+---
+
+The model layer deals with data logic and business logic. It helps the controller talk to the database. PostgreSQL is used to store the data and Prisma ORM is used to create the schemas while Drizzle ORM is used to communicate with teh database. Here is what the user and quote models look like:
+
+![Class diagram](./images/great-quotes-class-diagram.webp)
+
+The relationship shown above is a simple one to may relationship between the user and quote. A user can create multiple quotes sand a quote can belong to one and only one user. These were created using the [Prisma Schema Language](https://www.prisma.io/docs/orm/prisma-schema/overview).
+
+```prisma
+model User {
+    id     String  @id @default(uuid())
+    name   String
+    email  String
+    quotes Quote[]
+
+    createAt DateTime @default(now())
+}
+
+model Quote {
+    id      String @id @default(uuid())
+    content String
+    userId  String
+    user    User   @relation(fields: [userId], references: [id])
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now())
+
+    @@index([userId])
+}
+```
+
+### Views
+
+---
+
+The view layer handles the UI logic and generates UI components. React JS is used to create interactive UI components. Next UI is used as the primary component library for things like buttons and modals. Internal state is used to keep track of which models visible on the screen. Zod is used to validate user inputs for the modals. The quotes and their authors are fetched on each request and the webpage is rendered on the server.
+
+### Controllers
+
+---
+
+Controllers are the functions that act as a link between the model and view. They act as a middleman between the internal (web app) and external (database) parts of the system. This app uses Next JS API endpoints as its controllers, which are mostly database queries written in Drizzle. Here is an example of a controller that is responsible for creating quotes:
+
+```ts
+export async function POST(req: Request) {
+    const user = await currentUser();
+    const { quote } = await req.json();
+
+    try {
+        const quote = await db.insert(Quote).values({
+            userId: user.id,
+            content: quote,
+            id: uuid()
+        });
+
+        return NextResponse.json(quote);
+    } catch (error) {
+        console.log("Create quote error", error);
+        return new NextResponse("Create quote error", { status: 500 });
+    }
+}
+```
+
+This app has a controller for each of the primary interactions between the user and the system. These interactions are also called "use cases" and here is what the use-case diagram for this app looks like:
+
+![Use case diagram](./images/great-quotes-usecase-digram.webp)
+
 ## Getting Started
 
 ---

@@ -6,7 +6,7 @@ metaTitle: Digi Diary - MERN Stack Notes App
 description: MERN stack PWA that allows for CRUD operations on notes.
 metaDescription: Fullstack notes web app built using MongoDB, Express JS, React JS, Node JS with the frontend hosted on Vercel and backend hosted on Render.
 createdAt: 2023-08-28T00:00:00+12:00
-updatedAt: 2023-08-28T00:00:00+12:00
+updatedAt: 2024-09-02T00:00:00+12:00
 repo: https://github.com/anav5704/Note-App-MERN
 site: https://notes.anav.dev
 ---
@@ -51,7 +51,9 @@ As with most other MERN Stack apps, DigiDiary uses a MVC architecture, which is 
 
 ---
 
-The Model part of MVC deals with data logic and business logic. The data logic is the storing, retrieving, and manipulating of data from a database, MongoDB in this case. On the other hand, business logic refers to how this data is processed. The model acts as a link between the controller and the database as the controllers can't directly interact with the database itself. Mongoose is used to do all of this.
+The Model part of MVC deals with data logic and business logic. The data logic is the storing, retrieving, and manipulating of data from a database, MongoDB in this case. On the other hand, business logic refers to how this data is processed. The model acts as a link between the controller and the database as the controllers can't directly interact with the database itself. Mongoose is used to do all of this. Here is what the user and note models look like and their association:
+
+![Class diagram](./images/notes-app-class-diagram.webp)
 
 ### Views
 
@@ -89,6 +91,8 @@ const createNote = async (req, res) => {
 ```
 
 This app has a controller for each of the primary interactions between the user and the system. These interactions are also called "use cases" and I have made a use-case diagram for this app:
+
+![Use case diagram](./images/notes-app-usecase-diagram.webp)
 
 ## Getting Started
 
