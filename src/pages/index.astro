@@ -1,12 +1,18 @@
 ---
+import ExperienceCard from "@components/ExperienceCard.astro";
 import ResearchCard from "@components/ResearchCard.astro";
 import ProjectCard from "@components/ProjectCard.astro";
-import SkillCard from "@components/SkillCard.astro";
 import ImageGrid from "@components/ImageGrid.astro";
+import SkillCard from "@components/SkillCard.astro";
 import BlogCard from "@components/BlogCard.astro";
 import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
 import MainLayout from "@layouts/main.astro";
+
+const unsortedExperience = await getCollection("experience");
+const experience = unsortedExperience
+    .sort((a, b) => b.data.startDate.getTime() - a.data.endDate.getTime())
+    .slice(0, 3);
 
 const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
@@ -38,19 +44,28 @@ const research = unfilderedResearch
         <Header content="Hi, I'm Anav" />
         <p>
             I am a first-year Software Engineering student at the
-            <a href="https://www.usp.ac.fj/" target="_blank">
+            <a href="https://www.usp.ac.fj/" target="_blank" class="underline">
                 University of the South Pacific</a
             >
             who might be a little <em>too</em> passionate about web development.
         </p>
     </article>
+
     <ImageGrid />
 
     <!-- SKILLS SECTION -->
 
     <h2 id="skills">My Skills</h2>
 
-    {skills.map((skill) => <SkillCard skill={skill} />)}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {skills.map((skill) => <SkillCard skill={skill} />)}
+    </div>
+
+    <!-- EXPERIENCE SECTION -->
+
+    <h2 id="xp">Work Experience</h2>
+
+    {experience.map((exp) => <ExperienceCard experience={exp} />)}
 
     <!-- PROJECTS SECTION -->
 
@@ -58,27 +73,15 @@ const research = unfilderedResearch
 
     {projects.map((project) => <ProjectCard project={project} />)}
 
-    <div>
-        <a href="/projects">View all projects</a>
-    </div>
-
     <!-- BLOGS SECTION -->
 
     <h2 id="blogs">Latest Blogs</h2>
 
     {blogs.map((blog) => <BlogCard blog={blog} />)}
 
-    <div>
-        <a href="/blogs">View all blogs</a>
-    </div>
-
     <!-- RESEARCH SECTION -->
 
     <h2 id="research">Featured Research</h2>
 
     {research.map((research) => <ResearchCard research={research} />)}
-
-    <div>
-        <a href="/research">View all research</a>
-    </div>
 </MainLayout>

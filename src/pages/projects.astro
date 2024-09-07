@@ -1,8 +1,8 @@
 ---
+import ProjectCard from "@components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
 import ListLayout from "@layouts/list.astro";
-import ProjectCard from "@components/ProjectCard.astro";
 
 const unsortedProjects = await getCollection("projects");
 
