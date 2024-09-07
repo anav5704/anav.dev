@@ -9,9 +9,12 @@ interface Props {
 const { research } = Astro.props;
 ---
 
-<div class="space-y-1">
-    <a href={"research/" + research.slug}>
-        <b>{research.data.title}</b>
-    </a>
+<a
+    href={"research/" + research.slug}
+    class="group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
+>
+    <p class="line-clamp-1">
+        <b class="group-hover:underline">{research.data.title}</b>
+    </p>
     <p class="faded">{formatDate(research.data.createdAt)}</p>
-</div>
+</a>

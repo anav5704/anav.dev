@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { formatDate } from "@lib/format-date";
 
 interface Props {
     project: CollectionEntry<"projects">;
@@ -9,13 +8,14 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<div class="space-y-1">
-    <div>
-        <a href={"projects/" + project.slug}>
-            <b>{project.data.title}</b>
-        </a>
-        {" - "}
-        {project.data.description}
+<a
+    class="group p-2 border border-zinc-200 rounded-lg flex items-center gap-2 no-underline hover:no-underline"
+    href={"projects/" + project.slug}
+>
+    <div class="flex flex-col">
+        <b class="group-hover:underline">{project.data.title}</b>
+        <p class="faded no-underline">
+            {project.data.description}
+        </p>
     </div>
-    <p class="faded">{formatDate(project.data.createdAt)}</p>
-</div>
+</a>

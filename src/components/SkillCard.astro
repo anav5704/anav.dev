@@ -8,9 +8,19 @@ interface Props {
 const { skill } = Astro.props;
 ---
 
-<div>
+<div
+    class="col-span-1 group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
+>
     <b>{skill.data.title}</b>
-    {" - "}
-    {skill.data.description}
-    {skill.data.examples.map((example) => <code class="mr-1">{example}</code>)}
+    <div class="faded">
+        {
+            skill.data.examples.map((example, index) => (
+                <span>
+                    {skill.data.examples[index + 1]
+                        ? `${example}, `
+                        : `${example}`}
+                </span>
+            ))
+        }
+    </div>
 </div>
