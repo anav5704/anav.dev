@@ -28,13 +28,16 @@ import "../../src/global.css";
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="og:description" content={description} />
         <meta property="og:site_name" content="Anav Chand" />
         <meta name="description" content={description} />
         <link rel="sitemap" href="/sitemap-index.xml" />
         <meta property="og:image" content="/og.jpg" />
         <meta property="og:title" content={title} />
+        <meta property="og:url" content={pageUrl} />
         <meta name="author" content="Anav Chand" />
         <link rel="canonical" href={pageUrl} />
         <title>{title}</title>

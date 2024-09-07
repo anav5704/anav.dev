@@ -81,7 +81,7 @@ export const NavBar = () => {
                 className="hidden md:flex items-center justify-between p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
             >
                 <a data-umami-event="link-home" href="/" className="h-8 w-8 rounded-full">
-                    <img className="rounded-full" src="/src/images/logo.webp" alt="" />
+                    <img className="rounded-full" src="/logo.webp" alt="" />
                 </a>
                 {(showExternal ? externalLinks : internalLinks).map((link, index) => (
                     <a
@@ -111,7 +111,7 @@ export const NavBar = () => {
                 <div className="flex items-center justify-between w-full p-2">
 
                     <a data-umami-event="link-home" href="/" className="h-8 w-8 rounded-lg">
-                        <img className="rounded-lg" src="/src/images/logo.webp" alt="" />
+                        <img className="rounded-lg" src="/logo.webp" alt="" />
                     </a>
                     <button
                         className="h-8 w-8 border border-zinc-200 rounded-lg grid place-content-center"
