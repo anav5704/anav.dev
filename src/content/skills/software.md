@@ -1,9 +1,9 @@
 ---
-id: 3
-title: Backend
+id: 6
+title: Software
 description: Well versed in API development & experienced with database engines + data modelling.
 examples:
-    - Node JS
-    - Prisma
-    - PostgreSQL
+    - Figma
+    - Blender
+    - DaVinci Resolve
 ---

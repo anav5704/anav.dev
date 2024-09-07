@@ -3,10 +3,10 @@ id: 1
 featured: true
 title: Online PASS
 metaTitle: Online PASS - University of the South Pacific
-description: Internal software built for the University of the South Pacific.
+description: E-learning platform built to improve peer assisted study sessions at USP.
 metaDescription: Fullstack in-house software for the University of the South Pacific built using Next JS, TailwindCSS, Prisma, AWS RDS, AWS S3 and Supabase with the frontend and backend hosted on Render.
 createdAt: 2024-01-01T00:00:00+12:00
-updatedAt: 2024-07-17T00:00:00+12:00
+updatedAt: 2024-09-06T00:00:00+12:00
 repo: https://github.com/anav5702/online-pass
 site: https://opass.anav.dev
 ---
@@ -52,31 +52,31 @@ Online PASS! A real-time, full-stack progressive web application designed to str
 
 ---
 
-**Chat** - students can send messages, edit them, delete them and reply to other messages.
+**Chat** - students can send, edit, delete and reply to other messages.
 
-**Polls** - students can add polls with multiple options and course members can cast votes.
+**Polls** - students can add polls with options and course members can vote.
 
-**Submissions** - students can share with their peers and submit worksheets for marking.
+**Submissions** - students can submit worksheets for leaders to check.
 
-**Resources** - leaders can share resources by uploading worksheets or linking sites.
+**Resources** - leaders can share resources link worksheets and site links.
 
-**Schedule** - students can view the scheduled sessions and leaders can manage them.
+**Schedule** - students can view the sessions and leaders can manage them.
 
-**Attendance** - leaders can take directly attendance for sessions from within the app.
+**Attendance** - leaders can request to mark students as present for sessions.
 
-**Announcements** - admins and leaders can send scoped messages to course members.
+**Announcements** - admins and leaders can send announcements to courses.
 
-**Notifications** - alerts will be sent out to students on events such as session cancellation.
+**Notifications** - alerts will be sent out to students on certain events.
 
-**Achievements** - students can earn badges by completing tasks and reaching milestones.
+**Achievements** - students can earn badges by completing certain tasks.
 
-**Leaderboards** - list of students and leaders with high engagement and contribution.
+**Leaderboards** - list of users with high engagement and contribution.
 
-**Dashboard** - admins and leaders have access to a powerful dashboard with vital info.
+**Dashboard** - admins and leaders have access to a powerful dashboard.
 
-**Feedback Friday** - students can share their experiences and report bugs on Fridays.
+**Feedback Friday** - students can share their experiences or report bugs.
 
-**Turbo Keys** - internal app and course navigation links have shortcuts bound to them.
+**Turbo Keys** - internal app and course navigation links have shortcuts keys.
 
 ## Architecture
 

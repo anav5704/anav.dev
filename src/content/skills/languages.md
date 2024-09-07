@@ -6,5 +6,4 @@ examples:
     - C++
     - GoLang
     - TypeScript
-    - JavaScript
 ---

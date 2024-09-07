@@ -9,7 +9,7 @@ createdAt: 2024-07-07T00:00:00+12:00
 
 ---
 
-I thought of coding as a _cool_ thing back when I started gaining an interest in computers (and still do). Being able to write code and see the computer run it and give an output is very rewarding. Learning to code in today's world is one of the best decisions you can make. There is an ever-growing market in programming jobs, and it is a very high-paying skill to have. Whatever your reason to start coding, I’ll share some tips that I have learnt over the past 3 years so that you can learn coding faster.
+I thought of coding as a _cool_ thing back when I started gaining an interest in computers (and still do). Being able to write code and see the computer run it and give an output is very rewarding. Learning to code in today's world is one of the best decisions you can make. There is an ever-growing market in programming jobs, and it is a very high-paying skill to have. Whatever your reason to start coding, I’ll share some tips that I have learnt over the past 3 years so that you can learn cod=ing faster.
 
 ## Choose A Domain
 
@@ -53,7 +53,7 @@ Now let’s get into the good stuff. Here is a list of resources that I think wi
 
 [Awesome](https://github.com/sindresorhus/awesome) - these are lists about all kinds of interesting topics. They span across all primary domains and are a great way to discover new tools.
 
-[Roadmap.sh](https://roadmap.sh) - this is a collection of roadmaps based on various domains. It’s a massive help as it guides you in the right direction without holding your hand.
+[Roadmap.sh](https://roadmap.sh) - this is a collection of roadmaps based on various domains. It’s a massive help as it guides you without holding your hand.
 
 [Documentation](https://guneetsinghtuli.medium.com/why-learning-from-documentation-is-better-than-watching-youtube-tutorial-4e1282132bda) - normalize reading docs. It is the fastest way to fix bugs and learn tools. Reading docs is a sign you’re growing as a developer.
 
