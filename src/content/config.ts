@@ -1,4 +1,15 @@
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection } from "astro:content"
+
+const experienceCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        title: z.string(),
+        company: z.string(),
+        startDate: z.date(),
+        endDate: z.date(),
+        present: z.boolean(),
+    })
+})
 
 const skillsCollection = defineCollection({
     type: "content",
@@ -8,7 +19,7 @@ const skillsCollection = defineCollection({
         description: z.string(),
         examples: z.array(z.string())
     })
-});
+})
 
 const projectsCollection = defineCollection({
     type: "content",
@@ -24,7 +35,7 @@ const projectsCollection = defineCollection({
         repo: z.string(),
         site: z.string()
     })
-});
+})
 
 const blogsCollection = defineCollection({
     type: "content",
@@ -34,7 +45,7 @@ const blogsCollection = defineCollection({
         createdAt: z.date(),
         updatedAt: z.date()
     })
-});
+})
 
 const researchCollections = defineCollection({
     type: "content",
@@ -44,11 +55,12 @@ const researchCollections = defineCollection({
         createdAt: z.date(),
         updatedAt: z.date()
     })
-});
+})
 
 export const collections = {
+    experience: experienceCollection,
     skills: skillsCollection,
     projects: projectsCollection,
     blogs: blogsCollection,
     research: researchCollections
-};
+}
