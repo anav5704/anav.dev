@@ -59,7 +59,7 @@ const externalLinks = [
 
 const allLinks = [...internalLinks, ...externalLinks]
 
-export const NavBar = () => {
+export const NavBar = ({ children }: { children: React.ReactNode }) => {
     const [showExternal, setShowInternal] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
 
@@ -80,9 +80,7 @@ export const NavBar = () => {
             <div
                 className="hidden md:flex items-center justify-between p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
             >
-                <a data-umami-event="link-home" href="/" className="h-8 w-8 rounded-full">
-                    <img className="rounded-full" src="/logo.webp" alt="" />
-                </a>
+                {children}
                 {(showExternal ? externalLinks : internalLinks).map((link, index) => (
                     <a
                         className="hidden md:block no-underline hover:underline text-base"
@@ -110,9 +108,7 @@ export const NavBar = () => {
             >
                 <div className="flex items-center justify-between w-full p-2">
 
-                    <a data-umami-event="link-home" href="/" className="h-8 w-8 rounded-lg">
-                        <img className="rounded-lg" src="/logo.webp" alt="" />
-                    </a>
+                    {children}
                     <button
                         className="h-8 w-8 border border-zinc-200 rounded-lg grid place-content-center"
                         data-umami-event="toggle-menu"
