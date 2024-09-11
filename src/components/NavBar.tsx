@@ -120,7 +120,7 @@ export const NavBar = ({ children }: { children: React.ReactNode }) => {
                 {isOpen && (
                     <>
                         <hr />
-                        <div className="flex flex-col gap-2 p-2">
+                        <div className="flex flex-col gap-2 p-2 text-right">
                             {allLinks.map((link, index) => (
                                 <a
                                     className="no-underline hover:underline text-base"
