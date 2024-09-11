@@ -1,7 +1,7 @@
 ---
 title: How To Learn Coding Fast - Tips From A Software Engineering Student.
 description: This blog explains how you can learn coding quickly and effectively along with tips on how to grow as a developer.
-updatedAt: 2024-08-12T00:00:00+12:00
+updatedAt: 2024-09-10T00:00:00+12:00
 createdAt: 2024-07-07T00:00:00+12:00
 ---
 
@@ -9,7 +9,7 @@ createdAt: 2024-07-07T00:00:00+12:00
 
 ---
 
-I thought of coding as a _cool_ thing back when I started gaining an interest in computers (and still do). Being able to write code and see the computer run it and give an output is very rewarding. Learning to code in today's world is one of the best decisions you can make. There is an ever-growing market in programming jobs, and it is a very high-paying skill to have. Whatever your reason to start coding, I’ll share some tips that I have learnt over the past 3 years so that you can learn cod=ing faster.
+I thought of coding as a _cool_ thing back when I started gaining an interest in computers (and still do). Being able to write code and see the computer run it and give an output is very rewarding. Learning to code in today's world is one of the best decisions you can make. There is an ever-growing market in programming jobs, and it is a very high-paying skill to have. Whatever your reason to start coding, I’ll share some tips that I have learnt over the past 3 years so that you can learn coding faster.
 
 ## Choose A Domain
 
