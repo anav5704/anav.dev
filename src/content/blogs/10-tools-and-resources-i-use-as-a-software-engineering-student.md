@@ -2,7 +2,7 @@
 title: 10 Tools And Resources I Use As A Software Engineering Student.
 description: "Here are some tools and resources I use to maintain my software engineering grades and grow as a developer."
 updatedAt: 2024-09-11T00:00:00+12:00
-createdAt: 2024-09-11T00:00:00+12:00
+createdAt: 2024-09-16T00:00:00+12:00
 ---
 
 ## Introduction
@@ -21,7 +21,7 @@ Software Engineering is a blend of theory and practical work. Some courses are p
 
 ---
 
-[Arc](https://arc.net) is a minimal and aesthetic browser made by [The Browser Company](https://thebrowser.company). I use Arc because of 2 main features. Firstly, you can create spaces and switch between them easily. The second reason is tat you have the ability to split the main view into multiple panes. I typically have my lecture notes open on one pane with tutorial questions or notion on the other pane.
+[Arc](https://arc.net) is a minimal and aesthetic browser made by [The Browser Company](https://thebrowser.company). I use Arc because of 2 main features. Firstly, you can create spaces and switch between them easily. The second reason is that you have the ability to split the main view into multiple panes. I typically have my lecture notes open on one pane with tutorial questions or notion on the other pane.
 
 ### Notion.so
 
