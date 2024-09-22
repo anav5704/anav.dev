@@ -1,5 +1,5 @@
 ---
-title: How To Learn Coding Fast - Tips From A Software Engineering Student.
+title: "How To Learn Coding Fast: Tips From A Software Engineering Student."
 description: This blog explains how you can learn coding quickly and effectively along with tips on how to grow as a developer.
 updatedAt: 2024-09-10T00:00:00+12:00
 createdAt: 2024-07-07T00:00:00+12:00
