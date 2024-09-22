@@ -1,6 +1,6 @@
 ---
 title: "Simplifying OOP For CS112 Part 1: Pointers And Dynamic Memory."
-description: "Learn how to use C++ pointers and dynamic memory allocation with activity questions and solutions"
+description: "Learn how to use C++ pointers and dynamic memory allocation with code examples, activity questions and free solutions"
 updatedAt: 2024-09-22T00:00:00+12:00
 createdAt: 2024-09-22T00:00:00+12:00
 ---
@@ -54,7 +54,7 @@ char characterPtr = &character;
 *characterPtr  = 'B';
 ```
 
-Activity question: write a program that asks the user to input 2 numbers. Store those numbers and create pointers that point to the numbers. Add the numbers using the pointers and display the sum to the user. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointer-to-primitives.cpp).
+Activity question: write a program that asks the user to input 2 numbers. Store those numbers and create pointers that point to the numbers. Add the numbers using the pointers and display the sum to the user. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/pointer-to-primitives.cpp).
 
 ### Pointer To Arrays
 
@@ -83,7 +83,7 @@ cout << arrayPtr[1]; // Output: 34
 cout << arrayPtr[2]; // Output: 56
 ```
 
-Activity question: create an array of 5 integers. Create a pointer that points to that array. Use a for-loop and the pointer to print all elements. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointer-to-arrays.cpp).
+Activity question: create an array of 5 integers. Create a pointer that points to that array. Use a for-loop and the pointer to print all elements. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/pointer-to-arrays.cpp).
 
 ### Pointer To Pointers
 
@@ -105,7 +105,7 @@ cout << *numberPtrPtr // Output: memory address of numberPtr
 cout << **numberPtrPtr // Output: 10
 ```
 
-Activity question: modify the sum program from the [pointer to primitives](#pointer-to-primitives) section. Create 2 new pointers that point to the existing pointers. Use these new pointers to calculate the sum. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointer-to-pointers.cpp).
+Activity question: modify the sum program from the [pointer to primitives](#pointer-to-primitives) section. Create 2 new pointers that point to the existing pointers. Use these new pointers to calculate the sum. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/pointer-to-pointers.cpp).
 
 ### Pointers And Functions
 
@@ -141,7 +141,7 @@ sum = calculateSum(&num1, &num2);
 
 You can also create [pointers to functions](https://www.geeksforgeeks.org/function-pointer-in-cpp/), and [functions that return pointers](https://www.geeksforgeeks.org/how-to-return-a-pointer-from-a-function-in-cpp/). Although, CS112 does not cover these so they wont be explained here.
 
-Activity question: make a calculator program using pointers. Ask the user to enter 2 numbers. Store them in variables and create pointers that point to them. Calculate and print the sum, difference, product and quotient using functions that take the 2 integer pointers as parameters. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-functions.cpp).
+Activity question: make a calculator program using pointers. Ask the user to enter 2 numbers. Store them in variables and create pointers that point to them. Calculate and print the sum, difference, product and quotient using functions that take the 2 integer pointers as parameters. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/pointers-and-functions.cpp).
 
 ## Dynamic Memory
 
@@ -179,7 +179,7 @@ delete  numberPtr;
 delete characterPtr;
 ```
 
-Activity question: modify the program made in the [pointers to primitives](#pointer-to-primitives) section. Instead of having pointers point to static integers, point them to dynamic integers. Do not forget to de-allocate memory. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/dynamic-primitives.cpp).
+Activity question: modify the program made in the [pointers to primitives](#pointer-to-primitives) section. Instead of having pointers point to static integers, point them to dynamic integers. Do not forget to de-allocate memory. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/dynamic-primitives.cpp).
 
 ### Dynamic Arrays
 
@@ -202,7 +202,7 @@ The syntax for array de-allocation is a bit different. Square brackets `[]` will
 delete[] arrayPtr;
 ```
 
-Activity question: modify the program made in the [pointer to arrays](#pointer-to-arrays) section. The pointer that was pointing to the static array should now point to a dynamic array. Use this pointer to set and print the initial values. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/dynamic-arrays.cpp).
+Activity question: modify the program made in the [pointer to arrays](#pointer-to-arrays) section. The pointer that was pointing to the static array should now point to a dynamic array. Use this pointer to set and print the initial values. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/dynamic-arrays.cpp).
 
 ### Array Resizing
 
@@ -234,7 +234,7 @@ for(int i = 0;i < oldArraySize; i++l) {
 delete[] oldArrayPtr;
 ```
 
-Activity question: write a program that resizes an array based on user input. Create a dynamic array of size 5 and fill it random numbers. Ask the user to input a value more than 5. Resize the array to the size of what the user entered and fill the new elements with random numbers. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/array-resizing.cpp).
+Activity question: write a program that resizes an array based on user input. Create a dynamic array of size 5 and fill it random numbers. Ask the user to input a value more than 5. Resize the array to the size of what the user entered and fill the new elements with random numbers. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/array-resizing.cpp).
 
 ### Dangling Pointers
 
@@ -267,7 +267,7 @@ numberPtr = NULL;
 numberPtr = nullptr;
 ```
 
-Activity question: go back to all of the previous dynamic memory activity questions and take care of all dangling pointers. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/dangling-pointers.cpp).
+Activity question: go back to all of the previous dynamic memory activity questions and take care of all dangling pointers. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/pointers-and-dynamic-memory/dangling-pointers.cpp).
 
 ## Conclusion
 
