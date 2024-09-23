@@ -2,14 +2,14 @@
 title: "Simplifying OOP For CS112 Part 1: Pointers And Dynamic Memory."
 description: "Learn how to use C++ pointers and dynamic memory allocation with code examples, activity questions and free solutions"
 updatedAt: 2024-09-22T00:00:00+12:00
-createdAt: 2024-09-22T00:00:00+12:00
+createdAt: 2024-09-24T00:00:00+12:00
 ---
 
 ## Introduction
 
 ---
 
-CS112: Data Structures and Algorithms can appear to be a very difficult course. To some extent it is, but knowing the basics of object oriented programming will help you understand the harder concepts much easily. This article will cover pointers and dynamic memory, which key concepts that enable OOP. Each section will have an activity question for you to try. Attempting these will help you apply what you learn from this article. Free solutions for all of these will be provided.
+CS112: Data Structures and Algorithms can appear to be a very difficult course. To some extent it is, but knowing the basics of object oriented programming will help you understand the harder concepts easily. This article will cover pointers and dynamic memory, which are key concepts that enable OOP. Each section will have an activity question for you to try. Attempting these will help you apply what you learn from this article. Free solutions for all of these will be provided.
 
 ## Pointers
 

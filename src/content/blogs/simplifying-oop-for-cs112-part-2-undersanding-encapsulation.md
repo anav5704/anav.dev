@@ -2,7 +2,7 @@
 title: "Simplifying OOP For CS112 Part 2: Understanding Encapsulation."
 description: "Learn how to use C++ classes and  objects (encapsulation) with code examples, activity questions and free solutions"
 updatedAt: 2024-09-23T00:00:00+12:00
-createdAt: 2024-09-23T00:00:00+12:00
+createdAt: 2024-09-24T00:00:00+12:00
 ---
 
 ## Introduction
@@ -15,7 +15,7 @@ Object oriented programming in C++ is based on 3 core principles. These are: enc
 
 ---
 
-Just like integers and strings, classes are a data type. The only difference is that classes are user-defined (you decide what it has). They act as templated for creating objects. Objects are variables that are created when you initialize classes. Take for exapmle an `Integer` and a `Person` class.
+Just like integers and strings, classes are a data type. The only difference is that classes are user-defined (you decide what it has). They act as templates for creating objects. Objects are variables that are created when you initialize classes. Take for example an `Integer` and a `Person` class.
 
 ```cpp
 // int is the data type and x is the variable
@@ -53,7 +53,7 @@ delete  personPtr;
 
 Note that we use the `Member Access (->)` operator to access attributes and methods in the class. This operator only works with pointers.
 
-Activity question: write a program that has a `Course` class. This class should have two attributes, `courseCode` and `courseName`. It should a lso have `printDetails()` method to print the attributes. Create a `Course` object in `main()`, assign values, and print the course details. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/encapsulation/classes-and-objects.cpp).
+Activity question: write a program that has a `Course` class. This class should have two attributes, `courseCode` and `courseName`. It should also have a `printDetails()` method to print the attributes. Create a `Course` object in `main()`, assign values, and print the course details. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/encapsulation/classes-and-objects.cpp).
 
 ## Constructors And Destructors
 
@@ -61,8 +61,8 @@ Activity question: write a program that has a `Course` class. This class should 
 
 Constructors are special functions that run when an object is created. They are used to initialize variables and allocate memory. Destructors are also special functions, but that automatically run when an object is destroyed. They are used to perform clean up tasks like de-allocating memory. Rules for when creating constructors and destructors:
 
--   Must of of same name as class.
--   Does not have return type.
+-   Must be of same name as class.
+-   Does not have a return type.
 
 ```cpp
 class Person {
@@ -84,7 +84,7 @@ class Person {
 };
 ```
 
-In the parameterized constructor above, we use the `this` keyword to se the value for `name`. `this` is a pointer to the obejct it is inside, which is why we use the `Member Access (->)` operator with it. We can use the constructor in `main()` like this:
+In the parameterized constructor above, we use the `this` keyword to set the value for `name`. `this` is a pointer to the object it is inside, which is why we use the `Member Access (->)` operator with it. We can use the constructor in `main()` like this:
 
 ```cpp
 Person *personPtr = new Person("Anav");
@@ -141,7 +141,7 @@ Activity question: modify the program made in the [constructors and destructors]
 
 ---
 
-Scope resolution is a fancy way of telling the C++ compiler which function belongs to which class. Until now, the the class methods were were written inside the class. As a project grows in size, the methods are usually put outside the class, even in another file. This is when we have to use the `Scope Resolution (::)` operator. The syntax is as follows:
+Scope resolution is a fancy way of telling the C++ compiler which function belongs to which class. Until now, the the class methods were written inside the class. As a project grows in size, the methods are usually put outside the class, even in another file. This is when we have to use the `Scope Resolution (::)` operator. The syntax is as follows:
 
 ```cpp
 className::methodName
@@ -191,10 +191,10 @@ void Person::greet() {
 }
 ```
 
-Activity question: refactor the program made in the [setters and getters](#getters-and-setters) section. Move all the implementation outside the class. The only thing remaining in the class cloud be the attributes and prototypes. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/encapsulation/scope-resolution.cpp).
+Activity question: refactor the program made in the [setters and getters](#getters-and-setters) section. Move all the implementation outside the class. The only thing remaining in the class should be the attributes and prototypes. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/encapsulation/scope-resolution.cpp).
 
 ## Conclusion
 
 ---
 
-This guide went over what encapsulation is and the various things that can be done to achieve it. Understanding encapsulation will help in grasping he other two OOP principles as they extend everything mentioned above. I highly recommend attempting the activity questions before moving forward with the next parts. With that being said, I wish you best of luck for your object oriented programming journey!
+This guide went over what encapsulation is and the various things that can be done to achieve it. Understanding encapsulation will help in grasping the other two OOP principles as they extend everything mentioned above. I highly recommend attempting the activity questions before moving forward with the next parts. With that being said, I wish you best of luck for your object oriented programming journey!
