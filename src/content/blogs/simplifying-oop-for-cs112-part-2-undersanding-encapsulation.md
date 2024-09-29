@@ -1,8 +1,8 @@
 ---
 title: "Simplifying OOP For CS112 Part 2: Understanding Encapsulation."
 description: "Learn how to use C++ classes and  objects (encapsulation) with code examples, activity questions and free solutions"
-updatedAt: 2024-09-23T00:00:00+12:00
-createdAt: 2024-09-24T00:00:00+12:00
+createdAt: 2024-09-23T00:00:00+12:00
+updatedAt: 2024-09-24T00:00:00+12:00
 ---
 
 ## Introduction

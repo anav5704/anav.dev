@@ -1,8 +1,8 @@
 ---
 title: How To Setup Batman Chatbot In Your Discord Server For Free.
 description: This blog explains how you can learn coding quickly and effectively along with tips on how to grow as a developer.
-updatedAt: 2024-07-17T00:00:00+12:00
 createdAt: 2024-07-17T00:00:00+12:00
+updatedAt: 2024-07-17T00:00:00+12:00
 ---
 
 ## Guide Overview

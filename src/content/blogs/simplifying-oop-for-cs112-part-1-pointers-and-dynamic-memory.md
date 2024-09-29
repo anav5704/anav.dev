@@ -1,8 +1,8 @@
 ---
 title: "Simplifying OOP For CS112 Part 1: Pointers And Dynamic Memory."
 description: "Learn how to use C++ pointers and dynamic memory allocation with code examples, activity questions and free solutions"
-updatedAt: 2024-09-22T00:00:00+12:00
-createdAt: 2024-09-24T00:00:00+12:00
+createdAt: 2024-09-22T00:00:00+12:00
+updatedAt: 2024-09-24T00:00:00+12:00
 ---
 
 ## Introduction
@@ -18,17 +18,17 @@ CS112: Data Structures and Algorithms can appear to be a very difficult course. 
 Pointers, just like integers and stings, are a `Data Type`. The only difference is that instead of holding a value like `5` or `"my name"`, they hold memory addresses like `e29a07`. Pointer syntax looks like this:
 
 ```cpp
-data_type *ptr_name = memory_address;
+dataType *ptrName = memoryAddress;
 ```
 
 Once a pointer to a variable is created, you can also access and modify the value stored in the memory address the pointer points to. This is done by using the `Deference (*)`Operator. This process is called dereferencing.
 
 ```cpp
 // Modify value
-*ptr_name = new_value;
+*ptrName = newValue;
 
 // Access value
-cout << *ptr_name;
+cout << *ptrName;
 ```
 
 ### Pointer To Primitives
