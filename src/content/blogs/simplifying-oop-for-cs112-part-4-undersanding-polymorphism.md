@@ -201,4 +201,4 @@ Activity question: modify the program made in the [virtual functions](#virtual-f
 
 ---
 
-This guide went over what inheritance is and the various ways its internals can be implemented. Understanding inheritance will help in grasping the last OOP principle, as it is only achievable using classes with a inheritance relationship. I highly recommend attempting the activity questions before moving forward with the next parts. With that being said, I wish you best of luck for your object oriented programming journey!
+This guide went over what polymorphism is, and the difference between runtime and compile time polymorphism. Understanding polymorphism is the final concept needed to fully understand object oriented programming. I highly recommend attempting the activity questions before moving forward into the algorithms part of CS112. With that being said, I wish you best of luck for your CS112 journey!
