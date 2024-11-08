@@ -1,9 +1,9 @@
 ---
-id: 7
+id: 11
 featured: false
 title: Scalable Chat
-metaTitle: Scalable Chat App Redis Pub/Sub and Kafka.
-description: Chat app with pub/sub, message broker and web sockets.
+metaTitle: Scalable Chat App | Redis Pub/Sub and Kafka.
+description: Scalable chat app with pub/sub, a message broker and web sockets.
 metaDescription: Scalable Chat App built with Next.js, Node.js, Redis Pub/Sub and Kafka with the frontend hosted on Vercel and the backend hosted on Render.
 createdAt: 2024-12-14T00:00:00+12:00
 updatedAt: 2024-12-14T00:00:00+12:00

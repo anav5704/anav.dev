@@ -2,7 +2,7 @@
 id: 7
 featured: false
 title: Discord Clone
-metaTitle: Discord Clone
+metaTitle: Discord Clone | Next.js and Shadcn UI
 description: Simple clone of Discord with realtime chat and audio/video calls.
 metaDescription: dummy
 createdAt: 2023-11-20T00:00:00+12:00

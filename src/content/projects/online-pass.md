@@ -1,9 +1,9 @@
 ---
-id: 1
+id: 18
 featured: true
 title: Online PASS
-metaTitle: Online PASS - University of the South Pacific
-description: E-learning platform built to improve peer assisted study sessions at USP.
+metaTitle: Online PASS | University of the South Pacific
+description: E-learning platform built to improve peer assisted study sessions.
 metaDescription: Fullstack in-house software for the University of the South Pacific built using Next JS, TailwindCSS, Prisma, AWS RDS, AWS S3 and Supabase with the frontend and backend hosted on Render.
 createdAt: 2024-01-01T00:00:00+12:00
 updatedAt: 2024-09-06T00:00:00+12:00

@@ -20,7 +20,7 @@ const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
 const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects
     .filter((a) => a.data.featured == true)
-    .sort((a, b) => a.data.id - b.data.id)
+    .sort((a, b) => b.data.id - a.data.id)
     .slice(0, 3);
 
 const unfiltereedBlgos = await getCollection("blogs");

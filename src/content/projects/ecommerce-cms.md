@@ -1,8 +1,8 @@
 ---
-id: 12
+id: 9
 featured: false
 title: E-commerce CMS
-metaTitle: E-commerce CMS
+metaTitle: E-commerce CMS | Next.js and Prisma ORM
 description: Content management system built to manage an e-commerce store.
 metaDescription: Fullstack Content management system built for an e-commerce store. Built using Next.js, Prisma ORM and Neon  PostgreSQL.
 createdAt: 2023-11-11T00:00:00+12:00

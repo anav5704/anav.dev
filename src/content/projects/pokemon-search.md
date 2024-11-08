@@ -2,7 +2,7 @@
 id: 1
 featured: false
 title: Pokemon Search
-metaTitle: "Pokemon Search: JavaScript and PokeAPI."
+metaTitle: Pokemon Search | JavaScript and PokeAPI
 description: Pokemon search website that displays Pokemon image and stats.
 metaDescription: Pokemon search website that displays Pokemon image and stats. Build using HTML, CSS and JS using the PokeAPI.
 createdAt: 2023-05-08T00:00:00+12:00

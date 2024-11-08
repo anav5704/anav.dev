@@ -1,5 +1,5 @@
 ---
-id: 8
+id: 0
 featured: false
 title: JNC Website
 metaTitle: Jai Narayan College Fiji Website

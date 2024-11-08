@@ -1,8 +1,8 @@
 ---
-id: 11
+id: 8
 featured: false
 title: E-commerce Store
-metaTitle: E-commerce Store
+metaTitle: E-commerce Store | Next.js and Stripe
 description: E-commerce store for coding merch managed by custom built CMS.
 metaDescription: Fullstack E-commerce store for coding merch managed by custom built CMS. Built using Next.js and Stripe.
 createdAt: 2023-11-16T00:00:00+12:00

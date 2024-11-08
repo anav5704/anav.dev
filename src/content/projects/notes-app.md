@@ -1,9 +1,9 @@
 ---
-id: 3
+id: 4
 featured: false
 title: Notes App
-metaTitle: Digi Diary - MERN Stack Notes App
-description: MERN stack PWA that allows for CRUD operations on notes.
+metaTitle: Digi Diary | MERN Stack Notes App
+description: Web application that allows users to create and mange notes.
 metaDescription: Fullstack notes web app built using MongoDB, Express JS, React JS, Node JS with the frontend hosted on Vercel and backend hosted on Render.
 createdAt: 2023-08-28T00:00:00+12:00
 updatedAt: 2024-09-02T00:00:00+12:00

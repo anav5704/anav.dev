@@ -1,13 +1,13 @@
 ---
-id: 4
+id: 16
 featured: false
 title: Codebase Stats
-metaTitle: Codebase Stats - Count Lines of Code in your codebase
-description: CLI tool that counts no. of directories, files and lines of code.
+metaTitle: Codebase Stats | Count Lines of Code
+description: CLI tool that counts number of directories, files and lines of code.
 metaDescription: CLI tool that counts the number of directories, files and lines of code in your codebase. Built using Node JS and Typescript.
 createdAt: 2024-05-09T00:00:00+12:00
 updatedAt: 2024-05-09T00:00:00+12:00
-repo: https://github.com/anav5704/codebase-statst
+repo: https://github.com/anav5704/codebase-stats
 site: https://www.npmjs.com/package/codebase-stats
 ---
 
@@ -15,7 +15,7 @@ site: https://www.npmjs.com/package/codebase-stats
 
 ---
 
-[![Codebase Stats Demo](./images/codebase-stats-demo.webp)](https://www.npmjs.com/package/codebase-stats)
+[![Codebase Stats Demo](./images/codebase-stats-demo.webp)]()
 
 This is a simple CLI tool that counts the number of directories, files and lines that code your codebase consists of using a recursive function. All `.files`, `.directories`, `images` and the `node_modules` are ignored.
 

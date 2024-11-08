@@ -2,7 +2,7 @@
 id: 2
 featured: false
 title: Codeology
-metaTitle: Codeology
+metaTitle: Codeology | Learn Web Development
 description: Educational website with blogs and quizzes on web development.
 metaDescription: Educational website with blogs and quizzes on web development. Buit using Astro.js and TailwindCSS.
 createdAt: 2023-06-09T00:00:00+12:00
