@@ -5,5 +5,5 @@ description: Currently implementing agile workflows into projects & learning abo
 examples:
     - Git
     - GitHub
-    - Turbo Repo
+    - Turborepo
 ---

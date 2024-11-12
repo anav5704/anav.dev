@@ -4,6 +4,6 @@ title: Frontend
 description: Confident in building large web based applications using modern web technologies.
 examples:
     - Astro JS
+    - React JS
     - Next JS
-    - TailwindCSS
 ---
