@@ -60,7 +60,7 @@
     }
 
     blockquote {
-        @apply rounded-lg bg-zinc-200 p-2 italic;
+        @apply rounded-lg bg-zinc-100 p-2 italic font-serif;
     }
 
     pre {
@@ -68,6 +68,14 @@
 
         code {
             @apply bg-transparent;
+        }
+    }
+
+    mjx-container {
+        @apply bg-zinc-100 rounded-lg p-4 text-base;
+
+        svg {
+            @apply mx-auto;
         }
     }
 }
