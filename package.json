@@ -9,6 +9,9 @@
         "preview": "astro preview",
         "astro": "astro"
     },
+    "prisma": {
+        "schema": "src/prisma/schema.prisma"
+    },
     "dependencies": {
         "@astrojs/check": "^0.9.4",
         "@astrojs/react": "^3.6.2",
@@ -19,14 +22,19 @@
         "@fontsource/alice": "^5.0.14",
         "@fontsource/geist-sans": "^5.0.3",
         "@geist-ui/icons": "^1.0.2",
+        "@prisma/client": "^5.22.0",
         "@types/react": "^18.3.3",
         "@types/react-dom": "^18.3.0",
         "astro": "^4.16.7",
         "date-fns": "^3.6.0",
+        "lucide-react": "^0.460.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "rehype-mathjax": "^6.0.0",
         "tailwindcss": "^3.4.3",
         "typescript": "^5.4.5"
+    },
+    "devDependencies": {
+        "prisma": "^5.22.0"
     }
 }
