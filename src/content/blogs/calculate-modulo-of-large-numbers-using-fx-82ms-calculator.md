@@ -97,4 +97,4 @@ Encrypt the message `m = 30` given the two prime numbers `p = 3` and `q = 11`. V
 
 ---
 
-This article went over how to calculate the modulo of large numbers using a not so capable calculator. We broke our dividend into smaller parts and then did separate modulo calculations, multiplying the last remainder to the next. If you are still having trouble, just attempt similar questions and you'll eventually get better at it. Best of luck wit your cloud computing journey!
+This article went over how to calculate the modulo of large numbers using a not so capable calculator. We broke our dividend into smaller parts and then did separate modulo calculations, multiplying the last remainder to the next. If you are still having trouble, just attempt similar questions and you'll eventually get better at it. Best of luck with your cloud computing journey!
