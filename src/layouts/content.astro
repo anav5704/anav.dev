@@ -44,6 +44,8 @@ const contentStructuredData = {
     }
 };
 
+import Subscribe from "@components/Subscribe.astro";
+import { EmailForm } from "@components/EmailForm";
 import { NavBar } from "@components/NavBar";
 import Logo from "@components/Logo.astro";
 
@@ -57,7 +59,7 @@ import "../../src/global.css";
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-         <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta property="og:description" content={description} />
@@ -96,12 +98,14 @@ import "../../src/global.css";
     </head>
     <body class="max-w-7xl mx-auto">
         <NavBar client:load>
-             <Logo />
+            <Logo />
         </NavBar>
         <main
             class="pt-[60px] pb-[50vh] w-11/12 md:w-3/4 lg:w-1/2 mx-auto content"
         >
             <slot />
+            <Subscribe />
+            <EmailForm client:load />
         </main>
     </body>
 </html>
