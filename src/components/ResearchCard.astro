@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { formatDate } from "@lib/format-date";
+import { longDate } from "@lib/format-date";
 
 interface Props {
     research: CollectionEntry<"research">;
@@ -16,5 +16,5 @@ const { research } = Astro.props;
     <p class="line-clamp-1">
         <b class="group-hover:underline">{research.data.title}</b>
     </p>
-    <p class="faded">{formatDate(research.data.createdAt)}</p>
+    <p class="faded">{longDate(research.data.createdAt)}</p>
 </a>

@@ -1,26 +1,24 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { format } from "date-fns";
 
 interface Props {
     experience: CollectionEntry<"experience">;
 }
 
-const { experience } = Astro.props;
-//  disaly date in form 20204 Sept
-const startDate = format(experience.data.startDate, "MMM yyyy");
-const endDate: Date | String = experience.data.present
-    ? "Present"
-    : format(experience.data.endDate, "MMM yyyy");
+const {
+    experience, 
+    experience: { data }
+} = Astro.props;
 ---
 
-<div class="p-2 border border-zinc-200 rounded-lg flex items-center gap-2">
-    <div class="flex flex-col">
-        <b>{experience.data.title}</b>
-        <p class="faded no-underline">
-            @ {experience.data.company} | {startDate}
-            {" - "}
-            {endDate}
+<a
+    class="group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
+    href={"experience/#" + experience.slug}
+    >
+    <div class="flex flex-col w-full">
+        <b class="group-hover:underline">{data.longTitle}</b>
+        <p class="faded">
+            {data.type} @ {data.company}
         </p>
     </div>
-</div>
+</a>

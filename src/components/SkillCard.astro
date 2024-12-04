@@ -11,16 +11,16 @@ const { skill } = Astro.props;
 <div
     class="col-span-1 group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
 >
-    <b>{skill.data.title}</b>
-    <div class="faded">
+    <div>
         {
             skill.data.examples.map((example, index) => (
-                <span>
+            <b>
                     {skill.data.examples[index + 1]
                         ? `${example}, `
                         : `${example}`}
-                </span>
+                </b>
             ))
         }
+        <p class="faded">{skill.data.title}</p>
     </div>
 </div>

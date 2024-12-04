@@ -1,20 +1,20 @@
 ---
 import Header from "@components/Header.astro";
-import { formatDate } from "@lib/format-date";
+import { longDate } from "@lib/format-date";
 import { Calendar } from "@geist-ui/icons";
 
 interface Props {
-  title: string;
-  date: Date;
+    title: string;
+    date: Date;
 }
 
 const { title, date } = Astro.props;
 ---
 
 <article class="my-12 space-y-2">
-  <Header content={title} />
-  <p class="flex items-center gap-1">
-    <Calendar size={20} />
-    {formatDate(date)}
-  </p>
+    <Header content={title} />
+    <p class="flex items-center gap-1">
+        <Calendar size={20} />
+        {longDate(date)}
+    </p>
 </article>
