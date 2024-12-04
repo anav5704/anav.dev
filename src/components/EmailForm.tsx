@@ -1,4 +1,3 @@
-import { LoaderCircle } from "lucide-react"
 import { useState } from "react"
 
 export const EmailForm = () => {
@@ -59,14 +58,7 @@ export const EmailForm = () => {
                 onClick={handleSubscribe}
                 disabled={loading}
             >
-                {loading ? (
-                    <LoaderCircle
-                        className="animate-spin"
-                        size={20}
-                    />
-                ) : (
-                    <p>Subscribe</p>
-                )}
+                <p>{loading ? "Loading..." : "Subscribe"}</p>
             </button>
             <p className="col-span-4">{message}</p>
         </div>
