@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { shortDate } from "@lib/format-date";
+
+interface Props {
+    experience: CollectionEntry<"experience">;
+}
+
+const {
+    experience,
+    experience: { data }
+} = Astro.props;
+
+const { Content } = await experience.render();
+
+const startDate = shortDate(data.startDate);
+const endDate: Date | String = data.present
+    ? "Present"
+    : shortDate(data.endDate);
+---
+
+<h2 id={experience.slug} class="first-of-type:pt-0">{data.shortTitle}</h2>
+
+<hr />
+
+<div class="flex items-center justify-between">
+    <p>
+        {data.type} @ {data.company}
+    </p>
+    <p>
+        {startDate} - {endDate}
+    </p>
+</div>
+
+<Content />
