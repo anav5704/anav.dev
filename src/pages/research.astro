@@ -12,12 +12,12 @@ const reserearch = unsortedResearch.sort(
 ---
 
 <ListLayout
-    title="Anav Chand | Research"
+    title="Anav Chand | Research Papers"
     description="A collection of research papers, manily based on software engineering and computer science."
     contentType="Research"
 >
     <article class="my-12">
-        <Header content={`Research (${reserearch.length})`} />
+        <Header content={`Research Papers (${reserearch.length})`} />
     </article>
     {reserearch.map((research) => <ResearchCard research={research} />)}
 </ListLayout>

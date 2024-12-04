@@ -10,12 +10,12 @@ const projects = unsortedProjects.sort((a, b) => b.data.id - a.data.id);
 ---
 
 <ListLayout
-    title="Anav Chand | Projects"
+    title="Anav Chand | Personal Projects"
     description="A collection of full stack web development projects, built with modern technologies like React, Next.js, and TypeScript."
     contentType="Projects"
 >
     <article class="my-12">
-        <Header content={`Projects (${projects.length})`} />
+        <Header content={`Personal Projects (${projects.length})`} />
     </article>
     {projects.map((project) => <ProjectCard project={project} />)}
 </ListLayout>

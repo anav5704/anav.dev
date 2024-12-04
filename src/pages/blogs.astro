@@ -12,12 +12,12 @@ const blogs = unsortedBlogs.sort(
 ---
 
 <ListLayout
-    title="Anav Chand | Blogs"
+    title="Anav Chand | Blog Posts"
     description="A collection of technical blogs on web technologes and personal blogs on univeresity life."
     contentType="Blogs"
 >
     <article class="my-12">
-        <Header content={`Blogs (${blogs.length})`} />
+        <Header content={`Blog Posts (${blogs.length})`} />
     </article>
     {blogs.map((blog) => <BlogCard blog={blog} />)}
 </ListLayout>
