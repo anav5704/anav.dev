@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Header from "@components/Header.astro";
+import ListLayout from "@layouts/list.astro";
+import CertCard from "@components/CertCard.astro";
+import SkillCard from "@components/SkillCard.astro";
+
+const unsortedSkills = await getCollection("skills");
+const unsortedCerts = await getCollection("certs");
+
+const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
+const certs = unsortedCerts.sort((a, b) => a.data.id - b.data.id);
+---
+
+<ListLayout
+    title="Anav Chand | Skills And Certifications"
+    description="All of my programming, frontend, backend, software, testing, devops and cloud skills with certifications."
+    contentType="Skills"
+>
+    <article class="my-12">
+        <Header content="Skills And Certifications" />
+    </article>
+
+    <h2 class="pt-0">Tools And Tech</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {skills.map((skill) => <SkillCard skill={skill} />)}
+    </div>
+
+    <h2>Professional Certificates</h2>
+
+    {certs.map((cert) => <CertCard cert={cert} />)}
+</ListLayout>
