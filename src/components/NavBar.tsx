@@ -4,18 +4,18 @@ import { useState } from "react"
 
 const internalLinks = [
     {
-        label: "Skills",
-        href: "/#skills",
-        event: "link-skills",
-    }, {
-        label: "Experience",
-        href: "/#xp",
-        event: "link-experience",
-    },
-    {
         label: "Projects",
         href: "/projects",
         event: "link-projects",
+    },
+    {
+        label: "Skills",
+        href: "/skills",
+        event: "link-skills",
+    }, {
+        label: "Experience",
+        href: "/experience",
+        event: "link-experience",
     },
     {
         label: "Blogs",
