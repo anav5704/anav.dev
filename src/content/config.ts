@@ -3,9 +3,11 @@ import { z, defineCollection } from "astro:content"
 const experienceCollection = defineCollection({
     type: "content",
     schema: z.object({
-        title: z.string(),
+        shortTitle: z.string(),
+        longTitle: z.string(),
         company: z.string(),
         startDate: z.date(),
+        type: z.enum(["Full-time", "Part-time", "Internship", "Volunteer"]),
         endDate: z.date(),
         present: z.boolean(),
     })
@@ -16,8 +18,18 @@ const skillsCollection = defineCollection({
     schema: z.object({
         id: z.number(),
         title: z.string(),
-        description: z.string(),
         examples: z.array(z.string())
+    })
+})
+
+const certsCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        id: z.number(),
+        title: z.string(),
+        organization: z.string(),
+        url: z.string(),
+        issuedAt: z.date()
     })
 })
 
@@ -60,6 +72,7 @@ const researchCollections = defineCollection({
 export const collections = {
     experience: experienceCollection,
     skills: skillsCollection,
+    certs: certsCollection,
     projects: projectsCollection,
     blogs: blogsCollection,
     research: researchCollections
