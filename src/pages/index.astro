@@ -15,7 +15,9 @@ const experience = unsortedExperience
     .slice(0, 3);
 
 const unsortedSkills = await getCollection("skills");
-const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
+const skills = unsortedSkills
+    .sort((a, b) => a.data.id - b.data.id)
+    .splice(0, 6);
 
 const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects
@@ -23,65 +25,83 @@ const projects = unsortedProjects
     .sort((a, b) => b.data.id - a.data.id)
     .slice(0, 3);
 
-const unfiltereedBlgos = await getCollection("blogs");
-const blogs = unfiltereedBlgos
+const unfilteredBlogs = await getCollection("blogs");
+const blogs = unfilteredBlogs
     .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
 
-const unfilderedResearch = await getCollection("research");
-const research = unfilderedResearch
+const unfilteredResearch = await getCollection("research");
+const research = unfilteredResearch
     .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
 ---
 
 <MainLayout
-    title="Anav Chand | Fullstack Web Dev From Fiji"
-    description="Hi, I'm Anav Chand. I am a 1st year Software Engineering student at the University of the South Pacific. I am also a self-taught Full-Stack web developer."
+    title="Anav Chand | Web Developer & Software Engineering Student From Fiji"
+    description="Hi, I'm Anav Chand. I am an aspiring DevOps engineer, self-taught web developer, first-year software engineering student, and award-winning peer mentor @ USP."
 >
     <!-- HERO SECTION -->
 
     <article class="my-12 space-y-2">
-        <Header content="Hi, I'm Anav" />
+        <Header content="Hi, I'm Anav Chand" />
         <p>
-            I am a first-year Software Engineering student at the
-            <a href="https://www.usp.ac.fj/" target="_blank" class="underline">
-                University of the South Pacific</a
-            >
-            who might be a little <em>too</em> passionate about web development.
+            I am an aspiring DevOps engineer, self-taught web developer,
+            first-year software engineering student, and award-winning peer
+            mentor @ <a href="https://usp.ac.fj">USP</a>.
         </p>
     </article>
 
     <ImageGrid />
 
+    <!-- PROJECTS SECTION -->
+
+    <h2>Top Projects</h2>
+
+    {projects.map((project) => <ProjectCard project={project} />)}
+
+    <div data-umami-event="link-projects-all" class="w-full flex justify-end">
+        <a href="/projects">All personal projects</a>
+    </div>
+
     <!-- SKILLS SECTION -->
 
-    <h2 id="skills">My Skills</h2>
+    <h2>My Skills</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {skills.map((skill) => <SkillCard skill={skill} />)}
     </div>
 
+    <div data-umami-event="link-skills-all" class="w-full flex justify-end">
+        <a href="/skills">All skills and certifications</a>
+    </div>
+
     <!-- EXPERIENCE SECTION -->
 
-    <h2 id="xp">Work Experience</h2>
+    <h2>Recent Experience</h2>
 
     {experience.map((exp) => <ExperienceCard experience={exp} />)}
 
-    <!-- PROJECTS SECTION -->
-
-    <h2 id="projects">Top Projects</h2>
-
-    {projects.map((project) => <ProjectCard project={project} />)}
+    <div data-umami-event="link-experience-all" class="w-full flex justify-end">
+        <a href="/experience">All work and volunteer xp</a>
+    </div>
 
     <!-- BLOGS SECTION -->
 
-    <h2 id="blogs">Latest Blogs</h2>
+    <h2>Latest Blogs</h2>
 
     {blogs.map((blog) => <BlogCard blog={blog} />)}
 
+    <div data-umami-event="link-blogs-all" class="w-full flex justify-end">
+        <a href="/blogs">All blog posts</a>
+    </div>
+
     <!-- RESEARCH SECTION -->
 
-    <h2 id="research">Featured Research</h2>
+    <h2>Featured Research</h2>
 
     {research.map((research) => <ResearchCard research={research} />)}
+
+    <div data-umami-event="link-research-all" class="w-full flex justify-end">
+        <a href="/research">All research papers</a>
+    </div>
 </MainLayout>
