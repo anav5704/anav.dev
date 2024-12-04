@@ -51,7 +51,7 @@
     }
 
     img {
-        @apply rounded-lg;
+        @apply rounded-lg bg-zinc-100;
     }
 
     code {
