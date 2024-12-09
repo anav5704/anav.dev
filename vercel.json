@@ -1,0 +1,14 @@
+{
+    "redirects": [
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "github.anav.dev"
+                }
+            ],
+            "destination": "https://github.com/anav5704"
+        }
+    ]
+}
