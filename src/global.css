@@ -71,6 +71,35 @@
         }
     }
 
+    table {
+        @apply w-full text-left border-separate;
+        border-spacing: 0;
+
+        th {
+            @apply p-2 font-normal bg-zinc-200;
+        }
+
+        td {
+            @apply p-2 border border-zinc-200 border-t-0;
+        }
+
+        tr:first-child th:first-child {
+            @apply rounded-tl-lg;
+        }
+
+        tr:first-child th:last-child {
+            @apply rounded-tr-lg;
+        }
+
+        tr:last-child td:first-child {
+            @apply rounded-bl-lg;
+        }
+
+        tr:last-child td:last-child {
+            @apply rounded-br-lg;
+        }
+    }
+
     mjx-container {
         @apply bg-zinc-100 rounded-lg p-4 text-base;
 
