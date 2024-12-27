@@ -5,7 +5,7 @@
             "has": [
                 {
                     "type": "host",
-                    "value": "gh.anav.dev"
+                    "value": "github.anav.dev"
                 }
             ],
             "destination": "https://github.com/anav5704"
@@ -15,7 +15,27 @@
             "has": [
                 {
                     "type": "host",
-                    "value": "x.anav.dev"
+                    "value": "gitlab.anav.dev"
+                }
+            ],
+            "destination": "https://gitlab.com/anav5704"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "dockerhub.anav.dev"
+                }
+            ],
+            "destination": "https://hub.docker.com/u/anav5704"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "twitter.anav.dev"
                 }
             ],
             "destination": "https://twitter.com/anav_webdev"
@@ -25,30 +45,90 @@
             "has": [
                 {
                     "type": "host",
-                    "value": "yt.anav.dev"
+                    "value": "youtube.anav.dev"
                 }
             ],
-            "destination": "https://www.youtube.com/@aanaav"
+            "destination": "https://youtube.com/@aanaav"
         },
         {
             "source": "/",
             "has": [
                 {
                     "type": "host",
-                    "value": "in.anav.dev"
+                    "value": "linkedin.anav.dev"
                 }
             ],
-            "destination": "https://www.linkedin.com/in/aanaav"
+            "destination": "https://linkedin.com/in/aanaav"
         },
         {
             "source": "/",
             "has": [
                 {
                     "type": "host",
-                    "value": "cv.anav.dev"
+                    "value": "resume.anav.dev"
                 }
             ],
             "destination": "https://dub.sh/anav-resume"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "projects.anav.dev"
+                }
+            ],
+            "destination": "https://anav.dev/projects"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "skills.anav.dev"
+                }
+            ],
+            "destination": "https://anav.dev/skills"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "experience.anav.dev"
+                }
+            ],
+            "destination": "https://anav.dev/experience"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "blogs.anav.dev"
+                }
+            ],
+            "destination": "https://anav.dev/blogs"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "research.anav.dev"
+                }
+            ],
+            "destination": "https://anav.dev/research"
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "analytics.anav.dev"
+                }
+            ],
+            "destination": "https://cloud.umami.is/share/NQmwhitF9zeA15R2/www.anav.dev"
         }
     ]
 }
