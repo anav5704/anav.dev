@@ -2,7 +2,7 @@
 title: How To Use Prisma For Data Modeling And Drizzle For Queries.
 description: Learn how to use Prisma ORM and Drizzle ORM in the same Next.js app, connected to a Neon serverless PostgreSQL database.
 createdAt: 2024-06-28T00:00:00+12:00
-updatedAt: 2024-07-22T00:00:00+12:00
+updatedAt: 2024-12-27T00:00:00+12:00
 ---
 
 ## Prisma? Drizzle?
@@ -25,7 +25,7 @@ These ORMs are often used separately as they have their own strengths and weakne
 
 ---
 
-If you find anything confusing while following this guide, feel free to use [this repository](https://github.com/anav5704/great-quotes) as a reference. I am planning to create a proper standalone starter temple for a Prisma and Drizzle dual ORM Next.js app very soon.
+If you find anything confusing while following this guide, feel free to use [this repository](https://github.com/anav5704/great-quotes) as a reference. I am planning to create a proper standalone starter template for a Prisma and Drizzle dual ORM Next.js app very soon.
 
 ## Setup Neon PostgreSQL
 
@@ -137,7 +137,7 @@ model Quote {
 
 ---
 
-Drizzle will be used to pull the schema from the database and make the actual queries from out backend. It will act as a reliever and consumer.
+Drizzle will be used to pull the schema from the database and make the actual queries from our backend. It will act as a receiver and consumer.
 
 ### Install Drizzle
 
@@ -174,7 +174,7 @@ const sql = neon(process.env.DATABASE_URL!);
 export const db = drizzle(sql);
 ```
 
-We will also have to set up a `drizzle.config.ts` file within the `drizzle` directory. This just tells Drizzle where the schema is and where to generate the migrations.
+We will also have to create a `drizzle.config.ts` at the root of the project. This just tells Drizzle where the schema is and where to generate the migrations.
 
 ```ts
 import { defineConfig } from "drizzle-kit";
@@ -193,7 +193,7 @@ export default defineConfig({
 
 ---
 
-Checkpoint - your project structure should look something like this right now:
+Checkpoint! Your project structure should look something like this right now:
 
 ```ts
 Quotes-App
