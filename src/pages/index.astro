@@ -59,10 +59,6 @@ const research = unfilteredResearch
 
     {projects.map((project) => <ProjectCard project={project} />)}
 
-    <div data-umami-event="link-projects-all" class="w-full flex justify-end">
-        <a href="/projects">All personal projects</a>
-    </div>
-
     <!-- SKILLS SECTION -->
 
     <h2>My Skills</h2>
@@ -71,19 +67,11 @@ const research = unfilteredResearch
         {skills.map((skill) => <SkillCard skill={skill} />)}
     </div>
 
-    <div data-umami-event="link-skills-all" class="w-full flex justify-end">
-        <a href="/skills">All skills and certifications</a>
-    </div>
-
     <!-- EXPERIENCE SECTION -->
 
     <h2>Recent Experience</h2>
 
     {experience.map((exp) => <ExperienceCard experience={exp} />)}
-
-    <div data-umami-event="link-experience-all" class="w-full flex justify-end">
-        <a href="/experience">All work and volunteer xp</a>
-    </div>
 
     <!-- BLOGS SECTION -->
 
@@ -91,17 +79,9 @@ const research = unfilteredResearch
 
     {blogs.map((blog) => <BlogCard blog={blog} />)}
 
-    <div data-umami-event="link-blogs-all" class="w-full flex justify-end">
-        <a href="/blogs">All blog posts</a>
-    </div>
-
     <!-- RESEARCH SECTION -->
 
     <h2>Featured Research</h2>
 
     {research.map((research) => <ResearchCard research={research} />)}
-
-    <div data-umami-event="link-research-all" class="w-full flex justify-end">
-        <a href="/research">All research papers</a>
-    </div>
 </MainLayout>
