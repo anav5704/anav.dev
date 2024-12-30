@@ -10,7 +10,7 @@ const { project } = Astro.props;
 
 <a
     class="group p-2 border border-zinc-200 rounded-lg flex items-center gap-2 no-underline hover:no-underline"
-    href={"projects/" + project.slug}
+    href={"/projects/" + project.slug}
 >
     <div class="flex flex-col">
         <b class="group-hover:underline">{project.data.title}</b>

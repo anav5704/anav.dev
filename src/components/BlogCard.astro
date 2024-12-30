@@ -11,7 +11,7 @@ const { blog } = Astro.props;
 
 <a
     class="group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
-    href={"blogs/" + blog.slug}
+    href={"/blogs/" + blog.slug}
 >
     <p class="line-clamp-2">
         <b class="group-hover:underline">{blog.data.title}</b>
