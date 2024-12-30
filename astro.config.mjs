@@ -1,5 +1,6 @@
 import cloudflare from "@astrojs/cloudflare";
 import { defineConfig } from "astro/config";
+import partytown from "@astrojs/partytown";
 import rehypeMathjax from 'rehype-mathjax'
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
@@ -10,7 +11,11 @@ import react from "@astrojs/react";
 export default defineConfig({
     site: "https://www.anav.dev",
     output: "static",
-    adapter: cloudflare(),
+    adapter: cloudflare({
+        platformProxy: {
+            enabled: true,
+        }
+    }),
     prefetch: {
         prefetchAll: true,
         defaultStrategy: "viewport"
@@ -24,5 +29,5 @@ export default defineConfig({
             rehypeMathjax
         ],
     },
-    integrations: [tailwind(), react(), sitemap()],
+    integrations: [tailwind(), react(), sitemap(), partytown()],
 });
