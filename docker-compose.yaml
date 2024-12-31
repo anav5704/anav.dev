@@ -1,0 +1,10 @@
+services:
+    website:
+        build:
+            context: .
+            dockerfile: Dockerfile.test
+        ports:
+            - 4321:4321
+        environment:
+            - HOST=0.0.0.0
+            - PORT=4321
