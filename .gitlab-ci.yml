@@ -1,5 +1,6 @@
 stages:
     - build
+    - push
 
 variables:
     IMAGE_NAME: $CI_PROJECT_PATH
@@ -22,3 +23,14 @@ build:
 
     script:
         - docker build -t $IMAGE_NAME:$IMAGE_TAG --file Dockerfile.test .
+
+push:
+    stage: push
+
+    image: docker:latest
+
+    services:
+        - docker:dind
+
+    script:
+        - docker push $IMAGE_NAME:$IMAGE_TAG
