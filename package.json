@@ -3,19 +3,18 @@
     "version": "2.0.0",
     "type": "module",
     "scripts": {
+        "astro": "astro",
         "dev": "astro dev",
         "start": "astro dev",
-        "build": "astro check && astro build",
         "preview": "astro preview",
-        "astro": "astro",
-        "postinstall": "prisma generate"
+        "build": "astro check && astro build"
     },
     "prisma": {
         "schema": "src/prisma/schema.prisma"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.4",
-        "@astrojs/cloudflare": "^12.1.0",
+        "@astrojs/node": "^9.0.0",
         "@astrojs/partytown": "^2.1.2",
         "@astrojs/react": "^4.0.0",
         "@astrojs/sitemap": "^3.2.1",
