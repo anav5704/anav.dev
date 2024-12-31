@@ -1,6 +1,5 @@
 stages:
     - build
-    - push
 
 variables:
     IMAGE_NAME: $CI_PROJECT_PATH
@@ -18,22 +17,8 @@ build:
         DOCKER_TLS_CERTDIR: "/certs"
 
     before_script:
-        - apt upgrade && apt update
         - docker login -u $DOCKER_USER -p $DOCKER_PASSWD
 
     script:
         - docker build -t $IMAGE_NAME:$IMAGE_TAG --file Dockerfile.test .
-
-push:
-    stage: push
-
-    image: docker:latest
-
-    services:
-        - docker:dind
-
-    before_script:
-        - docker login -u $DOCKER_USER -p $DOCKER_PASSWD
-
-    script:
         - docker push $IMAGE_NAME:$IMAGE_TAG
