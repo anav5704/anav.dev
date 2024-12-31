@@ -32,5 +32,8 @@ push:
     services:
         - docker:dind
 
+    before_script:
+        - docker login -u $DOCKER_USER -p $DOCKER_PASSWD
+
     script:
         - docker push $IMAGE_NAME:$IMAGE_TAG
