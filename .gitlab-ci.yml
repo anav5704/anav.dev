@@ -1,5 +1,6 @@
 stages:
     - build
+    - deploy
 
 variables:
     IMAGE_NAME: $CI_PROJECT_PATH
@@ -17,8 +18,19 @@ build:
         DOCKER_TLS_CERTDIR: "/certs"
 
     before_script:
-        - docker login -u $DOCKER_USER -p $DOCKER_PASSWD
+        - echo $DOCKER_PASSWD | docker login -u $DOCKER_USERNAME --password-stdin
 
     script:
-        - docker build -t $IMAGE_NAME:$IMAGE_TAG --file Dockerfile.test .
+        - docker build -t $IMAGE_NAME:$IMAGE_TAG --file $DOCKER_FILE .
         - docker push $IMAGE_NAME:$IMAGE_TAG
+
+deploy:
+    stage: deploy
+
+    image: alpine:latest
+
+    before_script:
+        - chmod 400 $SSH_KEY
+
+    script:
+        - ssh -i $SSH_KEY $USER_NAME@$HOST_NAME "$DEPLOY_SCRIPT $DOCKER_USERNAME $DOCKER_PASSWD $IMAGE_NAME"
