@@ -21,8 +21,8 @@ build:
         - echo $DOCKER_PASSWD | docker login -u $DOCKER_USER --password-stdin
 
     script:
-        - docker build -t $IMAGE_NAME:$IMAGE_TAG --file $DOCKER_FILE .
-        - docker push $IMAGE_NAME:$IMAGE_TAG
+        - docker build -t $IMAGE_NAME:$IMAGE_TAG -t $IMAGE_NAME:latest --file $DOCKER_FILE .
+        - docker push $IMAGE_NAME --all-tags
 
 deploy:
     stage: deploy
