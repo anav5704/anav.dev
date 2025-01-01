@@ -27,9 +27,10 @@ build:
 deploy:
     stage: deploy
 
-    image: ubuntu:latest
+    image: alpine:latest
 
     before_script:
+        - apk update && apk add openssh-client
         - chmod 400 $SSH_KEY
 
     script:
