@@ -18,8 +18,7 @@ build:
         DOCKER_TLS_CERTDIR: "/certs"
 
     before_script:
-        - apt update && apt upgrade
-        - echo $DOCKER_PASSWD | docker login -u $DOCKER_USERNAME --password-stdin
+        - echo $DOCKER_PASSWD | docker login -u $DOCKER_USER --password-stdin
 
     script:
         - docker build -t $IMAGE_NAME:$IMAGE_TAG --file $DOCKER_FILE .
