@@ -31,6 +31,8 @@ deploy:
 
     before_script:
         - apk update && apk add openssh-client
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
         - ssh-keyscan -H $HOST_NAME >> ~/.ssh/known_hosts
         - chmod 400 $SSH_KEY
 
