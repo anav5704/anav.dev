@@ -18,7 +18,7 @@ build:
         DOCKER_TLS_CERTDIR: "/certs"
 
     before_script:
-        - echo $DOCKER_PASSWD | docker login -u $DOCKER_USERNAME --password-stdin
+        - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWD
 
     script:
         - docker build -t $IMAGE_NAME:$IMAGE_TAG --file $DOCKER_FILE .
