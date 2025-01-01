@@ -27,7 +27,7 @@ build:
 deploy:
     stage: deploy
 
-    image: alpine:latest
+    image: ubuntu:latest
 
     before_script:
         - chmod 400 $SSH_KEY
