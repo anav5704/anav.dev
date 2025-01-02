@@ -1,3 +1,33 @@
+# misc
 .DS_Store
-node_modules
+
+# build output
+.astro
 dist
+
+# development environment
+.vscode
+.nvmrc
+.prettierrc
+
+# environment variables
+.env
+
+# version control
+.git
+.gitignore
+.gitlab-ci.yml
+
+# nginx
+anav.dev.conf
+
+# dependencies
+node_modules
+
+# docker
+docker-compose.yaml
+docker-deploy.sh
+
+# documentation
+README.md
+docs
