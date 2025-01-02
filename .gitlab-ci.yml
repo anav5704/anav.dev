@@ -37,4 +37,4 @@ deploy:
         - chmod 400 $SSH_KEY
 
     script:
-        - ssh -i $SSH_KEY $USER_NAME@$HOST_NAME "$DEPLOY_SCRIPT $DOCKER_USER $DOCKER_PASSWD $IMAGE_NAME"
+        - ssh -i $SSH_KEY $USER_NAME@$HOST_NAME "$DEPLOY_SCRIPT $IMAGE_NAME"
