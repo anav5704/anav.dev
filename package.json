@@ -7,10 +7,9 @@
         "dev": "astro dev",
         "start": "astro dev",
         "preview": "astro preview",
-        "build": "astro check && astro build"
-    },
-    "prisma": {
-        "schema": "src/prisma/schema.prisma"
+        "build": "astro check && astro build",
+        "up": "docker-compose up =f / --build -d",
+        "down": "docker-compose down =f / --rmi=all"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.4",
@@ -23,11 +22,12 @@
         "@fontsource/alice": "^5.0.14",
         "@fontsource/geist-sans": "^5.0.3",
         "@geist-ui/icons": "^1.0.2",
-        "@prisma/client": "^6.0.1",
         "@types/react": "^18.3.3",
         "@types/react-dom": "^18.3.0",
         "astro": "^5.0.2",
         "date-fns": "^3.6.0",
+        "drizzle-orm": "^0.38.3",
+        "postgres": "^3.4.5",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "rehype-mathjax": "^6.0.0",
@@ -35,6 +35,6 @@
         "typescript": "^5.4.5"
     },
     "devDependencies": {
-        "prisma": "^6.0.1"
+        "drizzle-kit": "^0.30.1"
     }
 }
