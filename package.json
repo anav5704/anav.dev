@@ -8,8 +8,8 @@
         "start": "astro dev",
         "preview": "astro preview",
         "build": "astro check && astro build",
-        "up": "docker-compose up =f / --build -d",
-        "down": "docker-compose down =f / --rmi=all"
+        "up": "docker-compose -f docker/docker-compose.yaml up --build -d",
+        "down": "docker-compose -f docker/docker-compose.yaml down --rmi=all"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.4",
