@@ -1,9 +1,7 @@
 export const prerender = false
 
-import { Subscription } from "@drizzle/schema"
 import type { APIRoute } from "astro"
-import { eq } from "drizzle-orm"
-import { db } from "@drizzle"
+import { db } from "@prisma"
 
 export const POST: APIRoute = async ({ request }) => {
     try {
@@ -16,15 +14,23 @@ export const POST: APIRoute = async ({ request }) => {
             }))
         }
 
-        const subscription = await db.select().from(Subscription).where(eq(Subscription.email, email))
+        const subscription = await db.subscription.findFirst({
+            where: {
+                email
+            }
+        })
 
-        if (subscription.length) {
+        if (subscription) {
             return new Response(JSON.stringify({
                 message: "This email has already subscribed.",
             }))
         }
         else {
-            await db.insert(Subscription).values({ email })
+            await db.subscription.create({
+                data: {
+                    email
+                }
+            })
         }
 
         return new Response(JSON.stringify({
@@ -33,7 +39,6 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     catch (error) {
-        console.log(error)
         return new Response(JSON.stringify({
             message: "Oops, something went wrong on my server."
         }))
