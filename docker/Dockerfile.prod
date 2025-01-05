@@ -4,23 +4,23 @@ WORKDIR /app
 
 COPY package*.json .
 
-FROM base AS prod-deps
-
-RUN npm ci --omit=dev
-
-FROM base AS build-deps
+FROM base AS build 
 
 RUN npm ci
 
-FROM build-deps AS build
-
 COPY . .
+
+RUN npx prisma generate
 
 RUN npm run build
 
-FROM base AS runtime
+FROM node:20-alpine AS runtime
 
-COPY --from=prod-deps /app/node_modules ./node_modules
+LABEL maintainer="Anav Chand <me@anav.dev>"
+
+WORKDIR /app
+
+COPY --from=build /app/node_modules/.prisma ./node_modules/.prisma
 
 COPY --from=build /app/dist ./dist
 
