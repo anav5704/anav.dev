@@ -3,12 +3,14 @@
 set -eu
 
 IMAGE_NAME=$1
+IMAGE_TAG=$2
 
 clear_containers() {
-    echo "Clearing containers..."
+    echo "Stopping containers..."
+    docker ps -aq | xargs --no-run-if-empty docker stop
 
-    docker ps -aq | xargs --no-run-if-empty docker stop || true
-    docker ps -aq | xargs --no-run-if-empty docker rm || true 
+    echo "Removing containers..."
+    docker ps -aq | xargs --no-run-if-empty docker rm
 }
 
 start_container () {
@@ -16,7 +18,7 @@ start_container () {
 
     OPTIONS="-d --restart unless-stopped -p 4321:4321 --env-file .env.production"
 
-    docker run $OPTIONS $IMAGE_NAME:latest || {
+    docker run $OPTIONS $IMAGE_NAME:$IMAGE_TAG || {
         echo "Failed to start container"
         exit 1
     }

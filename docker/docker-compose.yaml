@@ -3,6 +3,7 @@ services:
         build:
             context: ..
             dockerfile: docker/Dockerfile.dev
+            no_cache: true
 
         ports:
             - 4321:4321
