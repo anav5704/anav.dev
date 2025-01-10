@@ -1,37 +1,21 @@
-FROM node:20-alpine AS base
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
 COPY package*.json .
 
-FROM base AS prod
-
-RUN npm install --omit=dev
-
-FROM base AS dev
-
-RUN npm install
-
-FROM dev AS build 
+RUN npm ci
 
 COPY . .
 
-RUN npx prisma generate
-
 RUN npm run build
 
-FROM base AS runtime
+FROM nginx:alpine AS runtime
 
-LABEL maintainer="Anav Chand <me@anav.dev>"
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
-WORKDIR /app
+COPY --from=build /app/dist /usr/share/nginx/html
 
-COPY --from=prod /app/node_modules ./node_modules
+EXPOSE 8080
 
-COPY --from=build /app/node_modules/.prisma ./node_modules/.prisma
-
-COPY --from=build /app/dist ./dist
-
-EXPOSE 4321
-
-CMD ["node", "./dist/server/entry.mjs"]
+CMD ["nginx", "-g", "daemon off;"]

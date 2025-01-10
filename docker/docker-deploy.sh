@@ -7,16 +7,16 @@ IMAGE_TAG=$2
 
 clear_containers() {
     echo "Stopping containers..."
-    docker ps -aq | xargs --no-run-if-empty docker stop
+    docker ps -aq --filter ancestor=$IMAGE_NAME | xargs --no-run-if-empty docker stop
 
     echo "Removing containers..."
-    docker ps -aq | xargs --no-run-if-empty docker rm
+    docker ps -aq --filter ancestor=$IMAGE_NAME | xargs --no-run-if-empty docker rm
 }
 
 start_container () {
     echo "Starting container..."
 
-    OPTIONS="-d --restart unless-stopped -p 4321:4321 --env-file .env.production"
+    OPTIONS="-d --restart unless-stopped -p 8080:8080"
 
     docker run $OPTIONS $IMAGE_NAME:$IMAGE_TAG || {
         echo "Failed to start container"
