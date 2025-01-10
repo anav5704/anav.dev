@@ -1,0 +1,11 @@
+include:
+    - local: ".gitlab/ci/build.yml"
+    - local: ".gitlab/ci/deploy.yml"
+
+stages:
+    - build
+    - deploy
+
+variables:
+    IMAGE_NAME: $CI_PROJECT_PATH
+    IMAGE_TAG: $CI_COMMIT_SHORT_SHA

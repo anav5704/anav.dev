@@ -1,0 +1,14 @@
+deploy:
+    stage: deploy
+
+    image: alpine:latest
+
+    before_script:
+        - apk update && apk add openssh-client
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+        - ssh-keyscan -H $HOST_NAME >> ~/.ssh/known_hosts
+        - chmod 400 $SSH_KEY
+
+    script:
+        - ssh -i $SSH_KEY $USER_NAME@$HOST_NAME "$DEPLOY_SCRIPT $IMAGE_NAME $IMAGE_TAG"
