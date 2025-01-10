@@ -1,6 +1,5 @@
 ---
 import Header from "@components/Header.astro";
-import { Github, Globe } from "@geist-ui/icons";
 
 interface Props {
     title: string;
@@ -15,11 +14,10 @@ const { title, repo, site } = Astro.props;
     <Header content={title} />
     <div class="flex items-center gap-5">
         <a target="_blank" href={repo} class="flex items-center gap-1">
-            <Github size={20} /> Source Code
+            Source Code
         </a>
-
         <a target="_blank" href={site} class="flex items-center gap-1">
-            <Globe size={20} /> Live Preview
+            Live Preview
         </a>
     </div>
 </article>

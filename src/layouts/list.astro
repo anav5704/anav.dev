@@ -22,8 +22,7 @@ const breadcrumbStructuredData = {
     ]
 };
 
-import { NavBar } from "@components/NavBar";
-import Logo from "@components/Logo.astro";
+import NavBar from "@components/NavBar.astro";
 
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/geist-sans";
@@ -64,14 +63,11 @@ import "../../src/global.css";
             type="text/partytown"
             data-domains="www.anav.dev"
             src="https://cloud.umami.is/script.js"
-            data-website-id="1914ece2-a419-41e4-8b8f-035edde09185"
-        />
+            data-website-id="1914ece2-a419-41e4-8b8f-035edde09185"></script>
     </head>
     <body class="max-w-7xl mx-auto">
-        <NavBar client:load>
-            <Logo />
-        </NavBar>
-        <main class="pt-[60px] pb-[50vh] w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
+        <NavBar />
+        <main class="pt-[45px] pb-[50vh] w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
             <slot />
         </main>
     </body>

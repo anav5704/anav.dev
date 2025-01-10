@@ -1,0 +1,68 @@
+---
+import LogoImage from "@images/logo.webp";
+import { Image } from "astro:assets";
+
+const links = [
+    {
+        label: "Projects",
+        href: "/projects",
+        event: "link-projects"
+    },
+    {
+        label: "Skills",
+        href: "/skills",
+        event: "link-skills"
+    },
+    {
+        label: "Experience",
+        href: "/experience",
+        event: "link-experience"
+    },
+    {
+        label: "Blogs",
+        href: "/blogs",
+        event: "link-blogs"
+    },
+    {
+        label: "Links",
+        href: "https://links.anav.dev",
+        event: "link-links"
+    }
+];
+---
+
+<nav
+    class="fixed w-screen max-w-7xl left-1/2 -translate-x-1/2 bg-transparent top-5"
+>
+    <div
+        class="hidden md:flex items-center justify-left p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
+    >
+        <a
+            class="h-8 w-8 rounded-lg md:rounded-full"
+            data-umami-event="link-home"
+            href="/"
+        >
+            <Image
+                class="rounded-lg md:rounded-full"
+                loading="eager"
+                src={LogoImage}
+                alt="Anav Chand"
+            />
+        </a>
+        <div class="flex w-full justify-around">
+            {
+                links.map((link) => (
+                    <a
+                        class="hidden md:block no-underline hover:underline text-base"
+                        data-umami-event={link.event}
+                        href={link.href}
+                    >
+                        {link.label}
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</nav>
+
+)

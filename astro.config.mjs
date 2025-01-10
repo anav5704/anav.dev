@@ -4,15 +4,9 @@ import rehypeMathjax from 'rehype-mathjax'
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import gruvbox from './gruvbox.json'
-import react from "@astrojs/react";
-import node from "@astrojs/node";
 
 export default defineConfig({
     site: "https://www.anav.dev",
-    output: "static",
-    adapter: node({
-        mode: "standalone",
-    }),
     prefetch: {
         prefetchAll: true,
         defaultStrategy: "viewport"
@@ -26,5 +20,5 @@ export default defineConfig({
             rehypeMathjax
         ],
     },
-    integrations: [tailwind(), react(), sitemap(), partytown()],
+    integrations: [tailwind(), sitemap(), partytown()],
 });

@@ -10,16 +10,11 @@ dist
 .nvmrc
 .prettierrc
 
-# environment variables
-.env
-
 # version control
 .git
 .gitignore
-.gitlab-ci.yml
-
-# nginx
-anav.dev.conf
+.github
+.gitlab
 
 # dependencies
 node_modules
@@ -29,4 +24,3 @@ docker
 
 # documentation
 README.md
-docs
