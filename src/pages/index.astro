@@ -1,6 +1,5 @@
 ---
 import ExperienceCard from "@components/ExperienceCard.astro";
-import ResearchCard from "@components/ResearchCard.astro";
 import ProjectCard from "@components/ProjectCard.astro";
 import ImageGrid from "@components/ImageGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
@@ -27,11 +26,6 @@ const projects = unsortedProjects
 
 const unfilteredBlogs = await getCollection("blogs");
 const blogs = unfilteredBlogs
-    .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
-    .slice(0, 3);
-
-const unfilteredResearch = await getCollection("research");
-const research = unfilteredResearch
     .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
 ---
@@ -78,10 +72,4 @@ const research = unfilteredResearch
     <h2>Latest Blogs</h2>
 
     {blogs.map((blog) => <BlogCard blog={blog} />)}
-
-    <!-- RESEARCH SECTION -->
-
-    <h2>Featured Research</h2>
-
-    {research.map((research) => <ResearchCard research={research} />)}
 </MainLayout>
