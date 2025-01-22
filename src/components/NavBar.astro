@@ -35,7 +35,7 @@ const links = [
     class="fixed w-screen max-w-7xl left-1/2 -translate-x-1/2 bg-transparent top-5"
 >
     <div
-        class="hidden md:flex items-center justify-left p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
+        class="flex items-center justify-left p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
     >
         <a
             class="h-8 w-8 rounded-lg md:rounded-full"
@@ -43,7 +43,7 @@ const links = [
             href="/"
         >
             <Image
-                class="rounded-lg md:rounded-full"
+                class="rounded-full"
                 loading="eager"
                 src={LogoImage}
                 alt="Anav Chand"
@@ -62,7 +62,38 @@ const links = [
                 ))
             }
         </div>
+        <button onclick="toggleMenu()" class="mr-3 block md:hidden">Menu</button
+        >
     </div>
 </nav>
 
-)
+<div
+    id="menu"
+    class="fixed hidden items-center top-0 left-0 backdrop-blur-lg w-screen h-screen"
+>
+    <div
+        class="bg-white text-center mx-auto w-11/12 h-fit space-y-10 py-10 rounded-lg"
+    >
+        {
+            links.map((link) => (
+                <a
+                    class="block no-underline hover:underline text-base"
+                    data-umami-event={link.event}
+                    href={link.href}
+                >
+                    {link.label}
+                </a>
+            ))
+        }
+        <button onclick="toggleMenu()">Close</button>
+    </div>
+</div>
+
+<script is:inline>
+    const menu = document.getElementById("menu");
+
+    const toggleMenu = () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+    };
+</script>
