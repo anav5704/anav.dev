@@ -35,15 +35,11 @@ const links = [
     class="fixed w-screen max-w-7xl left-1/2 -translate-x-1/2 bg-transparent top-5"
 >
     <div
-        class="flex items-center justify-left p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
+        class="flex items-center p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
     >
-        <a
-            class="h-8 w-8 rounded-lg md:rounded-full"
-            data-umami-event="link-home"
-            href="/"
-        >
+        <a class="w-full md:w-fit" data-umami-event="link-home" href="/">
             <Image
-                class="rounded-full"
+                class="rounded-full h-8 w-8"
                 loading="eager"
                 src={LogoImage}
                 alt="Anav Chand"
@@ -62,7 +58,7 @@ const links = [
                 ))
             }
         </div>
-        <button onclick="toggleMenu()" class="mr-3 block md:hidden">Menu</button
+        <button onclick="toggleMenu()" class="px-3 block md:hidden">Menu</button
         >
     </div>
 </nav>
