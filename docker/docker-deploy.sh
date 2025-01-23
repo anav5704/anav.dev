@@ -7,10 +7,10 @@ IMAGE_TAG=$2
 
 clear_containers() {
     echo "Stopping containers..."
-    docker ps -aq --filter ancestor=$IMAGE_NAME | xargs --no-run-if-empty docker stop
+    docker ps -aq | xargs --no-run-if-empty docker stop
 
     echo "Removing containers..."
-    docker ps -aq --filter ancestor=$IMAGE_NAME | xargs --no-run-if-empty docker rm
+    docker ps -aq | xargs --no-run-if-empty docker rm
 }
 
 start_container () {
