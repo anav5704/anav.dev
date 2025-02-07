@@ -1,9 +1,11 @@
+import opengraph from "./packages/astro/opengraph";
 import { defineConfig } from "astro/config";
 import partytown from "@astrojs/partytown";
-import rehypeMathjax from 'rehype-mathjax'
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-import gruvbox from './gruvbox.json'
+import gruvbox from "./gruvbox.json";
+import latex from "rehype-mathjax";
+import math from "remark-math";
 
 export default defineConfig({
     site: "https://www.anav.dev",
@@ -17,8 +19,11 @@ export default defineConfig({
             theme: gruvbox,
         },
         rehypePlugins: [
-            rehypeMathjax
+            latex,
+        ],
+        remarkPlugins: [
+            math
         ],
     },
-    integrations: [tailwind(), sitemap(), partytown()],
+    integrations: [tailwind(), opengraph(), sitemap(), partytown()],
 });
