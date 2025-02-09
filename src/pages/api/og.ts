@@ -7,7 +7,7 @@ import type { APIRoute } from "astro";
 
 import satori from "satori";
 
-export const GET: APIRoute = async ({ request, url: { searchParams } }) => {
+export const GET: APIRoute = async ({ url: { searchParams } }) => {
     const title = searchParams.get("title") as string;
     const description = searchParams.get("description") as string;
 
