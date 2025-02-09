@@ -1,4 +1,12 @@
 ---
+import NavBar from "@components/NavBar.astro";
+import { getImage } from "@utils/getImage";
+
+import "@fontsource-variable/jetbrains-mono";
+import "@fontsource/geist-sans";
+import "@fontsource/alice";
+import "../../src/global.css";
+
 interface Props {
     title: string;
     description: string;
@@ -11,8 +19,7 @@ const { title, description, contentType, createdAt, updatedAt } = Astro.props;
 
 const pageUrl = new URL(Astro.url.pathname, Astro.site);
 const contentUrl = new URL(contentType.toLocaleLowerCase() + "/", Astro.site);
-
-const ogImage = "/api/og?title=" + title + "&description=" + description;
+const ogImage = getImage({ title, description });
 
 const breadcrumbStructuredData = {
     "@context": "https://schema.org",
@@ -45,13 +52,6 @@ const contentStructuredData = {
         url: Astro.site
     }
 };
-
-import NavBar from "@components/NavBar.astro";
-
-import "@fontsource-variable/jetbrains-mono";
-import "@fontsource/geist-sans";
-import "@fontsource/alice";
-import "../../src/global.css";
 ---
 
 <html lang="en">
