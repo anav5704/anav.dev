@@ -1,4 +1,3 @@
-import opengraph from "./packages/astro/opengraph";
 import { defineConfig } from "astro/config";
 import partytown from "@astrojs/partytown";
 import tailwind from "@astrojs/tailwind";
@@ -7,12 +6,20 @@ import gruvbox from "./gruvbox.json";
 import latex from "rehype-mathjax";
 import math from "remark-math";
 
+import node from "@astrojs/node";
+
 export default defineConfig({
     site: "https://www.anav.dev",
+
+    adapter: node({
+        mode: "standalone",
+    }),
+
     prefetch: {
         prefetchAll: true,
         defaultStrategy: "viewport"
     },
+
     markdown: {
         syntaxHighlight: "shiki",
         shikiConfig: {
@@ -25,5 +32,6 @@ export default defineConfig({
             math
         ],
     },
-    integrations: [tailwind(), opengraph(), sitemap(), partytown()],
+
+    integrations: [tailwind(), sitemap(), partytown()],
 });
