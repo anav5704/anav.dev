@@ -11,6 +11,8 @@ import node from "@astrojs/node";
 export default defineConfig({
     site: "https://www.anav.dev",
 
+    trailingSlash: "never",
+
     adapter: node({
         mode: "standalone",
     }),
