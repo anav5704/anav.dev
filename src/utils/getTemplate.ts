@@ -24,7 +24,7 @@ const template = ({ title, description }: Props) => {
                                 type: "img",
                                 props: {
                                     src: logo.buffer,
-                                    tw: "rounded-full object-top",
+                                    tw: "rounded-full",
                                     width: 50,
                                     height: 50
                                 }
