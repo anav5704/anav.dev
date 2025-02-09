@@ -4,6 +4,11 @@ import { Image } from "astro:assets";
 
 const links = [
     {
+        label: "Home",
+        href: "/",
+        event: "link-home"
+    },
+    {
         label: "Projects",
         href: "/projects",
         event: "link-projects"
@@ -40,9 +45,10 @@ const links = [
         <a class="w-full md:w-fit" data-umami-event="link-home" href="/">
             <Image
                 class="rounded-full h-8 w-8"
-                loading="eager"
-                src={LogoImage}
                 alt="Anav Chand"
+                src={LogoImage}
+                loading="eager"
+                quality="max"
             />
         </a>
         <div class="flex w-full justify-around">
