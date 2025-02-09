@@ -22,8 +22,6 @@
         "@fontsource/geist-sans": "^5.0.3",
         "@resvg/resvg-js": "^2.6.2",
         "astro": "^5.0.2",
-        "date-fns": "^3.6.0",
-        "gray-matter": "^4.0.3",
         "rehype-mathjax": "^6.0.0",
         "remark-math": "^6.0.0",
         "satori": "^0.12.1",
