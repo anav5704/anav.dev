@@ -1,3 +1,5 @@
+# Fully static build served from Nginx
+
 FROM node:20-alpine AS build
 
 WORKDIR /app

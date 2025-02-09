@@ -2,6 +2,6 @@ services:
     website:
         build:
             context: ..
-            dockerfile: docker/Dockerfile.prod
+            dockerfile: docker/Dockerfile.node
         ports:
-            - 8080:8080
+            - 4321:4321
