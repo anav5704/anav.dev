@@ -42,7 +42,7 @@ const template = ({ title, description }: Props) => {
                 {
                     type: "h1",
                     props: {
-                        tw: "text-[70px] text-black font-bold leading-none tracking-tighter my-7",
+                        tw: "text-[70px] text-black font-bold leading-none tracking-tighter my-10",
                         style: { fontFamily: "Alice", textWrap: "balance" },
                         children: title
                     }
