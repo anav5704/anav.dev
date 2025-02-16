@@ -1,6 +1,6 @@
 ---
 import Header from "@components/Header.astro";
-import { longDate } from "@lib/format-date";
+import { long } from "@utils/getDate";
 
 interface Props {
     title: string;
@@ -13,6 +13,6 @@ const { title, date } = Astro.props;
 <article class="my-12 space-y-2">
     <Header content={title} />
     <p class="flex items-center gap-1">
-        Published on {longDate(date)}
+        Published on {long(date)}
     </p>
 </article>

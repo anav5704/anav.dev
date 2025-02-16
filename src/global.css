@@ -39,7 +39,7 @@
     }
 
     a {
-        @apply underline hover:underline;
+        @apply underline;
     }
 
     li {
@@ -60,11 +60,11 @@
     }
 
     blockquote {
-        @apply rounded-lg bg-zinc-100 p-2 italic font-serif;
+        @apply rounded-lg p-2 italic font-serif;
     }
 
     pre {
-        @apply p-2 rounded-lg;
+        @apply bg-zinc-100 p-2 rounded-lg;
 
         code {
             @apply bg-transparent;
@@ -101,7 +101,7 @@
     }
 
     mjx-container {
-        @apply bg-zinc-100 rounded-lg p-4 text-base;
+        @apply bg-zinc-100 rounded-lg p-4 text-base inline-flex;
 
         svg {
             @apply mx-auto;
@@ -112,6 +112,10 @@
 @layer components {
     .hero-image {
         @apply col-span-1 object-cover w-full h-full object-top;
+    }
+
+    .card {
+        @apply px-4 py-2 border border-zinc-200 rounded-md flex flex-col no-underline;
     }
 
     .faded {

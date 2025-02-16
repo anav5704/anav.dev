@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { longDate } from "@lib/format-date";
+import { long } from "@utils/getDate";
 
 interface Props {
     blog: CollectionEntry<"blogs">;
@@ -9,14 +9,7 @@ interface Props {
 const { blog } = Astro.props;
 ---
 
-<a
-    class="group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
-    href={"/blogs/" + blog.slug}
->
-    <p class="line-clamp-2">
-        <b class="group-hover:underline">{blog.data.title}</b>
-    </p>
-    <p class="faded">
-        {longDate(blog.data.createdAt)}
-    </p>
+<a class="card" href={"/blogs/" + blog.slug}>
+    <p>{blog.data.title}</p>
+    <p class="faded">{long(blog.data.createdAt)}</p>
 </a>

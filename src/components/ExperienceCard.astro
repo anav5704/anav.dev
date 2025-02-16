@@ -5,20 +5,10 @@ interface Props {
     experience: CollectionEntry<"experience">;
 }
 
-const {
-    experience, 
-    experience: { data }
-} = Astro.props;
+const { experience } = Astro.props;
 ---
 
-<a
-    class="group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
-    href={"/experience/#" + experience.slug}
-    >
-    <div class="flex flex-col w-full">
-        <b class="group-hover:underline">{data.longTitle}</b>
-        <p class="faded">
-            {data.type} @ {data.company}
-        </p>
-    </div>
+<a class="card" href={"/experience#" + experience.slug}>
+    <p>{experience.data.longTitle}</p>
+    <p class="faded">{experience.data.type} @ {experience.data.company}</p>
 </a>

@@ -8,14 +8,7 @@ interface Props {
 const { cert } = Astro.props;
 ---
 
-<a
-    class="group p-2 border border-zinc-200 rounded-lg flex flex-col no-underline hover:no-underline"
-    href={cert.data.url}
-    target="_blank"
->
-    <p class="line-clamp-2">
-        <b class="group-hover:underline">{cert.data.title}</b>
-    </p>
-    <p class="faded">
-    Issued by {(cert.data.organization)}     </p>
+<a class="card" href={cert.data.url} target="_blank">
+    <p>{cert.data.title}</p>
+    <p class="faded">Issued by {cert.data.organization}</p>
 </a>

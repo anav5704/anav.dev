@@ -8,14 +8,7 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<a
-    class="group p-2 border border-zinc-200 rounded-lg flex items-center gap-2 no-underline hover:no-underline"
-    href={"/projects/" + project.slug}
->
-    <div class="flex flex-col">
-        <b class="group-hover:underline">{project.data.title}</b>
-        <p class="faded no-underline">
-            {project.data.description}
-        </p>
-    </div>
+<a class="card" href={"/projects/" + project.slug}>
+    <p>{project.data.title}</p>
+    <p class="faded no-underline">{project.data.description}</p>
 </a>

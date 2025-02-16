@@ -4,19 +4,14 @@ const { headings } = Astro.props;
 ---
 
 <details class="border border-zinc-200 rounded-lg space-y-1 cursor-pointer">
-    <summary class="p-2">Table of Contents</summary>
-    <div class="p-2 space-y-2 !m-0 border-t border-zinc-200">
+    <summary class="px-4 py-2">Table of Contents</summary>
+    <div class="px-4 py-2 space-y-2 !m-0 border-t border-zinc-200">
         {
-            headings.map((heading: MarkdownHeading, index: number) => (
-                <div class="flex gap-5">
-                    <p class="text-zinc-200 toc">
-                        {heading.depth == 3
-                            ? heading.depth == headings[index + 1]?.depth
-                                ? "├─"
-                                : "└─"
-                            : null}
+            headings.map((heading: MarkdownHeading) => (
+                <div>
+                    <p class="text-zinc-200">
                         <a
-                            class="text-[#444444] no-underline hover:underline"
+                            class={`${heading.depth == 3 && "pl-8"} text-[#444444] no-underline`}
                             href={"#" + heading.slug}
                         >
                             {heading.text}
