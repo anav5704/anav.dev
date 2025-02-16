@@ -5,5 +5,4 @@ examples:
     - Vitest
     - Storybook
     - Cypress
-    - K6
 ---

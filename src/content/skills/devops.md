@@ -4,6 +4,6 @@ title: DevOps
 examples:
     - Docker 
     - Nginx
-    - GitLab
+    - GitLab CI
 ---
 
