@@ -1,9 +1,11 @@
 # Fully static build served from Nginx
 
-FROM node:20-alpine AS build
+FROM node:20 AS build
+
+RUN curl -fsSL https://d2lang.com/install.sh | sh -s --
 
 WORKDIR /app
-
+    
 COPY package*.json .
 
 RUN npm ci

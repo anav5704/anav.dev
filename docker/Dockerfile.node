@@ -1,16 +1,24 @@
 # Fully static build with API served from Node
 
-FROM node:20-alpine
+FROM node:20 AS build 
 
+RUN curl -fsSL https://d2lang.com/install.sh | sh -s --
+    
 WORKDIR /app
 
  COPY package*.json .
-
-RUN npm ci
+ 
+ RUN npm ci
 
 COPY . .
 
 RUN npm run build
+
+FROM node:20-alpine AS runtime
+
+COPY --from=build /app/dist ./dist
+
+COPY --from=build /app/node_modules ./node_modules
 
 ENV HOST=0.0.0.0 
 
