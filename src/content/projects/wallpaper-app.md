@@ -1,12 +1,10 @@
 ---
-id: 14
 featured: false
 title: Wallpaper App
 metaTitle: Wallpaper App | React Native and Expo
 description: Simple wallpaper app with categories and search functionality.
 metaDescription: Simple wallpaper app with categories and search functionality. Built using React Native and Expo.
 createdAt: 2024-01-25T00:00:00+12:00
-updatedAt: 2024-01-25T00:00:00+12:00
 repo: https://github.com/anav5704/wallpaper-app
 site: https://github.com/anav5704/wallpaper-app
 ---

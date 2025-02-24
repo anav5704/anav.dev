@@ -1,12 +1,10 @@
 ---
-id: 13
 featured: false
 title: Shockpad
 metaTitle: Shockpad | React.js and Electron.js
 description: Native Windows desktop app for taking notes using Markdown.
 metaDescription: Native Windows desktop app for taking notes using Markdown. Built using React.js and Electron.js.
 createdAt: 2024-01-25T00:00:00+12:00
-updatedAt: 2024-01-25T00:00:00+12:00
 repo: https://github.com/anav5704/note-app-electron
 site: https://github.com/anav5704/note-app-electron
 ---

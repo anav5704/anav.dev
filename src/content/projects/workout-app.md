@@ -1,12 +1,10 @@
 ---
-id: 3
 featured: false
 title: Workout App
 metaTitle: MERN Stack Workout App
 description: Web application that allows users to create and mange workouts.
 metaDescription: Fullstack workout web app built using MongoDB, Express JS, React JS, Node JS with the frontend hosted on Vercel and backend hosted on Render.
 createdAt: 2023-06-26T00:00:00+12:00
-updatedAt: 2023-06-26T00:00:00+12:00
 repo: https://github.com/anav5704/Workout-App-MERN
 site: https://github.com/anav5704/Workout-App-MERN
 ---

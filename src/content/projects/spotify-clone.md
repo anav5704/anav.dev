@@ -1,12 +1,10 @@
 ---
-id: 6
 featured: false
 title: Spotify Clone
 metaTitle: Spotify Clone | Next.js and Supabase
 description: Simple clone of Spotify with music upload, search and playback.
 metaDescription: Spotify Clone with music upload, search and playback. Built with Next.js TailwindCSS and Supabase.
 createdAt: 2023-10-01T00:00:00+12:00
-updatedAt: 2023-10-01T00:00:00+12:00
 repo: https://github.com/anav5704/spotify-clone
 site: https://spotify.anav.dev
 ---

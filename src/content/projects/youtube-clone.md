@@ -1,12 +1,10 @@
 ---
-id: 5
 featured: false
 title: YouTube Clone
 metaTitle: YouTube Clone | React.js and Material UI
 description: Simple clone of YouTube with video categories search functionality.
 metaDescription: YouTube Clone with categories and video search. Built using React.js, Material UI and Rapid API.
 createdAt: 2023-09-03T00:00:00+12:00
-updatedAt: 2023-09-03T00:00:00+12:00
 repo: https://github.com/anav5704/YouTube-Clone
 site: https://youtube.anav.dev
 ---

@@ -1,12 +1,10 @@
 ---
-id: 10
 featured: false
 title: Gamers Hub
 metaTitle: Gamers Hub | Astro.js and TailwindCSS
 description: Modern and simple blog website for game-related news articles.
 metaDescription: Modern and simple blog website for game-related news articles. Built using Astro.js and TailwindCSS.
 createdAt: 2023-11-11T00:00:00+12:00
-updatedAt: 2023-11-11T00:00:00+12:00
 repo: https://github.com/anav5704/gamers-hub
 site: https://games.anav.dev
 ---

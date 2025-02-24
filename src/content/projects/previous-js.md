@@ -1,12 +1,10 @@
 ---
-id: 15
 featured: false
 title: Previous JS
 metaTitle: Previous.js | Modern Next.js Inspired Landing Page
 description: Clean landing page inspired by modern web technologies like Next JS.
 metaDescription: Modern Next.js inspired landing page made using Next.js, TailwindCSS and NX monorepo. Hosted on Vercel.
 createdAt: 2024-04-18T00:00:00+12:00
-updatedAt: 2024-08-14T00:00:00+12:00
 repo: https://github.com/anav5704/previous.js
 site: https://previous-js.anav.dev
 ---
