@@ -6,7 +6,9 @@ import ListLayout from "@layouts/list.astro";
 
 const unsortedProjects = await getCollection("projects");
 
-const projects = unsortedProjects.sort((a, b) => b.data.id - a.data.id);
+const projects = unsortedProjects.sort(
+    (a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime()
+);
 ---
 
 <ListLayout
