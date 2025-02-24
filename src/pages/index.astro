@@ -21,7 +21,7 @@ const skills = unsortedSkills
 const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects
     .filter((a) => a.data.featured == true)
-    .sort((a, b) => b.data.id - a.data.id)
+    .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime())
     .slice(0, 3);
 
 const unfilteredBlogs = await getCollection("blogs");
