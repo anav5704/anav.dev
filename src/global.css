@@ -54,6 +54,10 @@
         @apply rounded-lg bg-zinc-100;
     }
 
+    iframe {
+        @apply rounded-lg w-full aspect-[16/10];
+    }
+
     code {
         @apply bg-zinc-200 px-2 rounded-lg inline-block text-sm;
         font-family: "JetBrains Mono Variable", monospace;
@@ -76,7 +80,7 @@
         border-spacing: 0;
 
         th {
-            @apply p-2 font-normal bg-zinc-200;
+            @apply p-2 font-normal bg-zinc-100 border border-zinc-200;
         }
 
         td {
