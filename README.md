@@ -1,18 +1,10 @@
-<h1 align="center">www.anav.dev</h1>
+<h3 align="center">www.anav.dev</h3>
 
 <p align="center">
-    <a href="https://github.com/anav5704/anav.dev/commits/main">
-        <img src="https://img.shields.io/github/commit-activity/m/anav5704/anav.dev/main?logo=github&label=Commits&logoColor=white&color=white&labelColor=6E40C9" alt="GitHub Commit Activity">
-    </a>
-    <a href="https://gitlab.com/anav5704/anav.dev/-/pipelines">
-        <img src="https://img.shields.io/gitlab/pipeline-status/anav5704%2Fanav.dev?logo=gitlab&label=Pipeline&logoColor=white&color=white&labelColor=FC6D26" alt="GitLab Pipeline Status">
-    </a>
-    <a href="https://hub.docker.com/r/anav5704/anav.dev/tags">
-        <img src="https://img.shields.io/docker/v/anav5704/anav.dev?sort=semver&label=Image&logo=docker&logoColor=white&color=white&labelColor=2496ED" alt="Docker Latest Image">
-    </a>
-    <a href="https://anav.dev">
-        <img src="https://img.shields.io/website?url=https://anav.dev&logo=nginx&label=Server&logoColor=white&color=white&labelColor=009639&up_message=online&down_message=offline" alt="Nginx Web Server">
-    </a>
+    <a href="https://github.com/anav5704/anav.dev/commits/main"><img src="https://img.shields.io/github/commit-activity/m/anav5704/anav.dev/main?logo=github&label=Commits&logoColor=white&color=white&labelColor=6E40C9" alt="GitHub Commit Activity"></a>
+    <a href="https://gitlab.com/anav5704/anav.dev/-/pipelines"><img src="https://img.shields.io/gitlab/pipeline-status/anav5704%2Fanav.dev?logo=gitlab&label=Pipeline&logoColor=white&color=white&labelColor=FC6D26" alt="GitLab Pipeline Status"></a>
+    <a href="https://hub.docker.com/r/anav5704/anav.dev/tags"><img src="https://img.shields.io/docker/v/anav5704/anav.dev?sort=semver&label=Image&logo=docker&logoColor=white&color=white&labelColor=2496ED" alt="Docker Latest Image"></a>
+    <a href="https://www/anav.dev"><img src="https://img.shields.io/website?url=https://anav.dev&logo=nginx&label=Server&logoColor=white&color=white&labelColor=009639&up_message=online&down_message=offline" alt="Nginx Web Server"></a>
 </p>
 
 ## Technologies Used
