@@ -59,7 +59,7 @@
     }
 
     code {
-        @apply bg-zinc-200 px-2 rounded-lg inline-block text-sm;
+        @apply bg-zinc-100 px-2 rounded-lg inline-block text-sm;
         font-family: "JetBrains Mono Variable", monospace;
     }
 
