@@ -23,7 +23,7 @@ This is a link management webapp I built for myself. The user-facing site (homep
 
 Being a University student and a peer mentor, I end up having to share links very regularly. This includes links for online documents, links for surveys, invite links for Viber communities, and more. The issue is that these links are used to identify unique resources, which makes them very long as they have some sort of Id in the URL (like a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)). 
 
-I tried using [Dub](https://dub.co) to shorten these links but I didn't like the fact that all the  links started Dubs own domain. I then tried setting up[ subdomain to external URL redirects on Vercel](http://anav.dev/blogs/how-to-setup-subdomain-to-external-url-redirects-on-vercel). This approach was better as the links started my owm domain. Unfortunately, I had to edit a file and push it to GitHub every time I wanted to update a link.
+I tried using [Dub](https://dub.co) to shorten these links but I didn't like the fact that all the  links started Dubs own domain. I then tried setting up[ subdomain to external URL redirects on Vercel](http://anav.dev/blogs/how-to-setup-subdomain-to-external-url-redirects-on-vercel). This approach was better as the links started my own domain. Unfortunately, I had to edit a file and push it to GitHub every time I wanted to update a link.
 
 Then came our University summer break. I tend to work on personal projects during my breaks, and this time, I decided to try out a new meta framework. After a bit of research, I decided to go with [SvelteKit](https://svelte.dev). With the issue of me sharing messy links not solved, I decided to work on a link management system as my first project.
 
