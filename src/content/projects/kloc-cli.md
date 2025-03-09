@@ -3,7 +3,7 @@ featured: false
 title: Kloc CLI
 metaTitle: Kloc CLI | Node.js Lines of Code CLI
 description:  Simple CLI tool to count lines of code in current working directory.
-metaDescription: mock
+metaDescription: Simple CLI tool to count lines of code in current working directory, built with Node.js and Commander.js.
 createdAt: 2024-11-01T00:00:00+12:00
 repo:  https://github.com/anav5704/kloc
 site:  https://npmjs.com/package/kloc-cli 

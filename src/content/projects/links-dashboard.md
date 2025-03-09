@@ -3,7 +3,7 @@ featured: false
 title: Links Dashboard
 metaTitle: Link Management System | SvelteKit 5 and Prisma ORM
 description: Personal link management system for URL shortening amd redirecting.
-metaDescription: mock
+metaDescription: Personal link management system for URL shortening and redirecting, built with SvelteKit 5 and Prism ORM.
 createdAt: 2025-01-09T00:00:00+12:00
 repo: https://github.com/anav5704/links.anav.dev
 site: https://links.anav.dev
