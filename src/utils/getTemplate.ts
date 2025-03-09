@@ -7,7 +7,7 @@ interface Props {
 }
 
 const template = ({ title, description }: Props) => {
-    const logo = fs.readFileSync(path.join(process.cwd(), "public/logo.jpg"));
+    const logo = fs.readFileSync(path.join(process.cwd(), "assets/logo.jpg"));
 
     return {
         type: "div",
