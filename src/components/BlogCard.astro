@@ -9,7 +9,13 @@ interface Props {
 const { blog } = Astro.props;
 ---
 
-<a class="card" href={"/blogs/" + blog.slug}>
-    <p>{blog.data.title}</p>
-    <p class="faded">{long(blog.data.createdAt)}</p>
-</a>
+<article>
+    <a class="card" href={"/blogs/" + blog.slug}>
+        <h4>{blog.data.title}</h4>
+        <p class="faded">
+            <time datetime={blog.data.createdAt.toISOString()}>
+                {long(blog.data.createdAt)}
+            </time>
+        </p>
+    </a>
+</article>

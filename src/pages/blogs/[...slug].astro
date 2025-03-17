@@ -1,8 +1,8 @@
 ---
-import { getCollection } from "astro:content";
-import ContentLayout from "@layouts/content.astro";
-import BlogDetails from "@components/BlogDetails.astro";
 import TableOfContents from "@components/TableOfContents.astro";
+import BlogDetails from "@components/BlogDetails.astro";
+import ContentLayout from "@layouts/content.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
     const allBlogs = await getCollection("blogs");
@@ -26,5 +26,7 @@ const { Content, headings } = await blog.render();
 >
     <BlogDetails title={blog.data.title} date={blog.data.createdAt} />
     <TableOfContents headings={headings} />
-    <Content />
+    <article class="space-y-4 content">
+        <Content />
+    </article>
 </ContentLayout>

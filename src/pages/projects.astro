@@ -1,7 +1,6 @@
 ---
 import ProjectCard from "@components/ProjectCard.astro";
 import { getCollection } from "astro:content";
-import Header from "@components/Header.astro";
 import ListLayout from "@layouts/list.astro";
 
 const unsortedProjects = await getCollection("projects");
@@ -13,11 +12,23 @@ const projects = unsortedProjects.sort(
 
 <ListLayout
     title="Anav Chand | Personal Projects"
-    description="A collection of full stack web development projects, built with modern technologies like React, Next.js, and TypeScript."
+    description="I enjoy building full-stack web applications that combine my skills in fullstack web development, database design, cloud and DevOps."
     contentType="Projects"
 >
-    <article class="my-12">
-        <Header content={`Personal Projects (${projects.length})`} />
-    </article>
-    {projects.map((project) => <ProjectCard project={project} />)}
+    <header>
+        <h1>{`Personal Projects (${projects.length})`}</h1>
+        <p>
+            I enjoy building full-stack web applications that combine my skills
+            in fullstack web development, database design, cloud and DevOps.
+        </p>
+    </header>
+    <ul class="space-y-4">
+        {
+            projects.map((project) => (
+                <li>
+                    <ProjectCard project={project} />
+                </li>
+            ))
+        }
+    </ul>
 </ListLayout>

@@ -1,6 +1,4 @@
 ---
-import Header from "@components/Header.astro";
-
 interface Props {
     title: string;
     repo: string;
@@ -10,14 +8,14 @@ interface Props {
 const { title, repo, site } = Astro.props;
 ---
 
-<article class="my-12 space-y-2">
-    <Header content={title} />
-    <div class="flex items-center gap-5">
+<header>
+    <h1>{title}</h1>
+    <p class="flex items-center gap-5">
         <a target="_blank" href={repo} class="flex items-center gap-1">
             Source Code
         </a>
         <a target="_blank" href={site} class="flex items-center gap-1">
             Live Preview
         </a>
-    </div>
-</article>
+    </p>
+</header>

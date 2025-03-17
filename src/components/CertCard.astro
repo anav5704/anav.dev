@@ -8,7 +8,9 @@ interface Props {
 const { cert } = Astro.props;
 ---
 
-<a class="card" href={cert.data.url} target="_blank">
-    <p>{cert.data.title}</p>
-    <p class="faded">Issued by {cert.data.organization}</p>
-</a>
+<article>
+    <a class="card" href={cert.data.url} target="_blank">
+        <h4>{cert.data.title}</h4>
+        <p class="faded">Issued by {cert.data.organization}</p>
+    </a>
+</article>

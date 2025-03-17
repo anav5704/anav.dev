@@ -1,8 +1,7 @@
 ---
-import { getCollection } from "astro:content";
-import Header from "@components/Header.astro";
-import ListLayout from "@layouts/list.astro";
 import BlogCard from "@components/BlogCard.astro";
+import { getCollection } from "astro:content";
+import ListLayout from "@layouts/list.astro";
 
 const unsortedBlogs = await getCollection("blogs");
 
@@ -13,11 +12,24 @@ const blogs = unsortedBlogs.sort(
 
 <ListLayout
     title="Anav Chand | Blog Posts"
-    description="A collection of technical blogs on web technologes and personal blogs on univeresity life."
+    description="I write about web development, software engineering, and DevOps, along with personal reflections on my university life and learning experiences."
     contentType="Blogs"
 >
-    <article class="my-12">
-        <Header content={`Blog Posts (${blogs.length})`} />
-    </article>
-    {blogs.map((blog) => <BlogCard blog={blog} />)}
+    <header>
+        <h1>{`Blog Posts (${blogs.length})`}</h1>
+        <p>
+            I write about web development, software engineering, and DevOps,
+            along with personal reflections on my university life and learning
+            experiences.
+        </p>
+    </header>
+    <ul class="space-y-4">
+        {
+            blogs.map((blog) => (
+                <li>
+                    <BlogCard blog={blog} />
+                </li>
+            ))
+        }
+    </ul>
 </ListLayout>

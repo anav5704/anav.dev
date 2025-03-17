@@ -1,5 +1,4 @@
 ---
-import Header from "@components/Header.astro";
 import { long } from "@utils/getDate";
 
 interface Props {
@@ -10,9 +9,9 @@ interface Props {
 const { title, date } = Astro.props;
 ---
 
-<article class="my-12 space-y-2">
-    <Header content={title} />
-    <p class="flex items-center gap-1">
-        Published on {long(date)}
+<header>
+    <h1>{title}</h1>
+    <p>
+        Published on <time datetime={date.toISOString()}>{long(date)}</time>
     </p>
-</article>
+</header>

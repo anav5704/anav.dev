@@ -5,7 +5,6 @@ import ImageGrid from "@components/ImageGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
 import BlogCard from "@components/BlogCard.astro";
 import { getCollection } from "astro:content";
-import Header from "@components/Header.astro";
 import MainLayout from "@layouts/main.astro";
 
 const unsortedExperience = await getCollection("experience");
@@ -34,42 +33,67 @@ const blogs = unfilteredBlogs
     title="Anav Chand | Web Developer & Software Engineering Student From Fiji"
     description="Hi, I'm Anav Chand. I am an aspiring DevOps engineer, self-taught web developer, second-year software engineering student, and award-winning peer mentor @ USP."
 >
-    <!-- HERO SECTION -->
-
-    <article class="my-12 space-y-2">
-        <Header content="Hi, I'm Anav Chand" />
+    <header>
+        <h1>Hi, I'm Anav Chand</h1>
         <p>
             I am an aspiring DevOps engineer, self-taught web developer,
             second-year software engineering student, and award-winning peer
             mentor @ <a href="https://usp.ac.fj" target="_blank">USP</a>.
         </p>
-    </article>
+    </header>
 
     <ImageGrid />
 
-    <!-- PROJECTS SECTION -->
+    <section class="space-y-4">
+        <h2>Top Projects</h2>
+        <ul class="space-y-4">
+            {
+                projects.map((project) => (
+                    <li>
+                        <ProjectCard project={project} />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 
-    <h2>Top Projects</h2>
+    <section class="space-y-4">
+        <h2>My Skills</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {
+                skills.map((skill) => (
+                    <li>
+                        <SkillCard skill={skill} />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 
-    {projects.map((project) => <ProjectCard project={project} />)}
+    <section class="space-y-4">
+        <h2>Recent Experience</h2>
+        <ul class="space-y-4">
+            {
+                experience.map((exp) => (
+                    <li>
+                        {" "}
+                        <ExperienceCard experience={exp} />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 
-    <!-- SKILLS SECTION -->
-
-    <h2>My Skills</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {skills.map((skill) => <SkillCard skill={skill} />)}
-    </div>
-
-    <!-- EXPERIENCE SECTION -->
-
-    <h2>Recent Experience</h2>
-
-    {experience.map((exp) => <ExperienceCard experience={exp} />)}
-
-    <!-- BLOGS SECTION -->
-
-    <h2>Latest Blogs</h2>
-
-    {blogs.map((blog) => <BlogCard blog={blog} />)}
+    <section class="space-y-4">
+        <h2>Latest Blogs</h2>
+        <ul class="space-y-4">
+            {
+                blogs.map((blog) => (
+                    <li>
+                        <BlogCard blog={blog} />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 </MainLayout>

@@ -1,6 +1,6 @@
 ---
-import ProjectDetails from "@components/ProjectDetails.astro";
 import TableOfContents from "@components/TableOfContents.astro";
+import ProjectDetails from "@components/ProjectDetails.astro";
 import ContentLayout from "@layouts/content.astro";
 import { getCollection } from "astro:content";
 
@@ -30,5 +30,7 @@ const { Content, headings } = await project.render();
         site={project.data.site}
     />
     <TableOfContents headings={headings} />
-    <Content />
+    <article class="space-y-4 content">
+        <Content />
+    </article>
 </ContentLayout>

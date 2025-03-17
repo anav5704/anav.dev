@@ -1,9 +1,8 @@
 ---
-import { getCollection } from "astro:content";
-import Header from "@components/Header.astro";
-import ListLayout from "@layouts/list.astro";
-import CertCard from "@components/CertCard.astro";
 import SkillCard from "@components/SkillCard.astro";
+import CertCard from "@components/CertCard.astro";
+import { getCollection } from "astro:content";
+import ListLayout from "@layouts/list.astro";
 
 const unsortedSkills = await getCollection("skills");
 const unsortedCerts = await getCollection("certs");
@@ -14,20 +13,41 @@ const certs = unsortedCerts.sort((a, b) => a.data.id - b.data.id);
 
 <ListLayout
     title="Anav Chand | Skills And Certifications"
-    description="All of my programming, frontend, backend, software, testing, devops and cloud skills with certifications."
+    description=" I've acquired a range of technical skills and earned several professional certifications that help me build high quality and real world projects."
     contentType="Skills"
 >
-    <article class="my-12">
-        <Header content="Skills And Certifications" />
-    </article>
+    <header>
+        <h1>Skills And Certifications</h1>
+        <p>
+            I've acquired a range of technical skills and earned several
+            professional certifications that help me build high quality and real
+            world projects.
+        </p>
+    </header>
 
-    <h2 class="pt-0">Tools And Tech</h2>
+    <section class="space-y-4">
+        <h2 class="pt-0">Tools And Tech</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {
+                skills.map((skill) => (
+                    <li>
+                        <SkillCard skill={skill} />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {skills.map((skill) => <SkillCard skill={skill} />)}
-    </div>
-
-    <h2>Professional Certificates</h2>
-
-    {certs.map((cert) => <CertCard cert={cert} />)}
+    <section class="space-y-4">
+        <h2>Professional Certificates</h2>
+        <ul class="space-y-4">
+            {
+                certs.map((cert) => (
+                    <li>
+                        <CertCard cert={cert} />
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 </ListLayout>

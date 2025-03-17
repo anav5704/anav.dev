@@ -8,7 +8,9 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<a class="card" href={"/projects/" + project.slug}>
-    <p>{project.data.title}</p>
-    <p class="faded no-underline">{project.data.description}</p>
-</a>
+<article>
+    <a class="card" href={"/projects/" + project.slug}>
+        <h4>{project.data.title}</h4>
+        <p class="faded no-underline">{project.data.description}</p>
+    </a>
+</article>

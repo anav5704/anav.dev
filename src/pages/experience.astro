@@ -1,7 +1,6 @@
 ---
 import ExperienceDetails from "@components/ExperienceDetails.astro";
 import { getCollection } from "astro:content";
-import Header from "@components/Header.astro";
 import ListLayout from "@layouts/list.astro";
 
 const unsortedExperience = await getCollection("experience");
@@ -12,13 +11,18 @@ const experience = unsortedExperience
 ---
 
 <ListLayout
-    title="Anav Chand | Work And Volunteer Experience"
-    description="All of my work and volunteer experience, along with my contributions and learnings."
+    title="Anav Chand | Work And Volunteer"
+    description="I've helped various organizations through paid and volunteer roles, picking up skills and insights while making meaningful contributions along the way."
     contentType="Experience"
 >
-    <article class="my-12">
-        <Header content="Work And Volunteer" />
-    </article>
+    <header>
+        <h1>Work And Volunteer</h1>
+        <p>
+            I've helped various organizations through paid and volunteer roles,
+            picking up skills and insights while making meaningful contributions
+            along the way.
+        </p>
+    </header>
     {
         experience.map((experience) => (
             <ExperienceDetails experience={experience} />

@@ -3,31 +3,22 @@ import type { MarkdownHeading } from "astro";
 const { headings } = Astro.props;
 ---
 
-<details class="border border-zinc-200 rounded-lg space-y-1 cursor-pointer">
-    <summary class="px-4 py-2">Table of Contents</summary>
-    <div class="px-4 py-2 space-y-2 !m-0 border-t border-zinc-200">
-        {
-            headings.map((heading: MarkdownHeading) => (
-                <div>
-                    <p class="text-zinc-200">
+<nav>
+    <details class="border border-zinc-200 rounded-lg space-y-1 cursor-pointer">
+        <summary class="px-4 py-2">Table of Contents</summary>
+        <ul class="px-4 py-2 space-y-2 !m-0 border-t border-zinc-200">
+            {
+                headings.map((heading: MarkdownHeading) => (
+                    <li>
                         <a
                             class={`${heading.depth == 3 && "pl-8"} text-[#444444] no-underline`}
                             href={"#" + heading.slug}
                         >
                             {heading.text}
                         </a>
-                    </p>
-                </div>
-            ))
-        }
-    </div>
-</details>
-
-<style>
-    details > summary {
-        list-style: none;
-    }
-    details > summary::-webkit-details-marker {
-        display: none;
-    }
-</style>
+                    </li>
+                ))
+            }
+        </ul>
+    </details>
+</nav>

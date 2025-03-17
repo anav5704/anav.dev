@@ -12,7 +12,6 @@ const { data } = experience;
 const { Content } = await experience.render();
 
 const startDate = short(data.startDate);
-const endDate: Date | String = data.present ? "Present" : short(data.endDate);
 ---
 
 <h2 id={experience.slug} class="first-of-type:pt-0">{data.shortTitle}</h2>
@@ -21,7 +20,21 @@ const endDate: Date | String = data.present ? "Present" : short(data.endDate);
 
 <div class="flex flex-col md:flex-row justify-between">
     <p>{data.type} @ {data.company}</p>
-    <p>{startDate} - {endDate}</p>
+    <p>
+        <time datetime={data.startDate.toISOString()}>
+            {startDate}
+        </time>
+        -
+        {
+            data.present ? (
+                <p>Present</p>
+            ) : (
+                <time datetime={data.endDate.toISOString()}>
+                    {short(data.endDate)}
+                </time>
+            )
+        }
+    </p>
 </div>
 
 <Content />
