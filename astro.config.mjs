@@ -3,6 +3,7 @@ import partytown from "@astrojs/partytown";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import gruvbox from "./gruvbox.json";
+import svelte from "@astrojs/svelte";
 import latex from "rehype-mathjax";
 import node from "@astrojs/node";
 import d2 from "astro-d2";
@@ -37,5 +38,5 @@ export default defineConfig({
             default: "301",
             dark: false
         }
-    }), tailwind(), partytown(), sitemap()],
+    }), svelte(), tailwind(), partytown(), sitemap()],
 });
