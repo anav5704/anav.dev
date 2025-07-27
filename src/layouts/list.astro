@@ -1,6 +1,7 @@
 ---
-import NavBar from "@components/NavBar.astro";
+import NavBar from "@components/NavBar.svelte";
 import { getImage } from "@utils/getImage";
+import Logo from "@components/Logo.astro";
 
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource/geist-sans";
@@ -68,8 +69,10 @@ const breadcrumbStructuredData = {
             data-website-id="1914ece2-a419-41e4-8b8f-035edde09185"></script>
     </head>
     <body class="max-w-7xl mx-auto">
-        <NavBar />
-        <main class="pt-16 pb-[50vh] w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
+        <NavBar client:load>
+            <Logo />
+        </NavBar>
+        <main class="pt-0 md:pt-16 pb-[50vh] w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
             <slot />
         </main>
     </body>
