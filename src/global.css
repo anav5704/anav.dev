@@ -40,11 +40,23 @@
     }
 
     a {
-        @apply underline;
+        @apply no-underline;
     }
 
-    .content li {
-        @apply list-disc ml-5;
+    .hero {
+        a {
+            @apply underline;
+        }
+    }
+
+    .content {
+        a {
+            @apply underline;
+        }
+
+        li {
+            @apply list-disc ml-5;
+        }
     }
 
     hr {
@@ -52,7 +64,11 @@
     }
 
     img {
-        @apply rounded-lg bg-zinc-100;
+        @apply rounded-lg;
+    }
+
+    img[src$=".svg"] {
+        @apply rounded-none;
     }
 
     iframe {
@@ -65,7 +81,7 @@
     }
 
     blockquote {
-        @apply rounded-lg p-2 italic font-serif;
+        @apply bg-zinc-100 text-center rounded-lg p-2 italic font-serif;
     }
 
     details > summary {
