@@ -2,14 +2,14 @@
 title: "Simplifying OOP For CS112 Part 3: Understanding Inheritance."
 description: "Learn how to use C++ inheritance and abstract classes with code examples, activity questions and free solutions"
 createdAt: 2024-09-30T00:00:00+12:00
-updatedAt: 2024-09-30T00:00:00+12:00
+updatedAt: 2025-07-27T00:00:00+12:00
 ---
 
 ## Introduction
 
 ---
 
-Object oriented programming in C++ is based on 3 core principles. These are: encapsulation, inheritance, and polymorphism. Inheritance is the ability for one class to borrow all attributes and methods from another class, and add its own. An example of this is is a child inheriting features from its parents, while having its own characteristics. Inheritance helps us manage our code well by reducing code duplication and improving modularity. This article builds off what was covered in the [understanding encapsulation article](https://www.anav.dev/blogs/simplifying-oop-for-cs112-part-2-undersanding-encapsulation). Be sure to check that out before proceeding.
+Object oriented programming in C++ is based on 3 core principles. These are: encapsulation, inheritance, and polymorphism. Inheritance is the ability for one class to borrow all attributes and methods from another class, and add its own. An example of this is a child inheriting features from its parents, while having its own characteristics. Inheritance helps us manage our code well by reducing code duplication and improving modularity. This article builds off what was covered in the [understanding encapsulation article](https://www.anav.dev/blogs/simplifying-oop-for-cs112-part-2-undersanding-encapsulation). Be sure to check that out before proceeding.
 
 ## Base And Derived Classes
 
@@ -28,13 +28,13 @@ Let's implement a `Dog` class that inherits from an `Animal` class.
 ```cpp
 class Animal {
     public:
-        string name
+        string name;
 
         // A default constructor is required
         Animal() {}
 
         void greet() {
-            cout << "Hi, I'm" << name << endl;
+            cout << "Hi, I'm " << name << endl;
         }
 };
 
@@ -43,7 +43,7 @@ class Dog: public Animal {
         string breed;
 
         void bark() {
-            cout << "Woof! Woof!" << endl
+            cout << "Woof! Woof!" << endl;
         }
 };
 ```
@@ -182,7 +182,7 @@ class Animal {
             return breed;
         }
 
-        string getAge() {
+        int getAge() {
             return age;
         }
 };

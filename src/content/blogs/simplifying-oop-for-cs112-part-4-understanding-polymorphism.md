@@ -2,7 +2,7 @@
 title: "Simplifying OOP For CS112 Part 4: Understanding Polymorphism."
 description: "Learn how to use C++ compile time and runtime polymorphism with code examples, activity questions and free solutions"
 createdAt: 2024-10-1T00:00:00+12:00
-updatedAt: 2024-10-1T00:00:00+12:00
+updatedAt: 2025-07-27T00:00:00+12:00
 ---
 
 ## Introduction
@@ -15,7 +15,7 @@ Object oriented programming in C++ is based on 3 core principles. These are: enc
 
 ---
 
-Also known as static polymorphism, compile time polymorphism is a type of polymorphism determined when the code is being compiled. This type of polymorphism is achieved by using by using function overloading and operator overloading. It tends to be much faster but less flexible than runtime polymorphism.
+Also known as static polymorphism, compile time polymorphism is a type of polymorphism determined when the code is being compiled. This type of polymorphism is achieved by using function overloading and operator overloading. It tends to be much faster but less flexible than runtime polymorphism.
 
 ### Function Overloading
 
@@ -56,13 +56,14 @@ This is what the implementation for `Bottle + Bottle` would look like:
 
 ```cpp
 class Bottle {
-    int water; // amount of water in ml
+    public:
+        int water; // amount of water in ml
 
-    Bottle operator+ (Bottle bottle) {
-        Bottle temp;
-        temp.water = this->water + bottle.water;
-        return temp;
-    }
+        Bottle operator+ (Bottle bottle) {
+            Bottle temp;
+            temp.water = this->water + bottle.water;
+            return temp;
+        }
 }
 ```
 
@@ -86,7 +87,7 @@ Activity question: create a program with a `Phone` class. It should have an inte
 
 ---
 
-Also known as dynamic polymorphism, compile time polymorphism is a type of polymorphism determined when the user is using the program. This type of polymorphism is achieved by using by using function overriding and virtual functions. It tends to be slower but much more flexible than compile time polymorphism.
+Also known as dynamic polymorphism, runtime compile time polymorphism is a type of polymorphism determined when the user is using the program. This type of polymorphism is achieved by using by using function overriding and virtual functions. It tends to be slower but much more flexible than compile time polymorphism.
 
 ### Function Overriding
 

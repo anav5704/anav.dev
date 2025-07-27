@@ -2,7 +2,7 @@
 title: "Simplifying OOP For CS112 Part 1: Pointers And Dynamic Memory."
 description: "Learn how to use C++ pointers and dynamic memory allocation with code examples, activity questions and free solutions"
 createdAt: 2024-09-22T00:00:00+12:00
-updatedAt: 2024-09-24T00:00:00+12:00
+updatedAt: 2025-07-27T00:00:00+12:00
 ---
 
 ## Introduction
@@ -15,13 +15,13 @@ CS112: Data Structures and Algorithms can appear to be a very difficult course. 
 
 ---
 
-Pointers, just like integers and stings, are a `Data Type`. The only difference is that instead of holding a value like `5` or `"my name"`, they hold memory addresses like `e29a07`. Pointer syntax looks like this:
+Pointers, just like integers and strings, are a `Data Type`. The only difference is that instead of holding a value like `5` or `"my name"`, they hold memory addresses like `0xe29a07`. Pointer syntax looks like this:
 
 ```cpp
 dataType *ptrName = memoryAddress;
 ```
 
-Once a pointer to a variable is created, you can also access and modify the value stored in the memory address the pointer points to. This is done by using the `Deference (*)`Operator. This process is called dereferencing.
+Once a pointer to a variable is created, you can also access and modify the value stored in the memory address the pointer points to. This is done by using the `Dereference (*)`Operator. This process is called dereferencing.
 
 ```cpp
 // Modify value
@@ -40,7 +40,7 @@ The first way to get memory addresses is by using the `Reference (&)` Operator. 
 ```cpp
 // Integers
 int integer = 5;
-int integerPtr = &integer;
+int *integerPtr = &integer;
 *integerPtr = 10;
 
 // Booleans
@@ -50,7 +50,7 @@ bool *booleanPtr = &boolean;
 
 // Characters
 char character = 'A';
-char characterPtr = &character;
+char *characterPtr = &character;
 *characterPtr  = 'B';
 ```
 
@@ -63,7 +63,7 @@ Activity question: write a program that asks the user to input 2 numbers. Store 
 Similarly, we can create pointers that point to arrays. Note that the pointer will point to the memory address of the first element of the array.
 
 ```cpp
-int array = {12, 34, 56, 78, 90};
+int array[] = {12, 34, 56, 78, 90};
 int *arrayPtr = array; // This is the same as: int *array = &array[0];
 ```
 
@@ -75,7 +75,7 @@ cout << *(arrayPtr + 1); // Output: 34
 cout << *(arrayPtr + 2); // Output: 56
 ```
 
-As seen above, `arrayPtr + 1` moves the pointer to the first index (second position) and then `*( )` dereferences it. Alternatively, you can use the array pointer as if it were are normal array:
+As seen above, `arrayPtr + 1` moves the pointer to the first index (second position) and then `*( )` dereferences it. Alternatively, you can use the array pointer as if it were a normal array:
 
 ```cpp
 cout << arrayPtr[0]; // Output: 12
@@ -130,7 +130,7 @@ When calling this function inside of `main()`, you can either pass pointers to i
 int num1 = 3, num2 = 2, sum = 0;
 
 int *num1Ptr = &num1;
-int *num2ptr = &num2;
+int *num2Ptr = &num2;
 
 // Using pointers
 sum = calculateSum(num1Ptr, num2Ptr);
@@ -173,7 +173,7 @@ The second way is to call them with a parameter to set the initial value.
 ```cpp
 //  Provide initial value
 int *numberPtr = new int(5);
-int *characterPtr = new char('A');
+char *characterPtr = new char('A');
 
 delete  numberPtr;
 delete characterPtr;
@@ -208,7 +208,7 @@ Activity question: modify the program made in the [pointer to arrays](#pointer-t
 
 ---
 
-Static arrays have a fixed size throughout the programs life (determined at compile time). This is also case the for dynamic arrays. But, since the allocation and de-allocation of dynamic variables happen during runtime, we can do a fake array resize on demand. This fake resize is done by:
+Static arrays have a fixed size throughout the programs life (determined at compile time). This is also the case for dynamic arrays. But, since the allocation and de-allocation of dynamic variables happen during runtime, we can do a fake array resize on demand. This fake resize is done by:
 
 -   Allocating memory for a new array.
 -   Moving elements from old array to a new array.
@@ -226,8 +226,8 @@ int *oldArrayPtr = new int[oldArraySize];
 int *newArrayPtr = new int[newArraySize];
 
 // Transfer elements from the old array to the new array
-for(int i = 0;i < oldArraySize; i++l) {
-    newArrayPtr[i] = newArrayPtr[i];
+for(int i = 0; i < oldArraySize; i++) {
+    newArrayPtr[i] = oldArrayPtr[i];
 }
 
 // De-allocate memory for the old array
@@ -240,7 +240,7 @@ Activity question: write a program that resizes an array based on user input. Cr
 
 ---
 
-Dangling pointers occur when you try to access a memory block that has already been de-allocated. The memory block that is being access could be take up by another part of the program. This can lead to memory leaks and unexpected behavior such as program crashes.
+Dangling pointers occur when you try to access a memory block that has already been de-allocated. The memory block that is being accessed could be taken up by another part of the program. This can lead to memory leaks and unexpected behavior such as program crashes.
 
 ```cpp
 int *numberPtr = new int(5);

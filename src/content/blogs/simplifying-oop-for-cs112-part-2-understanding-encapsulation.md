@@ -2,14 +2,14 @@
 title: "Simplifying OOP For CS112 Part 2: Understanding Encapsulation."
 description: "Learn how to use C++ classes and  objects (encapsulation) with code examples, activity questions and free solutions"
 createdAt: 2024-09-23T00:00:00+12:00
-updatedAt: 2024-09-24T00:00:00+12:00
+updatedAt: 2025-07-27T00:00:00+12:00
 ---
 
 ## Introduction
 
 ---
 
-Object oriented programming in C++ is based on 3 core principles. These are: encapsulation, inheritance, and polymorphism. Encapsulation is the grouping of related variables and functions into a single entity, while being separated from the outside world. An example of ths is an ATM machine. You can withdraw money and check your balance, but the important internal parts are hidden away. Encapsulation helps promote safe programming. This article builds off what was covered in the [pointers and dynamic memory article](https://anav.dev/blogs/simplifying-oop-for-cs112-part-1-pointers-and-dynamic-memory). Be sure to check that out before proceeding.
+Object oriented programming in C++ is based on 3 core principles. These are: encapsulation, inheritance, and polymorphism. Encapsulation is the grouping of related variables and functions into a single entity, while being separated from the outside world. An example of this is an ATM machine. You can withdraw money and check your balance, but the important internal parts are hidden away. Encapsulation helps promote safe programming. This article builds off what was covered in the [pointers and dynamic memory article](https://anav.dev/blogs/simplifying-oop-for-cs112-part-1-pointers-and-dynamic-memory). Be sure to check that out before proceeding.
 
 ## Classes And Objects
 
@@ -48,7 +48,7 @@ Person *personPtr = new Person;
 personPtr->name = "Anav";
 personPtr->greet(); // Output: Hi, I'm Anav
 
-delete  personPtr;
+delete personPtr;
 ```
 
 Note that we use the `Member Access (->)` operator to access attributes and methods in the class. This operator only works with pointers.
@@ -90,7 +90,7 @@ In the parameterized constructor above, we use the `this` keyword to set the val
 Person *personPtr = new Person("Anav");
 // Output: Parameterized constructor called
 
-delete  personPtr;
+delete personPtr;
 // Output: Destructor called
 ```
 
@@ -132,10 +132,10 @@ personPtr->setName("Anav");
 cout << personPtr->getName(); // Output: Anav
 personPtr->greet(); // Output: Hi, I'm Anav
 
-delete  personPtr;
+delete personPtr;
 ```
 
-Activity question: modify the program made in the [constructors and destructors](#getters-and-setters) section. Add getters and setters for each of the attributes. Use the getters in the `printDetails()` and the setters in `main()`. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/encapsulation/getters-and-setters.cpp).
+Activity question: modify the program made in the [constructors and destructors](#constructors-and-destructors) section. Add getters and setters for each of the attributes. Use the getters in the `printDetails()` and the setters in `main()`. [Solution](https://github.com/anav5704/simplifying-oop-for-CS112/blob/main/encapsulation/getters-and-setters.cpp).
 
 ## Scope Resolution
 
