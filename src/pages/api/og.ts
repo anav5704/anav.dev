@@ -1,10 +1,9 @@
 export const prerender = false;
 
 import { Alice, Geist } from "@utils/getFonts";
-import template from "@utils/getTemplate";
+import { template } from "@utils/getTemplate";
 import { Resvg } from "@resvg/resvg-js";
 import type { APIRoute } from "astro";
-
 import satori from "satori";
 
 export const GET: APIRoute = async ({ url: { searchParams } }) => {

@@ -60,4 +60,4 @@ const template = ({ title, description }: Props) => {
     };
 };
 
-export default template;
+export { template };
