@@ -1,6 +1,6 @@
 ---
 import TableOfContents from "@components/TableOfContents.astro";
-import BlogDetails from "@components/BlogDetails.astro";
+import BlogDetails from "@components/BlogDetails.svelte";
 import ContentLayout from "@layouts/content.astro";
 import { getCollection } from "astro:content";
 
@@ -15,6 +15,8 @@ export async function getStaticPaths() {
 
 const { blog } = Astro.props;
 const { Content, headings } = await blog.render();
+
+const url = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <ContentLayout
@@ -24,7 +26,12 @@ const { Content, headings } = await blog.render();
     createdAt={blog.data.createdAt}
     updatedAt={blog.data.updatedAt}
 >
-    <BlogDetails title={blog.data.title} date={blog.data.createdAt} />
+    <BlogDetails
+        client:load
+        url={url.href}
+        title={blog.data.title}
+        date={blog.data.createdAt}
+    />
     <TableOfContents headings={headings} />
     <article class="space-y-4 content">
         <Content />
