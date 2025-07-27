@@ -1,5 +1,5 @@
 ---
-featured: false
+featured: true 
 title: Links Dashboard
 metaTitle: Link Management System | SvelteKit 5 and Prisma ORM
 description: Personal link management system for URL shortening amd redirecting.
@@ -54,6 +54,8 @@ The website has 2 main parts. The first is the user facing landing page which li
  The second is a admin dashboard which lets me manage all my links. This page can  only be accessed after logging in with a password. I was very lazy so my auth flow is just the server checking if the entered password matches with an environment variable. Core admin features include:
 
  **Create, update and delete links** - these are the basic operations used to manage the links. A modal opens for each operation which uses [SvelteKit form actions](https://svelte.dev/docs/kit/form-actions) to talk to the database. With these features, I don't have to edit a file and push to GitHUb to make changes like before.
+
+**Copy link URL and QR code** - these are just a quick and easy way for me to share a link. Each link on the admin dashboard has buttons to copy the link URL and QR code. The QR code is generate on the client using [node-qrcode](https://github.com/soldair/node-qrcode) on demand, as compared to having it saved in a storage bucket.
 
  **Search and filter links** - this just shows all links that match my query. I went for a server side search implementation using [query strings](https://en.wikipedia.org/wiki/Query_string). The cool thing about this is that searching for "anav5704 hub" will show links that have both "anav5704" and "hub" anywhere in their title, subtitle, or URL.
 

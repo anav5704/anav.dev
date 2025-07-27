@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false 
 title: Great Quotes
 metaTitle: Great Quotes | Next.js Quotes App
 description: Storage for my friends quotes from highschool and university.
