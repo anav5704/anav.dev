@@ -1,91 +1,106 @@
 <script lang="ts">
-    import {
-        Home,
-        Crown,
-        SquareTerminal,
-        Briefcase,
-        Book,
-        Link
-    } from "@lucide/svelte";
+    import { Menu, X } from "@lucide/svelte";
 
-    const { children } = $props();
+    const { children, pathname } = $props();
 
-    let current = $state("");
+    let isOpen = $state(false);
 
-    const links = $derived([
+    const links = [
         {
             label: "Home",
-            icon: Home,
             href: "/",
             event: "link-home",
-            active: current == "/"
+            active: pathname == "/"
         },
         {
             label: "Projects",
-            icon: SquareTerminal,
             href: "/projects",
             event: "link-projects",
-            active: current.includes("/projects")
+            active: pathname.includes("/projects")
         },
         {
             label: "Skills",
-            icon: Crown,
             href: "/skills",
             event: "link-skills",
-            active: current.includes("/skills")
+            active: pathname.includes("/skills")
         },
         {
             label: "Experience",
-            icon: Briefcase,
             href: "/experience",
             event: "link-experience",
-            active: current.includes("/experience")
+            active: pathname.includes("/experience")
         },
         {
             label: "Blogs",
-            icon: Book,
             href: "/blogs",
             event: "link-blogs",
-            active: current.includes("/blogs")
+            active: pathname.includes("/blogs")
         },
         {
             label: "Links",
-            icon: Link,
             href: "https://links.anav.dev",
             event: "link-links",
             active: false
         }
-    ]);
-
-    $effect(() => {
-        current = window.location.pathname;
-    });
+    ];
 </script>
 
-<nav
-    class="fixed w-screen max-w-7xl left-1/2 -translate-x-1/2 bg-transparent bottom-5 md:bottom-auto md:top-5"
+<div
+    class="fixed w-screen max-w-7xl left-1/2 -translate-x-1/2 bg-transparent top-5"
 >
-    <div
-        class="gap-3 md:gap-0 flex items-center p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-full"
+    <nav
+        class="gap-3 md:gap-0 flex items-center p-2 w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-white border border-zinc-200 rounded-lg md:rounded-full"
     >
-        <a class="w-fit" data-umami-event="link-home" href="/">
+        <a class="w-full md:w-fit" data-umami-event="link-home" href="/">
             {@render children()}
         </a>
 
-        <ul class="flex w-full justify-around">
-            {#each links as { href, icon: Icon, label, event, active }}
+        <ul class="hidden md:flex w-full justify-around">
+            {#each links as { href, label, event, active }}
                 <li>
                     <a
-                        class={`${active && "text-[#444444]"} faded no-underline text-base`}
+                        class={`${active && "text-[#444444]"} hover:text-[#444444] faded no-underline text-base`}
                         data-umami-event={event}
                         {href}
                     >
-                        <Icon size={20} class="md:hidden" />
-
-                        <span class="hidden md:inline">{label}</span>
+                        {label}
                     </a>
                 </li>
             {/each}
         </ul>
+
+        <button onclick={() => (isOpen = true)} class="px-2 block md:hidden">
+            <Menu size={20} />
+        </button>
+    </nav>
+</div>
+
+{#if isOpen}
+    <div
+        class="fixed flex items-center top-0 left-0 backdrop-blur-lg w-screen h-screen"
+    >
+        <nav
+            class="relative bg-white border-zinc-200 border mx-auto w-11/12 h-fit rounded-lg py-10"
+        >
+            <button
+                onclick={() => (isOpen = false)}
+                class="absolute top-0 right-0 p-5"
+            >
+                <X size={20} />
+            </button>
+            <ul class="space-y-10 text-center">
+                {#each links as { href, label, event, active }}
+                    <li>
+                        <a
+                            class={`${active && "text-[#444444]"} hover:text-[#444444] block faded no-underline text-base`}
+                            data-umami-event={event}
+                            {href}
+                        >
+                            {label}
+                        </a>
+                    </li>
+                {/each}
+            </ul>
+        </nav>
     </div>
-</nav>
+{/if}
