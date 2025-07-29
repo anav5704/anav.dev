@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { Link, Check } from "@lucide/svelte";
+    import Check from "@lucide/svelte/icons/check";
+    import Link from "@lucide/svelte/icons/link";
 
     const { label, url } = $props();
 

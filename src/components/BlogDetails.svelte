@@ -1,6 +1,6 @@
 <script lang="ts">
+    import Calendar from "@lucide/svelte/icons/calendar";
     import CopyUrl from "@components/CopyUrl.svelte";
-    import { Calendar } from "@lucide/svelte";
     import { long } from "@utils/getDate";
 
     interface Props {

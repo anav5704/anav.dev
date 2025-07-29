@@ -1,6 +1,6 @@
 <script lang="ts">
+    import Github from "@lucide/svelte/icons/github";
     import CopyUrl from "@components/CopyUrl.svelte";
-    import { Github } from "@lucide/svelte";
 
     interface Props {
         url: string;
