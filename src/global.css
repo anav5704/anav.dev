@@ -68,7 +68,7 @@
     }
 
     img[src$=".svg"] {
-        @apply rounded-none;
+        @apply rounded-none mx-auto;
     }
 
     iframe {

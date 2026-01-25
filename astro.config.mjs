@@ -14,7 +14,7 @@ export default defineConfig({
     trailingSlash: "never",
 
     adapter: node({
-        mode: "standalone",
+        mode: "standalone"
     }),
 
     prefetch: {
@@ -25,18 +25,28 @@ export default defineConfig({
     markdown: {
         syntaxHighlight: "shiki",
         shikiConfig: {
-            theme: gruvbox,
+            theme: gruvbox
         },
-        rehypePlugins: [
-            latex,
-        ],
+        rehypePlugins: [latex]
     },
 
-    integrations: [d2({
-        pad: 0,
-        theme: {
-            default: "301",
-            dark: false
-        }
-    }), svelte(), tailwind(), partytown(), sitemap()],
+    integrations: [
+        d2({
+            pad: 0,
+            fonts: {
+                regular: "./assets/Geist.ttf",
+                bold: "./assets/Geist.ttf",
+                italic: "./assets/Geist.ttf",
+                semibold: "./assets/AliceGeistttf"
+            },
+            theme: {
+                default: "1",
+                dark: false
+            }
+        }),
+        svelte(),
+        tailwind(),
+        partytown(),
+        sitemap()
+    ]
 });
