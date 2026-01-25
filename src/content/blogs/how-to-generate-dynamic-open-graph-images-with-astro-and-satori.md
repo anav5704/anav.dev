@@ -19,19 +19,23 @@ Unlike the more common build time approach, we'll be going for a runtime approac
 
 
 ```d2
+*.style.border-radius: 6
+*.*.style.border-radius: 6
+*.style.fill: "#fff"
+*.*.style.fill: "#fff"
+*.style.font-color: "#444"
+*.*.style.font-color: "#444"
+*.style.double-border: false
+
 A: Astro Website
 B: Astro API Endpoint
 B.A: Satori & ReSVG
 B.B: Title
-B.C: Description
+B.C: Desc 
 B.D: Template
 B.E: Fonts
 B.F: Images
 B.G: Open Graph Image
-
-B.style.double-border: false
-B.style.fill: "#fff"
-B.direction: right
 
 A -> B: HTTP GET {style: { animated: true }}
 B.B -> B.A {style: { animated: true }} 
@@ -40,7 +44,7 @@ B.D -> B.A {style: { animated: true }}
 B.E -> B.A {style: { animated: true }}
 B.F -> B.A {style: { animated: true }}
 B.A -> B.G {style: { animated: true }}
-B -> A: Open Graph Image {style: { animated: true }}
+B -> A: OG Image {style: { animated: true }}
 ```
 
 ## Prerequisites
@@ -203,4 +207,3 @@ const { title, description } = Astro.props;
 ---
 
 All in all, implementing open graph images is a great way to elevate your website. And using Astro API endpoints makes this feature super easy to implement. It works for all the pages and generates images on demand. If you are interested in a buildtime approach, feel free to check out [this guide](https://knaap.dev/posts/dynamic-og-images-with-any-static-site-generator) which uses Astro endpoints or [this guide](https://dietcode.io/p/astro-og) which uses Astro hooks.
-

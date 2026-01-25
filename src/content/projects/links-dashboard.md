@@ -34,22 +34,26 @@ Then came our University summer break. I tend to work on personal projects durin
 The website has 2 main parts. The first is the user facing landing page which lists all my links. When a user clicks on a link, client side logic will track the click event for analytics (I'm using [Umami](https://umami.is) for this). Then, the server sid logic will fetch the full link based on the short link and redirect the user. If the short link was invalid, the user is sent to a link not found page.
 
 ```d2
-    A: User visits website
-    B: User clicks on link
-    B.shape: parallelogram
-    C: Server looks for full link
-    D: Full link \n exists?
-    D.shape: diamond
-    E: Redirect to error page
-    F: Redirect to full link
-    G: Click event is tracked
-    
-    A --> B {style: { animated: true }}
-    B --> C {style: { animated: true }}
-    B --> G {style: { animated: true }}
-    C --> D {style: { animated: true }}
-    D --> E: Nah {style: { animated: true }}
-    D --> F: Yup {style: { animated: true }}
+*.style.border-radius: 6
+*.style.fill: "#fff"
+*.style.font-color: "#444"
+
+A: User visits website
+B: User clicks on link
+B.shape: parallelogram
+C: Server looks for full link
+D: Full link \n exists?
+D.shape: diamond
+E: Redirect to error page
+F: Redirect to full link
+G: Click event is tracked
+
+A --> B {style: { animated: true }}
+B --> C {style: { animated: true }}
+B --> G {style: { animated: true }}
+C --> D {style: { animated: true }}
+D --> E: Nah {style: { animated: true }}
+D --> F: Yup {style: { animated: true }}
 ```
  The second is a admin dashboard which lets me manage all my links. This page can  only be accessed after logging in with a password. I was very lazy so my auth flow is just the server checking if the entered password matches with an environment variable. Core admin features include:
 
