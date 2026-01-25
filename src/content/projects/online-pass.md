@@ -1,5 +1,5 @@
 ---
-featured: true
+featured: false 
 title: Online PASS
 metaTitle: Online PASS | University of the South Pacific
 description: E-learning platform built to improve peer assisted study sessions.
