@@ -1,5 +1,4 @@
 ---
-id: 11
 featured: false
 title: Scalable Chat
 metaTitle: Scalable Chat App | Redis Pub/Sub and Kafka.

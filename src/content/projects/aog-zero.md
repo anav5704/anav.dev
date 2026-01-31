@@ -1,5 +1,5 @@
 ---
-featured: True
+featured: true
 title: AOG Zero
 metaTitle: AOG Zero | APU Health Monitoring System
 description: Data driven, proactive, health monitoring system for aircraft APUs.
