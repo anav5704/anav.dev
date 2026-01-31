@@ -23,7 +23,7 @@ This is a mobile attendance tracking app built for [PASS (Peer Assisted Study Se
 
 PASS leaders facilitate group study sessions for students enrolled in challenging courses. A key part of their role involves taking attendance at each session and submitting records to the PASS Coordinator. The traditional manual process of recording attendance was slow, error-prone, and tedious. 
 
-As an ex-PASS leader for three courses, I myself have faced these issues. Thus, I created PASSport to streamline this workflow. It allows leaders to scan student IDs in seconds rather than manually writing down details.
+Having served as a PASS leader for three courses, I encountered these challenges myself. To address them, I developed PASSport, which enables leaders to take attendance in seconds by scanning student IDs.
 
 ## Project Details
 
