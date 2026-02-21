@@ -9,7 +9,7 @@ import MainLayout from "@layouts/main.astro";
 
 const unsortedExperience = await getCollection("experience");
 const experience = unsortedExperience
-    .sort((a, b) => b.data.startDate.getTime() - a.data.endDate.getTime())
+    .sort((a, b) => b.data.startDate.getTime() - a.data.startDate.getTime())
     .slice(0, 3);
 
 const unsortedSkills = await getCollection("skills");
@@ -36,9 +36,9 @@ const blogs = unfilteredBlogs
     <header class="hero">
         <h1>Hi, I'm Anav Chand</h1>
         <p>
-            I am an aspiring DevOps engineer, self-taught web developer,
-            second-year software engineering student, and award-winning peer
-            mentor @ <a href="https://usp.ac.fj" target="_blank">USP</a>.
+            I'm a DevOps-focused software engineering student exploring AI
+            systems, cloud infra, and automation, with a track record of
+            technical leadership.
         </p>
     </header>
 
