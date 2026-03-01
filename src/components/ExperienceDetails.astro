@@ -27,7 +27,7 @@ const startDate = short(data.startDate);
         -
         {
             data.present ? (
-                <p>Present</p>
+                <span>Present</span>
             ) : (
                 <time datetime={data.endDate.toISOString()}>
                     {short(data.endDate)}

@@ -12,6 +12,10 @@
         scroll-padding-top: 70px;
     }
 
+    a {
+        @apply underline;
+    }
+
     main {
         @apply space-y-4 text-base md:text-lg;
     }
@@ -39,21 +43,7 @@
         @apply my-12 space-y-2;
     }
 
-    a {
-        @apply no-underline;
-    }
-
-    .hero {
-        a {
-            @apply underline;
-        }
-    }
-
     .content {
-        a {
-            @apply underline;
-        }
-
         li {
             @apply list-disc ml-5;
         }

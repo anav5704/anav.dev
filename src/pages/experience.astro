@@ -5,9 +5,9 @@ import ListLayout from "@layouts/list.astro";
 
 const unsortedExperience = await getCollection("experience");
 
-const experience = unsortedExperience
-    .sort((a, b) => b.data.startDate.getTime() - a.data.endDate.getTime())
-    .slice(0, 3);
+const experience = unsortedExperience.sort(
+    (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
+);
 ---
 
 <ListLayout

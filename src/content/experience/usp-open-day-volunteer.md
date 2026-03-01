@@ -11,7 +11,7 @@ type: Volunteer
 ![USP Open Day Volunteer: Computer Science and Information Systems department](./images/usp-open-day-volunteer.webp)
 
 
-I proudly represented the Computer Science and Information Systems department by architecting, implementing and demonstrating a serverless full-stack [quote management](https://anav.dev/prjoects/great-quotes) web application.
+I proudly represented the Computer Science and Information Systems department by architecting, implementing and demonstrating a serverless full-stack [quote management](https://anav.dev/projects/great-quotes) web application.
 
 I engaged with prospective students, explaining how frontends interact with backends and databases, and shared real-world insights on static websites vs. dynamic web applications.
 
