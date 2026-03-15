@@ -5,17 +5,12 @@ import sitemap from "@astrojs/sitemap";
 import gruvbox from "./gruvbox.json";
 import svelte from "@astrojs/svelte";
 import latex from "rehype-mathjax";
-import node from "@astrojs/node";
 import d2 from "astro-d2";
 
 export default defineConfig({
     site: "https://www.anav.dev",
 
     trailingSlash: "never",
-
-    adapter: node({
-        mode: "standalone"
-    }),
 
     prefetch: {
         prefetchAll: true,
