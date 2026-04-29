@@ -1,7 +1,0 @@
-services:
-    website:
-        build:
-            context: ..
-            dockerfile: docker/Dockerfile.node
-        ports:
-            - 4321:4321
