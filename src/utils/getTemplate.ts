@@ -1,13 +1,11 @@
-import path from "node:path";
-import fs from "node:fs";
-
 interface Props {
     title: string;
     description: string;
+    baseUrl: string;
 }
 
-const template = ({ title, description }: Props) => {
-    const logo = fs.readFileSync(path.join(process.cwd(), "assets/logo.jpg"));
+const template = ({ title, description, baseUrl }: Props) => {
+    const logoUrl = `${baseUrl}/logo.jpg`;
 
     return {
         type: "div",
@@ -23,7 +21,7 @@ const template = ({ title, description }: Props) => {
                             {
                                 type: "img",
                                 props: {
-                                    src: logo.buffer,
+                                    src: logoUrl,
                                     tw: "rounded-full",
                                     width: 50,
                                     height: 50
