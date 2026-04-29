@@ -32,7 +32,7 @@ export default defineConfig({
                 regular: "./assets/Geist.ttf",
                 bold: "./assets/Geist.ttf",
                 italic: "./assets/Geist.ttf",
-                semibold: "./assets/AliceGeistttf"
+                semibold: "./assets/Geist.ttf"
             },
             theme: {
                 default: "1",
