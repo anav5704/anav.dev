@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 import { short } from "@utils/getDate";
 
 interface Props {
@@ -9,12 +10,12 @@ interface Props {
 const { experience } = Astro.props;
 const { data } = experience;
 
-const { Content } = await experience.render();
+const { Content } = await render(experience);
 
 const startDate = short(data.startDate);
 ---
 
-<h2 id={experience.slug} class="first-of-type:pt-0">{data.shortTitle}</h2>
+<h2 id={experience.id} class="first-of-type:pt-0">{data.shortTitle}</h2>
 
 <hr />
 

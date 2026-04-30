@@ -2,19 +2,19 @@
 import TableOfContents from "@components/TableOfContents.astro";
 import BlogDetails from "@components/BlogDetails.svelte";
 import ContentLayout from "@layouts/content.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
     const allBlogs = await getCollection("blogs");
 
     return allBlogs.map((blog) => ({
-        params: { slug: blog.slug },
+        params: { slug: blog.id },
         props: { blog }
     }));
 }
 
 const { blog } = Astro.props;
-const { Content, headings } = await blog.render();
+const { Content, headings } = await render(blog);
 
 const url = new URL(Astro.url.pathname, Astro.site);
 ---

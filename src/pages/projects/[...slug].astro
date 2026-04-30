@@ -2,19 +2,19 @@
 import TableOfContents from "@components/TableOfContents.astro";
 import ProjectDetails from "@components/ProjectDetails.svelte";
 import ContentLayout from "@layouts/content.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
     const allProjects = await getCollection("projects");
 
     return allProjects.map((project) => ({
-        params: { slug: project.slug },
+        params: { slug: project.id },
         props: { project }
     }));
 }
 
 const { project } = Astro.props;
-const { Content, headings } = await project.render();
+const { Content, headings } = await render(project);
 
 const url = new URL(Astro.url.pathname, Astro.site);
 ---
