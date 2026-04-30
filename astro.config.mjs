@@ -1,22 +1,21 @@
 import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 import partytown from "@astrojs/partytown";
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import gruvbox from "./gruvbox.json";
 import svelte from "@astrojs/svelte";
+import vercel from "@astrojs/vercel";
 import latex from "rehype-mathjax";
 import d2 from "astro-d2";
 
 export default defineConfig({
+    adapter: vercel(),
     site: "https://www.anav.dev",
-
     trailingSlash: "never",
-
     prefetch: {
         prefetchAll: true,
         defaultStrategy: "viewport"
     },
-
     markdown: {
         syntaxHighlight: "shiki",
         shikiConfig: {
@@ -24,7 +23,6 @@ export default defineConfig({
         },
         rehypePlugins: [latex]
     },
-
     integrations: [
         d2({
             pad: 0,
@@ -40,8 +38,10 @@ export default defineConfig({
             }
         }),
         svelte(),
-        tailwind(),
         partytown(),
         sitemap()
-    ]
+    ],
+    vite: {
+        plugins: [tailwindcss()]
+    }
 });
