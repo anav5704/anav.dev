@@ -6,7 +6,7 @@
 
     let isOpen = $state(false);
 
-    const links = [
+    const links = $derived([
         {
             label: "Home",
             href: "/",
@@ -43,7 +43,7 @@
             event: "link-links",
             active: false
         }
-    ];
+    ]);
 </script>
 
 <div

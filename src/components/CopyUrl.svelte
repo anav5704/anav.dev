@@ -23,6 +23,6 @@
         Link Copied
     {:else}
         <Link size={20} />
-        <p>{label}</p>
+        {label}
     {/if}
 </button>
