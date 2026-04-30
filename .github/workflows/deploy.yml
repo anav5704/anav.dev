@@ -7,15 +7,19 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
+
             - name: Download dist
               uses: actions/download-artifact@v4
               with:
                   name: dist
                   path: dist/
 
-            - name: Deploy
-              uses: cloudflare/wrangler-action@v3
-              with:
-                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: pages deploy dist/ --project-name=www-anav-dev
+            - name: Install Vercel CLI
+              run: npm install --global vercel@latest
+
+            - name: Deploy to Vercel
+              run: vercel deploy dist/ --prod --token=${{ secrets.VERCEL_TOKEN }}
+              env:
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
