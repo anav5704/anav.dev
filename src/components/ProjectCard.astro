@@ -9,7 +9,7 @@ const { project } = Astro.props;
 ---
 
 <article>
-    <a class="card" href={"/projects/" + project.slug}>
+    <a class="card" href={"/projects/" + project.id}>
         <h4>{project.data.title}</h4>
         <p class="faded no-underline">{project.data.description}</p>
     </a>

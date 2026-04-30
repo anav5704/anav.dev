@@ -9,7 +9,7 @@ const { experience } = Astro.props;
 ---
 
 <article>
-    <a class="card" href={"/experience#" + experience.slug}>
+    <a class="card" href={"/experience#" + experience.id}>
         <h4>{experience.data.longTitle}</h4>
         <p class="faded">{experience.data.type} @ {experience.data.company}</p>
     </a>
