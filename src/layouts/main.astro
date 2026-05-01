@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import NavBar from "@components/NavBar.svelte";
 import { getImage } from "@utils/getImage";
 import Logo from "@components/Logo.astro";
@@ -43,11 +44,7 @@ const websiteStructuredData = {
         <meta name="author" content="Anav Chand" />
         <link rel="canonical" href={pageUrl} />
         <title>{title}</title>
-        <style>
-            @view-transition {
-                navigation: auto;
-            }
-        </style>
+        <ClientRouter />
         <script
             defer
             is:inline
