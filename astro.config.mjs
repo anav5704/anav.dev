@@ -16,6 +16,9 @@ export default defineConfig({
         defaultStrategy: "viewport"
     },
     adapter: vercel({
+        isr: {
+            expiration: 60 * 60 * 24
+        },
         imageService: true,
         devImageService: "sharp"
     }),
