@@ -9,13 +9,16 @@ import latex from "rehype-mathjax";
 import d2 from "astro-d2";
 
 export default defineConfig({
-    adapter: vercel(),
     site: "https://www.anav.dev",
     trailingSlash: "never",
     prefetch: {
         prefetchAll: true,
         defaultStrategy: "viewport"
     },
+    adapter: vercel({
+        imageService: true,
+        devImageService: "sharp"
+    }),
     markdown: {
         syntaxHighlight: "shiki",
         shikiConfig: {
