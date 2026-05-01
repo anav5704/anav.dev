@@ -15,9 +15,10 @@
         "@astrojs/sitemap": "^3.7.2",
         "@astrojs/svelte": "^8.1.0",
         "@astrojs/vercel": "^10.0.6",
-        "@fontsource-variable/jetbrains-mono": "^5.0.21",
+        
         "@fontsource/alice": "^5.0.14",
         "@fontsource/geist-sans": "^5.0.3",
+        "@fontsource/lilex": "^5.2.1",
         "@lucide/svelte": "^0.525.0",
         "@tailwindcss/vite": "^4.2.4",
         "@vercel/og": "^0.11.1",

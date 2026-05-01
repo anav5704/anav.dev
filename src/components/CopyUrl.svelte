@@ -17,7 +17,7 @@
     };
 </script>
 
-<button onclick={handleClick} class="flex items-center gap-1">
+<button onclick={handleClick} class="cursor-pointer flex items-center gap-1">
     {#if isCopied}
         <Check size={20} />
         Link Copied
