@@ -7,6 +7,7 @@ metaDescription: Fullstack E-commerce store for coding merch managed by custom b
 createdAt: 2023-11-16T00:00:00+12:00
 repo: https://github.com/anav5704/ecommerce-store
 site: https://ecommerce.anav.dev
+tags: ["Next.js", "Stripe"]
 ---
 
 ## Project Overview

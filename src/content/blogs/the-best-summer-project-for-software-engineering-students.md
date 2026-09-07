@@ -3,6 +3,7 @@ title: "The Best Summer Project For Software Engineering Students."
 description: "Learn why building a personal website is the perfect summer project for software engineering students."
 createdAt: 2025-02-17T00:00:00+12:00
 updatedAt: 2025-02-17T00:00:00+12:00
+tags: ["University"]
 ---
 
 ## Introduction

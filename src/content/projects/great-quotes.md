@@ -7,6 +7,7 @@ metaDescription: Fullstack quote sharing web app built using Next JS, TailwindCS
 createdAt: 2023-12-25T00:00:00+12:00
 repo: https://github.com/anav5704/great-quotes
 site: https://quotes.anav.dev
+tags: ["Next.js", "Prisma", "Drizzle", "ORM", "PostgreSQL", "Tailwind CSS", "Vercel"]
 ---
 
 ## Project Overview

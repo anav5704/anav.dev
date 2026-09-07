@@ -7,6 +7,7 @@ metaDescription: Fullstack Content management system built for an e-commerce sto
 createdAt: 2023-11-11T00:00:00+12:00
 repo: https://github.com/anav5704/custom-cms
 site: https://cms.anav.dev
+tags: ["Next.js", "Prisma", "ORM", "PostgreSQL", "Database", "TypeScript"]
 ---
 
 ## E-commerce CMS

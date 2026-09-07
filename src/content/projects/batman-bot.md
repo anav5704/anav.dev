@@ -7,6 +7,7 @@ metaDescription: Discord chat bot that imitates Batman built using Node Js, Disc
 createdAt: 2023-12-01T00:00:00+12:00
 repo: https://github.com/anav5704/ai-discord-bot
 site: https://discord.gg/K9rMzPudgS
+tags: ["AI", "Node.js", "JavaScript", "APIs", "Render", "DevOps"]
 ---
 
 ## Project Overview

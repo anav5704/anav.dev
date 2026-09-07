@@ -7,6 +7,7 @@ metaDescription: Fullstack notes web app built using MongoDB, Express JS, React 
 createdAt: 2023-08-28T00:00:00+12:00
 repo: https://github.com/anav5704/Note-App-MERN
 site: https://notes.anav.dev
+tags: ["MongoDB", "React", "Node.js", "Express", "JavaScript", "Render", "Vercel"]
 ---
 
 ## Project Overview

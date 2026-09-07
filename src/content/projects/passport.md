@@ -7,6 +7,7 @@ metaDescription: A mobile app for PASS leaders to take attendance by scanning st
 createdAt: 2025-08-07T00:00:00+12:00
 repo: https://github.com/anav5704/passport
 site: https://links.anav.dev/passport
+tags: ["Mobile", "React Native", "Expo", "University", "TypeScript", "Drizzle", "ORM"]
 ---
 
 ## Project Overview

@@ -3,6 +3,7 @@ title: "Simplifying OOP For CS112 Part 1: Pointers And Dynamic Memory."
 description: "Learn how to use C++ pointers and dynamic memory allocation with code examples, activity questions and free solutions"
 createdAt: 2024-09-22T00:00:00+12:00
 updatedAt: 2025-07-27T00:00:00+12:00
+tags: ["C++", "University"]
 ---
 
 ## Introduction

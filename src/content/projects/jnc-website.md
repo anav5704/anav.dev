@@ -7,6 +7,7 @@ metaDescription: Website for Jai Narayan College Fiji, built with HTML, CSS and 
 createdAt: 2022-03-01T00:00:00+12:00
 repo: https://github.com/anav5704/JNC-Website
 site: https://jnc.anav.dev/
+tags: ["HTML/CSS", "JavaScript"]
 ---
 
 ## Project Overview

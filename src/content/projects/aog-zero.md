@@ -7,6 +7,7 @@ metaDescription: Data driven, proactive, health monitoring system for aircraft A
 createdAt: 2025-12-15T00:00:00+12:00
 repo: https://github.com/anav5704/honeywell-aog-zero
 site: https://github.com/anav5704/honeywell-aog-zero
+tags: ["AI", "Architecture", "Python", "Next.js", "PostgreSQL", "Docker", "Cloud"]
 ---
 
 ## Project Overview 

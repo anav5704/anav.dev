@@ -7,6 +7,7 @@ metaDescription: Simple wallpaper app with categories and search functionality. 
 createdAt: 2024-01-25T00:00:00+12:00
 repo: https://github.com/anav5704/wallpaper-app
 site: https://github.com/anav5704/wallpaper-app
+tags: ["Mobile", "React Native", "Expo", "TypeScript"]
 ---
 
 ## Project Overview

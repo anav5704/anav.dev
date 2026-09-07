@@ -7,6 +7,7 @@ metaDescription: Spotify Clone with music upload, search and playback. Built wit
 createdAt: 2023-10-01T00:00:00+12:00
 repo: https://github.com/anav5704/spotify-clone
 site: https://spotify.anav.dev
+tags: ["Next.js", "Tailwind CSS", "TypeScript", "Supabase", "PostgreSQL"]
 ---
 
 ## Project Overview

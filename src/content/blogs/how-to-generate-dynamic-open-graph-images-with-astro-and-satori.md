@@ -3,6 +3,7 @@ title: How To Generate Dynamic Open Graph Images With Astro And Satori.
 description: "Learn how to easily generate dynamic Open Graph (OG) images with Astro, Satori and ReSVG during runtime."
 createdAt: 2025-07-27T00:00:00+12:00
 updatedAt: 2025-07-27T00:00:00+12:00
+tags: ["Astro", "Vercel", "DevOps"]
 ---
 
 ## Introduction

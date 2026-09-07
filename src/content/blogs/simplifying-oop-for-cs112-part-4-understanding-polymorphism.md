@@ -3,6 +3,7 @@ title: "Simplifying OOP For CS112 Part 4: Understanding Polymorphism."
 description: "Learn how to use C++ compile time and runtime polymorphism with code examples, activity questions and free solutions"
 createdAt: 2024-10-1T00:00:00+12:00
 updatedAt: 2025-07-27T00:00:00+12:00
+tags: ["C++", "University"]
 ---
 
 ## Introduction

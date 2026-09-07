@@ -7,6 +7,7 @@ metaDescription: Personal link management system for URL shortening and redirect
 createdAt: 2025-01-09T00:00:00+12:00
 repo: https://github.com/anav5704/links.anav.dev
 site: https://links.anav.dev
+tags: ["Svelte", "Prisma", "ORM", "Database", "Architecture", "TypeScript"]
 ---
 
 ## Project Overview

@@ -3,6 +3,7 @@ title: "Simplifying OOP For CS112 Part 3: Understanding Inheritance."
 description: "Learn how to use C++ inheritance and abstract classes with code examples, activity questions and free solutions"
 createdAt: 2024-09-30T00:00:00+12:00
 updatedAt: 2025-07-27T00:00:00+12:00
+tags: ["C++", "University"]
 ---
 
 ## Introduction

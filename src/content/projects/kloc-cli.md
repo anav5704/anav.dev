@@ -7,6 +7,7 @@ metaDescription: Simple CLI tool to count lines of code in current working direc
 createdAt: 2024-11-01T00:00:00+12:00
 repo:  https://github.com/anav5704/kloc
 site:  https://npmjs.com/package/kloc-cli 
+tags: ["CLI", "Node.js", "TypeScript"]
 ---
 
 ## Project Overview

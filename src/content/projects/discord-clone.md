@@ -7,6 +7,7 @@ metaDescription: dummy
 createdAt: 2023-11-20T00:00:00+12:00
 repo: https://github.com/anav5704/discord-clone
 site: https://github.com/anav5704/discord-clone
+tags: ["Real-time", "Next.js", "TypeScript", "Tailwind CSS"]
 ---
 
 ## Project Overview

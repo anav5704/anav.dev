@@ -3,6 +3,7 @@ title: How To Setup Subdomain To External URL Redirects On Vercel.
 description: Learn how to setup subdomain to external URL redirects by using Vercel and the vercel.json file configuration file.
 createdAt: 2024-12-27T00:00:00+12:00
 updatedAt: 2024-12-27T00:00:00+12:00
+tags: ["Vercel", "DNS", "DevOps", "Cloud"]
 ---
 
 ## Introduction

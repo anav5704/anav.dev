@@ -7,6 +7,7 @@ metaDescription: Modern and simple blog website for game-related news articles. 
 createdAt: 2023-11-11T00:00:00+12:00
 repo: https://github.com/anav5704/gamers-hub
 site: https://games.anav.dev
+tags: ["Astro", "Tailwind CSS"]
 ---
 
 ## Project Overview

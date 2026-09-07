@@ -7,6 +7,7 @@ metaDescription: CLI tool that counts the number of directories, files and lines
 createdAt: 2024-05-09T00:00:00+12:00
 repo: https://github.com/anav5704/codebase-stats
 site: https://www.npmjs.com/package/codebase-stats
+tags: ["CLI", "Node.js", "TypeScript"]
 ---
 
 ## Project Overview

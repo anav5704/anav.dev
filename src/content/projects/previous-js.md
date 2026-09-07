@@ -7,6 +7,7 @@ metaDescription: Modern Next.js inspired landing page made using Next.js, Tailwi
 createdAt: 2024-04-18T00:00:00+12:00
 repo: https://github.com/anav5704/previous.js
 site: https://previous-js.anav.dev
+tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"]
 ---
 
 ## Project Overview

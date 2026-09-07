@@ -3,6 +3,7 @@ title: How I Block Ads On Any Network Using AdGuard Home And Tailscale.
 description: Learn how to set up ad blocking on any device and network, using a Raspberry Pi, AdGuard Home, and Tailscale.
 createdAt: 2026-03-13T00:00:00+12:00
 updatedAt: 2026-03-13T00:00:00+12:00
+tags: ["Homelab", "Security", "DevOps", "Cloud"]
 ---
 
 ## The Problem

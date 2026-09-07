@@ -8,6 +8,7 @@ createdAt: 2023-12-14T00:00:00+12:00
 updatedAt: 2024-12-14T00:00:00+12:00
 repo: https://github.com/anav5704/scalable-chat
 site: https://scaleable-chat.anav.dev/
+tags: ["Architecture", "Real-time", "Node.js", "Redis", "Kafka", "Next.js", "Vercel"]
 ---
 
 ## Project Overview

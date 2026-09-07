@@ -7,6 +7,7 @@ metaDescription: Fullstack in-house software for the University of the South Pac
 createdAt: 2024-01-01T00:00:00+12:00
 repo: https://github.com/anav5702/online-pass
 site: https://opass.anav.dev
+tags: ["University", "Next.js", "Prisma", "ORM", "PostgreSQL", "Supabase", "Render"]
 ---
 
 ## Project Overview

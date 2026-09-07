@@ -7,6 +7,7 @@ metaDescription: Native Windows desktop app for taking notes using Markdown. Bui
 createdAt: 2024-01-25T00:00:00+12:00
 repo: https://github.com/anav5704/note-app-electron
 site: https://github.com/anav5704/note-app-electron
+tags: ["Electron", "React", "JavaScript"]
 ---
 
 ## Project Overview

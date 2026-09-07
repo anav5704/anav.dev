@@ -7,6 +7,7 @@ metaDescription: Educational website with blogs and quizzes on web development. 
 createdAt: 2023-06-09T00:00:00+12:00
 repo: https://github.com/anav5704/Codeology-v2
 site: https://codeology.netlify.app
+tags: ["Astro", "Tailwind CSS"]
 ---
 
 ## Project Overview

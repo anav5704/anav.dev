@@ -7,6 +7,7 @@ metaDescription: Fullstack workout web app built using MongoDB, Express JS, Reac
 createdAt: 2023-06-26T00:00:00+12:00
 repo: https://github.com/anav5704/Workout-App-MERN
 site: https://github.com/anav5704/Workout-App-MERN
+tags: ["MongoDB", "React", "Node.js", "Express", "JavaScript", "Render", "Vercel"]
 ---
 
 ## Project Overview
