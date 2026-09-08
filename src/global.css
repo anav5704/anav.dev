@@ -79,6 +79,20 @@
         display: none;
     }
 
+    details {
+        interpolate-size: allow-keywords;
+    }
+
+    details::details-content {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease, content-visibility 0.3s ease allow-discrete;
+    }
+
+    details[open]::details-content {
+        height: auto;
+    }
+
     pre {
         @apply bg-zinc-100 p-2 rounded-lg;
 
