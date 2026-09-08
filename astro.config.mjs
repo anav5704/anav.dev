@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 import gruvbox from "./gruvbox.json";
-import svelte from "@astrojs/svelte";
+import react from "@astrojs/react";
 import vercel from "@astrojs/vercel";
 import latex from "rehype-mathjax";
 import d2 from "astro-d2";
@@ -40,7 +40,7 @@ export default defineConfig({
                 dark: false
             }
         }),
-        svelte(),
+        react(),
         partytown(),
         sitemap()
     ],

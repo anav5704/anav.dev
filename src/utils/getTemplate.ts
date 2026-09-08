@@ -9,17 +9,20 @@ const template = ({ title, description, baseUrl }: Props) => {
 
     return {
         type: "div",
+        key: "root",
         props: {
             tw: "flex flex-col w-[1200px] h-[630px] bg-white text-zinc-600 p-10 items-start justify-center",
             style: { fontFamily: "Geist Sans" },
             children: [
                 {
                     type: "div",
+                    key: "header",
                     props: {
                         tw: "flex items-center border border-zinc-300 rounded-full px-3 m-0",
                         children: [
                             {
                                 type: "img",
+                                key: "logo",
                                 props: {
                                     src: logoUrl,
                                     tw: "rounded-full",
@@ -29,6 +32,7 @@ const template = ({ title, description, baseUrl }: Props) => {
                             },
                             {
                                 type: "p",
+                                key: "site-name",
                                 props: {
                                     tw: "text-[30px] px-5",
                                     children: "Anav Chand | www.anav.dev"
@@ -39,6 +43,7 @@ const template = ({ title, description, baseUrl }: Props) => {
                 },
                 {
                     type: "h1",
+                    key: "title",
                     props: {
                         tw: "text-[70px] text-black font-bold leading-none tracking-tighter my-10",
                         style: { fontFamily: "Alice", textWrap: "balance" },
@@ -47,6 +52,7 @@ const template = ({ title, description, baseUrl }: Props) => {
                 },
                 {
                     type: "p",
+                    key: "description",
                     props: {
                         tw: "text-[30px] m-0 p-0",
                         style: { textWrap: "balance" },
