@@ -1,7 +1,5 @@
 ---
-import ProjectCard from "@components/ProjectCard.astro";
-import SearchInput from "@components/SearchInput";
-import TagFilter from "@components/TagFilter";
+import Explorer from "@components/Explorer";
 import { getCollection } from "astro:content";
 import ListLayout from "@layouts/list.astro";
 
@@ -10,6 +8,14 @@ const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects.sort(
     (a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime()
 );
+
+const items = projects.map((project) => ({
+    id: project.id,
+    title: project.data.title,
+    description: project.data.description,
+    date: project.data.createdAt.toISOString(),
+    tags: project.data.tags
+}));
 
 const allTags = [...new Set(projects.flatMap((project) => project.data.tags))].sort();
 ---
@@ -26,21 +32,13 @@ const allTags = [...new Set(projects.flatMap((project) => project.data.tags))].s
             in fullstack web development, database design, cloud and DevOps.
         </p>
     </header>
-    <div class="flex gap-3">
-        <div class="w-3/4">
-            <SearchInput placeholder="Search projects" client:load />
-        </div>
-        <div class="w-1/4">
-            <TagFilter tags={allTags} selected={null} basePath="/projects" client:load />
-        </div>
-    </div>
-    <ul class="space-y-4">
-        {
-            projects.map((project) => (
-                <li>
-                    <ProjectCard project={project} />
-                </li>
-            ))
-        }
-    </ul>
+    <Explorer
+        items={items}
+        allTags={allTags}
+        selectedTag={null}
+        basePath="/projects"
+        type="project"
+        placeholder="Search projects"
+        client:load
+    />
 </ListLayout>

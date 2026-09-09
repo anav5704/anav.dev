@@ -1,9 +1,9 @@
 ---
 import ExperienceCard from "@components/ExperienceCard.astro";
-import ProjectCard from "@components/ProjectCard.astro";
+import ProjectCard from "@components/ProjectCard";
 import ImageGrid from "@components/ImageGrid.astro";
 import SkillCard from "@components/SkillCard.astro";
-import BlogCard from "@components/BlogCard.astro";
+import BlogCard from "@components/BlogCard";
 import { getCollection } from "astro:content";
 import MainLayout from "@layouts/main.astro";
 
@@ -50,7 +50,11 @@ const blogs = unfilteredBlogs
             {
                 projects.map((project) => (
                     <li>
-                        <ProjectCard project={project} />
+                        <ProjectCard
+                            id={project.id}
+                            title={project.data.title}
+                            description={project.data.description}
+                        />
                     </li>
                 ))
             }
@@ -90,7 +94,11 @@ const blogs = unfilteredBlogs
             {
                 blogs.map((blog) => (
                     <li>
-                        <BlogCard blog={blog} />
+                        <BlogCard
+                            id={blog.id}
+                            title={blog.data.title}
+                            date={blog.data.createdAt.toISOString()}
+                        />
                     </li>
                 ))
             }

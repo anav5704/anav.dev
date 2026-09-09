@@ -1,7 +1,5 @@
 ---
-import BlogCard from "@components/BlogCard.astro";
-import SearchInput from "@components/SearchInput";
-import TagFilter from "@components/TagFilter";
+import Explorer from "@components/Explorer";
 import { getCollection } from "astro:content";
 import ListLayout from "@layouts/list.astro";
 import { tagToSlug } from "@utils/tags";
@@ -26,6 +24,14 @@ const blogs = allBlogs
     .filter((blog) => blog.data.tags.includes(tag))
     .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime());
 
+const items = blogs.map((blog) => ({
+    id: blog.id,
+    title: blog.data.title,
+    description: blog.data.description,
+    date: blog.data.createdAt.toISOString(),
+    tags: blog.data.tags
+}));
+
 const allTags = [
     ...new Set(allBlogs.flatMap((blog) => blog.data.tags))
 ].sort();
@@ -44,26 +50,13 @@ const allTags = [
             experiences.
         </p>
     </header>
-    <div class="flex gap-3">
-        <div class="w-3/4">
-            <SearchInput placeholder="Search blogs" client:load />
-        </div>
-        <div class="w-1/4">
-            <TagFilter
-                tags={allTags}
-                selected={tag}
-                basePath="/blogs"
-                client:load
-            />
-        </div>
-    </div>
-    <ul class="space-y-4">
-        {
-            blogs.map((blog) => (
-                <li>
-                    <BlogCard blog={blog} />
-                </li>
-            ))
-        }
-    </ul>
+    <Explorer
+        items={items}
+        allTags={allTags}
+        selectedTag={tag}
+        basePath="/blogs"
+        type="blog"
+        placeholder="Search blogs"
+        client:load
+    />
 </ListLayout>

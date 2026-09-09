@@ -154,7 +154,7 @@
     }
 
     .card {
-        @apply px-4 py-2 border border-zinc-200 rounded-md flex flex-col no-underline;
+        @apply px-4 py-2 border border-zinc-200 rounded-md flex flex-col no-underline bg-white;
     }
 
     .faded {
