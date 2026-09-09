@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 @layer base {
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
     html,
     body {
         @apply scroll-smooth text-[#444444] bg-white underline-offset-[3px];
