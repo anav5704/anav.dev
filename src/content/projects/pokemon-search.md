@@ -7,7 +7,7 @@ metaDescription: Pokemon search website that displays Pokemon image and stats. B
 createdAt: 2023-05-08T00:00:00+12:00
 repo: https://github.com/anav5704/PokeAPI
 site: https://pokemon.anav.dev
-tags: ["HTML/CSS", "JavaScript", "APIs"]
+tags: ["HTML/CSS", "JavaScript", "API"]
 ---
 
 ## Project Overview

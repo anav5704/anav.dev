@@ -1,0 +1,68 @@
+---
+import ProjectCard from "@components/ProjectCard.astro";
+import SearchInput from "@components/SearchInput";
+import TagFilter from "@components/TagFilter";
+import { getCollection } from "astro:content";
+import ListLayout from "@layouts/list.astro";
+import { tagToSlug } from "@utils/tags";
+
+export async function getStaticPaths() {
+    const projects = await getCollection("projects");
+    const tags = [
+        ...new Set(projects.flatMap((project) => project.data.tags))
+    ].filter((tag) => tag in tagToSlug);
+
+    return tags.map((tag) => ({
+        params: { tag: tagToSlug[tag] },
+        props: { tag }
+    }));
+}
+
+const { tag } = Astro.props;
+
+const allProjects = await getCollection("projects");
+
+const projects = allProjects
+    .filter((project) => project.data.tags.includes(tag))
+    .sort((a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime());
+
+const allTags = [
+    ...new Set(allProjects.flatMap((project) => project.data.tags))
+].sort();
+---
+
+<ListLayout
+    title={`Anav Chand | ${tag} Projects`}
+    description="I enjoy building full-stack web applications that combine my skills in fullstack web development, database design, cloud and DevOps."
+    contentType="Projects"
+>
+    <header>
+        <h1>{`${tag} Projects (${projects.length})`}</h1>
+        <p>
+            I enjoy building full-stack web applications that combine my skills
+            in fullstack web development, database design, cloud and DevOps.
+        </p>
+    </header>
+    <div class="flex gap-3">
+        <div class="w-3/4">
+            <SearchInput placeholder="Search projects" client:load />
+        </div>
+        <div class="w-1/4">
+            <TagFilter
+                tags={allTags}
+                selected={tag}
+                basePath="/projects"
+                client:load
+            />
+        </div>
+    </div>
+    <ul class="space-y-4">
+        {
+            projects.map((project) => (
+                <li>
+                    <ProjectCard project={project} />
+                </li>
+            ))
+        }
+    </ul>
+</ListLayout>

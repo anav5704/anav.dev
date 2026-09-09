@@ -7,7 +7,7 @@ metaDescription: YouTube Clone with categories and video search. Built using Rea
 createdAt: 2023-09-03T00:00:00+12:00
 repo: https://github.com/anav5704/YouTube-Clone
 site: https://youtube.anav.dev
-tags: ["React", "JavaScript", "APIs"]
+tags: ["React", "JavaScript", "API"]
 ---
 
 ## Project Overview
