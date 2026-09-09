@@ -1,5 +1,7 @@
 ---
 import ProjectCard from "@components/ProjectCard.astro";
+import SearchInput from "@components/SearchInput";
+import TagFilter from "@components/TagFilter";
 import { getCollection } from "astro:content";
 import ListLayout from "@layouts/list.astro";
 
@@ -8,6 +10,8 @@ const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects.sort(
     (a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime()
 );
+
+const allTags = [...new Set(projects.flatMap((project) => project.data.tags))].sort();
 ---
 
 <ListLayout
@@ -22,6 +26,14 @@ const projects = unsortedProjects.sort(
             in fullstack web development, database design, cloud and DevOps.
         </p>
     </header>
+    <div class="flex gap-3">
+        <div class="w-3/4">
+            <SearchInput placeholder="Search projects" client:load />
+        </div>
+        <div class="w-1/4">
+            <TagFilter tags={allTags} selected={null} basePath="/projects" client:load />
+        </div>
+    </div>
     <ul class="space-y-4">
         {
             projects.map((project) => (

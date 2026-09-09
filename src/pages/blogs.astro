@@ -1,5 +1,7 @@
 ---
 import BlogCard from "@components/BlogCard.astro";
+import SearchInput from "@components/SearchInput";
+import TagFilter from "@components/TagFilter";
 import { getCollection } from "astro:content";
 import ListLayout from "@layouts/list.astro";
 
@@ -8,6 +10,8 @@ const unsortedBlogs = await getCollection("blogs");
 const blogs = unsortedBlogs.sort(
     (a, b) => b.data.createdAt.getTime() - a.data.createdAt.getTime()
 );
+
+const allTags = [...new Set(blogs.flatMap((blog) => blog.data.tags))].sort();
 ---
 
 <ListLayout
@@ -23,6 +27,14 @@ const blogs = unsortedBlogs.sort(
             experiences.
         </p>
     </header>
+    <div class="flex gap-3">
+        <div class="w-3/4">
+            <SearchInput placeholder="Search blogs" client:load />
+        </div>
+        <div class="w-1/4">
+            <TagFilter tags={allTags} selected={null} basePath="/blogs" client:load />
+        </div>
+    </div>
     <ul class="space-y-4">
         {
             blogs.map((blog) => (
