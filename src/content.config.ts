@@ -3,7 +3,7 @@ import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
 const blogsCollection = defineCollection({
-    loader: glob({ base: "./src/content/blogs", pattern: "**/*.md" }),
+    loader: glob({ base: "./src/content/blogs", pattern: "**/*.mdx" }),
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -14,7 +14,7 @@ const blogsCollection = defineCollection({
 });
 
 const projectsCollection = defineCollection({
-    loader: glob({ base: "./src/content/projects", pattern: "**/*.md" }),
+    loader: glob({ base: "./src/content/projects", pattern: "**/*.mdx" }),
     schema: z.object({
         title: z.string(),
         metaTitle: z.string(),
@@ -29,7 +29,7 @@ const projectsCollection = defineCollection({
 });
 
 const experienceCollection = defineCollection({
-    loader: glob({ base: "./src/content/experience", pattern: "**/*.md" }),
+    loader: glob({ base: "./src/content/experience", pattern: "**/*.mdx" }),
     schema: z.object({
         shortTitle: z.string(),
         longTitle: z.string(),
@@ -42,7 +42,7 @@ const experienceCollection = defineCollection({
 });
 
 const skillsCollection = defineCollection({
-    loader: glob({ base: "./src/content/skills", pattern: "**/*.md" }),
+    loader: glob({ base: "./src/content/skills", pattern: "**/*.mdx" }),
     schema: z.object({
         id: z.number(),
         title: z.string(),
@@ -51,7 +51,7 @@ const skillsCollection = defineCollection({
 });
 
 const certsCollection = defineCollection({
-    loader: glob({ base: "./src/content/certs", pattern: "**/*.md" }),
+    loader: glob({ base: "./src/content/certs", pattern: "**/*.mdx" }),
     schema: z.object({
         id: z.number(),
         title: z.string(),

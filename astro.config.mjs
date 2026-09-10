@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
+import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
-import gruvbox from "./gruvbox.json";
 import react from "@astrojs/react";
 import vercel from "@astrojs/vercel";
 import latex from "rehype-mathjax";
@@ -22,11 +22,18 @@ export default defineConfig({
     markdown: {
         syntaxHighlight: "shiki",
         shikiConfig: {
-            theme: gruvbox
+            theme: "gruvbox-dark-medium"
         },
         rehypePlugins: [latex]
     },
     integrations: [
+        mdx({
+            syntaxHighlight: "shiki",
+            shikiConfig: {
+                theme: "gruvbox-dark-medium"
+            },
+            rehypePlugins: [latex]
+        }),
         d2({
             pad: 0,
             fonts: {
