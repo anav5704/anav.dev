@@ -1,6 +1,7 @@
 ---
 import TableOfContents from "@components/TableOfContents.astro";
 import BlogDetails from "@components/BlogDetails";
+import Pre from "@components/Pre.astro";
 import ContentLayout from "@layouts/content.astro";
 import { getCollection, render } from "astro:content";
 
@@ -34,6 +35,6 @@ const url = new URL(Astro.url.pathname, Astro.site);
     />
     <TableOfContents headings={headings} />
     <article class="space-y-4 content">
-        <Content />
+        <Content components={{ pre: Pre }} />
     </article>
 </ContentLayout>

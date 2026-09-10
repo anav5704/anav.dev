@@ -160,4 +160,48 @@
     .faded {
         @apply text-[#767676];
     }
+
+    .codeblock {
+        @apply border border-zinc-200 rounded-lg overflow-hidden;
+    }
+
+    .codeblock-header {
+        @apply flex items-center justify-between px-3 py-2 text-sm;
+        background-color: #282828;
+        border-bottom: 1px solid #3c3836;
+        font-family: "Lilex", monospace;
+    }
+
+    .codeblock-lang {
+        @apply flex items-center gap-2 lowercase;
+        color: #ebdbb2;
+    }
+
+    .codeblock-dot {
+        @apply inline-block w-2 h-2 rounded-full shrink-0;
+    }
+
+    .codeblock-copy {
+        @apply flex items-center cursor-pointer bg-transparent border-0 p-1;
+        color: #ebdbb2;
+    }
+
+    .codeblock-copy svg {
+        @apply block;
+    }
+
+    .codeblock pre {
+        border-radius: 0;
+        border: 0;
+        margin: 0;
+    }
+
+    .codeblock pre:focus,
+    .codeblock pre:focus-visible {
+        outline: none;
+    }
+}
+
+.content astro-island {
+    display: block;
 }

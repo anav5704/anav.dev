@@ -1,0 +1,10 @@
+---
+import CodeBlock from "./CodeBlock.tsx";
+
+const { ...preProps } = Astro.props;
+const lang = String(Astro.props["data-language"] ?? "").toLowerCase();
+---
+
+<CodeBlock lang={lang} client:visible>
+    <pre {...preProps}><slot /></pre>
+</CodeBlock>
