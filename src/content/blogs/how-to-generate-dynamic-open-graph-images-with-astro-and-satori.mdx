@@ -54,12 +54,12 @@ B -> A: OG Image {style: { animated: true }}
 
 [Satori](https://github.com/vercel/satori) - This is a library used to convert HTML& CSS (or JSX in our case) to SVG. It allows us to programmatically define content and structure of the OG image (with support for assets like images and fonts).
 
-```sh
+```shell
 npm install satori
 ```
 [ReSVG](https://github.com/yisibl/resvg-js) - This is a SVG rendering toolkit that we'll use to convert our SVG output from Satori into PNG. We are doing this because PNG is the preferred format for OG images due to its compatibility.
 
-```sh
+```shell
 npm install @resvg/resvg-js
 ```
 
@@ -69,7 +69,7 @@ npm install @resvg/resvg-js
 
 The core image generation logic will live in an Astro API endpoint. Astro endpoints are a simple way to create API endpoints similar to [Next.js API routes](https://nextjs.org/docs/app/getting-started/route-handlers-and-middleware). Create a `og.ts` file in the `src/api` directory and paste this code:
 
-```ts
+```typescript
 export const prerender = false;
 
 import { Alice, Geist } from "@utils/getFonts";
@@ -113,7 +113,7 @@ This file imports image template and required fonts form `src/lib`. This is to k
 
 Now let's create the template that Satori will use. In this case, I have just created a div which contains an image, heading and paragraph tag. You may optionally style the layout using [TailwindCSS (experimental)](https://og-playground.vercel.app). Create a `getTemplate.ts` file and paste this code:
 
-```ts
+```typescript
 import path from "node:path";
 import fs from "node:fs";
 
@@ -167,7 +167,7 @@ export { template };
 
 The last thing to setup is the local font loading. If you don't have the fonts downloaded locally, you can get them from [FontShare](https://www.fontshare.com) or [Google Fonts](https://fonts.google.com). Create a `src/lib/getFonts.ts` file and paste this code:
 
-```ts
+```typescript
 import fs from "node:fs";
 
 const Alice = {

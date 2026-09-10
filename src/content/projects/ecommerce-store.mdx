@@ -34,13 +34,13 @@ This is a simple [e-commerce store](https://ecommerce.anav.dev) that is fully ma
 
 First fork and clone the repo. Then, run `npm install` to download all the dependencies. Now, set up your environmental variables. Make a `.env` file in the root of your project with the following variable(You will have to get this from the settings page in your respective store on the admin website):
 
-```sh
+```shell
 NEXT_PUBLIC_API_URL="api-url"
 ```
 
 The other and last thing you have to change is the parameter to the getBillboard function in `app/(routes)/page.tsx`
 
-```ts
+```typescript
 const billboard = await getBillboard("billboard-id");
 ```
 

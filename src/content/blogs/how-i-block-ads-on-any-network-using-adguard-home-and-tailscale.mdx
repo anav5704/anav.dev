@@ -87,7 +87,7 @@ services:
 
 Then start it:
 
-```sh
+```shell
 docker compose up -d
 ```
 
@@ -109,7 +109,7 @@ AdGuard Home comes with a default blocklist. For broader coverage, add community
 
 Install Tailscale and setup persistent iptables:
 
-```sh
+```shell
 # Install
 curl -fsSL https://tailscale.com/install.sh | sh
 
@@ -120,7 +120,7 @@ sudo sysctl -w net.ipv6.conf.all.forwarding=1
 
 Allow persistent iptables forwarding through the Tailscale interface:
 
-```sh
+```shell
 iptables -I FORWARD -i tailscale0 -j ACCEPT
 iptables -I FORWARD -o tailscale0 -j ACCEPT
 
@@ -143,7 +143,7 @@ In the Tailscale admin panel, go to **DNS → Add nameserver → Custom**. Enter
 
 On any device you want protected, install Tailscale and join your tailnet:
 
-```sh
+```shell
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --accept-routes
 ```

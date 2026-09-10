@@ -84,7 +84,7 @@ The view layer handles the UI logic and generates UI components. React JS is use
 
 Controllers are the functions that act as a link between the model and view. They act as a middleman between the internal (web app) and external (database) parts of the system. This app uses Next JS API endpoints as its controllers, which are mostly database queries written in Drizzle. Here is an example of a controller that is responsible for creating quotes:
 
-```ts
+```typescript
 export async function POST(req: Request) {
     const user = await currentUser();
     const { quote } = await req.json();
@@ -114,7 +114,7 @@ This app has a controller for each of the primary interactions between the user 
 
 First fork and clone the repo. Then, run `npm install` to download all the dependencies. Now, set up your environmental variables. Make a `.env` file in the root of your project with the following variables:
 
-```sh
+```shell
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="secret"
 GOOGLE_CLIENT_ID="client-id"

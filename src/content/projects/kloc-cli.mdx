@@ -40,7 +40,7 @@ Following this, I decided to build Kloc. I wanted to make somethings aht was mor
 ---
 
 There are 2 main parts to using this tool: configuration and formatting. To configure the CLI, I made a `get` command with 2 flags. This will print the location of the `kloc.config.json` and `.klocignore` files.
-```sh
+```shell
 kloc get --config
 kloc get --ignore
 ```
@@ -62,7 +62,7 @@ dist
 
 To format the output, I add 3 flags to the main `count` command. These flags a used to decided between whether the outout will be in a single line, a file tree format or a table format.
 
-```sh
+```shell
 kloc count --oneline
 kloc count --table
  kloc count --file

@@ -61,15 +61,13 @@ The Model part of MVC deals with data logic and business logic. The data logic i
 The view part handles the UI logic and generates UI components for the user based on the data collected by the model. This data is obtained from the controller and not the model itself. Some of the main views for this app are the home page(where all the created notes are displayed) and the edit page, where(the note data is displayed).
 Feel free to check out the final version if you want to have a look.
 
-</details>
-
 ### Controllers
 
 ---
 
 Controllers are the functions that act as a link between the model and view. It takes the input from the user and forwards it to the model to use it. It then sends a response back to the user after the model is done doing its thing. Responses can be either a success or failure, whereby the error needs to be handled. Here is. Here is an example of a controller for creating notes:
 
-```js
+```javascript
 const createNote = async (req, res) => {
     const { title, content } = req.body;
 
@@ -99,7 +97,7 @@ This app has a controller for each of the primary interactions between the user 
 
 Firstly, fork this repository and then clone it onto your machine. Then, cd into the client folder and run `npm install `. Now cd out to the root folder and cd into the server folder and run `npm install` again. Create a `.env` file in the root of the server folder and add the environment variables:
 
-```sh
+```shell
 PORT=4000
 MONGO="mongodb-uri"
 SECRET="hash-secret"
@@ -107,7 +105,7 @@ SECRET="hash-secret"
 
 The backend routes for the Express app are hardcoded in the `client/src/hooks/controllers/useNoteController` file for all 6 controllers, change it to your own backend routes.
 
-```js
+```javascript
 const res = await axios.get("https://digidiary.onrender.com/api/notes");
 ```
 
