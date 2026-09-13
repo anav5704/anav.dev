@@ -19,33 +19,36 @@ Open Graph (OG) images are pretty neat. They are the preview images that are sho
 Unlike the more common build time approach, we'll be going for a runtime approach. This means all of the OG images will be generated on demand, rather than being generated beforehand. When a page is visited, the client will make a HTTP request to our API.  The OG image API endpoint will obtain the meta title and description from the search parameters, and generate the image using Satori and ReSVG accordingly.
 
 
-```d2
-*.style.border-radius: 6
-*.*.style.border-radius: 6
-*.style.fill: "#fff"
-*.*.style.fill: "#fff"
-*.style.font-color: "#444"
-*.*.style.font-color: "#444"
-*.style.double-border: false
+```mermaid
+flowchart TD
+    A[Astro Website]
+    subgraph B[" "]
+        BA[Satori & ReSVG]
+        BB[Title]
+        BC[Desc]
+        BD[Template]
+        BE[Fonts]
+        BF[Images]
+        BG[Open Graph Image]
+    end
 
-A: Astro Website
-B: Astro API Endpoint
-B.A: Satori & ReSVG
-B.B: Title
-B.C: Desc 
-B.D: Template
-B.E: Fonts
-B.F: Images
-B.G: Open Graph Image
+    A e1@-->|HTTP GET| B
+    BB e2@--> BA
+    BC e3@--> BA
+    BD e4@--> BA
+    BE e5@--> BA
+    BF e6@--> BA
+    BA e7@--> BG
+    B e8@-->|OG Image| A
 
-A -> B: HTTP GET {style: { animated: true }}
-B.B -> B.A {style: { animated: true }} 
-B.C -> B.A {style: { animated: true }} 
-B.D -> B.A {style: { animated: true }}
-B.E -> B.A {style: { animated: true }}
-B.F -> B.A {style: { animated: true }}
-B.A -> B.G {style: { animated: true }}
-B -> A: OG Image {style: { animated: true }}
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
+    e7@{ animation: slow }
+    e8@{ animation: slow }
 ```
 
 ## Prerequisites
