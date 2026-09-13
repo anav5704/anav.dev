@@ -11,7 +11,7 @@ This is my portfolio website which showcases my projects, skills, certifications
 - TailwindCSS: CSS framework for styling the website
 - Markdown: content source (supports math and diagrams)
 - MDX: custom component integration with markdown
-- D2: generates technical diagrams during buildtime
+- Mermaid: generates technical diagrams during buildtime
 - Satori: generates dynamic open graph images during runtime
 - Docker: containerizes whole app using Node.js image
 - Caddy: reverse proxy running on a Ubuntu virtual machine
@@ -21,5 +21,5 @@ This is my portfolio website which showcases my projects, skills, certifications
 ## Learning Resources
 
 - [Add dynamic open graph images to an Astro site](https://dietcode.io/p/astro-og)
-- [Add diagrams to an Asto site with D2](https://aaronjbecker.com/posts/adding-d2-diagrams-to-astro)
+- [Mermaid flowchart syntax](https://mermaid.js.org/syntax/flowchart.html)
 - [Build an Astro site with Docker](https://docs.astro.build/en/recipes/docker)
