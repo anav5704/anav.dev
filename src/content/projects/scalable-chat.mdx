@@ -50,6 +50,31 @@ This project incorporates both a client/server architecture and a pub/sub archit
 
 In this new version, the message is sent to the Kafka producer after it is emitted by the web sockets. The producer then sends the message to a `MESSAGES` topic. The Kafka consumer subscribes to this topic when the server first starts and stores messages in a PostgreSQL database, one at a time. This consumer also has a 1-minute cool down if something goes wrong with the database. We are using Kafka instead of directly writing to the database as it has a significantly higher throughput.
 
+```mermaid
+flowchart TD
+    A[/Next.js client/]
+    B[Socket.IO server]
+    C[Redis pub/sub]
+    D[Other Node servers]
+    E[Connected clients]
+    F[Kafka MESSAGES topic]
+    G[Postgres]
+
+    A e1@-->|Send message| B
+    B e2@-->|Publish| C
+    C e3@-->|Broadcast| D
+    D e4@-->|Push over websocket| E
+    B e5@-->|Produce| F
+    F e6@-->|Consume one by one| G
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
+```
+
 ## Getting Started
 
 ---

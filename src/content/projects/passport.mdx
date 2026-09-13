@@ -30,9 +30,15 @@ Having served as a PASS leader for three courses, I encountered these challenges
 
 ---
 
-PASSport is built with React Native and Expo, targeting Android devices. The app follows a file-based routing structure using Expo Router and features a clean, minimal UI that respects the user's system theme (light/dark mode). The core features of this app include:
+PASSport is built with React Native and Expo, targeting Android devices. The app follows a file-based routing structure using Expo Router and features a clean, minimal UI that respects the user's system theme (light/dark mode). 
 
-**Barcode Scanning** - The camera-based scanner validates student IDs and signature barcodes. A two-step scan flow ensures authenticity, first the student ID, then the matching signature.
+### Core Features
+
+---
+
+The app stays small on purpose. Five features cover the whole workflow from starting a session to submitting records.
+
+**Barcode Scanning** - The camera-based scanner validates student IDs and signature barcodes. A two-step scan flow ensures authenticity, first the student ID, then the signature. Neither means much alone, only the pair counts.
 
 **Session Management** - Leaders can start sessions for their courses. The app prevents duplicate sessions within the same hour and tracks attendance counts for each session.
 
@@ -41,6 +47,39 @@ PASSport is built with React Native and Expo, targeting Android devices. The app
 **Attendance Export** - Data can be exported to password-protected Excel files with SHA-256 checksums for integrity verification, ready for submission to coordinators.
 
 **Offline Support** - All data is stored locally using SQLite with Drizzle ORM, requiring no internet connection during sessions.
+
+ ### Attendance Flow
+
+---
+
+Think of attendance as an account system. The first scan reads the student ID and the second reads the Campus ID. The two IDs never match each other. They only work combined, so the first scan of a pair signs it up and every scan after that logs it in. If the Campus ID doesn't match the one registered to that student ID, the app sends you back to rescan.
+
+```mermaid
+flowchart TD
+    A[Leader starts session]
+    B[/Scan student ID/]
+    C[/Scan signature/]
+    D{Pair<br/>known?}
+    E[Sign up pair]
+    V{Valid<br/>pair?}
+    F[Take attendance]
+
+    A e1@--> B
+    B e2@--> C
+    C e3@--> D
+    D e4@-->|Nah| E
+    D e5@-->|Yup| V
+    V e6@-->|Yup| F
+    V e7@-->|Nah| B
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
+    e7@{ animation: slow }
+```
 
 
 ## Project Outcomes

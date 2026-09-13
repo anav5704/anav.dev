@@ -81,17 +81,128 @@ Online PASS! A real-time, full-stack progressive web application designed to str
 
 ---
 
-![Architecture diagram](./images/online-pass-architecture.webp)
-
 The PASS web app adopts a 3-layer MVC architecture, leveraging modern and open-source technologies. In the model layer, Prisma serves as the ORM for data management, interfacing with a PostgreSQL database hosted on AWS RDS, while AWS S3 handles object storage. React JS is utilized in the view layer for creating a dynamic user interface, with Next UI and Shadcn UI providing accessible and customizable components. For interconnection, Next JS acts as the framework, utilizing its built-in server to handle API functionalities, while Supabase serves as the real-time server, offering services such as web sockets for enhanced interactivity.
+
+```mermaid
+flowchart TD
+    A[React UI]
+    B[Next.js API routes]
+    C[Prisma ORM]
+    subgraph AWS[" "]
+        D[(RDS Postgres)]
+        E[(S3 bucket)]
+    end
+    F[Supabase]
+    G[Other clients]
+
+    A e1@-->|REST| B
+    B e2@-->|Queries| C
+    C e3@--> D
+    B e4@-->|Uploads| E
+    B e5@-->|Publishes events| F
+    F e6@-->|Websockets| G
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
+```
 
 ## Data Models
 
 ---
 
-![Data models diagram](./images/online-pass-data-models.webp)
+This schema outlines the structure of OPASS where every Course related model roots back up to the Member. The Member model was chosen to be the main entity as deleting it will delete every model that has a relationship to it in a cascading manner. This prevents there being any ghost entries laying in the database after a Member is removed from a Course.
 
-This schema outlines the structure of OPASS where every Course related model roots back up to the Member. The Member model was chosen to be the main entity as deleting it will delete every model that has a relationship to it in a cascading manner. This prevents there being any ghost entries laying in the database after a Member is removed from a Course. All in all, these models provide the foundation for a robust system supporting various educational and collaborative activities.
+### Courses
+
+---
+
+Each course runs sessions with attendance, posts announcements that become notifications, and enrolls members.
+
+```mermaid
+flowchart TD
+    Course[Course]
+    Session[Session]
+    Attendance[Attendance]
+    Announcement[Announcement]
+    Notification[Notification]
+    Member[Member]
+
+    Course e1@---|1:N| Announcement
+    Course e2@---|1:N| Session
+    Course e3@---|1:N| Member
+    Announcement e4@---|1:N| Notification
+    Session e5@---|1:N| Attendance
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+```
+
+### People
+
+---
+
+A user owns their member profile, gives feedback, earns achievements from badges, and receives notifications.
+
+```mermaid
+flowchart TD
+    User[User]
+    Member[Member]
+    Feedback[Feedback]
+    Achievement[Achievement]
+    Badge[Badge]
+    Notification[Notification]
+
+    User e1@---|1:1| Member
+    User e2@---|1:N| Feedback
+    User e3@---|1:N| Achievement
+    Badge e4@---|1:N| Achievement
+    User e5@---|1:N| Notification
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+```
+
+### Engagement
+
+---
+
+Members drive everything interactive. They create polls with votable options, cast votes, send messages, and share resources.
+
+```mermaid
+flowchart TD
+    Member[Member]
+    Poll[Poll]
+    Option[Option]
+    Vote[Vote]
+    Message[Message]
+    Resource[Resource]
+
+    Member e1@---|1:N| Poll
+    Poll e2@---|1:N| Option
+    Option e3@---|1:N| Vote
+    Member e4@---|1:N| Vote
+    Member e5@---|1:N| Message
+    Member e6@---|1:N| Resource
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
+```
+
+All in all, these models provide the foundation for a robust system supporting various educational and collaborative activities.
 
 ## Useful Links
 
