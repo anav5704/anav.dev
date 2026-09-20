@@ -1,14 +1,14 @@
 import { defineConfig } from "astro/config";
-import path from "node:path";
-import { pathToFileURL } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
-import mdx from "@astrojs/mdx";
-import partytown from "@astrojs/partytown";
-import sitemap from "@astrojs/sitemap";
-import react from "@astrojs/react";
-import vercel from "@astrojs/vercel";
-import latex from "rehype-mathjax";
 import rehypeMermaid from "rehype-mermaid";
+import partytown from "@astrojs/partytown";
+import { pathToFileURL } from "node:url";
+import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
+import react from "@astrojs/react";
+import latex from "rehype-mathjax";
+import mdx from "@astrojs/mdx";
+import path from "node:path";
 
 const mermaidConfig = {
     theme: "base",
