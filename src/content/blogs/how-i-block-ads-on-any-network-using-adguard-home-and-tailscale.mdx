@@ -34,19 +34,19 @@ Every device on my tailnet is configured to send its DNS queries to the Pi's Tai
 
 ```mermaid
 flowchart TD
-    A[Client - anywhere in the world]
-    B[Tailscale - encrypted tunnel]
-    C[AdGuard Home - Pi @ 100.83.97.28]
+    A[Client]
+    B[Tailscale]
+    C[AdGuard Home]
     D[Blocked Domain]
-    E[Upstream DNS - 1.1.1.1]
+    E[Upstream DNS]
     F[Internet]
 
-    A e1@-->|DNS query| B
+    A e1@-->|Query| B
     B e2@<--> C
     C e3@-->|Blocked| D
     C e4@<-->|Allowed| E
     E e5@<--> F
-    B e6@-->|DNS response| A
+    B e6@-->|Response| A
 
     e1@{ animation: slow }
     e2@{ animation: slow }
