@@ -39,6 +39,7 @@
         "typescript": "^5.8.2"
     },
     "devDependencies": {
-        "playwright": "^1.63.0"
+        "playwright": "^1.63.0",
+        "vercel": "^59.23.2"
     }
 }

@@ -1,0 +1,69 @@
+# Builds the site (Mermaid diagrams need Chromium, which Vercel's build
+# sandbox can't run) in GitHub Actions, then uploads the prebuilt
+# output to Vercel.
+#
+# Required repository secrets:
+#   VERCEL_TOKEN       - Vercel access token (Account → Settings → Tokens)
+#   VERCEL_ORG_ID      - from `vercel link` in .vercel/project.json
+#   VERCEL_PROJECT_ID  - from `vercel link` in .vercel/project.json
+name: Deploy to Vercel (prebuilt)
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        types: [opened, synchronize, reopened]
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: pnpm/action-setup@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: pnpm
+
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
+
+            # GH runners allow apt, so this also installs the shared
+            # libraries (libnspr4, ...) that Chromium needs. This is the
+            # exact step Vercel's sandbox cannot do.
+            - name: Install Playwright Chromium with system deps
+              run: npx playwright install --with-deps chromium
+
+            # .vercel/ is gitignored, so the runner needs the project
+            # ids written back before the deploy step.
+            - name: Link Vercel project
+              run: |
+                  mkdir -p .vercel
+                  printf '{"orgId":"%s","projectId":"%s"}\n' \
+                    "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > .vercel/project.json
+              env:
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+            # astro build (via the @astrojs/vercel adapter) writes the
+            # deployable output to .vercel/output.
+            - name: Build site
+              run: pnpm build
+
+            - name: Deploy preview (pull request)
+              if: github.event_name == 'pull_request'
+              run: pnpm exec vercel deploy --prebuilt --token=$VERCEL_TOKEN
+              env:
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+            - name: Deploy production (main)
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              run: pnpm exec vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+              env:
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
