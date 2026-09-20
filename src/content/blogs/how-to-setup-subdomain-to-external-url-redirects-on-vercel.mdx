@@ -78,6 +78,29 @@ In this case, if a users visits [github.anav.dev](https://github.anav.dev), they
 
 After adding all the redirect rules, you will need to push the code to your remote Git repository so that Vercel can rebuild your website.
 
+That whole mapping table boils down to this flow. A visitor hits a subdomain, Vercel checks it against your host rules, and answers with a redirect or a 404.
+
+```mermaid
+flowchart TD
+    A[/Visitor enters subdomain/]
+    B[Vercel edge network]
+    C{Host rule match?}
+    D[Redirect to destination]
+    E[404 not found]
+
+    A e1@--> B
+    B e2@--> C
+    C e3@-->|Yup| D
+    C e4@-->|Nah| E
+    D e5@-->|308| A
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+```
+
 ## Configure Subdomains
 
 ---

@@ -101,5 +101,18 @@ const contentStructuredData = {
         <main class="pt-16 pb-[50vh] w-11/12 md:w-3/4 lg:w-1/2 mx-auto">
             <slot />
         </main>
+        <!-- Shared defs for Mermaid SVGs (cluster background pattern). -->
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+            <defs>
+                <pattern
+                    id="mermaid-cluster-dots"
+                    width="10"
+                    height="10"
+                    patternUnits="userSpaceOnUse"
+                >
+                    <circle cx="1.5" cy="1.5" r="1.5" fill="#e4e4e7"></circle>
+                </pattern>
+            </defs>
+        </svg>
     </body>
 </html>

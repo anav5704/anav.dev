@@ -44,11 +44,28 @@ There are 5 main parts to this project, the Next JS app, the Node JS server, the
 
 ---
 
-![Scalable Chat Architecture](./images/scalable-chat-architecture.webp)
-
 This project incorporates both a client/server architecture and a pub/sub architecture. The Node JS server, which uses web sockets to listen for users connecting to the server, subscribes them to the Redis server on load. When a user sends a message, the web sockets pick it up and publish it to the Redis server which broadcasts it to all connected clients(regardless of which Node JS server published it).
 
 In this new version, the message is sent to the Kafka producer after it is emitted by the web sockets. The producer then sends the message to a `MESSAGES` topic. The Kafka consumer subscribes to this topic when the server first starts and stores messages in a PostgreSQL database, one at a time. This consumer also has a 1-minute cool down if something goes wrong with the database. We are using Kafka instead of directly writing to the database as it has a significantly higher throughput.
+
+```mermaid
+flowchart LR
+    Client[Clients]
+    Server[Socket.IO servers]
+    Redis[Redis pub/sub]
+    Kafka[Kafka broker]
+    DB[(PostgreSQL)]
+
+    Client e1@<--> Server
+    Server e2@<--> Redis
+    Server e3@--> Kafka
+    Kafka e4@--> DB
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+```
 
 ## Getting Started
 

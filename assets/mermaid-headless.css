@@ -1,0 +1,16 @@
+/* Loaded ONLY inside headless Chromium at build time (rehype-mermaid
+   `css` option) so diagram text is measured with the same Geist Sans
+   that visitors load via @fontsource. Without this, the build measures
+   with a fallback font and long words overflow their boxes in the
+   browser. Relative URLs resolve against this file's file:// URL. */
+@font-face {
+    font-family: "Geist Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src:
+        url("../node_modules/@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff2")
+        format("woff2"),
+        url("../node_modules/@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff")
+        format("woff");
+}

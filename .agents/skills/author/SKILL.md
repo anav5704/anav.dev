@@ -111,96 +111,60 @@ When you're tempted to write a bulleted list, ask: would this flow better as sen
 
 ### Code Blocks
 
-- Include language identification: ` ```d2 `, ` ```bash `, ` ```python `, etc.
+- Include language identification: ` ```mermaid `, ` ```bash `, ` ```python `, etc.
 - Code blocks are for shell commands, configuration, or substantial code snippets
 - Short inline code references (variable names, command flags) use backticks: `createdAt`, `--verbose`
 
-### Diagrams with D2
+### Diagrams with Mermaid
 
-Use D2 diagrams for architecture, data flow, or system interactions. D2 is a text-based diagramming language that produces clean, professional visualizations.
+Use Mermaid flowcharts for architecture, data flow, or system interactions. Site theme (Geist font, zinc boxes, slow animated edges) lives in `mermaidConfig` in `astro.config.mjs`. Keep diagram source structural and animate every edge with the pattern below.
 
-#### When to Use D2
+#### When to Use Mermaid
 
 - Architecture overviews (showing how major components connect)
 - Data flow pipelines (showing how data moves through the system)
 - System interactions (frontend → backend → database)
-- Avoid D2 for simple concepts that don't need visualization
+- Avoid Mermaid for simple concepts that don't need visualization
 
-#### Real Example: AOG Zero Architecture
+#### Real Example: Links Dashboard Flow
 
-The AOG Zero project (an aircraft health monitoring system) uses D2 to show how three layers work together:
+The Links Dashboard project uses Mermaid to show how a clicked link resolves:
 
-```d2
-*.style.border-radius: 6
-*.*.style.border-radius: 6
-*.style.fill: "#fff"
-*.*.style.fill: "#fff"
-*.style.font-color: "#444"
-*.*.style.font-color: "#444"
-*.style.double-border: false
+```mermaid
+flowchart TD
+    A[User visits website]
+    B[/User clicks on link/]
+    C[Server looks for full link]
+    D{Full link<br/>exists?}
+    E[Redirect to error page]
+    F[Redirect to full link]
+    G[Click event is tracked]
 
-Frontend: Dashboard
+    A e1@--> B
+    B e2@--> C
+    B e3@--> G
+    C e4@--> D
+    D e5@-->|Nah| E
+    D e6@-->|Yup| F
 
-Backend: "" 
-Backend.A: Auth & Routing
-Backend.B: Business Logic
-Backend.C: SQLAlchemy ORM
-
-ML: "" 
-ML.A: Feature Extraction
-ML.B: PCA Health Indicator
-ML.C: RUL Regression
-
-DB: PostgreSQL 
-APU: APU Sensors
-
-Frontend -> Backend: HTTP Req {
-  style: { animated: true } 
-}
-
-Frontend <- Backend: API Res {
-  style: { animated: true }
-}
-
-Backend.A -> Backend.B {
-  style: { animated: true }
-}
-
-Backend.B -> Backend.C {
-  style: { animated: true }
-}
-
-Backend.C -> DB {
-  style: { animated: true }
-}
-
-APU -> ML.A {
-  style: { animated: true }
-}
-
-ML.A -> ML.B {
-  style: { animated: true }
-}
-
-ML.B -> ML.C {
-  style: { animated: true }
-}
-
-ML.C -> Backend.B: RUL {
-  style: { animated: true }
-}
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
 ```
 
 **What This Diagram Shows:**
 
-The diagram separates three independent concerns. APU sensors feed into the ML pipeline (feature extraction → health indicator → RUL prediction). Meanwhile, the frontend sends requests through backend routing, which handles authentication, business logic, and database queries. The ML layer outputs predictions back to the backend so the dashboard can display them. Each arrow has `animated: true` to emphasize data flow.
+The diagram follows one click through the system. The landing page tracks the event while the server looks up the full link, then redirects to either the destination or an error page depending on whether the short link exists.
 
-**Key D2 Patterns:**
+**Key Mermaid Patterns:**
 
-- **Containers**: `Backend: ""` groups related components; `Backend.A:` creates nested items within that group
-- **Connections**: `A -> B` shows direction; `: "label"` adds text to arrows (e.g., `: "HTTP Req"`)
-- **Styling**: `style: { animated: true }` adds movement to show data flow vs. static structure
-- **Hierarchy**: Global styles at the top (`*.style.border-radius: 6`) apply to all elements; keep diagrams clean by avoiding clutter
+- **Shapes**: `[rectangle]`, `[/parallelogram/]`, `{diamond}`, `[(database)]`, `subgraph Id["Title"]` for groups
+- **Connections**: `A --> B` shows direction; `-->|text|` adds labels (e.g., `-->|Nah|`). Animate with edge ids: `A e1@--> B` plus `e1@{ animation: slow }` at the end.
+- **Decisions read Yup/Nah**: decision `{diamond}` branches always use `|Yup|` and `|Nah|`, never Yes/No/Match. Site-wide convention.
+- **Keep it structural**: no theme variables or colors in diagram source. That lives in `mermaidConfig`.
 
 ### Links
 
@@ -234,7 +198,7 @@ Purpose: Shows the end product and main features at a glance.
 
 - **After intro**: Hero/overview image (shows the finished product)
 - **After problem statement**: Screenshot or diagram showing the problem context
-- **After architecture**: The D2 diagram (if included)
+- **After architecture**: The Mermaid diagram (if included)
 - **After results/features**: Screenshots of key functionality
 
 #### Writing Image Guidance
@@ -338,5 +302,5 @@ Before finishing, scan for:
 - ✓ Does the ending give a concrete takeaway or next step, not just a recap?
 - ✓ Are bullet points minimal? (<6 per piece, used only when truly necessary)
 - ✓ Are image guidance notes specific and purposeful? (e.g., "Add screenshot of error message showing validation failure")
-- ✓ Do D2 diagrams (if included) show architecture or data flow, not simple concepts?
+- ✓ Do Mermaid diagrams (if included) show architecture or data flow, not simple concepts?
 - ✓ Does the tone feel conversational and credible, not AI-sounding?

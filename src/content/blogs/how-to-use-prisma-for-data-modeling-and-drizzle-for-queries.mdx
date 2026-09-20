@@ -205,6 +205,32 @@ Quotes-App
     └── schema.prisma
 ```
 
+The full loop looks like this. Prisma pushes the schema out to Neon, Drizzle pulls it back in as typed models, and the app queries through Drizzle from then on.
+
+```mermaid
+flowchart TD
+    A[schema.prisma]
+    B[Prisma db push]
+    C[Neon Postgres]
+    D[Drizzle introspect]
+    E[Drizzle schema + relations]
+    F[Next.js queries]
+
+    A e1@-->|Define models| B
+    B e2@-->|Migrate| C
+    C e3@-->|Pull tables| D
+    D e4@-->|Generate| E
+    E e5@-->|Import| F
+    F e6@-->|SQL| C
+
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
+```
+
 ### Push Schema
 
 ---

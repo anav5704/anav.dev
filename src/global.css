@@ -200,6 +200,36 @@
     .codeblock pre:focus-visible {
         outline: none;
     }
+
+    /* Mermaid diagrams: centered, dotted clusters. Colors and fonts
+       come from mermaidConfig; arrowheads need a pin since they ignore
+       lineColor. All boxes sharp by design. */
+    .content svg[id^="mermaid"] {
+        display: block;
+        margin-inline: auto;
+    }
+
+    .content svg[id^="mermaid"] .cluster rect {
+        fill: url(#mermaid-cluster-dots) !important;
+    }
+
+    /* Container headings as padded badges. The foreignObject viewport
+       must allow overflow or the padding clips. */
+    .content svg[id^="mermaid"] .cluster-label foreignObject {
+        overflow: visible !important;
+    }
+
+    .content svg[id^="mermaid"] .cluster-label p {
+        background: #ffffff !important;
+        border: 1px solid #71717a !important;
+        border-radius: 6px !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Arrowheads ignore Mermaid's lineColor, so pin them to match. */
+    .content svg[id^="mermaid"] .arrowheadPath {
+        fill: #71717a !important;
+    }
 }
 
 .content astro-island {

@@ -29,3 +29,4 @@ pnpm-debug.log*
 .DS_Store
 .vercel
 .wrangler
+.env*

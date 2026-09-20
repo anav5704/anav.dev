@@ -30,65 +30,41 @@ Aircraft On Ground (AOG) events, often caused by component failures, lead to cos
 
 The system is built around a three-tier architecture that connects the ML pipeline, backend services, and frontend dashboard. The prediction model processes sensor data and generates RUL estimates, which are served through an API and stored in the database. The frontend then uses this data to visualize APU health and maintenance information.
 
-```d2
-*.style.border-radius: 6
-*.*.style.border-radius: 6
-*.style.fill: "#fff"
-*.*.style.fill: "#fff"
-*.style.font-color: "#444"
-*.*.style.font-color: "#444"
-*.style.double-border: false
+```mermaid
+flowchart TD
+    Frontend[Dashboard]
+    subgraph Backend[" "]
+        B_A[Auth & Routing]
+        B_B[Business Logic]
+        B_C[SQLAlchemy ORM]
+    end
+    subgraph ML[" "]
+        M_A[Feature Extraction]
+        M_B[PCA Health Indicator]
+        M_C[RUL Regression]
+    end
+    DB[(PostgreSQL)]
+    APU[APU Sensors]
 
-Frontend: Dashboard
+    Frontend e1@-->|HTTP Req| B_A
+    B_A e2@-->|HTTP Res| Frontend
+    B_A e3@--> B_B
+    B_B e4@--> B_C
+    B_C e5@--> DB
+    APU e6@--> M_A
+    M_A e7@--> M_B
+    M_B e8@--> M_C
+    M_C e9@-->|RUL| B_B
 
-Backend: "" 
-Backend.A: Auth & Routing
-Backend.B: Business Logic
-Backend.C: SQLAlchemy ORM
-
-ML: "" 
-ML.A: Feature Extraction
-ML.B: PCA Health Indicator
-ML.C: RUL Regression
-
-DB: PostgreSQL 
-APU: APU Sensors
-
-Frontend -> Backend: HTTP Req {
-  style: { animated: true } 
-}
-
-Frontend <- Backend: API Res {
-  style: { animated: true } 
-}
-
-Backend.A -> Backend.B {
-  style: { animated: true }
-}
-
-Backend.B -> Backend.C {
-  style: { animated: true }
-}
-
-Backend.C -> DB {
-  style: { animated: true }
-}
-
-APU -> ML.A {
-  style: { animated: true }
-}
-
-ML.A -> ML.B {
-  style: { animated: true }
-}
-
-ML.B -> ML.C {
-  style: { animated: true }
-}
-
-ML.C -> Backend.B: RUL {
-  style: { animated: true }
-}
+    e1@{ animation: slow }
+    e2@{ animation: slow }
+    e3@{ animation: slow }
+    e4@{ animation: slow }
+    e5@{ animation: slow }
+    e6@{ animation: slow }
+    e7@{ animation: slow }
+    e8@{ animation: slow }
+    e9@{ animation: slow }
 ```
 
 ### Frontend 
