@@ -64,15 +64,15 @@ export default function Explorer({
 
     return (
         <div className="space-y-4">
-            <div className="flex gap-3">
-                <div className="w-3/4">
+            <div className="flex flex-col md:flex-row gap-3">
+                <div className="w-full md:w-3/4">
                     <SearchInput
                         value={query}
                         onChange={setQuery}
                         placeholder={placeholder}
                     />
                 </div>
-                <div className="w-1/4">
+                <div className="w-full md:w-1/4">
                     <TagFilter
                         tags={allTags}
                         selected={selectedTag}
