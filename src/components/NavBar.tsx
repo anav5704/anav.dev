@@ -1,4 +1,11 @@
 import { useState, useMemo } from "react";
+import {
+    Dialog,
+    DialogBackdrop,
+    DialogPanel,
+    DialogTitle,
+    CloseButton
+} from "@headlessui/react";
 import { Menu, X } from "lucide-react";
 
 interface NavLink {
@@ -83,6 +90,7 @@ export default function NavBar({
 
                     <button
                         onClick={() => setIsOpen(true)}
+                        aria-label="Open menu"
                         className="px-2 block md:hidden"
                     >
                         <Menu size={20} />
@@ -90,15 +98,31 @@ export default function NavBar({
                 </nav>
             </div>
 
-            {isOpen && (
-                <div className="fixed flex items-center top-0 left-0 backdrop-blur-lg w-screen h-screen">
-                    <nav className="relative bg-white border-zinc-200 border mx-auto w-11/12 h-fit rounded-lg py-10">
-                        <button
-                            onClick={() => setIsOpen(false)}
+            <Dialog
+                open={isOpen}
+                onClose={() => setIsOpen(false)}
+                className="relative z-50 md:hidden"
+            >
+                <DialogBackdrop
+                    transition
+                    className="fixed inset-0 backdrop-blur-lg bg-black/20 duration-200 ease-out data-closed:opacity-0"
+                />
+
+                <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+                    <DialogPanel
+                        transition
+                        className="relative bg-white border-zinc-200 border mx-auto w-11/12 h-fit rounded-lg py-10 duration-200 ease-out data-closed:scale-95 data-closed:opacity-0"
+                    >
+                        <DialogTitle className="sr-only">
+                            Navigation menu
+                        </DialogTitle>
+
+                        <CloseButton
+                            aria-label="Close menu"
                             className="absolute top-0 right-0 p-5"
                         >
                             <X size={20} />
-                        </button>
+                        </CloseButton>
                         <ul className="space-y-10 text-center">
                             {links.map(({ href, label, event, active }) => (
                                 <li key={event}>
@@ -112,9 +136,9 @@ export default function NavBar({
                                 </li>
                             ))}
                         </ul>
-                    </nav>
+                    </DialogPanel>
                 </div>
-            )}
+            </Dialog>
         </>
     );
 }
