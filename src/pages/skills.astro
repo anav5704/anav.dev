@@ -8,7 +8,9 @@ const unsortedSkills = await getCollection("skills");
 const unsortedCerts = await getCollection("certs");
 
 const skills = unsortedSkills.sort((a, b) => a.data.id - b.data.id);
-const certs = unsortedCerts.sort((a, b) => a.data.id - b.data.id);
+const certs = unsortedCerts.sort(
+    (a, b) => b.data.issuedAt.getTime() - a.data.issuedAt.getTime()
+);
 ---
 
 <ListLayout
