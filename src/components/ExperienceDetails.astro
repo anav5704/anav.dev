@@ -24,8 +24,7 @@ const startDate = short(data.startDate);
     <p>
         <time datetime={data.startDate.toISOString()}>
             {startDate}
-        </time>
-        -
+        </time>{" - "}
         {
             data.present ? (
                 <span>Present</span>
