@@ -9,7 +9,8 @@ const blogsCollection = defineCollection({
         description: z.string(),
         createdAt: z.date(),
         updatedAt: z.date(),
-        tags: z.array(z.string())
+        tags: z.array(z.string()),
+        topics: z.array(z.string()).min(1).max(3)
     })
 });
 
@@ -24,7 +25,8 @@ const projectsCollection = defineCollection({
         createdAt: z.date(),
         repo: z.url(),
         site: z.url(),
-        tags: z.array(z.string())
+        tags: z.array(z.string()),
+        topics: z.array(z.string()).min(1).max(3)
     })
 });
 
