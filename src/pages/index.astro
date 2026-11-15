@@ -11,6 +11,11 @@ const unsortedExperience = await getCollection("experience");
 const experience = unsortedExperience
     .sort((a, b) => b.data.startDate.getTime() - a.data.startDate.getTime())
     .slice(0, 3);
+const currentRole = unsortedExperience
+    .filter((item) => item.data.present)
+    .sort((a, b) => b.data.startDate.getTime() - a.data.startDate.getTime())[0];
+const roleArticle = /^[aeiou]/i.test(currentRole.data.longTitle) ? "an" : "a";
+const description = `I'm ${roleArticle} ${currentRole.data.longTitle} @ ${currentRole.data.company}, exploring data systems, cloud infrastructure, solutions architecture, and DevOps.`;
 
 const unsortedSkills = await getCollection("skills");
 const skills = unsortedSkills
@@ -29,17 +34,10 @@ const blogs = unfilteredBlogs
     .slice(0, 3);
 ---
 
-<MainLayout
-    title="Anav Chand | Software Engineering Student, DevOps & AI Enthusiast."
-    description="I'm a DevOps-focused software engineering student exploring AI systems, cloud infra, and architecture, with a track record of technical leadership."
->
+<MainLayout title="Anav Chand | AI Engineer" description={description}>
     <header class="hero">
         <h1>Hi, I'm Anav Chand</h1>
-        <p>
-            I'm a DevOps-focused software engineering student exploring AI
-            systems, cloud infra, and architecture, with a track record of
-            technical leadership.
-        </p>
+        <p>{description}</p>
     </header>
 
     <ImageGrid />
@@ -47,61 +45,53 @@ const blogs = unfilteredBlogs
     <section class="space-y-4">
         <h2>Top Projects</h2>
         <ul class="space-y-4">
-            {
-                projects.map((project) => (
-                    <li>
-                        <ProjectCard
-                            id={project.id}
-                            title={project.data.title}
-                            description={project.data.description}
-                        />
-                    </li>
-                ))
-            }
+            {projects.map((project) => (
+                <li>
+                    <ProjectCard
+                        id={project.id}
+                        title={project.data.title}
+                        description={project.data.description}
+                    />
+                </li>
+            ))}
         </ul>
     </section>
 
     <section class="space-y-4">
         <h2>My Skills</h2>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {
-                skills.map((skill) => (
-                    <li>
-                        <SkillCard skill={skill} />
-                    </li>
-                ))
-            }
+            {skills.map((skill) => (
+                <li>
+                    <SkillCard skill={skill} />
+                </li>
+            ))}
         </ul>
     </section>
 
     <section class="space-y-4">
         <h2>Recent Experience</h2>
         <ul class="space-y-4">
-            {
-                experience.map((exp) => (
-                    <li>
-                        {" "}
-                        <ExperienceCard experience={exp} />
-                    </li>
-                ))
-            }
+            {experience.map((exp) => (
+                <li>
+                    {" "}
+                    <ExperienceCard experience={exp} />
+                </li>
+            ))}
         </ul>
     </section>
 
     <section class="space-y-4">
         <h2>Latest Blogs</h2>
         <ul class="space-y-4">
-            {
-                blogs.map((blog) => (
-                    <li>
-                        <BlogCard
-                            id={blog.id}
-                            title={blog.data.title}
-                            date={blog.data.createdAt.toISOString()}
-                        />
-                    </li>
-                ))
-            }
+            {blogs.map((blog) => (
+                <li>
+                    <BlogCard
+                        id={blog.id}
+                        title={blog.data.title}
+                        date={blog.data.createdAt.toISOString()}
+                    />
+                </li>
+            ))}
         </ul>
     </section>
 </MainLayout>
