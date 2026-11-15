@@ -1,0 +1,28 @@
+---
+interface Item {
+    href: string;
+    title: string;
+}
+
+interface Props {
+    items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+    items.length > 0 && (
+        <section class="space-y-4">
+            <h2>Related</h2>
+            <hr />
+            <ul class="space-y-2">
+                {items.map((item) => (
+                    <li>
+                        <a href={item.href}>{item.title}</a>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    )
+}

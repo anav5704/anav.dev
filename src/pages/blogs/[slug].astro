@@ -1,8 +1,10 @@
 ---
 import TableOfContents from "@components/TableOfContents.astro";
+import RelatedLinks from "@components/RelatedLinks.astro";
 import BlogDetails from "@components/BlogDetails";
 import Pre from "@components/Pre.astro";
 import ContentLayout from "@layouts/content.astro";
+import { relatedTo } from "@utils/related";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -16,6 +18,9 @@ export async function getStaticPaths() {
 
 const { blog } = Astro.props;
 const { Content, headings } = await render(blog);
+const blogs = await getCollection("blogs");
+const projects = await getCollection("projects");
+const related = relatedTo("blogs", blog, blogs, projects);
 
 const url = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -37,4 +42,5 @@ const url = new URL(Astro.url.pathname, Astro.site);
     <article class="space-y-4 content">
         <Content components={{ pre: Pre }} />
     </article>
+    <RelatedLinks items={related} />
 </ContentLayout>
