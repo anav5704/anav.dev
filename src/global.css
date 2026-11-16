@@ -161,6 +161,18 @@
         @apply text-[#767676];
     }
 
+    .search-bar {
+        @apply grid;
+    }
+
+    .search-bar > * {
+        @apply col-start-1 row-start-1;
+    }
+
+    .search-bar kbd {
+        @apply self-center justify-self-end mr-3 pointer-events-none text-[#767676];
+    }
+
     .codeblock {
         @apply border border-zinc-200 rounded-lg overflow-hidden;
     }
