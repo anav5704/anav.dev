@@ -1,3 +1,4 @@
+import { unified } from "@astrojs/markdown-remark";
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import rehypeMermaid from "rehype-mermaid";
@@ -57,7 +58,9 @@ export default defineConfig({
         shikiConfig: {
             theme: "gruvbox-dark-medium"
         },
-        rehypePlugins: [mermaidPlugin, latex]
+        processor: unified({
+            rehypePlugins: [mermaidPlugin, latex]
+        })
     },
     integrations: [
         mdx({
@@ -67,8 +70,7 @@ export default defineConfig({
             },
             shikiConfig: {
                 theme: "gruvbox-dark-medium"
-            },
-            rehypePlugins: [mermaidPlugin, latex]
+            }
         }),
         react(),
         partytown(),
