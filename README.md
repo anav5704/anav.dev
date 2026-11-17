@@ -1,25 +1,64 @@
 # www.anav.dev
 
-This is my portfolio website which showcases my projects, skills, certifications, experience and blogs. It is a fully static website, with an API endpoint to serve dynamic open graph images. The website is deployed on Oracle Cloud using Docker and GitLab CI.
+This is my portfolio. It covers projects, skills, certifications, experience, and blogs. Pages are prerendered from MDX at build time. The one dynamic route is `/api/og`, which renders open graph images on request. GitHub Actions builds the site and deploys the prebuilt output to Vercel.
 
-![Architecture](./.github/docs/architecture.png)
+```mermaid
+flowchart TD
+    subgraph sources [Sources]
+        mdx[MDX collections]
+        src[Astro pages and React components]
+    end
 
-## Technologies Used
+    subgraph ci [GitHub Actions]
+        install[pnpm install and Playwright Chromium]
+        build[vercel build]
+        ship["vercel deploy --prebuilt"]
+    end
 
-- Astro.js: generates static site and Node.js server
-- Svelte: handles complex and interactive components 
-- TailwindCSS: CSS framework for styling the website
-- Markdown: content source (supports math and diagrams)
-- MDX: custom component integration with markdown
-- Mermaid: generates technical diagrams during buildtime
-- Satori: generates dynamic open graph images during runtime
-- Docker: containerizes whole app using Node.js image
-- Caddy: reverse proxy running on a Ubuntu virtual machine
-- Cloudflare: provides DNS management, SSL encryption and caching  
-- GitLab CI: builds Docker image and deploys it to Oracle Cloud
+    subgraph host [Vercel]
+        pages["Prerendered pages, RSS, and sitemap"]
+        og["/api/og"]
+    end
 
-## Learning Resources
+    browser[Browser]
 
-- [Add dynamic open graph images to an Astro site](https://dietcode.io/p/astro-og)
+    mdx --> install
+    src --> install
+    install --> build
+    build --> ship
+    ship --> pages
+    ship --> og
+    pages -->|HTML and React islands| browser
+    browser -->|og:image| og
+```
+
+## Technologies used
+
+---
+
+Astro generates the site through the Vercel adapter. React islands cover navigation, search, tag filters, and code blocks. Tailwind CSS handles styling.
+
+Content lives in MDX collections for blogs, projects, experience, skills, and certs. During the build, Shiki highlights code, rehype-mermaid renders diagrams to inline SVG with Playwright Chromium, and rehype-mathjax renders math. Fuse.js powers client-side search.
+
+`/api/og` uses `@vercel/og` to draw a 1200 by 600 image from the page title and description. Partytown loads Umami off the main thread. GitHub Actions runs on every push with Node 24 and pnpm 10, then deploys to Vercel.
+
+## Local development
+
+---
+
+`postinstall` downloads Playwright Chromium, which Mermaid needs when you build.
+
+```bash
+pnpm install
+pnpm dev
+```
+
+`pnpm build` runs `astro check` and `astro build`. `pnpm preview` serves that output locally. Production deploys skip those scripts. The workflow runs `vercel pull`, `vercel build --prod`, and `vercel deploy --prebuilt --prod` with `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, and `VERCEL_TOKEN`.
+
+## Learning resources
+
+---
+
+- [Deploy an Astro site to Vercel](https://docs.astro.build/en/guides/deploy/vercel/)
+- [Open graph images on Vercel](https://vercel.com/docs/og-image-generation)
 - [Mermaid flowchart syntax](https://mermaid.js.org/syntax/flowchart.html)
-- [Build an Astro site with Docker](https://docs.astro.build/en/recipes/docker)
