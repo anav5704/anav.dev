@@ -4,9 +4,11 @@ import { Image } from "astro:assets";
 ---
 
 <Image
-    class="rounded-lg md:rounded-full h-8 w-8"
+    class="size-8 min-w-8 shrink-0 rounded-lg object-cover md:rounded-full"
     alt="Anav Chand"
     src={LogoImage}
+    width={64}
+    height={64}
+    quality={80}
     loading="eager"
-    quality="max"
 />
