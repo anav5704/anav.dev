@@ -18,9 +18,11 @@ const roleArticle = /^[aeiou]/i.test(currentRole.data.longTitle) ? "an" : "a";
 const description = `I'm ${roleArticle} ${currentRole.data.longTitle} @ ${currentRole.data.company}, exploring data systems, cloud infrastructure, solutions architecture, and DevOps.`;
 
 const unsortedSkills = await getCollection("skills");
-const skills = unsortedSkills
-    .sort((a, b) => a.data.id - b.data.id)
-    .splice(0, 6);
+const homeSkillTitles = ["AI & ML", "Architecture", "Cloud & DevOps"];
+const skills = homeSkillTitles.flatMap((title) => {
+    const skill = unsortedSkills.find((item) => item.data.title === title);
+    return skill ? [skill] : [];
+});
 
 const unsortedProjects = await getCollection("projects");
 const projects = unsortedProjects
@@ -59,7 +61,7 @@ const blogs = unfilteredBlogs
 
     <section class="space-y-4">
         <h2>My Skills</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ul class="grid grid-cols-1 gap-4">
             {skills.map((skill) => (
                 <li>
                     <SkillCard skill={skill} />
