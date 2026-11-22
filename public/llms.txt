@@ -1,0 +1,70 @@
+# Anav Chand
+
+> DevOps-focused software engineering student in Suva, Fiji. AI Engineer intern at Pacific Technologies. Final-year Bachelor of Software Engineering student at the University of the South Pacific, exploring AI systems, cloud infrastructure, and architecture.
+
+Anav Chand ([LinkedIn](https://www.linkedin.com/in/aanaav)) is based in Suva, Central, Fiji. He is studying a Bachelor of Software Engineering (Computer Software Engineering) at the University of the South Pacific, 2023–2027, and is in his final year with a GPA of 4.44/4.5. He finished high school at Jai Narayan College (2018–2022, Technical Science, Student Leadership Council), with 376/400 in the year 12 external exam and 361/400 in year 13. His profile language is English. The skills he pins on LinkedIn are solution architecture, leadership, and GitHub.
+
+Honors on his profile:
+
+- 3rd place overall, Honeywell Aerospace and Tata Consultancy Services AI Hackathon, December 2025
+- Best Solutions Architect, same hackathon, December 2025
+- All Rounder PASS Leader Award, PASS Programme, October 2025
+- Honorary Award for Highest Academic Achievement, University of the South Pacific, August 2025
+- Outstanding PASS Leader Award, PASS Programme, October 2024
+
+USP ATS (August 2026–October 2026) is an applicant tracking system for recruitment across USP's campuses and countries. It covers job creation with a two-admin approval step, applicant workflows, and hybrid AI scoring. The stack is Next.js (App Router), TypeScript, PostgreSQL on Neon with Prisma, Entra ID SSO, trigger.dev, Gemini through the Vercel AI SDK, Cloudflare R2, TanStack Query, Zod, Vitest, and GitHub Actions. This site does not have a separate writeup for it yet.
+
+## Experience
+
+- [AI Engineer, Pacific Technologies](https://www.anav.dev/experience): Internship in Suva since January 2026. Works on a distributed SAFe team doing data preprocessing, exploratory analysis, feature engineering, model experimentation, and pipeline development.
+- [Software Developer, Oceanic Communications](https://www.anav.dev/experience): Internship in Suva, November 2025–January 2026. Post-launch work on the Fiji Rugby Union site (about 10% faster overall and about 20% better core web vitals), an attendance and leave tool, and Bitrix ERP integrations for a task timer and quality logger.
+- [PASS Leader, Cloud Computing](https://www.anav.dev/experience): Part-time at USP, July 2025–November 2025. Built a student-ID attendance app for PASS and supported Oracle Cloud labs on networking, compute, and Ubuntu.
+- [PASS Leader, Software Engineering](https://www.anav.dev/experience): Part-time at USP, July 2024–November 2024. Introduced Dub.co QR codes for the PASS programme and raised CS140 course penetration by about 50%.
+- [PASS Leader, Computer Science](https://www.anav.dev/experience): Part-time at USP, February 2024–June 2024. Wrote coding worksheets with two other mentors and reviewed them with the course coordinator.
+
+## Volunteering
+
+- [Machine Learning Engineer, USP](https://www.anav.dev/experience): November 2025–February 2026, with mechanical and electrical students on ABU Robocon 2026. Built a YOLOv8 Nano detector and an EfficientNet-B0 classifier for symbols on scrolls.
+- [Dokploy architecture diagram](https://github.com/Dokploy/website/pull/114): Open-source documentation since January 2026. Merged pull request that redraws Dokploy's core architecture diagram.
+- [Dokploy Docker Swarm diagram](https://github.com/Dokploy/website/pull/116): Companion pull request that adds a diagram of multi-node Docker Swarm deployments.
+- [USP Open Day](https://www.anav.dev/experience): September 2024 with Computer Science and Information Systems, demonstrating a serverless quotes app. August 2025 with Student Learning Services, presenting the PASS programme.
+
+## Projects
+
+- [AOG Zero](https://www.anav.dev/projects/aog-zero): December 2025 hackathon build that estimates auxiliary power unit remaining useful life so airlines can schedule maintenance before an aircraft-on-ground event. Three tiers: an ML pipeline, an API and database, and a fleet dashboard. Placed 3rd overall at the Honeywell Aerospace and TCS AI Hackathon. Code is at [honeywell-aog-zero](https://github.com/anav5704/honeywell-aog-zero).
+- [Personal website](https://www.anav.dev/): April 2024–December 2025. Static Astro site for projects, skills, experience, and blogs, with runtime Open Graph images. Self-hosted on Oracle Cloud using Docker, Nginx, Cloudflare, and GitLab CI.
+- [CS000](https://www.anav.dev/projects/cs000): June 2024–July 2024 course that teaches Git and GitHub to Pacific students who otherwise share assignments over email and Viber. Auth, progress tracking, and interactive lessons. Live at [cs000.dev](https://www.cs000.dev).
+- [PASSport](https://www.anav.dev/projects/passport): Android app PASS leaders at USP use to take attendance. A session needs a student ID scan and a campus ID scan. Records stay on the device in SQLite via Drizzle, and exports are password-protected Excel files with a SHA-256 checksum. Code is at [passport](https://github.com/anav5704/passport).
+- [git-repo-chat](https://github.com/anav5704/git-repo-chat): Chat over a git repo. An indexer clones the repo, chunks files and commits, and stores Gemini embeddings in Postgres with pgvector. Answers use symbol search, semantic search, and commit history, and fall back to the web when the repo has nothing relevant. Citations point at a file and line range, a commit, or a URL.
+- [Online PASS](https://www.anav.dev/projects/online-pass): Full-stack app for USP peer study sessions, built to replace the mix of Viber and Zoom. Chat, polls, worksheet submissions, schedules, and attendance, with Azure AD, Prisma on AWS RDS, S3, and Supabase for realtime. Code is at [online-pass](https://github.com/anav5704/online-pass).
+- [Makora](https://github.com/anav5704/makora): Chess app that syncs games from chess.com and lichess, then reviews losses for mistakes, inaccuracies, and blunders. TypeScript monorepo with a Next.js app, a tRPC API, and workers for sync and analysis, on Postgres and Redis. [Demo](https://links.anav.dev/makora-demo) and [waitlist](https://links.anav.dev/makora-waitlist).
+- [All projects](https://www.anav.dev/projects): The rest of the portfolio, including Links Dashboard and earlier web apps.
+
+## Skills and certifications
+
+- [Skills and certifications](https://www.anav.dev/skills): LinkedIn lists solution architecture, systems design, software architecture, leadership, project management, peer mentoring, web development, generative AI, GitHub, Microsoft Azure, Linux, Linux system administration, Docker, containerization, MLOps, DataOps, Databricks, Oracle Cloud, Scaled Agile Framework, UML, Next.js, React, PostgreSQL, TypeScript, Python, JavaScript, C++, Java, SQL, PHP, WordPress, Figma, DaVinci Resolve, and Excel.
+- [MLOps Fundamentals](https://www.anav.dev/skills): DataCamp, issued July 2026. Skills: DataOps, MLOps.
+- [Software Architecture of Large-Scale Systems](https://www.anav.dev/skills): Udemy, issued May 2026.
+- [The Complete React Guide](https://www.anav.dev/skills): Udemy, issued February 2026. Skills include TypeScript and Next.js.
+- [DevOps Essentials for Data Engineering](https://www.anav.dev/skills): Databricks, issued February 2026.
+- [Get Started with Databricks for Data Engineering](https://www.anav.dev/skills): Databricks, issued February 2026.
+- [Ubuntu Linux Professional Certificate](https://www.anav.dev/skills): Canonical, issued January 2026.
+- [Docker Foundations Professional Certificate](https://www.anav.dev/skills): Docker, Inc, issued November 2024.
+- [Career Essentials in GitHub](https://www.anav.dev/skills): GitHub, issued November 2024.
+
+## Writing
+
+- [Blog](https://www.anav.dev/blogs): Essays and tutorials from coursework and side projects.
+- [The best summer project for software engineering students](https://www.anav.dev/blogs/the-best-summer-project-for-software-engineering-students): Why a personal site is a useful first real project.
+- [How to learn coding fast](https://www.anav.dev/blogs/how-to-learn-coding-fast-tips-from-a-software-engineering-student): How he got out of tutorial hell and into projects.
+- [Pointers and dynamic memory](https://www.anav.dev/blogs/simplifying-oop-for-cs112-part-1-pointers-and-dynamic-memory): First post in a four-part CS112 series. Later parts cover encapsulation, inheritance, and polymorphism.
+- [Prisma for modeling, Drizzle for queries](https://www.anav.dev/blogs/how-to-use-prisma-for-data-modeling-and-drizzle-for-queries): Using both ORMs in one Next.js app on Neon.
+- [Dynamic Open Graph images with Astro and Satori](https://www.anav.dev/blogs/how-to-generate-dynamic-open-graph-images-with-astro-and-satori): How this site generates OG images at runtime.
+- [RSS](https://www.anav.dev/rss.xml): Feed of new posts.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/aanaav): Source profile for the roles, projects, and certificates above.
+- [GitHub](https://github.com/anav5704): Code for most projects on this site.
+- [AI hackathon opens in Suva](https://fijisun.com.fj/living/technology/ai-hackathon-opens-in-suva-to-inspire-young-tech-enthusiasts): Fiji Sun coverage of the Honeywell hackathon, featured on his profile.
+- [Honeywell explores AI talent in Fiji](https://fijisun.com.fj/living/technology/honeywell-explores-artificial-intelligence-talent-in-fiji): Fiji Sun feature, also on his profile.
