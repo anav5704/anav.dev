@@ -81,11 +81,11 @@ Next.js is used to create a dashboard that allows users to view real-time APU he
 FastAPI exposes a REST API which allows the frontend to connect with the database and prediction model. The schema and queries for the database (PostgreSQL) are handled by SQLAlchemy.
 
 
-### AI/ML 
+### AI/ML
 
 ---
 
-A Python based prediction model was trained on simulated sensor datasets using Scikit-learn. This model predicts the APU's remaining useful life with an R<sup>2</sup> score of 0.97 and RMSE percentage of 12.76%.
+A linear regression in Scikit-learn maps the Health Indicator to remaining useful life. RUL is that indicator's position between the start of life and the end of life, written as a percentage of total life. On the test set the model reached an R<sup>2</sup> of 0.97 and an RMSE of 12.76%. The fitted Z-score scaler is saved with the model and applied again at inference, so a live window is scaled the same way as the training data.
 
 ### Infrastructure
 
@@ -97,10 +97,34 @@ The frontend, backend, and database are containerized using Docker and orchestra
 
 ---
 
-Six sensor channels were simulated with realistic noise and degradation patterns, then smoothed using moving averages and segmented into sliding windows representing health snapshots. For each window, key statistical features were extracted to capture drift, instability, and distribution changes linked to degradation. Features were combined, normalized with Z-score standardization, and reduced using PCA into a single Health Indicator representing the dominant degradation trend. This representation allowed a simple linear regression model to achieve strong performance. [Read more]().
+Each recorded life is smoothed, split into health snapshots, and described with statistics. PCA folds those statistics into one Health Indicator, and that indicator is what the RUL model reads.
+
+### Synthetic Life
+
+---
+
+Labeled run-to-failure data is scarce, so training uses one synthetic life. The six channels are ambient temperature, combustion temperature (EGT), oil temperature, vibration, pressure, and RPM. Each one degrades on a smooth bounded curve with Gaussian noise, and a random failure threshold means each channel fails at a different point in that life.
+
+### Sliding Windows
+
+---
+
+A moving average keeps the slow wear trend and drops high-frequency noise. The signal is then cut into windows. Each window is one health snapshot, long enough for stable statistics and short enough that gradual wear still shows up.
+
+### Statistical Features
+
+---
+
+Fifteen features per sensor makes ninety numbers per window. Means and medians track drift. Standard deviation, RMS, and peak-to-peak track instability. Kurtosis and skewness pick up early faults. Quartiles and scale-free ratios, such as standard deviation over mean, keep a high-magnitude sensor from drowning the others.
+
+### Health Indicator
+
+---
+
+The features are Z-score normalized, then PCA keeps the first principal component as the Health Indicator. That component is the aging trend. It is forced to move in one direction, in line with irreversible wear. Linear regression on this series produces the RUL estimate.
 
 ## Project Results
 
 ---
 
-The system provided accurate RUL predictions and clear fleet health insights, enabling proactive maintenance to prevent costly AOG events. Using simulated sensor data and ML-driven analysis, the system achieved strong predictive performance and earned 3rd place overall in the Honeywell & TCS AI Hackathon.
+Those estimates are what the dashboard uses for fleet health and maintenance timing. The system placed 3rd overall in the Honeywell & TCS AI Hackathon. The linear model reached that accuracy because the Health Indicator was already a clean degradation signal. The next gain is a nonlinear or temporal model on the same features.
